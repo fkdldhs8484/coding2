@@ -36,8 +36,8 @@ body {
     padding: 40px 0;
     text-align: center;
 }
-# footer a {
-
+# footer a:hover{
+    text-decoration: underline;
 }
 
 /* 헤더 영역 */
