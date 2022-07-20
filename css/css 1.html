@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 기초</title>
+    <title>font-size</title>
 
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
     <style>
@@ -48,7 +48,6 @@
             border-bottom: 1px dashed #dedede;
             padding-bottom: 2vw;
         }
-        #contents .menu ul {}
         #contents .menu  ul li{
             list-style: none;
             display: inline;
@@ -133,16 +132,15 @@
         <h2>font-size, 단위의 고찰</h2>
             <P>글자 크기는 명시하지 않으면 기본이 16px이다.</P>
     </article>
-
     <article class="article">
-        <h3>PX</h3>
+            <h2>px</h2>
              <p>해상도에 따라 상대적으로 달라지는 기본 단위이다.</p>
             <pre class="box">
                 font-size : 12px;
             </pre>
     </article>
     <article class="article">
-        <h3>%</h3>
+        <h2>%</h2>
             <p>부모 요소의 글자 크기를 100% 기준으로 계산한 % 단위
             (설정이 없다면 16px이 100%되므로, 150%는 24px 된다.)</p>
             <pre class="box">
@@ -150,7 +148,7 @@
             </pre>
     </article>
     <article class="article">
-        <h3>em</h3>
+        <h2>em</h2>
             <p>부모 요소의 글자 크기를 100% 기준으로 계산한 100분의 1 단위
             (설정이 없다면 16px이 1em되므로, 1.5는 24px(16px X 1.5=24px)이 된다.)</p>
             <pre class="box">
@@ -158,20 +156,19 @@
             </pre>
     </article>
     <article class="article">
-        <h3>rem</h3>
+        <h2>rem</h2>
             <p>rem은 em과 비슷하지만 부모 요소가 아닌 최상위 요소의 크기를 100% 기준으로 계산한다.</p>
             <pre class="box">
                 font-size : 1.5rem;
             </pre>
     </article>
     <article class="article">
-        <h3>vw,vh</h3>
+        <h2>vw,vh</h2>
             <p>vw는 뷰포트 너비값의 100분의 1 단위, vh는 뷰포트 높이값의 100분의 1 단위 이다.</p>
             <pre class="box">
                 font-size : 10vw;
             </pre>
     </article>
-    
     <table class="table">
         <thead>
             <tr>
@@ -183,22 +180,22 @@
         </thead>
         <tbody>
             <tr>
-                <td class="center">6px</td>
-                <td class="center">37.50%</td>
-                <td class="center">0.375em</td>
-                <td class="center">5pt</td>
+                <td>6px</td>
+                <td>37.50%</td>
+                <td>0.375em</td>
+                <td>5pt</td>
             </tr>
             <tr>
                 <td class="center">7px</td>
-                <td class="center">43.800%</td>
-                <td class="center">0.438em</td>
-                <td class="center">5pt</td>
+                <td>43.800%</td>
+                <td>0.438em</td>
+                <td>5pt</td>
             </tr>
             <tr>
                 <td class="center">16px</td>
-                <td class="center">50%</td>
-                <td class="center">0.500em</td>
-                <td class="center">6pt</td>
+                <td>50%</td>
+                <td>0.500em</td>
+                <td>6pt</td>
             </tr>
         </tbody>
     </table>
