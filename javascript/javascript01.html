@@ -723,6 +723,8 @@ g : function(){
             // document.write(obj[0].a);
             // document.write(obj[0].b);
             // document.write(obj[1].c);
+
+            document.querySelector(".sample14_result").innerHTML = obj[0].a + "<br>" + obj[0].b + "<br>" + obj[1].c
         }
 
         //15 객체 : 객체 속에 배열
@@ -740,6 +742,9 @@ g : function(){
             // document.write(obj.c.x);
             // document.write(obj.c.y);
             // document.write(obj.d);
+
+            document.querySelector(".sample15_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + 
+            obj.b[1] + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d
         }
 
         // 16 객체 : 객체 속에 변수
@@ -787,8 +792,8 @@ g : function(){
             // obj.f();
             // obj.g();
 
-            document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" + 
-            obj.c + "<br>" + obj.c.x + "<br>" +  obj.c.y + "<br>" +  obj.d
+            //document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" + 
+            //obj.c + "<br>" + obj.c.x + "<br>" +  obj.c.y + "<br>" +  obj.d
         }
     </script>
 </body>
