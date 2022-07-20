@@ -411,8 +411,8 @@ document.write(obj.c);
                 <p></p>
                 <div class="script">
 <pre><code class="language-js">const obj = [
-    {a:100, b:200},
-    {c:"javascript"}
+{a:100, b:200},
+{c:"javascript"}
 ];
 
 document.write(obj[0].a);
@@ -434,10 +434,10 @@ document.write(obj[1].c);
                 <p></p>
                 <div class="script">
 <pre><code class="language-js">const obj = {
-    a: 100,
-    b: [200, 300],
-    c: {x: 400, y: 500},
-    d: "javascript"
+a: 100,
+b: [200, 300],
+c: {x: 400, y: 500},
+d: "javascript"
 }
 
 document.write(obj.a);
@@ -490,14 +490,15 @@ b : [200, 300],
 c : {x:400, y:500},
 d : "javascript",
 e : function(){
-    document.write("자바스크립트가 실행되었습니다.");
+document.write("자바스크립트가 실행되었습니다.");
 },
 f : function(){
-    document.write( obj.d + "가 실행되었습니다.");
+document.write( obj.d + "가 실행되었습니다.");
 },
 g : function(){
-    document.write( this.d + "가 실행되었습니다.");
-}
+document.write( this.d + "가 실행되었습니다.")
+};
+
 document.write(obj.a);
 document.write(obj.b[0]);
 document.write(obj.b[1]);
@@ -511,15 +512,30 @@ obj.f();
 obj.g();
 }
 </code></pre>
-                </div>
+            </div>
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
-                        <div class="sample17_result">100<br>200<br>300<br>400<br>500<br>javascript</div>
+                        <div class="sample17_result">
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            javascript</div>
+                            [object Object]<br>
+                            자바스크립트가 실행되었습니다.<br>
+                            javascript가 실행되었습니다.<br>
+                            javascript가 실행되었습니다.
+                        </div>
                     </details>
                 </div>
             </div>
             <!-- //sample17 -->
+        </div>
+        <!-- // main_sample -->
+
+        <div class="main_desc"></div>
     </main>
     <!-- //main -->
 
