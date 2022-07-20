@@ -215,6 +215,15 @@ for(let i=0; i -> arr.length; i++){
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample06_result">
+                                100<br>
+                                200<br>
+                                300<br>
+                                400<br>
+                                500<br>
+                                600<br>
+                                700<br>
+                                800<br>
+                                900  
                             </div>
                         </details>
                 </div>
@@ -254,6 +263,28 @@ for(let i=0; i -> arr.length; i++){
                             300 <br>
                             400 <br>
                             500 <br>
+                            <br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            <br>
+                            100<br>
+                            0<br>
+                            100,200,300,400,500<br>
+                            200<br>
+                            1<br>
+                            100,200,300,400,500<br>
+                            300<br>
+                            2<br>
+                            100,200,300,400,500<br>
+                            400<br>
+                            3<br>
+                            100,200,300,400,500<br>
+                            500<br>
+                            4<br>
+                            100,200,300,400,500
                         </div>
                     </details>
                 </div>
@@ -281,9 +312,11 @@ for(let i=0; i -> arr.length; i++){
                 y = 200, 
                 z = "javascript";
 
-            document.write(x)
-            document.write(y)
-            document.write(z)
+            //document.write(x)
+            //document.write(y)
+            //document.write(z)
+//
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z
 
         }
 
@@ -295,18 +328,23 @@ for(let i=0; i -> arr.length; i++){
                   y = 200,
                   z = "javascript";
 
-            document.write(x)
-            document.write(y)
-            document.write(z)
+            //document.write(x)
+            //document.write(y)
+            //document.write(z)
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z
+
         }
 
         //03
         {
             const arr = [100, 200, "javascript"];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2]);
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]);
+
+            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2]
         }
 
         document.write("<br><br>");
@@ -315,10 +353,12 @@ for(let i=0; i -> arr.length; i++){
         {
             const arr = [100, 200, ["javascript", "jquery"]];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2][0]);
-            document.write(arr[2][1]);
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2][0]);
+            //document.write(arr[2][1]);
+
+            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2][0] + "<br>" + arr[2][1]
         }
 
         document.write("<br><br>");
@@ -327,7 +367,9 @@ for(let i=0; i -> arr.length; i++){
         {
             const arr = [100, 200, "javascript"];
 
-            document.write(arr.length);
+            //document.write(arr.length);
+
+            document.querySelector(".sample05_result").innerHTML = arr.length
         }
 
         document.write("<br><br>");
@@ -343,9 +385,9 @@ for(let i=0; i -> arr.length; i++){
             // document.write(arr[4]);
 
             //for(초기값, 조건식, 증감식)
-            for(let i=0; i<arr.length; i++) {
+            //for(let i=0; i<arr.length; i++) {
                 //document.write(arr[i]);
-            }
+            //}
 
         }
 
@@ -375,7 +417,6 @@ for(let i=0; i -> arr.length; i++){
                 //document.write(index,"<br>");
                 //document.write(array,"<br>");
             });
-
         }
     </script>
 </body>
