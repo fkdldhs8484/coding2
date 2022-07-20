@@ -43,20 +43,144 @@
               '+'를 기준으로 좌/추 측에 숫자가 아닌 문자나 변수 등이 오면 더하기 연산이 아닌 연결 연산을 함.  
             </p>
 
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>산술 연산자 종류</th>
+                        <th>속성 설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce" rowspan="2">+</td>
+                        <td>더하기 연산을 할 때 사용</td>
+                    </tr>
+                    <tr>
+                    <td >문자와 문자, 문자와 변수 등을 연결할 때 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">-</td>
+                        <td>빼기 연산을 할 때 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">*</td>
+                        <td>곱하기 연산을 할 때 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">/</td>
+                        <td>몫을 구 할 때 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">%</td>
+                        <td>나머지를 구 할 때 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">++</td>
+                        <td>1씩 증가시킬 때 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">--</td>
+                        <td>1씩 감소시킬 때 사용</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <hr>
 
             <main id="main">
             <div class="document">
-                <h2 class="t_tit2">산술연산자의 종류</h2>
+                    <h2 class="t_tit">대입 연산자</h2>
+                    <p class="t_desc">
+                      '='같다는 의미가 아니라 변수에 대입(저장)을 의미  
+                    </p>
                 <table class="t_table">
-                    <thead>
-                        <tr>
-                            <th>분류</th>
-                            <th>메서드</th>
-                        </tr>
-                    </thead>
-                    <tbody>d</tbody>
-                </div>
+                <thead>
+                    <tr>
+                        <th>대입 연산자 종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">=</td>
+                        <td>num = 1 은 우변의 1값을 좌변의 num변수에 대입(저장)한다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">+-</td>
+                        <td>num += 2 는 num=num +2 와 같다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">-=</td>
+                        <td>num -= 2는 num = num -2 와 같다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">*=</td>
+                        <td>num *=2 는 num=num *2 와 같다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">/=</td>
+                        <td>num /=2 는 num /2 와 같다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">%=</td>
+                        <td>num %=는 num = num %2 와 같다.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <hr>
+
+                <main id="main">
+                    <div class="document">
+                        <h2 class="t_tit">비교 연산자</h2>
+                        <p class="t_desc">
+                        값을 Boolean(논리)값 인 true 나 false로 반환 함.
+                    </p>
+                    <table class="t_table">
+                        <thead>
+                            <tr>
+                                <th>비교 연산자</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ce">></td>
+                                <td>a > b 가 참이면 true, 거짓이면 false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce"><</td>
+                                <td>a < b 가 참이면 true, 거짓이면 false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">>=</td>
+                                <td>a > b 가 참이면 true, 거짓이면 false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce"> <=</td>
+                                <td>a <= b 가 참이면 true, 거짓이면 false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">==</td>
+                                <td>a == b, a와b 가 같으면 true , 같지 않으면 false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">!=</td>
+                                <td>a != b, a와b가 같지 않으면 true, 같으면 false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">===</td>
+                                <td>a === b, a와b가 같고 데이터 타입도 같으면 true 같지 않으면  false</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">!==</td>
+                                <td>a != b, a와b가 같지 않거나 데이터 타입도 같지면 true 같으면  false</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </main>
+            </div>
             </main>
         </div>
     </main>

@@ -220,6 +220,44 @@ for(let i=0; i -> arr.length; i++){
                 </div>
             </div>
             <!-- //sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">    const num = [100, 200, 300, 400, 500];
+
+    //for문을 이용해서 출력...
+    for(let i=0; i&lt;num.length; i++) {
+        document.write(num[i]);
+    }
+
+    //forEach()를 이용해서 출력
+    num.forEach(function(element) {
+        document.write(element);
+    });
+
+    //forEach() 3가지 인자(parameter)값
+    num.forEach(function(element, index, array){
+        document.write(element);
+        document.write(index);
+        document.write(array);
+    });
+</code></pre>
+                </div>
+
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample07_result">
+                            100 <br>
+                            200 <br>
+                            300 <br>
+                            400 <br>
+                            500 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
     </main>
     <!-- //main -->
 
@@ -246,9 +284,9 @@ for(let i=0; i -> arr.length; i++){
             document.write(x)
             document.write(y)
             document.write(z)
+
         }
 
-        document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
         document.write("<br><br>");
 
         //02 
@@ -261,8 +299,6 @@ for(let i=0; i -> arr.length; i++){
             document.write(y)
             document.write(z)
         }
-
-        document.write("<br><br>");
 
         //03
         {
@@ -307,9 +343,10 @@ for(let i=0; i -> arr.length; i++){
             // document.write(arr[4]);
 
             //for(초기값, 조건식, 증감식)
-            for(let i=0; i<arr.length; i++){
-                document.write(arr[i]);
+            for(let i=0; i<arr.length; i++) {
+                //document.write(arr[i]);
             }
+
         }
 
         document.write("<br><br>");
@@ -319,8 +356,8 @@ for(let i=0; i -> arr.length; i++){
             const num = [100, 200, 300, 400, 500];
 
             //for문을 이용해서 출력.....
-            for( let i=0; i<num.length; i++ ){
-                document.write(num[i]);
+            for( let i=0;i<num.length; i++){
+                // document.write(num[i]);
             }
 
             document.write("<br><br>");
@@ -334,10 +371,11 @@ for(let i=0; i -> arr.length; i++){
 
             // forEach() 3가지 인자(parameter)값
             num.forEach(function(element, index, array){
-                document.write(element,"<br>");
-                document.write(index,"<br>");
-                document.write(array,"<br>");
+                //document.write(element,"<br>");
+                //document.write(index,"<br>");
+                //document.write(array,"<br>");
             });
+
         }
     </script>
 </body>
