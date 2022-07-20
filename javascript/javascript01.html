@@ -461,7 +461,15 @@ document.write(obj.d)
                 <h3>16. 객체 : 데이터 저장(키와 값) 표현 방법 7</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">const a = 100;
+const b = 200;
+const c = "javascript";
+
+const obj = { a, b, c }
+
+// document.write(obj.a);
+// document.write(obj.b);
+// document.write(obj.c);
 </code></pre>
                 </div>
                 <div class="result">
@@ -476,7 +484,21 @@ document.write(obj.d)
                 <h3>17. 객체 : 데이터 저장(키와 값) 표현 방법 8</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">const obj = {
+a : 100,
+b : [200, 300],
+c : {x:400, y:500},
+d : "javascript",
+e : function(){
+    document.write("자바스크립트가 실행되었습니다.");
+},
+f : function(){
+    document.write( obj.d + "가 실행되었습니다.");
+},
+g : function(){
+    document.write( this.d + "가 실행되었습니다.");
+}
+}
 </code></pre>
                 </div>
                 <div class="result">
@@ -720,7 +742,7 @@ document.write(obj.d)
             // document.write(obj.d);
         }
 
-        // 객체 : 객체 속에 변수
+        // 16 객체 : 객체 속에 변수
         {
             const a = 100;
             const b = 200;
@@ -733,7 +755,7 @@ document.write(obj.d)
             // document.write(obj.c);
         }
 
-        // 객체 : 객체 속에 함수
+        // 17 객체 : 객체 속에 함수
         {
             const obj = {
                 a : 100,
