@@ -4,55 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃2</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
         }
-        /* 정렬 */
         body {
-            background-color: rgb(180, 159, 159);
+            background-color: #FFE0B2;
         }
-        /* 배경색 */
-        #weap {
-            width: 1200px;
-            margin: 0;
+        #wrap {
+            width: 870px;
+            margin: 0 auto ;
         }
-        #header {
-            width: 1200px;
+        #herader {
+            width: 100%;
             height: 100px;
-            background-color: rgb(241, 217, 217);
+            background-color: #FFE0B2;
         }
         #nav {
-            width: 1200px;
+            width: 100%;
             height: 100px;
-            background-color: rgb(194, 171, 171);
+            background-color: #FFCC80;
         }
         #aside {
-            width: 300px;
-            height: 780px;
-            background-color: rgb(168, 144, 144);
-            float: left;
-        }
-        #artrcle {
-            width: 600px;
-            height: 780px;
-            background-color: rgb(196, 145, 145);
+            width: 30%;
+            height: 722px;
+            background-color: #FFB74D;
             float: left;
         }
         #section {
-            width: 300px;
-            height: 780px;
-            background-color: rgb(148, 107, 107);
+            width: 70%;
+            height: 722px;
+            background-color: #FFA726;
             float: left;
         }
         #footer {
-            width: 1200px;
+            width: 100%;
             height: 100px;
-            background-color: rgb(241, 217, 217);
+            background-color: #FF9800;
             clear: both;
         }
-        @media(max-width:1220px){
+        @media(max-width:1200px){
             #wrap{
                 width: 96%;
             }
@@ -74,16 +66,13 @@
                 float: left;
             }
         }
-
     </style>
 </head>
 <body>
-    <div>
-        <div id="weap"></div>
+    <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
         <div id="aside"></div>
-        <div id="artrcle"></div>
         <div id="section"></div>
         <div id="footer"></div>
     </div>
