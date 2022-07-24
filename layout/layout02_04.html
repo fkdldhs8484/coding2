@@ -27,73 +27,81 @@
             background-color: rgb(194, 171, 171);
         }
         #main {
-            display: grid;
-            grid-template-columns: 30% 40% 30%;  
-            grid-template-rows: 780px ;     
+            display: flex;
         }
         #aside {
+            width: 30%;
+            height: 780px;
             background-color: rgb(168, 144, 144);
         }
         #section {
-            background-color: rgb(148, 107, 107);
+            width: 40%;
+            height: 780px;
+            background-color: rgb(196, 145, 145);
         }
         #article {
-            background-color: rgb(196, 145, 145);
-       }
+            width:  30%;
+            height: 780px;
+            background-color: rgb(148, 107, 107);
+        }
         #footer {
             height: 100px;
             background-color: rgb(241, 217, 217);
         }
-        @media(max-width:1200px){
+        @media (max-width:1200px){
             #wrap {
-            width:96%;
+                width: 96%;
             }
-            
         }
-        @media(max-width:768px){
+        @media (max-width: 768px){
             #wrap {
-            width:100%;
+                width: 100%;
             }
             #main {
-            grid-template-areas: 
-                "aside section"
-                "article article";
-            grid-template-columns: 30% 70%;
-            grid-template-rows: 630px 150px;
+                flex-wrap: wrap;
             }
             #aside {
-                grid-area: aside;
+            width: 30%;
+            height: 630px;
             }
             #section {
-                grid-area: section;
+                width: 70%;
+                height: 630px;
             }
             #article {
-                grid-area: article;
+                width:  100%;
+                height: 150px;
             }
         }
-        @media(max-width:480px){
-            #main {
-            grid-template-areas: 
-                "aside"
-                "section"
-                "article ";
-            grid-template-columns:100%;
-            grid-template-rows: 200px 430px 150px;
+        @media (max-width: 480px){
+            #aside {
+                width:100%;
+                height: 200px;
             }
+            #section {
+                width:100%;
+
+                height: 430px;
+            }
+            #article {
+                width: 100%;
+                height: 430px;
+            }
+
         }
 
     </style>
 </head>
 <body>
         <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
+            <header id="header"></header>
+            <nav id="nav"></nav>
             <main id="main">
                 <aside id="aside"></aside>
                 <section id="section"></section>
                 <article id="article"></article>
-        </main>
-        <footer id="footer"></footer>
+            </main>
+            <footer id="footer"></footer>
     </div>
     <!-- 
         layout03_01 : float 방식 레이아웃

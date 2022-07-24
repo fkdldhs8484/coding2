@@ -18,44 +18,51 @@
             margin: 0 auto;
         }
         #header {
+            width: 1200px;
             height: 100px;
             background-color: #B3E5FC;
         }
         #nav {
+            width: 1200px;
             height: 100px;
             background-color: #81D4FA;
 
         }
         #main {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            height: 780px;
-        }
-
+            width: 1200px;
+            }
         #asdie {
-            width: 30%; 
+            width: 300px; 
             height: 780px;    
             background-color: #4FC3F7;
+            float: left;
         }
         #article1 {
-            width: 70%; 
+            width: 900px; 
             height: 260px;    
             background-color: #29B6F6;
+            float: left;
+
+
         }
         #article2 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #03A9F4;
+            float: left;
 
 
         }
         #article3 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #039BE5;
+            float: left;
+
+
         }
         #footer {
+            width: 1200px;
             height: 100px;
             background-color: #0288D1;
         }
@@ -70,22 +77,14 @@
             clear: both;
         }
 
-        /* 미디어커리 */ 
-        @media (max-width: 1300px){
-        }
-        @media (max-width: 768px){
-        }
-        @media (max-width: 480px){
-                
-        }
-        
+        /* 미디어커리 */
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="main" >
+        <div id="main" class="clearfix">
             <div id="asdie"></div>
             <div id="article1"></div>
             <div id="article2"></div>

@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background-color: #e1f5fe;
+            background-color: #E1F5FE;
         }
         #wrap {
             width: 1200px;
@@ -19,12 +19,12 @@
         }
         #header {
             height: 100px;
-            border-color: #b3e5fc;
+            background-color: #B3E5FC;
         }
         #nav {
             height: 100px;
-            border-color: #81d4fa;
-            
+            background-color: #81D4FA;
+
         }
         #main {
             display: flex;
@@ -32,92 +32,103 @@
             flex-direction: column;
             height: 780px;
         }
+
         #asdie {
-            width: 300px;
-            height: 780px;
-            border-color: #4fc3f7;
+            width: 30%; 
+            height: 780px;    
+            background-color: #4FC3F7;
         }
         #article1 {
-            width: 35%;
-            height: 780px;
-            border-color: #29b6f6;
+            width: 70%; 
+            height: 260px;    
+            background-color: #29B6F6;
         }
         #article2-1 {
             width: 100%;
             height: 260px;
-            border-color: #03a9f4;
+            background-color: #03A9F4;
         }
         #article2-2 {
             width: 100%;
             height: 260px;
-            border-color: #039be5;
+            background-color: #039BE5;
         }
         #footer {
             height: 100px;
-            border-color: #0288d1;
+            background-color: #0288D1;
+        }
+        /* clearfix */
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        .clearfix::after {
+            clear: both;
         }
 
-        /* 미디어커리 */
-        @media (max-width: 1300px) {
-            #wedia {
+        /* 미디어커리 */ 
+        @media (max-width: 1300px){
+            #wrap {
                 width: 96%;
+        }
+        
+        #article2 {
+            display: flex;
+        }
+
+        #article2-1 {
+            width: 50%;
+            height: 520px;
+        }
+        #article2-2 {
+            width: 50%;
+            height: 520px;
+        }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
             }
-            #article2 {
-                display: flex;
-            }
+            #article1 {
+            width: 100%; 
+            height: 390px;    
+        }
             #article2-1 {
-                width: 50%;
-                height: 520px;
+            width: 100%;
+            height: 390px;
             }
             #article2-2 {
-                width: 50%;
-                height: 520px;
+                display: none;
             }
             }
-            @media (max-width: 768px) {
-                #wedia {
-                    width: 100%;
-                }
-                #article1 {
-                    width: 100%;
-                    height:390px;
-                }
-                #article2-2 {
-                width:100%;
-                height: 390px;
-            }
-            #article2-2 {
-                display: none;           
-             }
-            }
-            @media (max-width: 480px) {
+            @media (max-width: 480px){
                 #asdie {
-                    width: 100px;
-                    height: 200px;
-                }
-
+                    width: 100%;
+                height:200px;    
+            }
                 #article1 {
-                    height:430px;
+                height: 430px;    
                 }
-                #article2-2 {
+                #article2-1 {
                 height: 150px;
-            }
-            }
-
+                }
+                }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="main">
+        <div id="main" >
             <div id="asdie"></div>
             <div id="article1"></div>
             <div id="article2">
                 <div id="article2-1"></div>
-                <div id="article3-2"></div>
+                <div id="article2-2"></div>
             </div>
-        </div>
+            </div>
         <div id="footer"></div>
     </div>
 </body>

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레이아웃 유형</title>
     <style>
-        * {
+        *{
             margin: 0;
         }
         body {
-            background-color: #FFE0B2;
+            background-color: #FFF3E0;
         }
         #wrap {
-            width: 870px;
-            margin: 0 auto ;
+            width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
         }
-        #herader {
+        #header {
             width: 100%;
             height: 100px;
             background-color: #FFE0B2;
@@ -28,13 +29,13 @@
         }
         #aside {
             width: 30%;
-            height: 722px;
+            height: 780px;
             background-color: #FFB74D;
             float: left;
         }
         #section {
             width: 70%;
-            height: 722px;
+            height: 780px;
             background-color: #FFA726;
             float: left;
         }
@@ -44,37 +45,43 @@
             background-color: #FF9800;
             clear: both;
         }
-        @media(max-width:1200px){
-            #wrap{
+        @media (max-width: 1300px){
+            #wrap {
                 width: 96%;
             }
         }
-        @media(max-width:768px){
-            #wrap{
+        @media (max-width: 768px){
+            #wrap {
                 width: 100%;
             }
         }
-        @media(max-width:480px){
-            #aside{
+        @media (max-width: 480px){
+            #aside {
                 width: 100%;
                 height: 300px;
-                float: left;
             }
-            #section{
+            #section {
                 width: 100%;
-                height: 480px;
-                float: left;
+                height: 480%;
             }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section"></div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <footer id="footer"></footer>
     </div>
+    <!-- 
+        layout03_01 : float 방식 레이아웃
+        layout03_02 : float 방식 반응형 레이아웃  
+        layout03_03 : flex 방식 레이아웃 
+        layout03_04 : flex 방식 반응형 레이아웃  
+        layout03_05 : grid 방식 레이아웃 
+        layout03_06 : grid 방식 반응형 레이아웃  
+    -->
 </body>
 </html>
