@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 연산자</title>
+    <title>자바스크립트 : for문</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -31,7 +31,8 @@
             <ul class="study">
                 <li><a href="basic.html">기본 규칙</a></li>
                 <li><a href="operator.html">연산자</a></li>
-                <li><a href="for.html">for문</a></li>
+                <li><a href="study/for.html">반복문</a></li>
+                <li><a href="study/if.html">조건문</a></li>
             </ul>
         </nav>
     </header>
@@ -39,35 +40,99 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">for문</h2>
-            <p class="t_desc">for문은 특정 구문을 여러번 반복하고 싶을 때 사용하는 반복문</p>
+            <h2 class="t_tit">반복문</h2>
+            <p class="t_desc">반복문은 프로그램에서 필요한 결과 값을 도출하기 위해 실행문의 순서을 반복적으로 실행시키는 문법을 말한다.
+                반복문에는 while문, do while문, for문 을 가장 많이 사용한다.</p>
+        </div>
+    <!-- 반복문-->
+        <div class="document">
+            <h2 class="t_tit">while문</h2>
+            <p class="t_desc">특정조건에 만족할때 까지 반복
+            </p>
             <p class="t_box">
-                for ( 초기값; 조건식; 증감값 ){<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                초기값{<br>
+                while (조건식) {<br>
+                실행문;<br>
+                증가감식;<br>
                 }
             </p>
+        </div>
+    <!-- while문 -->
+        <div class="document">
+                <h2 class="t_tit">do while문</h2>
+                <p class="t_desc">조건식이 true 일 경우에 계속해서 반복합니다.
+                    조건식이 false가 되면 반복은 멈춘다.
+                </p>
+                <p class="t_box">
+                    초기값{<br>
+                    do {<br>
+                    실행문;<br>
+                    증가감식;<br>
+                    } while (조건식)
+                </p>
+        </div>
+    <!-- do while문 -->
+        <div class="document">
+            <h2 class="t_tit">for 문</h2>
+            <p class="t_desc">반복횟수가 정해진 경우 사용
+            </p>
+            <p class="t_box">
+                for (초기값; 조건식; 증가감식){
+                    실행문;
+                }
+            </p>
+        </div>
+    <!-- for문 -->
 
-            <hr>
 
-            <h3 class="t_tit2"> 0부터 99까지 출력하기</h3>
+            <div class="main_sample">
+            <h3 class="t_tit2">0부터 99까지 출력하기</h3>
             <div class="t_code">
 <pre><code>//0부터 99까지 출력하기
-for (let i=0; i&lt;100; i++){
+for (let i=0; i&lt;99; i++){
     document.write(i)
 }
 </code></pre>
             </div>
-
-            <h3 class="t_tit2"> 1부터 100까지 출력하기</h3>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div class="simple01">
+                        <script>
+                            let simple01 = document.querySelector('.simple01');
+                            for(let i = 0; i<100; i++){
+                                simple01.innerHTML += i + "<br>";
+                            }
+                        </script>
+                    </div>
+                </details>
+            </div>
+<!-- 0~99까지 출력 -->
+            <h3 class="t_tit2">1부터 99까지 출력하기</h3>
+            <p class="t_desc"></p>
             <div class="t_code">
 <pre><code>//1부터 99까지 출력하기
-for (let i=0; i&lt;100; i++){
+for (let i=1; i&lt;99; i++){
     document.write(i)
 }
 </code></pre>
             </div>
-
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div class="simple02">
+                        <script>
+                            let simple02 = document.querySelector('.simple02');
+                            for(let i = 1; i<=99; i++){
+                                simple02.innerHTML += i + "<br>";
+                            }
+                        </script>
+                    </div>
+                </details>
+            </div>
+<!-- 1~99까지 출력 -->
             <h3 class="t_tit2"> 1부터 100까지 출력하기 (짝수)</h3>
+            <p class="t_desc"></p>
             <div class="t_code">
 <pre><code>//2부터 2씩 증가
 for (let i=2; i&lt;100; i+=2){ //i+2 --> i = i + 2 
@@ -75,30 +140,150 @@ for (let i=2; i&lt;100; i+=2){ //i+2 --> i = i + 2
 }
 </code></pre>
             </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="simple03">
+                        <script>
+                           let simple03 = document.querySelector('.simple03');
+                            for(let i = 2; i<100; i+=2){
+                                simple03.innerHTML += i + "<br>";
+                            } 
+                        </script>
+                    </div>
+            </details>
+        </div>
+<!-- 1~100까지 출력 -->
+            <h3 class="t_tit2"> 1부터 100까지 출력하기 (5의 배수)</h3>
+            <p class="t_desc"></p>
+            <div class="t_code">
+<pre><code>{
+for(let i=1; i&it;=100; i++){
+if (i % 5 == 0) {
+    document.write("<span style='color:blue'>"+i+"</span>");
+}
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="simple04">
+                        <script>
+                           let simple04 = document.querySelector('.simple04');
+                            for(let i = 1; i<100; i++){
+                                if (i%5 ==0){
+                                    document.write("<span>"+i+"</span>"); 
+                                }
+                            } 
+                        </script>
+                    </div>
+                </details>
+            </div>
+<!-- 1~100까지 출력 -->
+            <h3 class="t_tit2"> 1부터 100까지 출력하기 (5의 배수는 빨간색, 7의 배수는 파란색)</h3>
+            <p class="t_desc"></p>
+            <div class="t_code">
+<pre><code>{
+for(let i=1; i&it;=100; i++){
+if (i % 5 == 0) {
+document.write("<span style='color:blue'>"+i+"</span>");
+}
+if (i % 7 == 0) {
+document.write("<span style='color:red'>"+i+"</span>");
+}
+}
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="simpl05">
+                        <script>
+                            let simple05 = document.querySelector('.simple05');
+                            for(let i = 1; i<100; i++){
+                                if (i%5 ==0){
+                                    document.write("<span style='color:blue'>"+i+"</span>");
+                                }
+                                if (i%7==0){
+                                    document.write("<span style='color:red'>"+i+"</span>");
+                                }
+                            } 
+                        </script>
+                    </div>
+                </details>
+            </div>
 
+            <h3 class="t_tit2"> 구구단 출력하기</h3>
+            <p class="t_desc"></p>
+            <div class="t_code">
+<pre><code>for(let i=6; i&lt;=6; i++){
+for(let j=1; j&lt;=9; j++){
+let sum = i*j;
+document.write(i+"*"+j+"="+sum);
+document.write("<br>");
+}
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="simpl06">
+                        <script>
+                            for(let i = 6; i<=6; i++){
+                                for(let j=1; j<=9; j++){
+                                    let sum = i*j;
+                                    document.write(i+"*"+j+"="+sum);
+                                    document.write("");
+                                }
+                            }
+                        </script>
+                    </div>
+                </details>
+            </div>
+<!-- 구구단 출력하기 -->
             <h3 class="t_tit2">for문을 이용해서 테이블 출력하기</h3>
             <p class="t_desc">중첩</p>
             <div class="t_code">
-<pre><code class="language-js">//for 문을 이용해서 테이블 출력하기(100칸)
-let table = "&it;table>";
-for(let i=0; i&it;10; i++){
-table += "&it;tr>";
-for(let j=0; j&it;10; j++){
-table += "&it;td>0&it;/td>";
+<pre><code class="language-js"><!-- //for 문을 이용해서 테이블 출력하기(100칸) -->
+{
+let table = "&lt;table class='testTable'>";
+//tr 10개
+for(let j=1; j&lt;=10; j++){
+table += "<tr>";
+for(let i=1;i&lt;=10; i++){
+table += "<td>1</td>";
 }
-table += "&it;/tr>";
+table += "&lt;/tr>";
 }
-table += "&it;/table>";
-document.write(table);
+table += "&lt;/table>"
+document.write(table)
+}
 </code></pre>
             </div>
             <div class="t_result">
                 <details>
                     <summary>결과 확인하기</summary>
-                    <div class="result01"></div>
+                    <div class="sampl07">
+                        <script>
+                            {let table = "<table class='testTable'>";
+                            for(let j=1; j<=10; j++){
+                                table += "<tr>";
+                            for(let i=1;i<=10; i++){
+                                table += "<td>1</td>";
+                            }
+                                table += "</tr>";
+                            }
+                            table += "</table>"
+                            document.write(table)
+                            }
+                        </script> 
+                    </div>
                 </details>
                 <style>
-                .tesrTable tr td {
+                .testTable tr td {
                     border: 1px solid #000;
                 }
                 </style>
@@ -133,6 +318,105 @@ document.write(table);
     <script src="../assets/js/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
+    </script>
+
+    <script>
+    // 01.0분터 99까지 출력
+    // for(let i=0;i<100;i++){
+    //     document.write(i)
+    // }
+    //02. 1부터 99까지 출력하기
+    // for (let i=0; i<100; i++){
+    //     document.write(i)
+    // }
+        // for문을 이용해서 1~100까지 출력하기.(5의 배수, 7의배수)
+    // {
+    //     for(let i=1; i<=100; i++){
+    //         if (i % 5 == 0) {
+    //             document.write("<span style='color:blue'>"+i+"</span>");
+    //         }
+    //         if (i % 7 == 0) {
+    //             document.write("<span style='color:red'>"+i+"</span>");
+    //         }
+    //     }
+    // }
+
+    //for문을 이용해서 1~100까지 출력(짝수는 빨간색, 홀수는 파란색)
+    // {
+    //     for(let i=1; i<=100; i++){
+    //         if (i % 2 == 0) {
+    //             document.write("<span style='color:red'>"+i+"</span>")
+    //         }else{
+    //             document.write("<span style='color:blue'>"+i+"</span>")
+    //         }
+ 
+    //     }
+    // }
+    //for문을 이용해서 1~100까지 출력(짝수는 빨간색, 홀수는 파란색) : 조건부 연산자
+    // {
+    //     for(let i=1; i<=100; i++){
+    //         (i % 2 == 0) ? document.write("<span style='color:red'>"+i+"</span>") : document.write("<span style='color:blue'>"+i+"</span>")
+    //     }
+    //     }
+    // document.write("<br>")
+        //for문을 이용해서 구구단
+        //(2, 3, 4, 5, 6, 7, 8, 9) 8번 반복
+        //(1, 2, 3, 4, 5, 6, 7, 8, 9) 9번 반복
+
+        // i*j =sum
+        // 2*1 = 2      3*1=3
+        // 2*2 = 4
+        // 2*3 = 6
+        // 2*4 = 8
+        // 2*5 = 10
+        // 2*6 = 18
+        // 2*7 = 14
+        // 2*8 = 16
+        // 2*9 = 18
+
+        // for(let i=6; i<=6; i++){
+        //     for(let j=1; j<=9; j++){
+        //         let sum = i*j;
+        //         document.write(i+"*"+j+"="+sum);
+        //         document.write("<br>");
+        //     }
+        // }
+        //for문을 이용해서 테이블 만들기
+        // {
+        //     let table = "<table class='testTable'>";
+        //     //tr 10개
+        //     for(let j=1; j<=10; j++){
+        //         table += "<tr>";
+        //         for(let i=1;i<=10; i++){
+        //             table += "<td>1</td>";
+        //         }
+
+        //         table += "</tr>";
+        //     }
+        //     table += "</table>"
+        // document.write(table)
+        // }
+                
+                
+        //10번 반복(for문)
+        //  for(let i=1; i<=10; i++){
+        //      table += "<td>"+i+"</td>";
+        //  }
+         
+        //  table += "<table>";
+
+        // document.write(table);
+                
+        // {
+        //     //데이터 타입(자료형) 
+        //     let table = 1; //숫자
+        //     let table2 = "1"; //문자
+        //     let table3 = true; //불린(true, false)
+        //     let table4 = []; //배열
+        //     let table5 = {}; //객체
+        //     let table6 =     //특수값(null, undeifend)
+        // }
+
     </script>
 </body>
 </html>
