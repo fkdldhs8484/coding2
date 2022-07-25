@@ -1,12 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>데이터 타입</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
 <body>
-    
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="study/basic.html">기본 규칙</a></li>
+                <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">반복문</a></li>
+                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="study/type.html">데이터 타입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">데이터 타입</h2>
+            <p class="t_desc">
+                변수에 저장되는 데이터의 유형으로 Primitive(원시) 데이터 타입과  Object(객체) 데이터 타입으로
+                나눌수 있다. Primitive(원시)에는 number, string, boolean, undefined, null, symbol등이 있으며,
+                Object(객체)에는 function, object, array등이 있습니다.
+            </p>
+
+            <hr>
+
+            <h2 class="t_tit2">number(숫자)데이터</h2>
+            <p class="t_desc">정수, 소수점, 지수를 표현 할 수 있다.</p>
+            <p class="t_box">
+                <i>var num = 10;</i><br>
+                <i>var num = 10;</i><br>
+                <i>var num = 10;</i><br>
+                console.log(num1);//<i>10</i><br>
+                console.log(num2);//<i>10.5</i><br>
+                console.log(num2);//<i>100</i>,le+2는 1*10의 2승을 의미한다.
+            </p>
+            <h2 class="t_tit2">string(문자)데이터</h2>
+            <p class="t_desc">"또는"으로 표현,작은따옴표를 많이 표현</p>
+            <p class="t_box">
+                <i>var str1 = '문자';</i><br>
+                <i>var str2 = "문자";</i><br>
+                console.log(num1);//<i>문자</i><br>
+                console.log(num2);//<i>문자</i><br>
+            </p>
+            <p class="t_desc">문자안에 들어갈 경우 바깥쪽을 작음따옴표로 처리했으면 안쪽은 큰따옴표로,
+                반대로 바깥쪽을 큰따옴표로 처리했으면 안쪽은 작은 따옴표로 처리한다.
+            </p>
+            <p class="t_box">
+                <i>var str1 = '문자는 "문자"';</i><br>
+                <i>var str2 = "문자는 '문자'"";</i><br>
+                console.log(num1);//<i>문자는 "문자"</i><br>
+                console.log(num2);//<i>문자는 '문자'</i><br>
+            </p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>이스케이프 문자/th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">\n</td>
+                        <td class="ce">행 바꿈</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">\t</td>
+                        <td class="ce">탭 문자</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">\\</td>
+                        <td class="ce">역슬래시</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">\'</td>
+                        <td class="ce">작은 땀옴표</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">\"</td>
+                        <td class="ce">큰 따옴표</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="t_tit2">boolean(논리)데이터</h2>
+            <p class="t_desc">true(참)과 false(거짓)의 값을 표현, boolean()변수의 값을 true나false 로 변환 시켜주는 명령어</p>
+            <p class="t_box">
+                <i>var temp1 = (5>4);</i><br>
+                <i>var temp1 = (5>4);</i><br>
+                console.log(num1);//<i>true</i><br>
+                console.log(num1);//<i>false</i>
+            </p>
+            <p class="t_desc">boolean 에서 0값은 false를 의미 0값 이외의 숫자나 문자 값은 true의미</p>
+            <p class="t_box">
+                <i>var temp1 = 0;</i>//0의 boolean은 false을 의미<br>
+                <i>var temp1 = 1;</i>//1의 boolean은 true을 의미<br>
+                console.log(boolean(temp1));//<i>false</i><br>
+                console.log(boolean(temp2));//<i>true</i><br>
+            </p>
+
+            <h2 class="t_tit2">undefined()데이터</h2>
+            <p class="t_desc">변수는 선언 하였으나 데이터 값을 지정하지 않았을 경우나 객체의 속성 값을 지정하지 않았을 경우 자동 저장되는 값</p>
+            <p class="t_box">
+                var temp1 = 10;<br>
+                <i>var temp2 ;</i><br>
+                console.log(temp1);//10<br>
+                console.log(temp2);//<i>undefined</i>->변수에 데이터 값이 없기 때문에 undefined 저장
+            </p>
+            <p class="t_box">
+                var obj ={};<br>
+                obj.name = '홍길동';<br>
+                <i>obj.age;</i><br>
+                console.log(obj.name);//홍길동<br>
+                console.log(obj.age);//<i>undefined</i>->객체에 속성 값이 없기 때문에 undefined 저장
+            </p>
+
+            <h2 class="t_tit2">null 데이터</h2>
+            <p class="t_desc">변수를 (empty)빈 (초기화)상태로 만들거나 데이터를 저장하였으나 값이 존재하지 않을 때 null값을 반환함</p>
+            <p class="t_box">
+                var obj = 10;<br>
+                <i>obj = null;</i><br>
+                console.log(obj);//<i>null</i>,변수를 빈 상태로 만듬<br>
+                <i>var obj = document.getElemtById('gnb');</i><br>
+                console.log(obj);// 데이터를 저장하였으나 값이 존재 하지 않을 경우 null
+            </p>
+            <p class="t_box">
+                var obj1; //undefined<br>
+                var obj2 = null;//null<br>
+                console.log(<i>Boolean(obj1)</i>);//<i>false</i><br>
+                console.log(<i>Boolean(obj2)</i>);//<i>false</i><br>
+            </p>
+
+            <h2 class="t_tit2">typeof 명령</h2>
+            <p class="t_desc">변수에 저장되어 있는 데이터 타입을 알아보려면 typeof 사용</p>
+            <p class="t_box">
+                var num = 10;<br>
+                var str= '문자';<br>
+                console.log(<i>typeof</i> num);////number<br>
+                console.log(<i>typeof</i> str);//string<br>
+            </p>
+
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
 </body>
 </html>
