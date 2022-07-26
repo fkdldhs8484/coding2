@@ -29,10 +29,11 @@
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul class="study">
-                <li><a href="study/basic.html">기본 규칙</a></li>
-                <li><a href="study/operator.html">연산자</a></li>
-                <li><a href="study/for.html">반복문</a></li>
-                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
             </ul>
         </nav>
     </header>
@@ -61,80 +62,62 @@
             <p class="t_desc">if문은 if문안에 또 다른 if문을 중첩하여 사용할수 있다.
             </p>
             <p class="t_box">
-&lt;!DOCTYPE html&gt;<br>
-&lt;html lang="ko"&gt;<br>
-&lt;head&gt;<br>
-&lt;meta charst="UTF-8"&gt;<br>
-&lt;title if문 title&gt;<br>
-&lt;script&gt;<br>
-var html1 = Number(prompt('html 점수입력', ''));<br>
-var html1 = Number(prompt('html 점수입력', ''));<br>
-var html1 = Number(prompt('html 점수입력', ''));<br>
-var html1 = Number(prompt('html 점수입력', ''));<br>
-var comment;<br>
-if (avg >- 60) {<br>
-    if (html &lt; 40) {<br>
-        comment = "html" + "40점 미만 불합격";<br>
-    }else if (css &lt; 40 ){<br>
-        commanf = 'css'+'40점 미만 불합격';<br>
+                if (조건식) { <br>
+                    실행문;<br>
+                }
+            </p>
+<p class="t_box">
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang="ko"&gt;<br>
+    &lt;head&gt;<br>
+    &lt;meta charst="UTF-8"&gt;<br>
+    &lt;title if문 title&gt;<br>
+    &lt;script&gt;<br>
+    var classification = prompt('아동,청소년,성인 중 선택 입력','');<br>
+    switch (<i>classlflcation</i>) {<br>
+        <i>case'아동':<br></i>
+            classification += ':입장료 무료';<br>
+        <i>case'청소년':<br></i>
+            classification += ':입장료 2000원';<br>
+        <i>case'성인':<br></i>
+            classification += ':입장료 5000원';<br>
     }<br>
-    else if (javascript &lt; 40){<br>
-        comment = "javascript" + '40점 미만 불합격';<br>
-    }else {<br>
-        comment = '평균' + avg + '점합격';<br>
-    }<br>
-}else {<br>
-    comment = '평균' + avg + '점 불합격';<br>
-}<br>
-document.write(comment);<br>
-&lt;/script&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;<br>
+    break;<br>
+    <i>default:</i><br>
+        classification = '입력 값을 다시 확인하세요.';<br>
+    }  <br>
+    document.write(classification);
+    &lt;/script&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br>
 </p>
-            </div>
+<p class="codepen" data-height="500" data-default-tab="js,result" data-slug-hash="WNzEoLa" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/WNzEoLa">
+    if문</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
+
 
         <div class="document">
             <h2 class="t_tit">switch문</h2>
             <p class="t_desc">switch문 if문과 다르게 특정조건에 만족 했을때 블록{}을 스스로 빠져나가지 못한다.
             </p>
             <p class="t_box">
-                &lt;!DOCTYPE html&gt;<br>
-                &lt;html lang="ko"&gt;<br>
-                &lt;head&gt;<br>
-                &lt;meta charst="UTF-8"&gt;<br>
-                &lt;title if문 title&gt;<br>
-                &lt;script&gt;<br>
-                var classification = prompt('아동,청소년,성인 중 선택 입력','');<br>
-                switch (classlflcation) {<br>
-                    case'아동':<br>
-                        classification += ':입장료 무료';<br>
-                    case'청소년':<br>
-                        classification += ':입장료 2000원';<br>
-                    case'성인':<br>
-                        classification += ':입장료 5000원';<br>
-                }<br>
-                break;<br>
-                default:<br>
-                    classification = '입력 값을 다시 확인하세요.';<br>
-                }  <br>
-                document.write(classification);
-                &lt;/script&gt;<br>
-                &lt;/head&gt;<br>
-                &lt;body&gt;<br>
-                &lt;/body&gt;<br>
-                &lt;/html&gt;<br>
+                초기값<br>
+                while (조건식) {<br>
+                    실행문;<br>
+                    증가감식;<br>
+                }
             </p>
+        </div>  
         </div>
+    </div>
     </main>
     <!-- //main -->
 
-    <p class="codepen" data-height="500" data-default-tab="js,result" data-slug-hash="WNzEoLa" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-        <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/WNzEoLa">
-        if문</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
       <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
     <footer id="footer">

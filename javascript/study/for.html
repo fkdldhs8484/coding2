@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : for문</title>
+    <title>자바스크립트 : 반복문</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -31,8 +31,9 @@
             <ul class="study">
                 <li><a href="basic.html">기본 규칙</a></li>
                 <li><a href="operator.html">연산자</a></li>
-                <li><a href="study/for.html">반복문</a></li>
-                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
             </ul>
         </nav>
     </header>
@@ -94,7 +95,7 @@ for (let i=0; i&lt;99; i++){
 }
 </code></pre>
             </div>
-            <div class="t_result">
+            <div class="result">
                 <details>
                     <summary>결과 확인하기</summary>
                     <div class="simple01">
@@ -117,7 +118,7 @@ for (let i=1; i&lt;99; i++){
 }
 </code></pre>
             </div>
-            <div class="t_result">
+            <div class="result">
                 <details>
                     <summary>결과 확인하기</summary>
                     <div class="simple02">
@@ -204,10 +205,10 @@ document.write("<span style='color:red'>"+i+"</span>");
                             let simple05 = document.querySelector('.simple05');
                             for(let i = 1; i<100; i++){
                                 if (i%5 ==0){
-                                    document.write("<span style='color:blue'>"+i+"</span>");
+                                    document.write("<span style='color:red'>"+i+"</span>");
                                 }
                                 if (i%7==0){
-                                    document.write("<span style='color:red'>"+i+"</span>");
+                                    document.write("<span style='color:blue'>"+i+"</span>");
                                 }
                             } 
                         </script>

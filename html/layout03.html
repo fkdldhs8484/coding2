@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+
+
+    <link rel="stylesheet" href="assrts/css/style.css">
+    </rel>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 구글 아이콘 -->
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 학년 코딩반</a></h1>
+        <span>이름 : 웹쓰</span>
+    </header>
+    <!-- //herad -->
+
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초문법</a></li>
+                <li><a href="block.html">블록구조 인라인 구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호황선</a></li>
+                <li><a href="semantic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃1</a></li>
+                <li><a href="layout02.html">레이아웃2</a></li>
+                <li class="active"><a href="layout03.html">레이아웃3</a></li>
+                <li><a href="layout04.html">레이아웃4</a></li>
+                <li><a href="layout05.html">레이아웃5</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃02</h2>
+                <p class="t_desc">
+                </p>
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fkz0D9O4Rt6A9tGvbjVPNSN%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D43%253A125" allowfullscreen></iframe>
+                </div>
+                <h3 class="t_tit2">float 방식 레이아웃</h3>
+                <div class="t_code">
+<pre><code class="language-css">
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 1200px;
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    width: 1200px;
+    height: 100px;
+    background-color: #81D4FA;
+
+}
+#main {
+    width: 1200px;
+    }
+#asdie {
+    width: 300px; 
+    height: 780px;    
+    background-color: #4FC3F7;
+    float: left;
+}
+#article1 {
+    width: 900px; 
+    height: 260px;    
+    background-color: #29B6F6;
+    float: left;
+
+
+}
+#article2 {
+    width: 900px;
+    height: 260px;
+    background-color: #03A9F4;
+    float: left;
+
+
+}
+#article3 {
+    width: 900px;
+    height: 260px;
+    background-color: #039BE5;
+    float: left;
+
+
+}
+#footer {
+    width: 1200px;
+    height: 100px;
+    background-color: #0288D1;
+}
+/* clearfix */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+</code></pre>
+
+                </div>
+                <h3 class="t_tit2">flex 방식 반응형 레이아웃</h3>
+                <div class="t_code">
+<pre><code class="language-css">
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    height: 100px;
+    background-color: #81D4FA;
+
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 780px;
+}
+
+#asdie {
+    width: 30%; 
+    height: 780px;    
+    background-color: #4FC3F7;
+}
+#article1 {
+    width: 70%; 
+    height: 260px;    
+    background-color: #29B6F6;
+}
+#article2-1 {
+    width: 100%;
+    height: 260px;
+    background-color: #03A9F4;
+}
+#article2-2 {
+    width: 100%;
+    height: 260px;
+    background-color: #039BE5;
+}
+#footer {
+    height: 100px;
+    background-color: #0288D1;
+}
+/* clearfix */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* 미디어커리 */ 
+@media (max-width: 1300px){
+    #wrap {
+        width: 96%;
+}
+
+#article2 {
+    display: flex;
+}
+
+#article2-1 {
+    width: 50%;
+    height: 520px;
+}
+#article2-2 {
+    width: 50%;
+    height: 520px;
+}
+}
+@media (max-width: 768px){
+#wrap {
+width: 100%;
+}
+#article1 {
+width: 100%; 
+height: 390px;    
+}
+#article2-1 {
+width: 100%;
+height: 390px;
+}
+#article2-2 {
+display: none;
+}
+}
+@media (max-width: 480px){
+#asdie {
+    width: 100%;
+height:200px;    
+}
+#article1 {
+height: 430px;    
+}
+#article2-1 {
+height: 150px;
+}
+}
+</code></pre>
+
+                </div>
+                <h3 class="t_tit2">grid 방식 반응형 레이아웃</h3>
+                <div class="t_code">
+<pre><code class="language-css">
+* {
+margin: 0;
+padding: 0;
+}
+body {
+background-color: #E1F5FE;
+}
+#wrap {
+width: 1200px;
+margin: 0 auto;
+}
+#header {
+height: 100px;
+background-color: #B3E5FC;
+}
+#nav {
+height: 100px;
+background-color: #81D4FA;
+
+}
+#main {
+display: grid;
+grid-template-areas: 
+"aside article1 article1"
+"aside article2 article2"
+"aside article3 article3";
+grid-template-columns: 30% 70%;
+grid-template-rows: 260px 260px 260px;
+
+}
+
+#asdie {
+background-color: #4FC3F7;
+grid-area: aside;
+}
+#article1 {
+background-color: #29B6F6;
+grid-area: article1;
+}
+#article2 {
+background-color: #03A9F4;
+grid-area: article2;
+}
+#article3 {
+background-color: #039BE5;
+grid-area: article3;
+}
+#footer {
+height: 100px;
+background-color: #0288D1;
+}
+/* 미디어커리 */ 
+@media (max-width: 1300px){
+#wrap {
+width: 96%;
+}
+#main {
+display: grid;
+grid-template-areas: 
+    "aside article1 article1"
+    "aside article2 article3"
+    "aside article2 article3";
+grid-template-columns: 30% 35% 35%;
+grid-template-rows: 260px 520px;
+
+}
+}
+@media (max-width: 768px){
+#wrap {
+width: 100%;
+}
+#main {
+display: grid;
+grid-template-areas: 
+    "aside article1"
+    "aside article2";
+grid-template-columns: 30% 70%;
+grid-template-rows: 390px 390px;
+}
+#article3 {
+display: none;
+}
+}
+@media (max-width: 480px){
+#main {
+display: grid;
+grid-template-areas: 
+    "aside"
+    "article1"
+    "article2";
+grid-template-columns: 100%;
+grid-template-rows: 200px 430px 150px;
+}
+}
+</code></pre>
+
+                </div>
+                <div class="t_iframe">
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="PoRKMRw" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/PoRKMRw">
+                        Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- //herad -->
+
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
