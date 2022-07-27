@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            overflow: hidden;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #header .h1 {
+            width: 300px;
+            background-color: red;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #header .h2 {
+            width: 900px;
+            background-color: tomato;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #banner {
+            width: 1200px;
+            height: 400px;
+            overflow: hidden;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #banner .b1 {
+            width: 800px;
+            background-color: blue;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #banner .b2 {
+            width: 400px;
+            background-color: blueviolet;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #section {
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #section .s1 {
+            width: 400px;
+            height: 500px;
+            background-color: aqua;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #section .s2 {
+            width: 400px;
+            background-color: aquamarine;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #section .s3 {
+            width: 400px;
+            background-color: brown;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+        }
+
+        #footer .f1 {
+            width: 200px;
+            background-color: forestgreen;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #footer .f2 {
+            width: 800px;
+            background-color: burlywood;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #footer .f3 {
+            width: 200px;
+            background-color: rosybrown;
+            float: left;
+            height: inherit;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="h1">로고</div>
+            <div class="h2">메뉴</div>
+        </div>
+        <div id="banner">
+            <div class="b1">이미지슬라이드</div>
+            <div class="b2">광고</div>
+        </div>
+        <div id="section">
+            <div class="s1">공지사항</div>
+            <div class="s2">갤러리</div>
+            <div class="s3">팝업</div>
+        </div>
+        <div id="footer">
+            <div class="f1">푸터</div>
+            <div class="f2">카피라이트</div>
+            <div class="f3">소셜미디어</div>
+        </div>
+    </div>
+
+    <script>
+        let dog = document.querySelector('.b1');
+        for (i=1; i<=10; i++){
+            if(i%2==1){
+                dog.innerHTML += i;
+            }           
+        }
+    </script>
+</body>
+
+</html>
