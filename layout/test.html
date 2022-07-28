@@ -8,21 +8,31 @@
 </head>
 <body>
     <script>
-        // 01 선언적 함수
-        function func(){
-            document.write("실행되었습니다.1")
+        // 01. 선언적 함수
+        {
+            function func (){
+                document.write ("함수가 실행되었습니다.")
+            }
+            func()
         }
-        // 02
-        const func (){
-            document.write("실행되었습니다.2")
+        // 02. 익명 함수
+        {
+            const func = function (){
+                document.write("함수가 실행되었습니다.")
+            }
+            func();
         }
-        // 03
-        function func (rest){
-           
+        // 03. 매개변수
+        {
+            function func (str){
+                document.write(str)
+            }
+            func("함수가 실행되었습니다.");
         }
-        document.write("실행되었습니다.3")
-        // 04
-        
+        // 04. 화살표 함수 (선언적)
+        {
+            func = () =>  document.write("함수가 실행되었습니다.");
+        }
     </script>
 </body>
 </html>

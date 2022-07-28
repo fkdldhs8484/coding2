@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="../index.html">Javascript</a></h1>
@@ -35,6 +37,7 @@
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터타입</a></li>
                 <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -44,47 +47,48 @@
         <div class="document">
             <h2 class="t_tit">함수</h2>
             <p class="t_desc">함수는 반복적으로 사용되는 기능을 만들어 내기 위한 코드들의 집합</p>
-        
-        
+        </div>
+
         <hr>
-    
+        
+        <div class="document">
             <h3 class="t_tit2">선언적 함수</h3>
             <p class="t_desc2">함수를 호출할 때 함수의 앞 또는 뒤에서 호출 가능</p>
             <p class="t_box">
-              function 함수 (){
+                function 함수 (){
                 실행문;
-              }  ;
+                } ;
             </p>
             <p class="t_box">
                 function compute(){
-                    console.log('선언적 함수');
+                console.log('선언적 함수');
                 } ;
             </p>
-            
+
             <h3 class="t_tit2">익명 함수</h3>
             <p class="t_desc2">변수 선언 이후에 호출</p>
             <p class="t_box">
                 var 변수 = function(){
-                    실행문;
+                실행문;
                 };
             </p>
             <p class="t_box">
                 var compute = function(){
-                    console.iog('익명 함수');
+                console.iog('익명 함수');
                 };
             </p>
             <h3 class="t_tit2">매개변수</h3>
             <p class="t_desc2">함수를 호출할 때 전달하는 변수</p>
             <p class="t_box">
                 function 함수명(매개변수1, 매개변수2,..){<br>
-                    실행문;
+                실행문;
                 }
                 함수명(매개변수1 값, 매개볏누2 값,..);
             </p>
             <p class="t_box">
                 function getAvg(s1, s2){<br>
-                    var avg = (s1 +s2) /2;<br>
-                    return avg;
+                var avg = (s1 +s2) /2;<br>
+                return avg;
                 }
                 console.iog(getAvg(90,80)); //85
             </p>
@@ -96,15 +100,14 @@
             </p>
             <p class="t_box">
                 var doMultiplication = <i>(s1, s2)=>{</i><br>
-                    var avg = (s1+s2) /2;
-                    return avg;
+                var avg = (s1+s2) /2;
+                return avg;
                 }
                 console.iog(doMultiplication(2,5));//3.5
             </p>
-            
         </div>
     </main>
-     <!-- //main -->
+    <!-- //main -->
 
     <footer id="footer">
         <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
@@ -116,7 +119,8 @@
         hljs.highlightAll();
     </script>
     <script>
-        
+
     </script>
 </body>
+
 </html>
