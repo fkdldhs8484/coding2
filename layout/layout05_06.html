@@ -78,14 +78,17 @@
             }
 
             .contents {
+                display: grid;
                 grid-template-areas:
                     "cont1 cont2 cont2"
                     "cont1 cont3 cont4"
                 ;
                 grid-template-columns: repeat(3, 1fr);
-                /* 자동으로 3등분 1fr 3번 쓰든가 repeat(3, 3.3333 혹은 1fr) 쓰기*/
-                grid-template-rows: repeat(2, 1fr)
-                    /* 이건 부모요소에 너비와 높이값을 정해줬기 때문에 가능함 */
+                /* grid-template-columns: 33.333% 33.333% 33.333%;
+                grid-template-columns: repeat(3, 33.333%);
+                grid-template-columns: 1fr 1fr 1fr;  fr은 공간을 나타내는 단위
+                grid-template-columns: repeat(3, 1fr); 다양한 방법으로 3등분을 표현할 수 있습니다.*/
+                grid-template-rows: 390px 390px;
             }
         }
 
@@ -95,6 +98,7 @@
             }
 
             .contents {
+                display: grid;
                 grid-template-areas:
                     "cont1 cont2"
                     "cont1 cont3"
