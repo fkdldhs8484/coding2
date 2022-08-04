@@ -46,19 +46,83 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">quiz 02</h2>
-        </div> 
-        정답 확인 버튼을 눌러서 정답이 틀리면 "틀렸습니다!" 정답이 맞으면 "맞았습니다!"가 뜨는 구조이다.
-        <div class="script">
-<pre><code class="language-js">
-
+            <p class="t_box">정답을 적어서 맞으면 <i>"맞았습니다!"</i> 정답이 틀리면 <i>"틀렸습니다!"</i></p>
+            <h3 class="t_tit2">선택자</h3>
+            <div class="t_code">
+                <pre><code class="language-js">const quizType = document.querySelector(".quiz__type");   //퀴즈종류
+const quizNum = document.querySelector(".quiz__question .number "); //퀴즈번호
+const quizask = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+const quizconfirm = document.querySelector(".quiz__answer .confirm"); //정답확인버튼
+const quizResult = document.querySelector(".quiz__answer .Result"); //정답결과
+const quizinput = document.querySelector(".quiz__answer .input"); //사용자 정답
+const quizview = document.querySelector(".quiz__view"); //강아지
 </code></pre>
+            </div>
+            <h3 class="t_tit2">문제 정보</h3>
+            <p class="t_desc">let변하는 값</p>
+            <div class="t_code">
+                <pre><code class="language-js">const answeType = "웹디자인기능사";
+const answerNum = "2";
+const answerask = "기업의 새로운 이념 구축에 필요한 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지 통합 전력은 무엇인가요?"
+let answerResult = "CIP";
+</code></pre>
+            </div>
+            <h3 class="t_tit2">문제 출력</h3>
+            <p class="t_desc">toLowerCase 소문자로 바꿔줌</p>
+            <div class="t_code">
+                <pre><code class="language-js">quizType.innerText = answeType;
+quizNum.innerText = answerNum + ".";
+quizask.innerText = answerask;
+quizResult.innerText ="정답은 : " + answerResult.toLowerCase() + "입니다.";
+</code></pre>
+            </div>
+            <h3 class="t_tit2">정답 숨기기</h3>
+            <div class="t_code">
+                <pre><code class="language-js">quizResult.style.display = "none";
+</code></pre>
+            </div>
+            <h3 class="t_tit2">정답 확인</h3>
+            <div class="t_code">
+                <pre><code class="language-js">quizconfirm.addEventListener("click", () => {
+quizinput.style.display = "none";
+quizResult.style.display = "block";
+quizconfirm.style.display = "none";
+</code></pre>
+            </div>
+            <h3 class="t_tit2">사용자 정답</h3>
+            <p class="t_desc"> toLowerCase 소문자로 바꿔줌 trim 여백</p>
+            <div class="t_code">
+                <pre><code class="language-js">const userWord = quizinput.value.toLowerCase().trim();
+answerResult = answerResult.toLowerCase().trim(); //변하는 값('='우변을 좌변으로?)
+// console.log(userWord)
+// console.log(answerResult)
+</code></pre>
+            </div>
+            <h3 class="t_tit2">사용자 정답 == 문제 정답</h3>
+            <div class="t_code">
+                <pre><code class="language-js">if (userWord == answerResult) {
+//정답 일때
+quizview.classList.add("like");
+// alert("정답입니다.")
+} else {
+//오답 일때
+quizview.classList.add("dislike");
+// alert("오답입니다.")
+}
+});  //정답버튼을 클릭 했을 때
+</code></pre>
+            </div>
+
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/javascript/effect/quizEffect02.html"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
         </div>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="JjLLOyz" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-            <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/JjLLOyz">
-            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </main>
     <!-- //main -->
 
