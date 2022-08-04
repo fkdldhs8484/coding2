@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+
+
+    <link rel="stylesheet" href="assrts/css/style.css">
+    </rel>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 구글 아이콘 -->
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 학년 코딩반</a></h1>
+        <span>이름 : 웹쓰</span>
+    </header>
+    <!-- //herad -->
+
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초문법</a></li>
+                <li><a href="block.html">블록구조 인라인 구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호황선</a></li>
+                <li><a href="semantic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃1</a></li>
+                <li><a href="layout02.html">레이아웃2</a></li>
+                <li><a href="layout03.html">레이아웃3</a></li>
+                <li><a href="layout04.html">레이아웃4</a></li>
+                <li class="active"><a href="layout05.html">레이아웃5</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃05</h2>
+                <p class="t_desc">
+
+                </p>
+                <div class="t_iframe">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fkz0D9O4Rt6A9tGvbjVPNSN%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D619%253A2"
+                        allowfullscreen></iframe>
+                </div>
+                <h3 class="t_tit2">float을 이용한 레이아웃이다. </h3>
+                <div class="t_code">
+<pre><code class="language-css">* {
+margin: 0;
+padding: 0;
+}
+
+#wrap {
+width: 100%;
+margin: 0 auto;
+}
+
+#header {
+width: 100%;
+height: 100px;
+background-color: #EEEBE9;
+}
+
+#nav {
+width: 100%;
+height: 100px;
+background-color: #B9AAA5;
+}
+
+#mian {
+width: 100%;
+height: 780px;
+background-color: #886F65;
+}
+
+#footer {
+width: 100%;
+height: 100px;
+background-color: #4E342E;
+}
+
+.container {
+width: 1200px;
+height: inherit;
+margin: 0 auto;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contents .cont1 {
+width: 100%;
+height: 100px;
+background-color: #74574a;
+}
+
+.contents .cont2 {
+width: 100%;
+height: 200px;
+background-color: #684D43;
+}
+
+.contents .cont3 {
+width: 50%;
+height: 480px;
+background-color: #594139;
+float: left;
+}
+
+.contents .cont4 {
+width: 50%;
+height: 480px;
+background-color: #4A352F;
+float: left;
+}
+
+/* 
+float 으로 인한 영역깨짐 방지법
+1.깨지는 영역에 clear:both 를 설정.
+2.부모 박스 영역에 overflow: hidden을 설정.
+3.clearfix 를 설정한다.
+*/
+/* clearfix */
+.clearfix::before,
+.clearfix::after {
+content: '';
+display: block;
+line-height: 0;
+}
+
+.clearfix::after {
+clear: both;
+}
+
+@media (max-width:1220px) {
+.container {
+width: 96%;
+}
+
+.contents .cont1 {
+width: 30%;
+height: 780px;
+float: left;
+}
+
+.contents .cont2 {
+width: 70%;
+height: 390px;
+float: left;
+}
+
+.contents .cont3 {
+width: 35%;
+height: 390px;
+float: left;
+}
+
+.contents .cont4 {
+width: 35%;
+height: 390px;
+float: left;
+}
+}
+
+@media (max-width:768px) {
+.container {
+width: 100%;
+}
+
+.contents .cont1 {
+width: 30%;
+height: 780px;
+}
+
+.contents .cont2 {
+width: 70%;
+height: 260px;
+}
+
+.contents .cont3 {
+width: 70%;
+height: 260px;
+}
+
+.contents .cont4 {
+width: 70%;
+height: 260px;
+}
+}
+@media (max-width:480px) {
+.container .cont1 {
+width: 100%;
+height: 150px;
+}
+.contents .cont2 {
+width: 100%;
+height: 210px;
+}
+
+.contents .cont3 {
+width: 100%;
+height: 210px;
+}
+
+.contents .cont4 {
+width: 100%;
+height: 210px;
+}
+}
+</code></pre>
+
+                </div>
+                <h3 class="t_tit2">flex을 이용한 레이아웃이다. </h3>
+                <div class="t_code">
+<pre><code class="language-css">* {
+margin: 0;
+padding: 0;
+}
+
+#wrap {}
+
+#header {
+height: 100px;
+background-color: #EEEBE9;
+}
+
+#nav {
+height: 100px;
+background-color: #B9AAA5;
+}
+
+#main {
+height: 780px;
+background-color: #886F65;
+}
+
+#footer {
+height: 100px;
+background-color: #4E342E;
+}
+
+.container {
+width: 1200px;
+height: inherit;
+background-color: rgba(0, 0, 0, 0.3);
+margin: 0 auto;
+}
+
+.contents {}
+
+.contents .left {}
+
+.contents .left .con1 {
+width: 100%;
+height: 100px;
+background-color: #74574A;
+}
+
+.contents .right {
+display: flex;
+flex-wrap: wrap;
+}
+
+.contents .right .con2 {
+width: 100%;
+height: 200px;
+background-color: #684D43;
+}
+
+.contents .right .con3 {
+width: 50%;
+height: 480px;
+background-color: #594139;
+}
+
+.contents .right .con4 {
+width: 50%;
+height: 480px;
+background-color: #4A352F;
+}
+
+@media (max-width: 1220px) {
+.container {
+width: 96%;
+}
+
+.contents {
+display: flex;
+flex-wrap: wrap;
+}
+
+.contents .left {
+width: 30%;
+}
+
+.contents .left .con1 {
+width: 100%;
+height: 780px;
+}
+
+.contents .right {
+width: 70%;
+}
+
+.contents .right .con2 {
+width: 100%;
+height: 390px;
+}
+
+.contents .right .con3 {
+width: 50%;
+height: 390px;
+}
+
+.contents .right .con4 {
+width: 50%;
+height: 390px;
+}
+}
+
+@media (max-width: 768px) {
+.container {
+width: 100%;
+}
+
+.contents .right .con2 {
+width: 100%;
+height: 260px;
+}
+
+.contents .right .con3 {
+width: 100%;
+height: 260px;
+}
+
+.contents .right .con4 {
+width: 100%;
+height: 260px;
+}
+}
+
+@media (max-width: 480px) {
+.contents .left {
+width: 100%;
+height: 150px;
+}
+
+.contents .left .con1 {
+width: 100%;
+height: 150px;
+}
+
+.contents .right {
+width: 100%;
+height: 630px;
+}
+
+.contents .right .con2 {
+height: 210px;
+}
+
+.contents .right .con3 {
+height: 210px;
+}
+
+.contents .right .con4 {
+height: 210px;
+}
+}
+</code></pre>
+
+                </div>
+                <h3 class="t_tit2">grid을 이용한 레이아웃이다. </h3>
+                <div class="t_code">
+<pre><code class="language-css">* {
+margin: 0;
+}
+#wrap {}
+
+#header {
+height: 100px;
+background-color: #EEEBE9;
+}
+#nav {
+height: 100px;
+background-color: #B9AAA5;
+}
+#main {
+height: 780px;
+background-color: #886F65;
+}
+#footer {
+height: 100px;
+background-color: #4E342E;
+}
+.container {
+width: 1200px;
+height: inherit;
+margin: 0 auto;
+background-color: rgba(0, 0, 0, 0.3);
+}
+.contents {
+display: grid;
+grid-template-areas:
+"cont1 cont1"
+"cont2 cont2"
+"cont3 cont4"
+;
+grid-template-columns: 50% 50%;
+grid-template-rows: 100px 200px 480px;
+}
+.contents .cont1 {
+background-color: #74574A;
+grid-area: cont1;
+}
+.contents .cont2 {
+background-color: #684D43;
+grid-area: cont2;
+}
+.contents .cont3 {
+background-color: #594139;
+grid-area: cont3;
+}
+.contents .cont4 {
+background-color: #4A352F;
+grid-area: cont4;
+}
+@media (max-width: 1220px) {
+.container {
+width: 96%;
+}
+.contents {
+display: grid;
+grid-template-areas:
+"cont1 cont2 cont2"
+"cont1 cont3 cont4"
+;
+grid-template-columns: repeat(3, 1fr);
+/* grid-template-columns: 33.333% 33.333% 33.333%;
+grid-template-columns: repeat(3, 33.333%);
+grid-template-columns: 1fr 1fr 1fr;  fr은 공간을 나타내는 단위
+grid-template-columns: repeat(3, 1fr); 다양한 방법으로 3등분을 표현할 수 있습니다.*/
+grid-template-rows: 390px 390px;
+}
+}
+@media (max-width: 768px) {
+.container {
+width: 100%;
+}
+.contents {
+display: grid;
+grid-template-areas:
+"cont1 cont2"
+"cont1 cont3"
+"cont1 cont4"
+;
+grid-template-columns: 30% 70%;
+grid-template-rows: repeat(3, 1fr);
+}
+}
+@media (max-width: 480px) {
+.contents {
+grid-template-areas:
+"cont1"
+"cont2"
+"cont3"
+"cont4"
+;
+grid-template-columns: 100%;
+grid-template-rows: 150px 210px 210px 210px;
+}
+}
+</code></pre>
+
+                </div>
+                <div class="t_iframe">
+                    <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="LYdOrRq"
+                        data-user="fkdldhs8484"
+                        style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/LYdOrRq">
+                                Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- //herad -->
+
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
