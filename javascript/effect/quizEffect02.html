@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
+    
+</head>
+<!-- header -->
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript01.html">Quiz</a> <em>주관식 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li class="active"><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask">
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <input type="text" class="input" placeholder="정답을 적어주세요!">
+                    <button class="confirm">정답확인하기</button>
+                    <div class="Result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+    <!-- footer -->
+    <script>
+        //선택자
+        const quizType = document.querySelector(".quiz__type");   //퀴즈종류
+        const quizNum = document.querySelector(".quiz__question .number "); //퀴즈번호
+        const quizask = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+        const quizconfirm = document.querySelector(".quiz__answer .confirm"); //정답확인버튼
+        const quizResult = document.querySelector(".quiz__answer .Result"); //정답결과
+        const quizinput = document.querySelector(".quiz__answer .input"); //사용자 정답
+        const quizview = document.querySelector(".quiz__view"); //강아지
+        //문제 정보
+        const answeType = "웹디자인기능사";
+        const answerNum = "2";
+        const answerask = "기업의 새로운 이념 구축에 필요한 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지 통합 전력은 무엇인가요?"
+        let answerResult = "CIP"; //let변하는 값
+
+        //문제 출력
+        quizType.innerText = answeType;
+        quizNum.innerText = answerNum + ".";
+        quizask.innerText = answerask;
+        quizResult.innerText ="정답은 : " + answerResult.toLowerCase() + "입니다."; //toLowerCase 소문자로 바꿔줌
+
+        //정답 숨기기
+        quizResult.style.display = "none";
+
+        //정답 확인
+        quizconfirm.addEventListener("click", () => {
+            quizinput.style.display = "none";
+            quizResult.style.display = "block";
+            quizconfirm.style.display = "none";
+
+            //사용자 정답
+            const userWord = quizinput.value.toLowerCase().trim(); //toLowerCase 소문자로 바꿔줌 trim 여백
+            answerResult = answerResult.toLowerCase().trim(); //변하는 값('='우변을 좌변으로?)
+            // console.log(userWord)
+            // console.log(answerResult)
+
+            //사용자 정답 == 문제 정답
+            if (userWord == answerResult) {
+                //정답 일때
+                quizview.classList.add("like");
+                
+                // alert("정답입니다.")
+            } else {
+                //오답 일때
+                quizview.classList.add("dislike");
+                // alert("오답입니다.")
+            }
+        });  //정답버튼을 클릭 했을 때
+    </script>
+</body>
+
+</html>
