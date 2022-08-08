@@ -46,146 +46,148 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">카드 유형01</h2>
-
-            <h3 class="t_tit2">HTML 소스</h3>
-            <div class="script">
-                <pre><code class="language-js">
-<body>
-    <section id="cardType" class="card__wrap nexon section">
-        <h2>말티즈 강의</h2>
-        <p>우리집 말티즈의 귀여움을 알아보자.</p>
-        <div class="card__inner container">
-            <article class="card">
-                <!-- alt 웹 표준성  -->
-            <figure class="card__header">
-                <img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
-            </figure>
-                <div class="card__body">
-                    <h3 class="tit">말티즈가 한심하게 처다볼때</h3>
-                    <p class="decs">말티즈는 가끔 아니 자주 주인을 한심하게 처다볼때가 많습니다.성격이 치와와급으로 더럽습니다.자기 마음에 안들면 짖습니다. 간식주면 다 따라갑니다.</p>
-                    <a class="btn" href="/">더 자세히 보기</a>
-                </div>
-            </article>
-            <article class="card">
-            <figure class="card__header">
-                <img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
-            </figure>
-                <div class="card__body">
-                    <h3 class="tit">말티즈가 산책할때</h3>
-                    <p class="decs">말티즈는 산책을 아주 좋아합니다. 간식을 들고 가도 산책을 더 좋아해서 간식을 처다도 안봅니다.주인이 멈춰도 알아서 자기가 갈길을 갑니다.</p>
-                    <a class="btn" href="/">더 자세히 보기</a>
-                </div>
-            </article>
-            <article class="card">
-            <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
-            </figure>
-                <div class="card__body">
-                    <h3 class="tit">말티즈가 간식 달라고 할때</h3>
-                    <p class="decs">말티즈는 간식을 원할 때 주인을 뚫어져라 처다보거나 간식이 있는 곳으로 가 짖습니다.한개만 주면 더 달라고 쪼릅니다. 안주면 주인 다리를 발톱으로 박박 긁습니다.</p>
-                    <a class="btn" href="/">더 자세히 보기</a>
-                </div>
-            </article>
-        </div>
-    </section>
-</body>
-</code></pre>
-            </div>
-            <!-- HTML 소스 -->
-            <h3 class="t_tit2">CSS 소스</h3>
+            <h2 class="t_tit">사이트 만들기 : 카드 유형01</h2>
+            <h3 class="t_tit2">HTML 유형</h3>
             <div class="t_code">
-<pre><code>
-    <style>
-        /* fonst */
-        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
-
-        .nexon {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-        }
-
-        /* reset */
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        h1,h2,h3,h4,h5,h6 {
-            font-weight: normal;
-        }
-
-        /* common */
-        .container {
-            width: 1160px;
-            padding: 0 20px;
-            margin: 0 auto;
-        }
-
-        .section {
-            padding: 120px 0;
-        }
-
-        /* '+' 형제, '>' 자식? */
-        .section>h2 {
-            font-size: 50px;
-            line-height: 1;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .section>p {
-            font-size: 22px;
-            font-weight: 300;
-            color: #666;
-            text-align: center;
-            margin-bottom: 70px;
-        }
-
-        /* cartType */
-        .card__inner {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .card {
-            width: 32%;
-            background: #f5f5f5;
-        }
-
-        .card__body {
-            padding: 24px;
-        }
-
-        .card__body .tit {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .card__body .decs {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .card__body .btn {}
-    </style>
-
+                <pre><code>&ltbody>
+    &ltsection id="cardType" class="card__wrap nexon section">
+        &lth2>말티즈 강의</h2>
+        &ltp>우리집 말티즈의 귀여움을 알아보자.</p>
+        &ltdiv class="card__inner container">
+            &ltarticle class="card">
+                <!-- alt 웹 표준성  -->
+                &ltfigure class="card__header">
+                    &ltimg src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
+                &lt/figure>
+                &ltdiv class="card__body">
+                    &lth3 class="tit">말티즈가 한심하게 처다볼때</h3>
+                    &ltp class="decs">말티즈는 가끔 아니 자주 주인을 한심하게 처다볼때가 많습니다.성격이 치와와급으로 더럽습니다.자기 마음에 안들면 짖습니다. 간식주면 다 따라갑니다.</p>
+                    &lta class="btn" href="/">더 자세히 보기</a>
+                &lt/div>
+            &lt/article>
+            &ltarticle class="card">
+                &ltfigure class="card__header">
+                    &ltimg src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
+                &lt/figure>
+                &ltdiv class="card__body">
+                    &lth3 class="tit">말티즈가 산책할때</h3>
+                    &ltp class="decs">말티즈는 산책을 아주 좋아합니다. 간식을 들고 가도 산책을 더 좋아해서 간식을 처다도 안봅니다.주인이 멈춰도 알아서 자기가 갈길을 갑니다.</p>
+                    &lta class="btn" href="/">더 자세히 보기</a>
+                &lt/div>
+            &lt/article>
+            &ltarticle class="card">
+                &ltfigure class="card__header">
+                    &ltimg src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                &lt/figure>
+                &ltdiv class="card__body">
+                    &lth3 class="tit">말티즈가 간식 달라고 할때</h3>
+                    &ltp class="decs">말티즈는 간식을 원할 때 주인을 뚫어져라 처다보거나 간식이 있는 곳으로 가 짖습니다.한개만 주면 더 달라고 쪼릅니다. 안주면 주인 다리를 발톱으로 박박 긁습니다.</p>
+                    &lta class="btn" href="/">더 자세히 보기</a>
+                &lt/div>
+            &lt/article>
+        &lt/div>
 </code></pre>
             </div>
-            <!-- CSS 소스 -->
-            <hr>
+            <div class="document">
+                <h3 class="t_tit2">CSS 유형</h3>
+                <div class="t_code">
+                    <pre><code>&ltstyle>
+    /* fonst */
+    @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+    .nexon {
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
+
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+    }
+
+    /* common */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .section {
+        padding: 120px 0;
+    }
+
+    /* '+' 형제, '>' 자식? */
+    .section>h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section>p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    /* cartType */
+    .card__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 32%;
+        background: #f5f5f5;
+    }
+
+    .card__body {
+        padding: 24px;
+    }
+
+    .card__body .tit {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card__body .decs {
+        font-size: 18px;
+        line-height: 1.4;
+        color: #666;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    .card__body .btn {}
+    &lt/style>
+</code></pre>
+                </div>
+            </div>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D2%253A172"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
 
         </div>
     </main>
