@@ -178,6 +178,7 @@ body {
     width: 100%;
     padding: 13px 20px;
     font-size: 22px;
+    line-height: 1.3;
     box-sizing: border-box;
     text-align: center;
     font-family: "Cafe24Dangdanghae";
@@ -239,6 +240,49 @@ body {
 }
 
 /* 애니메이션 */
+.quiz__selects {
+   margin: 5px 0;
+}
+.quiz__selects label {
+    display: flex;
+}
+.quiz__selects label input {
+    position: absolute;
+    left: -9999px;
+}
+.quiz__selects label span {
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: "Cafe24Dangdanghae";
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+}
+.quiz__selects label span::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 15px;
+    display: flex;
+    flex-shrink: 0;
+    box-shadow: inset 0px 0px 0px 4px #936da1; 
+    transition: all 0.25s;
+    cursor: pointer;
+}
+/* box-shadow 원안 그림자 효과?,
+transition 애니메이션 효과,
+flex-shrink,
+cursor: pointer; 커서를 손가락 모양으로.. */
+.quiz__selects label input:checked + span {
+    background-color: #e9d6ee;
+}
+.quiz__selects label input:checked + span::before {
+    box-shadow: inset 0px 0px 0px 10px #936da1; 
+}
 @keyframes wobble {
     0% {
         transform: translatex(0) rotate(0deg)

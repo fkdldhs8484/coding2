@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">quiz04</h2>
+            <p class="t_box">문제의 답<보기>가 4개가 있는 구조이다.</p>
+            <h3 class="t_tit2">선택자</h3>
+            <p class="t_desc">quiz 문제가 여러개면 <i>querySelector뒤에 All</i>을 붙여야한다.</p>
+            <div class="t_code">
+<pre><code class="language-js">const quizType = document.querySelector(".quiz__type");   //퀴즈종류
+const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈번호
+const quizAsk = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm"); //정답확인버튼
+const quizResult = document.querySelector(".quiz__answer .result"); //정답결과
+const quizview = document.querySelector(".quiz__view"); //강아지
+const quizSelects = document.querySelector(".quiz__selects"); //객관식보기
+const quizChoice = quizSelects.querySelectorAll(".choice"); //객관식보기
+const quizSelect = quizSelects.querySelectorAll(".select"); //객관식보기
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">문제정보</h3>
+            <div class="t_code">
+<pre><code class="language-js"> const quizInfo = [
+{
+answerType: "웹디자인기능사 2022년 01회",
+ansWerNum: "1",
+answerAsk: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는?",
+answerChoice: ["아바타", "쿠키", "포털", "허브"],
+answerResult: "1",
+answerEx: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는 아바타라고 한다."
+}
+];
+</code></pre>
+            </div>
+            <h3 class="t_tit2">문제출력</h3>
+            <p class="t_desc">for이 충돌할수도 있어서... function updateQuiz 를 써서 한덩어리로 묶어준다.</p>
+            <div class="t_code">
+<pre><code class="language-js">function updateQuiz() {
+quizType.textContent = quizInfo[0].answerType;
+quizNumber.textContent = quizInfo[0].ansWerNum + ". ";
+quizAsk.textContent = quizInfo[0].answerAsk;
+quizResult.textContent = quizInfo[0].answerEx;
+//보기출력
+for (let i = 0; i &lt 4; i++) {
+quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+}
+//해설 숨기기
+quizResult.style.display = "none";
+}
+updateQuiz();
+</code></pre>
+            </div>
+            <h3 class="t_tit2">정답 확인 버튼</h3>
+            <p class="t_desc"> quizConfirm(정답 확인 버튼) 여러개가 있다는 걸 알려줘야한다.<br>btn=>quizConfirm </p>
+            <div class="t_code">
+<pre><code class="language-js">function answerQuiz() {
+//사용자 선택한 정답 == 문제정답
+//사용자가 클릭한 iuput --> checked
+for (let i = 0; i < quizSelect.length; i++) {
+if (quizSelect[i].checked == true) { //보기에 체크가 된 상태
+//체크된 번호 == 문제번호가 일치하는지..
+if (quizSelect[i].value == quizInfo[0].answerResult) {
+// alert("정답")
+quizview.classList.add("like");
+} else {
+// alert("오답")
+quizview.classList.add("dislike");
+quizResult.style.display = "block";
+quizConfirm.style.display = "none";
+}
+}
+}
+}
+</code></pre>
+            </div>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/javascript/effect/quizEffect04.html"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
