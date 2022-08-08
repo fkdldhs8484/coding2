@@ -46,9 +46,35 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">quiz04</h2>
-            <p class="t_box">문제의 답<보기>가 4개가 있는 구조이다.</p>
+            <p class="t_box">문제의 답<보기>가 4개가 있는 객관식 구조이다.</p>
+
+            <h3 class="t_tit2"></h3>
+            <p class="t_desc">●답<보기>가 4개 여서 quiz__answer 밑에 quiz__selects 추가한다.</p>
+            <div class="t_code">
+<pre><code class="language-js">&ltdiv class="quiz__selects">&lt/div>
+&ltdiv class="quiz__selects">
+&ltlabel for="select1">
+&ltinput type="radio" id="select1" class="select" name="select" value="1">
+&ltspan class="choice">&lt/span>
+&lt/label>
+&ltlabel>
+&ltinput type="radio" id="select2" class="select" name="select" value="2">
+&ltspan class="choice">&lt/span>
+&lt/label>
+&ltlabel>
+&ltinput type="radio" id="select3" class="select" name="select" value="3">
+&ltspan class="choice">&lt/span>
+&lt/label>
+&ltlabel>
+&ltinput type="radio" id="select4" class="select" name="select" value="4">
+&ltspan class="choice">&lt/span>
+&lt/label>
+&lt/div>
+</code></pre>
+            </div>
+
             <h3 class="t_tit2">선택자</h3>
-            <p class="t_desc">quiz 문제가 여러개면 <i>querySelector뒤에 All</i>을 붙여야한다.</p>
+            <p class="t_desc"></p>
             <div class="t_code">
 <pre><code class="language-js">const quizType = document.querySelector(".quiz__type");   //퀴즈종류
 const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈번호
@@ -76,6 +102,7 @@ answerEx: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트
 ];
 </code></pre>
             </div>
+
             <h3 class="t_tit2">문제출력</h3>
             <p class="t_desc">for이 충돌할수도 있어서... function updateQuiz 를 써서 한덩어리로 묶어준다.</p>
             <div class="t_code">
@@ -95,12 +122,12 @@ updateQuiz();
 </code></pre>
             </div>
             <h3 class="t_tit2">정답 확인 버튼</h3>
-            <p class="t_desc"> quizConfirm(정답 확인 버튼) 여러개가 있다는 걸 알려줘야한다.<br>btn=>quizConfirm </p>
+            <p class="t_desc"> </p>
             <div class="t_code">
 <pre><code class="language-js">function answerQuiz() {
 //사용자 선택한 정답 == 문제정답
 //사용자가 클릭한 iuput --> checked
-for (let i = 0; i < quizSelect.length; i++) {
+for (let i = 0; i &lt quizSelect.length; i++) {
 if (quizSelect[i].checked == true) { //보기에 체크가 된 상태
 //체크된 번호 == 문제번호가 일치하는지..
 if (quizSelect[i].value == quizInfo[0].answerResult) {
@@ -115,6 +142,11 @@ quizConfirm.style.display = "none";
 }
 }
 }
+</code></pre>
+            </div>
+            <h3 class="t_tit2">정답 클릭</h3>
+            <div class="t_code">
+<pre><code class="language-js">quizConfirm.addEventListener("click", answerQuiz);
 </code></pre>
             </div>
             <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
