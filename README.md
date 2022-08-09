@@ -23,5 +23,5 @@ https://fkdldhs8484.github.io/coding2/javascript/effect/quizEffect04.html
 https://fkdldhs8484.github.io/coding2/html/index.html
 https://fkdldhs8484.github.io/coding2/html/alphabet.html
 
-###페이지 만들기
+### 페이지 만들기
 https://fkdldhs8484.github.io/coding2/site/cardType02.html
