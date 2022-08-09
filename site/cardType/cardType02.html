@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형02</title>
+    <style>
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* img {
+            width: 100%;
+        } */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .card__body {
+            padding: 0 0 20px;
+        }
+
+        .card__body .tit {
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .card__body .t_desc {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 사진 오른쪽으로 옮겨줌 */
+        .card {
+            width: 275px;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cardType" class="card__wrap nexon section">
+        <h2>육식동물 구경하기</h2>
+        <p>동물을 다 좋아하지만 개인적으로 더 좋아하는 동물은 육식동물
+            육식동물의 귀여움을 알아보자.</p>
+        <div class="card__inner container">
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/Rectangle 1.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">사자</h3>
+                    <p class="t_desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                </div>
+            </article>
+            <div class="card__inner container">
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/Rectangle 2.jpg" alt="웹표준 사이트 만들기">
+                    </figure>
+                    <div class="card__body ">
+                        <h3 class="tit">독수리</h3>
+                        <p class="t_desc">하늘의 왕이라고 불리는 독수리, 나는 모습이 머싯다. 조류 중에 제일 좋아한다.머싯다</p>
+                    </div>
+                </article>
+                <div class="card__inner container">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="img/Rectangle 3.jpg" alt="웹표준 사이트 만들기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">여우</h3>
+                            <p class="t_desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.
+                            </p>
+                        </div>
+                    </article>
+                    <div class="card__inner container">
+                        <article class="card">
+                            <figure class="card__header">
+                                <img src="img/Rectangle 4.jpg" alt="웹표준 사이트 만들기">
+                            </figure>
+                            <div class="card__body">
+                                <h3 class="tit">백호</h3>
+                                <p class="t_desc">동물의 왕이 아니지만 사자 만큼 싸움을 잘하는 백호 호랑이 중에 백호가 제일 귀엽다. 하얀색 털을 갖고 있어서 그런가보다.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

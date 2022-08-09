@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벡터 방식과 비트맵 방식</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">백터 방식</h2>
+            <p class="t_desc2">
+                백터는 점과 점을 연결해 수학적인 함수관계로 이미지를 표현해 선과 면을 만들어내는 것, 점과 점을 연결해 선을 만들고 선이 3개 이상 모이면
+                면을 만들 수 있다. 이렇게 만들어진 선은 두께, 색상, 곡률 값을 갖게 되고 면은 색상 값을 가질 수가 있다.
+            </p>
+            <h2 class="t_tit">비트맵 방식</h2>
+            <p class="t_desc2">
+                각 픽셀에 저장된 일련의 비트 정보 집합을 말한다. 디스플레이는 픽셀의 배열로 구설되어 있다.
+                가로와 세로를 곱하면 디스플레이가 가진 픽셀의 총개수를 알 수 있다. 비트맵은 이미지 크기를 줄이거나 늘리면 원본 이미지가 깨진다.
+            </p>
+
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="ce">벡터</th>
+                        <th class="ce">비트맵</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce" >장점</td>
+                        <td >확대하거나 축소해도 해상도에 영향을 끼치지 않고, 용량이 많이 늘어나지 않는다.</td>
+                        <td >많은 픽셀로 정교하고 다양한 색상을 가진 이미지를 만들 수 있다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">단점</td>
+                        <td>사진과 이미지 같은 정교한 그래픽 표현에 한계가 있다.</td>
+                        <td>이미지 축소와 확대가 가능하지만 이미지가 깨진다./td>
+                    </tr>
+                    <tr>
+                        <td class="ce">형식</td>
+                        <td>Al, PDF, SVG</td>
+                        <td>JPG, JPEG, PNG, GIF</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
