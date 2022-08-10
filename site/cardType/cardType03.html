@@ -8,13 +8,11 @@
     <title>카드 유형 03</title>
     <style>
         /* fonst */
-        @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
-
+        @import url('https://webfontworld.github.io/GothicA1/GothicA1.css');
         .gmarket {
-            font-family: SCoreDream;
+            font-family: 'GothicA1';
             font-weight: 500;
         }
-
         /* reset */
         * {
             margin: 0;
@@ -24,6 +22,10 @@
         a {
             text-decoration: none;
             color: #000;
+        }
+
+        body {
+            background-color: #f9dcc2;
         }
 
         img {
@@ -41,107 +43,173 @@
 
         /* common */
         .container {
-            width: 3000px;
-            height: 1447px;
+            width: 1160px;
+            background-color: #fff;
             margin: 0 auto;
-            background: #f9dcc2;
-            
+            min-width: 1160px;
         }
 
-        .container .title {
-            font-family: SCoreDream;
-            width: 818px;
-            height: 112px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            font-size: 55px;
-            line-height: 1.4;
+        .mint {
+            width: 100%;
+            height: 25px;
+            background-color: #FCAA5B;
         }
 
-        .container .dose {
-            width: 818px;
-            height: 262px;
-            font-size: 39px;
-            text-align: left;
-            color: #666;
-        }
-
-        .container .card {
-            width: 800px;
-            height: 642px;
-            float: left;
-            padding: 50px 100px 50px 100px;
-            
-        }
-        .container .card .dose2 {
-            font-family: SCoreDream;
-            width: 220px;
-            font-size: 35px;
-            margin: 35px 0 0 450px;
-            line-height: 1.4;
-            color: #fcaa5b;
-        }
-
-        .container .card .dose3 {
-            font-family: SCoreDream;
-            width: 220px;
-            font-size: 35px;
-            margin: 10px 0 0 450px;
-            line-height: 1.4;
-            color: #666;
+        .boBter {
+            border-style: none !important;
         }
 
         .section {
             padding: 120px 0;
-            column-rule: 1px solid red;
         }
 
-        /* '+' 형제, '>' 자식? */
-        .section>h2 {
-            font-size: 50px;
-            line-height: 1;
-            text-align: center;
-            margin-bottom: 20px;
+        .card_wrap {
+            width: 1160px;
+            height: 628px;
+            margin: 120px auto;
         }
 
-        .section>p {
-            font-size: 22px;
+        .card__inner {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card__inner .card {
+            width: 385px;
+            padding: 30px 26px;
+            border-right: 1px solid #d9d9d9;
+        }
+
+        .card__inner .card .seaimg img {
+            width: 335px;
+            height: 250px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
+            position: relative;
+            position: relative;
+        }
+
+        .container .card .profile .name {
+            font-size: 16px;
             font-weight: 300;
-            color: #666;
+            line-height: 1.4;
+            text-align: right;
+            margin-right: 16px;
+            color: rgb(56, 56, 56);
+        }
+
+        .card__inner .card img {
+            width: 335px;
+            height: 250px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
+            position: relative;
+            position: relative;
+        }
+
+        .card__inner .card .seaimg .btn {
+            width: 85px;
+            height: 18px;
+            border-radius: 30px;
+            background-color: #fff;
             text-align: center;
-            margin-bottom: 70px;
+            position: absolute;
+            transform: translate(229px, -266px);
+            font-size: 11px;
+            line-height: 18px;
+            font-weight: 700;
+        }
+
+        .card__inner .card .seaimg .btn a {
+            color: #FCAA5B;
+        }
+
+        .card__inner .card .title {
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .card__inner .card .desc {
+            margin: 15px 0 0;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.4;
+            text-align: left;
+            overflow: hidden;
+            /* 2줄 이상 효과 */
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            color: #666;
+        }
+
+        .card__inner .card .profile {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .card__inner .card .profile .name {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.4;
+            text-align: right;
+            margin-right: 16px;
+            color: rgb(56, 56, 56);
+        }
+
+        .card__inner .card .profile img {
+            width: 45px;
+            height: 45px;
         }
     </style>
 </head>
 
 <body>
-    <section id="cardType03" SCoreDream>
-        <div class="container">
+    <section id="cardType03" class="card_wrap GothicA1 ">
+        <div class="mint"></div>
+        <div class="card__inner container">
             <article class="card">
-                <img src="img/card_bg03_01.jpg" alt="#">
+                <div class="seaimg">
+                    <img src="img/card_bg03_01.jpg" alt="#">
+                    <div class="btn"> <a href="#"> orange </a> </div>
+                </div>
                 <h3 class="title">오렌지(orange) 의 대하여 알아보자.</h3>
-                <p class="dose">오렌지는 비타민 c가 매우 풍부한 과일의 하나로, 일반적 으로 당귤 나무의 열매인 당귤을 부르는 말이다. 대표적인 귤 열매로 기름기를 함유한 가죽질 껍질과
-                    즙이
-                    많은 과육으로 이루어져 있다.</p>
-                <p class="dose2">오렌지 박사</p>
-                <p class="dose3">9 Resources</p>
+                <p class="desc">오렌지는 비타민 c가 매우 풍부한 과일의 하나로, 일반적 으로 당귤 나무의 열매인 당귤을 부르는 말이다. 대표적인 귤 열매로 기름기를 함유한 가죽질 껍질과
+                    즙이 많은 과육으로 이루어져 있다.</p>
+                <div class="profile">
+                    <p class="name"><span>오렌지 박사</span> <br> 9 Resources</p>
+                    <img src="img/card_bg03_04.jpg" alt="프로필">
+                </div>
             </article>
             <article class="card">
-                <img src="img/card_bg03_02.jpg" alt="#">
+                <div class="seaimg">
+                    <img src="img/card_bg03_02.jpg" alt="#">
+                    <div class="btn"> <a href="#"> Hallabong </a> </div>
+                </div>
                 <h3 class="title">한라봉(Hallabong) 의 대하여 알아보자.</h3>
-                <p class="dose">귤 종류 중에서 제일 좋아하는 한라봉 나같이 신맛을 싫어하는 사람들에게는 아주 달달한 과일이다. 과육의 질감은 오렌지처럼 약간 단단한 편이고 물기가 많아
-                    차게
-                    먹으면 아주 시원하다.</p>
-                <p class="dose2">오렌지 박사</p>
-                <p class="dose3">9 Resources</p>
+                <p class="desc">귤 종류 중에서 제일 좋아하는 한라봉 나같이 신맛을 싫어하는 사람들에게는 아주 달달한 과일이다. 과육의 질감은 오렌지처럼 약간 단단한 편이고 물기가 많아
+                    차게 먹으면 아주 시원하다.</p>
+                <div class="profile">
+                    <p class="name">한라봉 박사 <br> 9 Resources</p>
+                    <img src="img/card_bg03_05.jpg" alt="프로필">
+                </div>
             </article>
             <article class="card">
-                <img src="img/card_bg03_03.jpg" alt="#">
+                <div class="seaimg">
+                    <img src="img/card_bg03_03.jpg" alt="#">
+                    <div class="btn"> <a href="#"> mandarin </a> </div>
+                </div>
                 <h3 class="title">귤(mandarin) 의 대하여 알아보자.</h3>
-                <p class="dose">감귤나무 열매로 모양은 둥글납작하고 빛깔은 주황 혹은 붉은색이다. 수분이 풍부하고 매우 맛있다. 겨울 제철 과일이다. 쪼물딱 거리고 먹으면 더욱 맛있다.
+                <p class="desc">감귤나무 열매로 모양은 둥글납작하고 빛깔은 주황 혹은 붉은색이다. 수분이 풍부하고 매우 맛있다. 겨울 제철 과일이다. 쪼물딱 거리고 먹으면 더욱 맛있다.
                 </p>
-                <p class="dose2">오렌지 박사</p>
-                <p class="dose3">9 Resources</p>
+                <div class="profile">
+                    <p class="name">귤 박사 <br> 9 Resources</p>
+                    <img src="img/card_bg03_06.jpg" alt="프로필">
+                </div>
             </article>
         </div>
     </section>
