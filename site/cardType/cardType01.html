@@ -85,6 +85,9 @@
         .card__body .tit {
             font-size: 24px;
             margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .card__body .decs {
@@ -93,6 +96,11 @@
             color: #666;
             margin-bottom: 20px;
             font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
         }
 
         .card__body .btn {}
@@ -100,7 +108,7 @@
 </head>
 
 <body>
-    <section id="cardType" class="card__wrap nexon section">
+    <section id="cardType01" class="card__wrap nexon section">
         <h2>말티즈 강의</h2>
         <p>우리집 말티즈의 귀여움을 알아보자.</p>
         <div class="card__inner container">
@@ -110,7 +118,7 @@
                 이미지 표현 3가지 img->의미,로고->의미x backgvad, 이미지
                 -->
                 <figure class="card__header">
-                    <img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
+                    <img src="img/card_bg01_01.jpg" alt="웹표준 사이트 만들기">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">말티즈가 한심하게 처다볼때</h3>
@@ -129,7 +137,7 @@
             </article>
             <article class="card ">
                 <figure class="card__header">
-                    <img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
+                    <img src="img/card_bg01_02.jpg" alt="웹표준 사이트 만들기">
                 </figure>
                 <div class="card__body ">
                     <h3 class="tit">말티즈가 산책할때</h3>
@@ -147,7 +155,7 @@
             </article>
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                    <img src="img/card_bg01_03.jpg" alt="웹표준 사이트 만들기">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">말티즈가 간식 달라고 할때</h3>

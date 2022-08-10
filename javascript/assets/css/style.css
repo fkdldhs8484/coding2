@@ -100,6 +100,31 @@ body {
 .main_sample .result {
     margin-bottom: 80px;
 }
+/* sample */
+.sample {
+    margin-bottom: 80px;
+}
+.sample .table {
+    margin-bottom: 10px;
+}
+.sample .table table {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    
+}
+.sample .table table tr th{
+    font-weight: normal;
+    border-color: #f5f5f5;
+    padding: 3px;
+}
+.sample .table table tr td{
+    border: 1px solid #e6e6e6;
+    padding: 3px;
+}
+.sample .table table tr td [class*="_P"] {
+    background: #000;
+}
 
 /* 티스토리용 문서 */
 .document i {

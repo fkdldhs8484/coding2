@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드 유형02</title>
+    <title>카드 유형 02</title>
     <style>
-        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+        /* fonst */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
-        .nexon {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
+        .gmarket {
+            font-family: GmarketSans;
+            font-weight: 500;
         }
-
+        /* reset */
         * {
             margin: 0;
             padding: 0;
@@ -24,6 +24,9 @@
             color: #000;
         }
 
+        img {
+            width: 100%;
+        }
         h1,
         h2,
         h3,
@@ -32,72 +35,94 @@
         h6 {
             font-weight: normal;
         }
-
-        /* img {
-            width: 100%;
-        } */
+        /* common */
         .container {
             width: 1160px;
             padding: 0 20px;
             margin: 0 auto;
             min-width: 1160px;
         }
-
         .section {
             padding: 120px 0;
         }
-
+        /* '+' 형제, '>' 자식? */
         .section>h2 {
             font-size: 50px;
             line-height: 1;
             text-align: center;
             margin-bottom: 20px;
         }
-
         .section>p {
             font-size: 22px;
             font-weight: 300;
             color: #666;
             text-align: center;
             margin-bottom: 70px;
-            line-height: 1.4;
         }
-
-        .card__body {}
-
-        .card__body .tit {
-            margin-bottom: 10px;
-            font-size: 28px;
-            font-weight: 500;
+        .gray {
+            border-color: #f5f5f5;
         }
-
-        .card__body .t_desc {
-            font-size: 18px;
-            font-weight: 300;
-            line-height: 1.4;
-            color: #666;
-            margin-bottom: 15px;
+        /* ir효과(이미지 대체 효과 == alt) 중요 */
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
         }
-
+        /* cardType02 */
         .card__inner {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+        }
+        .card__inner .card {
+            width: 24%;
+            position: relative;
+        }
+        /* position: relative; 기준점 */
+        .card__inner .card:nth-child(1){
             margin-bottom: 50px;
         }
-
-        /* 사진 오른쪽으로 옮겨줌 */
-        .card {
-            width: 275px;
-            background: #f5f5f5;
+        .card__inner .card img {
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
-        .card__body .btn {
-            float: right;
+        /* overflow ~ text-overflow 제목 길어짐 방짐 */
+        .card__inner .card .tit {
+            font-size: 28px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
+        }
+        /* overflow ~ -webkit-box-orient 세줄효과 */
+        .card__inner .card .desc {
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+        .card__inner .card .more{
+            width: 24px;
+            height: 24px;
+            background-image: url(img/arrow\ 1_1.svg);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 210px;
+            border-radius: 5px;
         }
     </style>
 </head>
-
 <body>
-    <section id="cardType" class="card__wrap nexon section">
+    <section id="cardType02" class="card_wrap gmarket section gray">
         <h2>육식동물 구경하기</h2>
         <p>
             동물을 다 좋아하지만 개인적으로 더 좋아하는 동물은 육식동물!<br>
@@ -105,166 +130,55 @@
         </p>
         <div class="card__inner container">
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 1.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">사자
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
-                </div>
+                <img src="img/card_bg02_01.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <!--  이미지가 안보이면 숨겨놓은 ir 을 통해 더보기를 보이게 한다?-->
+            <article class="card">
+                <img src="img/card_bg02_02.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 2.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body ">
-                    <h3 class="tit">흰머리수리
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">절벽 위에 고고하게 앉아 있다가 날개를 촥 펼치며 고공 다이빙을 하는 모습으로 사람들이 독수리중에 먼저 생각나는 인지도가 높은 동물이다.</p>
-                </div>
+                <img src="img/card_bg02_03.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 3.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">여우
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">여우는 개과에 속하는 여러 동물의 총칭이다. 개과의 동물 중 작은 편에 속하는 동물로, 개보다 작으며, 좁은 주둥이와 털이 많은 귀가 특징이다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_04.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 4.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">백호
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">흰털을 가진 호랑이로 한국과 중국 등지의 민화에서는 영험한 상상의 동물로 등장하기도 한다.화나 민화에 등장하여 신비로운 동물로 여겨졌다.
-                    </p>
-                </div>
-            </article>
-        </div>
-        <div class="card__inner container">
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 5.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">호랑이
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">고양이과에 속하는 포유동물.우리나라의 건국신화에도 등장하고 올림픽대회의 마스코트로 선정될 정도로 우리에게 친숙한 동물이다.</p>
-                </div>
+                <img src="img/card_bg02_05.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 6.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body ">
-                    <h3 class="tit">사자
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
-                </div>
+                <img src="img/card_bg02_06.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 7.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">표범
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">식육목 고양이과의 포유류. 돈점박이라고도 하며, 강변의 숲, 숲이 무성한 바위 지대, 덤불, 사바나, 인가 가까운 곳 등 서식범위가 넓다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_07.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Rectangle 8.jpg" alt="웹표준 사이트 만들기">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">곰
-                    <a class="btn" href="/">
-                        <span aria-hidden="true">
-                            <svg width="33" height="26" viewBox="0 0 33 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="33" height="25.8351" rx="5" fill="#111111" />
-                                <path d="M24.7071 13.7071C25.0976 13.3166 25.0976 12.6834 24.7071 12.2929L18.3431 5.92893C17.9526 5.53841 17.3195 5.53841 16.9289 5.92893C16.5384 6.31946 16.5384 6.95262 16.9289 7.34315L22.5858 13L16.9289 18.6569C16.5384 19.0474 16.5384 19.6805 16.9289 20.0711C17.3195 20.4616 17.9526 20.4616 18.3431 20.0711L24.7071 13.7071ZM9 14H24V12H9V14Z"  fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </h3>
-                    <p class="t_desc">강가의 연어 사냥꾼 불곰, 곰 종류 가운데 가장 무겁고 거대한 종 어깨는 등면보다 높으며 혹 모양의 융기가 있다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_08.jpg" alt="포트폴리오">
+                <h3 class="tit">사자 </h3>
+                <p class="desc">동물의 왕이라고 불리는 사자, 사냥하는 모습이 너무 멋지다. 배고파 할땐 무섭지만 드러눕는걸 보면 우리집 강아지가 생각 나서 귀엽다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
         </div>
     </section>
-
 </body>
-
 </html>
