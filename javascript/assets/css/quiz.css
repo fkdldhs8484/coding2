@@ -264,6 +264,7 @@ body {
     align-items: center;
     width: 100%;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .quiz__selects label span::before {
@@ -271,15 +272,13 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #fff;
+    background-color: #fff;
     margin-right: 15px;
     display: flex;
     flex-shrink: 0;
     box-shadow: inset 0px 0px 0px 4px #936da1;
     transition: all 0.25s;
-    cursor: pointer;
 }
-
 /* box-shadow 원안 그림자 효과?,
 transition 애니메이션 효과,
 flex-shrink,
@@ -291,7 +290,25 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 .quiz__selects label input:checked+span::before {
     box-shadow: inset 0px 0px 0px 10px #936da1;
 }
-
+.quiz__confirm {
+    width: 100%;
+    text-align: center;
+}
+.quiz__confirm .check {
+    font-size: 22px;
+    line-height: 1.3;
+    padding: 13px 60px;
+    border: 6px ridge #cacaca;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Cafe24Dangdanghae";
+    cursor: pointer;
+    margin: 40px 0;
+    transition: background 0.3s;
+}
+.quiz_confirm .check:hover {
+    background: #f5524f58;
+}
 @keyframes wobble {
     0% {
         transform: translatex(0) rotate(0deg)

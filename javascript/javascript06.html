@@ -25,7 +25,7 @@
                 <li><a href="javascript07.html">수학 객체</a></li>
                 <li><a href="javascript08.html">숫자 객체</a></li>
                 <li><a href="javascript09.html">브라우저 객체</a></li>
-                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript10.html">요서 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul class="effect">
@@ -45,7 +45,7 @@
                 <li><a href="study/type.html">데이터 타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
                 <li><a href="study/var.html">지역변수/전역변수</a></li>
-                <li><a href="study/element.html">요소 선택</a></li>
+                <li><a href="study/element.html">요서 선택</a></li>
             </ul>
         </nav>
     </header>
@@ -54,30 +54,212 @@
     <main id="main">
         <div class="main_menu">
             <ul>
-                <li><a href="#sample01">01. if문</a></li>
+                <li><a href="#sample01">01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
+                <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요서 문자열을 결합 : 반환(문자열) : ★★★</a></li>
+                <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요서에 추가 : 반환(숫자) : ★★</a></li>
+                <li><a href="#sample03">04. 배열 메서드 : pop() : 배열 마지막 요서를 삭제 : 반환(삭제된 요서)</a></li>
+                <li><a href="#sample01">05. 배열 : </a></li>
+                <li><a href="#sample01">06. 배열 : </a></li>
+                <li><a href="#sample01">07. 배열 : </a></li>
+                <li><a href="#sample01">08. 배열 : </a></li>
+                <li><a href="#sample01">09. 배열 : </a></li>
+                <li><a href="#sample01">10. 배열 : </a></li>
             </ul>
         </div>
+        <!-- ==main_menu -->
         <div class="main_sample">
             <div id="sample01" class="sample">
-                <h3>01. 변수 : 데이터 저장</h3>
-                <p></p>
+                <h3>01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)s</h3>
+                <p>length 속성은 배열의 길이를 구할 수 있다.</p>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%;">
+                            <col style="width: 32%;">
+                            <col style="width: 22%;">
+                            <col style="width: 42%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="sample01_M1"></td>
+                                <td class="sample01_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="sample01_M2"></td>
+                                <td class="sample01_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="sample01_M3"></td>
+                                <td class="sample01_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N4"></td>
+                                <td class="sample01_Q4"></td>
+                                <td class="sample01_M4"></td>
+                                <td class="sample01_P4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+//01
+document.querySelector(".sample01_N1").innerHTML = "1";
+document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample01_M1").innerHTML = "length";
+document.querySelector(".sample01_P1").innerHTML = arrNum.length;
+const arrTxt = [a, b, c, d, e];
+//02
+document.querySelector(".sample01_N2").innerHTML = "2";
+document.querySelector(".sample01_Q2").innerHTML = "[a, b, c, d, e]";
+document.querySelector(".sample01_M2").innerHTML = "length";
+document.querySelector(".sample01_P2").innerHTML = arrTxt.length;
+const arr = [1, 2, ['a', 'b']];
+//03
+document.querySelector(".sample01_N2").innerHTML = "3";
+document.querySelector(".sample01_Q2").innerHTML = "[1, 2, ['a', 'b']]";
+document.querySelector(".sample01_M2").innerHTML = "length";
+document.querySelector(".sample01_P2").innerHTML = arr.length;
 </code></pre>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과보기</summary>
-                        <div class="sample01_result">
-                            
-                        </div>
-                    </details>
+            </div>
+        <!-- sample01 -->
+            <div id="sample02" class="sample">
+                <h3>02. 배열 메서드 : join() : 배열 요서 문자열을 결합 : 반환(문자열)</h3>
+                <p>join 은 배열의 요서들을 연결하여 하나의 문자열로 만드는 함수이다. 배열의 길이가 0이면 빈 문자열을 반환하게 된다. 구분값이 존재하지 않으면 쉼표로 표기되어 연결되고 빈 문자열일 경우 구분없이 연결된다.</p>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%;">
+                            <col style="width: 32%;">
+                            <col style="width: 22%;">
+                            <col style="width: 42%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample02_N1"></td>
+                                <td class="sample02_Q1"></td>
+                                <td class="sample02_M1"></td>
+                                <td class="sample02_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N2"></td>
+                                <td class="sample02_Q2"></td>
+                                <td class="sample02_M2"></td>
+                                <td class="sample02_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N3"></td>
+                                <td class="sample02_Q3"></td>
+                                <td class="sample02_M3"></td>
+                                <td class="sample02_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N4"></td>
+                                <td class="sample02_Q4"></td>
+                                <td class="sample02_M4"></td>
+                                <td class="sample02_P4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="script">
+<pre><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+const text1 = arrNum.join('');
+const text2 = arrNum.join('');
+const text3 = arrNum.join('★');
+const text4 = arrNum.join('-');
+</code></pre>
                 </div>
             </div>
-            <!-- //sample01 -->
+        <!-- sample02 -->
+            <div id="sample03" class="sample">
+                <h3>03. 배열 메서드 : push(), pop()</h3>
+                <p>push() 메서드 는 Array(배열)의 마지막에 새로운 요서를 추가하고 난후 변경된 배열의 길이를 반환하는 함수이다.
+                    pop() 메서드 는 배열의 마지막 요소를 제거한 후, 제거한 요소를 반환 한다.
+                </p>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%;">
+                            <col style="width: 32%;">
+                            <col style="width: 13%;">
+                            <col style="width: 13%;">
+                            <col style="width: 37%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>결과값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample03_N1"></td>
+                                <td class="sample03_Q1"></td>
+                                <td class="sample03_M1"></td>
+                                <td class="sample03_P1"></td>
+                                <td class="sample03_A1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample03_N2"></td>
+                                <td class="sample03_Q2"></td>
+                                <td class="sample03_M2"></td>
+                                <td class="sample03_P2"></td>
+                                <td class="sample03_A2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="script">
+<pre><code class="language-js">//01
+const arrNum = [100, 200, 300, 400, 500];
+const arrPush = arrNum.push(600);
+document.querySelector(".sample03_N1").innerHTML = "1";
+document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample03_M1").innerHTML = "push(600)";
+document.querySelector(".sample03_P1").innerHTML = arrPush; //6
+document.querySelector(".sample03_A1").innerHTML = arrNum; //100,200,300,400,500,600
+//02
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrPush2 = arrNum2.pop();
+document.querySelector(".sample03_N2").innerHTML = "2";
+document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample03_M2").innerHTML = "pop(600)";
+document.querySelector(".sample03_P2").innerHTML = arrPush2; // 리턴값 500
+document.querySelector(".sample03_A2").innerHTML = arrNum2; //100,200,300,400
+</code></pre>
+                </div>
+            </div>
+        <!-- sample03 -->
         </div>
     </main>
-    <!-- //main -->
+<!-- //main -->
 
     <footer id="footer">
         <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
@@ -89,7 +271,76 @@
         hljs.highlightAll();
     </script>
     <script>
-        
+        {
+        const arrNum = [100, 200, 300, 400, 500];
+
+        document.querySelector(".sample01_N1").innerHTML = "1";
+        document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+        document.querySelector(".sample01_M1").innerHTML = "length";
+        document.querySelector(".sample01_P1").innerHTML = arrNum.length;
+
+        const arrTxt = ['a', 'b', 'c', 'd', 'e'];
+
+        document.querySelector(".sample01_N2").innerHTML = "2";
+        document.querySelector(".sample01_Q2").innerHTML = "[a, b, c, d, e]";
+        document.querySelector(".sample01_M2").innerHTML = "length";
+        document.querySelector(".sample01_P2").innerHTML = arrTxt.length;
+
+        const arr = [1, 2, ['a', 'b']];
+
+        document.querySelector(".sample01_N3").innerHTML = "3";
+        document.querySelector(".sample01_Q3").innerHTML = "[1, 2, ['a', 'b']]";
+        document.querySelector(".sample01_M3").innerHTML = "length";
+        document.querySelector(".sample01_P3").innerHTML = arr.length;
+        }
+        // 02
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const text1 = arrNum.join('');
+            const text2 = arrNum.join('');
+            const text3 = arrNum.join('★');
+            const text4 = arrNum.join('-');
+
+            document.querySelector(".sample02_N1").innerHTML = "1";
+            document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M1").innerHTML = "join()";
+            document.querySelector(".sample02_P1").innerHTML = text1;
+
+            document.querySelector(".sample02_N2").innerHTML = "2";
+            document.querySelector(".sample02_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M2").innerHTML = "join('')";
+            document.querySelector(".sample02_P2").innerHTML = text2;
+
+            document.querySelector(".sample02_N3").innerHTML = "3";
+            document.querySelector(".sample02_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M3").innerHTML = "join(' ')";
+            document.querySelector(".sample02_P3").innerHTML = text3;
+
+            document.querySelector(".sample02_N4").innerHTML = "4";
+            document.querySelector(".sample02_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M4").innerHTML = "join('-')";
+            document.querySelector(".sample02_P4").innerHTML = text4;
+        }
+        // 03
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const arrPush = arrNum.push(600);
+
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample03_M1").innerHTML = "push(600)";
+            document.querySelector(".sample03_P1").innerHTML = arrPush; //6
+            document.querySelector(".sample03_A1").innerHTML = arrNum; //100,200,300,400,500,600
+
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrPush2 = arrNum2.pop();
+
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample03_M2").innerHTML = "pop(600)";
+            document.querySelector(".sample03_P2").innerHTML = arrPush2; // 리턴값 500
+            document.querySelector(".sample03_A2").innerHTML = arrNum2; //100,200,300,400
+        }
     </script>
 </body>
 </html>

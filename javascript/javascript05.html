@@ -72,7 +72,7 @@
         <div class="main_sample">
             <div id="sample01" class="sample">
                 <h3>01. 문자열 : 문자열 결합 / 템플릿 문자열</h3>
-                <p>문자열...</p>
+                <p>템플릿 문자열이란? 간단하게 말해서 내장된 표현식을 허용하는 문자열 리터럴이다.</p>
                 <div class="table">
                     <table>
                         <colgroup>
@@ -118,8 +118,37 @@
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">
-a
+<pre><code class="language-js">{
+// 01
+const str1 = "자바스크립트";
+const str2 = "제이쿼리";
+document.querySelector(".sample01_N1").innerHTML = "1";
+document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
+document.querySelector(".sample01_M1").innerHTML = "문자열(string) 결합";
+document.querySelector(".sample01_P1").innerHTML = str1 + str2;
+// 02
+const num1 = 100;
+const num2 = 200;
+document.querySelector(".sample01_N2").innerHTML = "2";
+document.querySelector(".sample01_Q2").innerHTML = "100, 200";
+document.querySelector(".sample01_M2").innerHTML = "숫자(string) 결합";
+document.querySelector(".sample01_P2").innerHTML = num1 + num2;
+//자바스크립트제이쿼리
+// 03
+const tect1 = "모던";
+const tect2 = "자바스크립트";
+const tect3 = "핵심";
+document.querySelector(".sample01_N3").innerHTML = "3";
+document.querySelector(".sample01_Q3").innerHTML = "모던,자바스크립트,핵심";
+document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
+document.querySelector(".sample01_P3").innerHTML = "나는 " + tect1 +"(modern) "+ tect2 +"(javascript) " + tect3 + "을 배우고 싶다.";
+document.querySelector(".sample01_N4").innerHTML = "3";
+document.querySelector(".sample01_Q4").innerHTML = "모던,자바스크립트,핵심";
+document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+document.querySelector(".sample01_P4").innerHTML = `나는 ${tect1} (modern) ${tect2}(javascript) ${tect3}을 배우고 싶다.`;
+// ${}새로나옴
+// 나는 모던(modern) 자바스크립트(javascript) 핵심을 배우고 싶다.
+}
 </code></pre>
                 </div>
             </div>
@@ -209,6 +238,23 @@ a
             document.querySelector(".sample01_M2").innerHTML = "숫자(string) 결합";
             document.querySelector(".sample01_P2").innerHTML = num1 + num2;
             //자바스크립트제이쿼리
+
+            const tect1 = "모던";
+            const tect2 = "자바스크립트";
+            const tect3 = "핵심";
+
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "모던,자바스크립트,핵심";
+            document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
+            document.querySelector(".sample01_P3").innerHTML = "나는 " + tect1 +"(modern) "+ tect2 +"(javascript) " + tect3 + "을 배우고 싶다.";
+
+            document.querySelector(".sample01_N4").innerHTML = "3";
+            document.querySelector(".sample01_Q4").innerHTML = "모던,자바스크립트,핵심";
+            document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+            document.querySelector(".sample01_P4").innerHTML = `나는 ${tect1} (modern) ${tect2}(javascript) ${tect3}을 배우고 싶다.`;
+            // ${}새로나옴
+            // 나는 모던(modern) 자바스크립트(javascript) 핵심을 배우고 싶다.
+
         }
     </script>
 </body>
