@@ -47,53 +47,58 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">사이트 만들기 : 카드 유형03</h2>
-            <p class="t_desc2">이번 카드 유형은 이미지가 3개이며, 전체 배경색이 들어 갔다. 이미지 안에 도형?과 정렬하는 선이 있는 구조이다.
-                container,mint을 주어 보조배경?을 한번 더 추가한다. 하단에는 name 을 써서 글의 위치 크기를 설정한다.
+            <p class="t_desc2">이번 카드 유형은 큰 이미지가 3개이다. 먼저 생각해야할건 상자?를 3개로 잡아야한다.
+                전체 배경이 들어갔다.
             </p>
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D128%253A1136" allowfullscreen></iframe>
             <hr>
             <h3 class="t_tit2">HTML 유형</h3>
             <div class="t_code">
-<pre><code>&ltsection id="cardType03" class="card_wrap GothicA1 ">
-    &ltdiv class="mint">&lt/div>
+<pre><code>&ltsection id="cardType03" class="card__wrap score section">
+    &lth2 class="blind">주황색 과일&lt/h2>
     &ltdiv class="card__inner container">
         &ltarticle class="card">
-            &ltdiv class="seaimg">
-                &ltimg src="img/card_bg03_01.jpg" alt="#">
-                &ltdiv class="btn"> &lta href="#"> orange </a> &lt/div>
-            &lt/div>
-            &lth3 class="title">오렌지(orange) 의 대하여 알아보자.</h3>
-            &ltp class="desc">오렌지는 비타민 c가 매우 풍부한 과일의 하나로, 일반적 으로 당귤 나무의 열매인 당귤을 부르는 말이다. 대표적인 귤 열매로 기름기를 함유한 가죽질 껍질과
+            &ltfigure class="card__header">
+                &ltimg src="img/card_bg03_1.jpg" alt="Architects">
+                &ltfigcaption>orange&lt/figcaption>
+            &lt/figure>
+            &ltdiv class="card__contents">
+                &lth3>오렌지(orange) 의 대하여 알아보자.&lt/h3>
+                &ltp>오렌지는 비타민 c가 매우 풍부한 과일의 하나로, 일반적 으로 당귤 나무의 열매인 당귤을 부르는 말이다. 대표적인 귤 열매로 기름기를 함유한 가죽질 껍질과
                 즙이 많은 과육으로 이루어져 있다.&lt/p>
-            &ltdiv class="profile">
-                &ltp class="name">&ltspan>오렌지 박사&lt/span> <br> 9 Resources</p>
-                &ltimg src="img/card_bg03_04.jpg" alt="프로필">
+            &lt/div>
+            &ltdiv class="card__footer">
+                &lth4>오렌지 박사&ltem>9 Resources&lt/em>&lt/h4>
+                &ltspan>&ltimg src="img/card_bg03_1.png" alt="프로필">&lt/span>
             &lt/div>
         &lt/article>
         &ltarticle class="card">
-            &ltdiv class="seaimg">
-                &ltimg src="img/card_bg03_02.jpg" alt="#">
-                &ltdiv class="btn"> &lta href="#"> Hallabong </a> &lt/div>
+            &ltfigure class="card__header">
+                &ltimg src="img/card_bg03_2.jpg" alt="Architects">
+                &ltfigcaption> Hallabong&lt/figcaption>
+            &lt/figure>
+            &ltdiv class="card__contents">
+                &lth3>한라봉(Hallabong) 을 알아보자.&lt/h3>
+                &ltp>귤 종류 중에서 제일 좋아하는 한라봉 나같이 신맛을 싫어하는 사람들에게는 아주 달달한 과일이다. 과육의 질감은 오렌지처럼 약간 단단한 편이고 물기가 많아
+                차게 먹으면 아주 시원하다.&lt/p>
             &lt/div>
-            &lth3 class="title">한라봉(Hallabong) 의 대하여 알아보자.</h3>
-            &ltp class="desc">귤 종류 중에서 제일 좋아하는 한라봉 나같이 신맛을 싫어하는 사람들에게는 아주 달달한 과일이다. 과육의 질감은 오렌지처럼 약간 단단한 편이고 물기가 많아
-                차게 먹으면 아주 시원하다.</p>
-            &ltdiv class="profile">
-                &ltp class="name">한라봉 박사 <br> 9 Resources</p>
-                &ltimg src="img/card_bg03_05.jpg" alt="프로필">
+            &ltdiv class="card__footer">
+                &lth4>한라봉 박사 &ltem> Resources &lt/em>&lt/h4>
+                &ltspan>&ltimg src="img/card_bg03_05.jpg" alt="프로필">&lt/span>
             &lt/div>
         &lt/article>
         &ltarticle class="card">
-            &ltdiv class="seaimg">
-                &ltimg src="img/card_bg03_03.jpg" alt="#">
-                &ltdiv class="btn"> &lta href="#"> mandarin </a> &lt/div>
+            &ltfigure class="card__header">
+                &ltimg src="img/card_bg03_3.jpg" alt="#">
+                &ltfigcaption>mandarin &lt/figcaption>
+            &lt/figure>
+            &ltdiv class="card__contents">
+                &lth3>귤(mandarin) 의 대하여 알아보자.&lt/h3>
+                &ltp>감귤나무 열매로 모양은 둥글납작하고 빛깔은 주황 혹은 붉은색이다. 수분이 풍부하고 매우 맛있다. 겨울 제철 과일이다. 쪼물딱 거리고 먹으면 더욱 맛있다.</p>
             &lt/div>
-            &lth3 class="title">귤(mandarin) 의 대하여 알아보자.</h3>
-            &ltp class="desc">감귤나무 열매로 모양은 둥글납작하고 빛깔은 주황 혹은 붉은색이다. 수분이 풍부하고 매우 맛있다. 겨울 제철 과일이다. 쪼물딱 거리고 먹으면 더욱 맛있다.
-            &lt/p>
-            &ltdiv class="profile">
-                &ltp class="name">귤 박사 <br> 9 Resources</p>
-                &ltimg src="img/card_bg03_06.jpg" alt="프로필">
+            &ltdiv class="card__footer">
+                &lth4>귤 박사 &ltem> 9 Resources &lt/em></h4>
+                &ltspan>&ltimg src="img/card_bg03_3.png" alt="프로필">&lt/span>
             &lt/div>
         &lt/article>
     &lt/div>
@@ -103,167 +108,147 @@
             <hr>
             <div class="document">
                 <h3 class="t_tit2">CSS 유형</h3>
+                <p class="t_box">
+                    <i>figcaption</i>을 써 이미지 안에 카테고리 를 만들었다.<br>
+                    <i>.card__inner .card:nth-child(1)</i> 안에 border-right: 1px solid #eee; 을 써 구분하는 선을 추가한다. '1'을 '2'로 바꾸면 선 2개 추가...<br>
+                    <i>.card__footer</i> 에는 h4,em을 넣어 위치를 설정하고 span을 사용해 이미지 크기와 위치를 설정한다.
+                </p>
                 <div class="t_code">
-<pre><code>&ltstyle>
-    /* fonst */
-    @import url('https://webfontworld.github.io/GothicA1/GothicA1.css');
-    .gmarket {
-        font-family: 'GothicA1';
-        font-weight: 500;
+<pre><code>/* fonts */
+    @import url('https://webfontworld.github.io/score/SCoreDream.css');
+    .score {
+        font-family: 'SCoreDream';
+        font-weight: 300;
     }
     /* reset */
     * {
         margin: 0;
         padding: 0;
     }
-
     a {
         text-decoration: none;
         color: #000;
     }
-
-    body {
-        background-color: #f9dcc2;
-    }
-
     img {
         width: 100%;
     }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h1, h2, h3, h4, h5, h6 {
         font-weight: normal;
     }
-
     /* common */
     .container {
         width: 1160px;
-        background-color: #fff;
+        padding: 0 20px;
         margin: 0 auto;
         min-width: 1160px;
     }
-
-    .mint {
-        width: 100%;
-        height: 25px;
-        background-color: #FCAA5B;
-    }
-
-    .boBter {
-        border-style: none !important;
-    }
-
     .section {
         padding: 120px 0;
     }
-
-    .card_wrap {
-        width: 1160px;
-        height: 628px;
-        margin: 120px auto;
+    .section > h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
     }
-
+    .section > p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    /* blind */
+    .blind {
+        position:absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+    }
+    /* cardType03 */
+    body {
+        background-color: #FCAA5B;
+    }
     .card__inner {
         display: flex;
-        justify-content: center;
     }
-
     .card__inner .card {
-        width: 385px;
-        padding: 30px 26px;
-        border-right: 1px solid #d9d9d9;
+        padding: 26px;
+        width: 33.3333%;
+        background-color: #fff;
     }
-
-    .card__inner .card .seaimg img {
-        width: 335px;
-        height: 250px;
-        margin-bottom: 30px;
-        border-radius: 15px;
+    .card__inner .card:nth-child(1) {
+        border-right: 1px solid #eee;
+    }
+    .card__inner .card:nth-child(2) {
+        border-right: 1px solid #eee;
+    }
+    .card__header {
+        position: relative;
+    }
+    .card__header img {
+        border-radius: 10px;
         box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
-        position: relative;
-        position: relative;
+        margin-bottom: 20px;
     }
-
-    .container .card .profile .name {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.4;
-        text-align: right;
-        margin-right: 16px;
-        color: rgb(56, 56, 56);
-    }
-
-    .card__inner .card img {
-        width: 335px;
-        height: 250px;
-        margin-bottom: 30px;
-        border-radius: 15px;
-        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
-        position: relative;
-        position: relative;
-    }
-
-    .card__inner .card .seaimg .btn {
-        width: 85px;
-        height: 18px;
-        border-radius: 30px;
+    .card__header figcaption {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 6px 16px;
+        border-radius: 50px;
         background-color: #fff;
         text-align: center;
-        position: absolute;
-        transform: translate(229px, -266px);
-        font-size: 11px;
-        line-height: 18px;
-        font-weight: 700;
-    }
-
-    .card__inner .card .seaimg .btn a {
+        font-size: 14px;
         color: #FCAA5B;
     }
-
-    .card__inner .card .title {
-        font-size: 22px;
-        font-weight: 900;
-    }
-
-    .card__inner .card .desc {
-        margin: 15px 0 0;
-        font-size: 16px;
-        font-weight: 300;
+    .card__contents h3 {
+        font-size: 20px;
         line-height: 1.4;
-        text-align: left;
+        margin-bottom: 10px;
         overflow: hidden;
-        /* 2줄 이상 효과 */
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .card__contents p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        color: #666;
+        margin-bottom: 30px;
     }
-
-    .card__inner .card .profile {
-        margin-top: 30px;
+    .card__footer {
         display: flex;
         justify-content: flex-end;
     }
-
-    .card__inner .card .profile .name {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.4;
+    .card__footer h4 {
         text-align: right;
-        margin-right: 16px;
-        color: rgb(56, 56, 56);
+        color: #FCAA5B;
     }
-
-    .card__inner .card .profile img {
-        width: 45px;
-        height: 45px;
+    .card__footer em {
+        display: block;
+        color: #666;
+        font-style: normal;
     }
-        </style>
+    .card__footer span {
+        width: 40px;
+        height: 40px;
+        background: #000;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        margin-left: 10px;
+        margin-top: -3px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    }
 </code></pre>
                 </div>
             </div>
