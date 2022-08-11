@@ -50,7 +50,11 @@
             text-align: center;
             margin-bottom: 70px;
         }
+        
         /* blind */
+        /* position: absolute; 문서 상에서 독립되어 앞뒤에 나온 요소와 더 이상 상호작용을 하지 않게 된다는 것 
+           clip: rect(0 0 0 0); 특정부분만 나오게 해준다.
+        */
         .blind {
             position:absolute;
             clip: rect(0 0 0 0);
@@ -85,6 +89,7 @@
             box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
         }
+        /* border-radius ~ color 이미지안에 도형추가 */
         .card__header figcaption {
             position: absolute;
             right: 10px;
@@ -117,6 +122,7 @@
             -webkit-box-orient: vertical;
             margin-bottom: 30px;
         }
+        /* justify-content: flex-end : 항목이 끝 라인쪽으로 포장됩니다. */
         .card__footer {
             display: flex;
             justify-content: flex-end;
