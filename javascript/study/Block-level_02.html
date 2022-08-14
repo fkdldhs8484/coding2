@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 관련 요소</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FzRaN7pfMUt7DwX2bhqTDSF%2F08%252F14%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+            </div>
+            <hr>
+            <h3 class="t_tit">01. &ltheader>,&ltsection>,&ltfooter>,&ltnav>,&ltarticle>,&ltaside></h3>
+            <div class="document">
+                <table class="t_table">
+                    <thead>
+                        <tr>
+                            <th>요소 유형</th>
+                            <th>태그명</th>
+                            <th>태그의 의미 및 특징</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce" rowspan="12" >블록 레벨<br>  요소</td>
+                            <td class="ce" rowspan="2">&ltheader>,&lt/hteader></td>
+                            <td class="ce" > 1.HTmL문서의 헤더 영역을 의미하는 태그로 제목이나 내비게이션, 검색 등의 내용들을 포함할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce"> 2.텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &ltheader>,&ltfooter> 태그는 포함할 수 없다.</td>
+                        </tr>
+                        <td class="ce" rowspan="2">&ltsection>,&lt/section></td>
+                        <td class="ce" > 1.HTML 문서에서 맥락이 같은 요소들을 주제별로 그룹화해주는 태그이며 섹션 주제에 대한 제목 요소(&lth2>~&lth6>)를 포함하는 것이 좋다.</td>
+                        <tr>
+                            <td class="ce"> 2.텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있다.</td>
+                        </tr>
+                        <td class="ce" rowspan="2">&ltfooter>,&lt/footer></td>
+                        <td class="ce" > 1.HTML 문서의 푸터 영역을 의미하는 태그 섹션 작성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함할 수 있다.</td>
+                        <tr>
+                            <td class="ce"> 2.텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &ltheader>,&ltfooter> 태그는 포함할 수 없다.</td>
+                        </tr>
+                        <td class="ce" rowspan="2">&ltnav>,&lt/nav></td>
+                        <td class="ce" > 1.HTML 문서의 메인 메뉴나 목차 등을 정의해 주는 태그이다.</td>
+                        <tr>
+                            <td class="ce"> 2.텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있다.</td>
+                        </tr>
+                        <td class="ce" rowspan="2">&ltarticle>,&lt/article></td>
+                        <td class="ce" > 1.HTML 문서 내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스 기사, 블로그 포스팅 등을 의미하는 태그이며 제목 요소(&lth2>~&lth6>)를 포함하는 것이 좋다.</td>
+                        <tr>
+                            <td class="ce"> 2.텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있다.</td>
+                        </tr>
+                        <td class="ce" rowspan="2">&ltaside>,&lt/aside></td>
+                        <td class="ce" > 1.메인 콘텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그, HTML 문서의 오른쪽이나 왼쪽의 사이드 메뉴나 광고 등의 영역으로 사용된다.</td>
+                        <tr>
+                            <td class="ce"> 2.텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 인코딩 디코딩 함수 -->
+            <div class="document">
+                <div class="t_code"><예제>
+<pre><code>&lt!DOCTYPE html>
+&lthtml lang="ko">
+&lthead>
+    &ltmeta charset="UTF-8">
+    &lttitle>구조 요소&lttitle>
+&lt/head>
+&ltbody>
+    &ltheader>
+        &lth1>&lta href="#">반응형웹&lt/a>&lt/h1>
+        &ltnav>
+            &ltul>
+                &ltli>&lta href="#">MENU01&lt/a>&lt/li>
+                &ltli>&lta href="#">MENU02&lt/a>&lt/li>
+                &ltli>&lta href="#">MENU03&lt/a>&lt/li>
+                &ltli>&lta href="#">MENU04&lt/a>&lt/li>
+                &ltli>&lta href="#">MENU05&lt/a>&lt/li>
+            &lt/ul>
+        &lt/nav>
+    &lt/header>   
+    &ltdiv id="conntainer">
+        &ltsection>
+            &lth2>콘텐츠 그룹 01 &lt/h2>
+        &lt/section>   
+        &ltsection>
+            &lth2>콘텐츠 그룹 02 &lt/h2>
+        &lt/section>   
+        &ltarticle>
+            &lth2>주요기사 &lt/h2>
+        &lt/article>
+        &ltaside>광고&lt/aside>
+    &ltdiv>
+    &ltfooter>
+        &ltaddress>경기도 부천시 오정구 삼정동  032)674-5685 icoxpub@naver.com &lt/address>
+        &ltp> COPYRIGHT All rights reserved. &lt/p>
+    &lt/footer>
+&lt/body>
+&lt/html>
+</code></pre>
+                </div>
+                <h3 class="t_tit2">결과</h3>
+                <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+                    <iframe src="http://127.0.0.1:5500/javascript/study/test01.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

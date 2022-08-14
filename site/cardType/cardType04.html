@@ -8,13 +8,14 @@
     <style>
         /* fonts */
         @import url('https://webfontworld.github.io/sebang/SebangGothic.css');
-        @import url('https://webfontworld.github.io/NanumSquare/NanumSquare.css');
+        @import url('https://webfontworld.github.io/NanumSquareRound/NanumSquareRound.css');
+
         .sebang {
             font-family: 'SebangGothic';
             font-weight: 400;
         }
         .square {
-            font-family: 'NanumSquare';
+            font-family: 'NanumSquareRound';
             font-weight: 400;
         }
         /* reset */
@@ -28,7 +29,7 @@
         }
         img {
             width: 100%;
-            vertical-align: top;
+            vertical-align: top; /*이미지 여백생길 시 */
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
@@ -49,6 +50,31 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .section > h2.tit {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .section > h2.tit span {
+            background-color: #000;
+            color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            font-family: "SebangGothic";
+            padding: 5px 15px ;
+        }
+        .section > h2.tit span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+        }
         .section > p {
             font-size: 22px;
             font-weight: 300;
@@ -56,25 +82,6 @@
             text-align: center;
             margin-bottom: 70px;
         }
-        .section > h2.tit {
-            width: 1160px;
-            padding: 0 20px;
-            margin: 0 auto;
-            min-width: 1160px;
-            text-align: left;
-            margin-bottom: 30px;
-            
-        }
-        .section > h2.tit span {
-            background: #000;
-            color: #fff;
-            display: inline-block;
-            padding: 5px 15px;
-            font-size: 12px;
-            font-family: 'SebangGothic';
-            position: relative;
-        }
-        
         /* blind */
         .blind {
             position:absolute;
@@ -84,8 +91,8 @@
             margin: -1px;
             overflow: hidden;
         }
-        /* cardType04 */
-        .card__inner {
+           /* cardType04 */
+           .card__inner {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -97,7 +104,7 @@
             justify-content: space-between;
             margin-bottom: 30px;
             border-bottom: 1px solid #000;
-            padding-bottom: 30px ;
+            padding-bottom: 30px;
         }
         .card.first::before {
             content: '';
@@ -106,7 +113,7 @@
             background: #000;
             position: absolute;
             left: 0;
-            top: -55px;
+            bottom: -55px;
         }
         .card.first::after {
             content: '';
@@ -115,38 +122,24 @@
             background: #000;
             position: absolute;
             left: 0;
-            top: -55px;
+            bottom: -140px;
         }
         .card.first .card__header {
-            width: 70%;
+            width: 68%;
         }
         .card.first .card__contents {
             width: 30%;
         }
         .card.first .card__contents .sub {
-            font-size: 14px;
+            font-style: 14px;
             line-height: 1;
             margin-bottom: 10px;
-            display: block;
-        }
-        .card.first .card__contents .title {
-            font-size: 36px;
-            line-height: 1.3;
-            word-break: keep-all;
-            margin-bottom: 50px;
-            display: none;
-        }
-        .card.first .card__contents .desc {
-            font-size: 36px;
-            line-height: 1.5;
-            color: #666;
         }
         .card {
             width: 24%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            
         }
         .card__header {
             width: 28%;
@@ -157,84 +150,93 @@
         .card__contents .sub {
             display: none;
         }
+        .card.first  .card__contents .title {
+            font-size: 36px;
+            line-height: 1.3;
+            word-break: break-all;
+            margin-bottom: 50px;
+        }
+        .card.first .card__contents .desc {
+            color: #666;
+            font-style: 16px;
+            line-height: 1.5;
+            -webkit-line-clamp: 3;
+        }
         .card__contents .title {
+            font-size: 18px;
+            margin-bottom: 5px;
             font-family: 'SebangGothic';
-            font-size: 22px;
-            margin-bottom: 10px;
         }
         .card__contents .desc {
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.5;
             color: #666;
+            font-family: 'NanumSquareRound';
             overflow: hidden;
-            position: absolute;
+            text-overflow: ellipsis;
             display: -webkit-box;
-        }
-        .card__contents .more {
-            display: none;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
     </style>
 </head>
 <body>
-    <section id="cardType04" class="card__wrap section square">
-        <h2 class="tit"><span>Travel Channel</span></h2>
-        <div class="card__inner container">
-            <article class="card first">
-                <figure class="card__header">
-                    <img src="img/card_bg04_01_big.jpg" alt="Travel Channel">
-                </figure>
-                <div class="card__contents">
-                    <span class="sub">Travel Channel</span>
-                    <h3 class="title">여행하기 좋은 나라 베스트 파이브</h3>
-                    <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
-                    <a class="more" href="/"><span>더보기</span></a>
-                </div>
-            </article>
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg04_02_small.jpg" alt="Travel Channel">
-                </figure>
-                <div class="card__contents">
-                    <span class="sub">Travel Channel</span>
-                    <h3 class="title">Clean Japan</h3>
-                    <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
-                    <a class="more" href="/"><span>더보기</span></a>
-                </div>
-            </article>
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg04_03_small.jpg" alt="Travel Channel">
-                </figure>
-                <div class="card__contents">
-                    <span class="sub">Travel Channel</span>
-                    <h3 class="title">Clean Japan</h3>
-                    <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
-                    <a class="more" href="/"><span>더보기</span></a>
-                </div>
-            </article>
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg04_04_small.jpg" alt="Travel Channel">
-                </figure>
-                <div class="card__contents">
-                    <span class="sub">Travel Channel</span>
-                    <h3 class="title">Clean Japan</h3>
-                    <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
-                    <a class="more" href="/"><span>더보기</span></a>
-                </div>
-            </article>
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg04_05_small.jpg" alt="Travel Channel">
-                </figure>
-                <div class="card__contents">
-                    <span class="sub">Cool Dubai</span>
-                    <h3 class="title">여행하기 좋은 나라 베스트 파이브</h3>
-                    <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
-                    <a class="more" href="/"><span>더보기</span></a>
-                </div>
-            </article>
-        </div>
-    </section>
-</body>
+    <body>
+        <section id="cardType04" class="card__wrap section square">
+            <h2 class="tit"><span>Travel Channel</span></h2>
+            <div class="card__inner container">
+                <article class="card first">
+                    <figure class="card__header">
+                        <img src="img/card_bg04_01_big.jpg" alt="Travel Channel">
+                    </figure>
+                    <div class="card__contents">
+                        <span class="sub">Travel Channel</span>
+                        <h3 class="title">여행하기 좋은 나라<br>베스트 파이브</h3>
+                        <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
+                        <a class="more" href="/"><span>더보기</span></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg04_05_big.jpg" alt="Travel Channel">
+                    </figure>
+                    <div class="card__contents">
+                        <h3 class="title">Clean Japan</h3>
+                        <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
+                        <a class="more" href="/"><span>더보기</span></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg04_02_big.jpg" alt="Travel Channel">
+                    </figure>
+                    <div class="card__contents">
+                        <h3 class="title">Clean Japan</h3>
+                        <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
+                        <a class="more" href="/"><span>더보기</span></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg04_03_big.jpg" alt="Travel Channel">
+                    </figure>
+                    <div class="card__contents">
+                        <h3 class="title">Clean Japan</h3>
+                        <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
+                        <a class="more" href="/"><span>더보기</span></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="img/card_bg04_04_big.jpg" alt="Travel Channel">
+                    </figure>
+                    <div class="card__contents">
+                        <h3 class="title">Clean Japan</h3>
+                        <p class="desc">완벽한 휴일을 구상하고 있나요? 특별한 시간을 찾고 있다구요? 그렇다면 수많은 여행 관련 업체를 둘러봐야 하지 않을까요?</p>
+                        <a class="more" href="/"><span>더보기</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </body>
 </html>

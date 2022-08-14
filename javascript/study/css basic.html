@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css기본 문법</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">css 기본 문법</h2>
+            <p class="t_desc2">
+                CSS를 정의하는 방법으로는 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트 등이 있습니다. 외부스타일을 많이 사용하지만 간단한 스타일은 내부 스타일을 사용한다.
+            </p>
+
+            <hr>
+
+            <h3 class="t_tit2">내부 스타일시트</h3>
+            <p class="t_box">
+                CSS를 HTML 문서 안에 &ltstyle>태그를 사용하여 HTML 문서 안에 CSS가 함께 저장하는 형태이다.
+            </p>
+            <div class="t_code"> p{color : red;}의 의미는 p태그 안의 글자 색상을 빨간색으로 설정하라는 뜻이다.
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;내부 스타일시트 &lt;/title&gt;
+    &lt;style type = "text/css&gt;
+        p { color: red ; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 250px; padding-top: 0;">
+                <iframe src="http://127.0.0.1:5500/javascript/study/css%20basic_01.html" frameborder="0"></iframe>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">외부 스타일시트</h3>
+            <p class="t_box">
+                스타일 속성들을 따로 저장하려 THML 문서에 파일명으로 연결할 수 있다. 스타일 시트는 *.css확장자를 가진 별도의 파일로 저장하고,  HTML에서 &lt link> 태그를 선언한다.
+                <i>내부 스타일시트는 그 스타일이 기술된 페이지에만 적용되는 반면, 외부 사트일시트는 그 스타일을 선언한 모든 HTML 페이지에 적용된다.</i>
+            </p>
+            <div class="t_code"> 예제
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;외부 스타일시트 &lt;/title&gt;
+    &lt; link rel = 'stylesheet' type='text/css' href='style.css' &gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code>//style.css
+&lt;@charest 'utf-8';&gt;
+p { color : red; }
+</code></pre>
+            </div>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 250px; padding-top: 0;">
+                <iframe src="http://127.0.0.1:5500/javascript/study/css%20basic_01.html" frameborder="0"></iframe>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">@import</h3>
+            <p class="t_box">
+                @import는  CSS안으로 다른 css파일을 불러들일 경우 사용한다. css맨 윗줄에 기술합니다.
+            </p>
+            <div class="t_code"> 
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;스타일시트 포함 &lt;/title&gt;
+    &lt;style type='text/css&gt;
+        @import url('style.css'); 
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p style='color: red;'&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 250px; padding-top: 0;">
+                <iframe src="http://127.0.0.1:5500/javascript/study/css%20basic_01.html" frameborder="0"></iframe>
+            </div>
+
+            <hr>
+
+            <h3 class="t_tit2">인라인 스타일시트(inline style)</h3>
+            <p class="t_box">
+                스타일 속성들을 따로 저장하려 THML 문서에 파일명으로 연결할 수 있다. 스타일 시트는 *.css확장자를 가진 별도의 파일로 저장하고,  HTML에서 &lt link> 태그를 선언한다.
+            </p>
+            <div class="t_code"> 
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;인라인 스타일시트 &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p style='color: red;'&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 250px; padding-top: 0;">
+                <iframe src="http://127.0.0.1:5500/javascript/study/css%20basic_01.html" frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
