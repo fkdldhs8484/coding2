@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>카드 유형 02</title>
     <style>
-         /* fonts */
-         @import url('https://webfontworld.github.io/GothicA1/GothicA1.css');
-        .GothicA1 {
-            font-family: 'GothicA1';
-            font-weight: 300;
+        /* fonst */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmarket {
+            font-family: 'GmarketSans';
+            font-weight: 500;
         }
+
         /* reset */
         * {
             margin: 0;
             padding: 0;
         }
+
         a {
             text-decoration: none;
             color: #000;
         }
+
         img {
             width: 100%;
         }
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: normal;
         }
+
         /* common */
         .container {
             width: 1160px;
@@ -34,162 +46,102 @@
             margin: 0 auto;
             min-width: 1160px;
         }
+
         .section {
             padding: 120px 0;
         }
-        .section > h2 {
+
+        /* '+' 형제, '>' 자식? */
+        .section>h2 {
             font-size: 50px;
             line-height: 1;
             text-align: center;
             margin-bottom: 20px;
         }
-        .section > p {
+
+        .section>p {
             font-size: 22px;
             font-weight: 300;
             color: #666;
             text-align: center;
             margin-bottom: 70px;
         }
-        
-        /* blind */
-        /* position: absolute; 문서 상에서 독립되어 앞뒤에 나온 요소와 더 이상 상호작용을 하지 않게 된다는 것 
-           clip: rect(0 0 0 0); 특정부분만 나오게 해준다.
-        */
-        .blind {
-            position:absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
+
+        .gray {
+            border-color: #f5f5f5;
+        }
+
+        /* ir효과(이미지 대체 효과 == alt) 중요 */
+        .ir {
+            display: block;
             overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
         }
-        body {
-            background-color:#fcaa5b;
-        }
-        .card__inner {
+        /* cardType02 */
+        .card__innrt {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        .card__inner .card {
-            padding: 24px;
-            width: 33.3333%;
-            background-color: #fff;
-        }
-        .card__inner .card:nth-child(1){
-            border-right: 1px solid #eee;
-        }
-        .card__inner .card:nth-child(2){
-            border-right: 1px solid #eee;
-        }
-        .card__header {
+        .card__innrt .card {
+            width: 24%;
             position: relative;
         }
-        .card__header img {
-            border-radius: 10px;
-            box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
+        .card__innrt .card:nth-child(1) {
+            margin-bottom: 50px;
+        }
+        .card__innrt .card .img{
             margin-bottom: 20px;
+            border-radius: 10px;
         }
-        .card__header figcaption{
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 6px 16px;
-            border-radius: 50px;
-            background-color: #fff;
-            font-size: 14px;
-            color: #fcaa5b;
-        }
-        .card__contents h3 {
-            font-size: 20px;
-            line-height: 1.4;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
+        .card__innrt .card .tit{
+            font-size: 28px;
             margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
         }
-        .card__contents p {
-            font-size: 16px;
-            line-height: 1.7;
+        .card__innrt .card .desc{
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #666;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
-            margin-bottom: 30px;
         }
-        .card__footer {
-            display: flex;
-            justify-content: flex-end;
-        }
-        .card__footer h4 {
-            text-align: right;
-            color: #fcaa5b;
-        }
-        .card__footer em {
+        .card__innrt .card .more{
+            width: 24px;
+            height: 24px;
+            background-image: url(img/arrow\ 1_1.svg);
             display: block;
-            color: #666;
-            font-style: normal;
-        }
-        .card__footer span {
-            width: 40px;
-            height: 40px;
-            overflow: hidden;
-            display: block;
-            margin-top: 2px;
-            margin-left: 12px;
-            background: #000;
-            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 210px;
+            border-radius: 5px;
         }
     </style>
 </head>
+
 <body>
-    <section id="cardType03" class="card__wrap section GothicA1">
-        <h2 class="blind">주황색 과일</h2>
-        <div class="card__inner container">
+    <section id="cardType02" class="card__wrap section  GmarketSans">
+        <h2> 육식동물 구경하기</h2>
+        <p> 동물을 다 좋아하지만 개인적으로 더 좋아하는 동물은 육식동물!<br>
+            육식동물의 귀여움을 알아보자.</p>
+        <div class="card__innrt container ">
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg03_1.jpg" alt="#">
-                    <figcaption>orange</figcaption>
-                </figure>
-                <div class="card__contents">
-                    <h3>오렌지(orange) 의 대하여 알아보자.</h3>
-                    <p>오렌지는 비타민 c가 매우 풍부한 과일의 하나로, 일반적 으로 당귤 나무의 열매인 당귤을 부르는 말이다. 대표적인 귤 열매로 기름기를 함유한 가죽질 껍질과 즙이 많은 과육으로 이루어져 있다.</p>
-                </div>
-                <div class="card__footer">
-                    <h4>오렌지 박사<em>9 Resources</em></h4>
-                    <span><img src="img/card_bg03_1.png" alt="#"></span>
-                </div>
-            </article>
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg03_2.jpg" alt="#">
-                    <figcaption>Hallabong</figcaption>
-                </figure>
-                <div class="card__contents">
-                    <h3>한라봉(Hallabong) 의 대하여 알아보자.</h3>
-                    <p>귤 종류 중에서 제일 좋아하는 한라봉 나같이 신맛을 싫어하는 사람들에게는 아주 달달한 과일이다. 과육의 질감은 오렌지처럼 약간 단단한 편이고 물기가 많아 차게 먹으면 아주 시원하다.</p>
-                </div>
-                <div class="card__footer">
-                    <h4>한라봉 박사<em>9 Resources</em></h4>
-                    <span><img src="img/card_bg03_2.png" alt="#"></span>
-                </div>
-            </article>
-            <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg03_3.jpg" alt="#">
-                    <figcaption>mandarin</figcaption>
-                </figure>
-                <div class="card__contents">
-                    <h3>귤(mandarin) 의 대하여 알아보자.</h3>
-                    <p>감귤나무 열매로 모양은  둥글납작하고 빛깔은 주황 혹은 붉은색이다. 수분이 풍부하고 매우 맛있다. 겨울 제철 과일이다. 쪼물딱 거리고 먹으면 더욱 맛있다.</p>
-                </div>
-                <div class="card__footer">
-                    <h4>귤 박사<em>9 Resources</em></h4>
-                    <span><img src="img/card_bg03_3.png" alt="#"></span>
-                </div>
+                <img src="img/card_bg02_01.jpg" alt="">
+                <h3 class="tit">사자</h3>
+                <p class="desc">ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ</p>
+                <a class="more" href="/"><span class="ir"></span></a>
             </article>
         </div>
     </section>
 </body>
+
 </html>

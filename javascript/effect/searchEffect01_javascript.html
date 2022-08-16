@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/search.css">
+
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/earlyfont/EF_Diary.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Search</h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="quizEffect01.html">1</a>
+                    <ul class="sub">
+                        <li class="active"><a href="searchEffect01.html">HTML</a></li>
+                        <li><a href="searchEffect01_css.html">CSS</a></li>
+                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
+                    </ul>
+                </li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="search__wrap">
+            <span>indexOf()를 이용하여 CSS 속성 검색하기</span>
+            <h1>JAVASCRIPT 태그 검색하기</h1>
+            
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="HTML 테그를 입력해 주세요.">
+            </div>
+            <div class="search__list">
+                <div class="html">
+                    <ul>
+                        <li data-name="indexOf"><strong>indexOf</strong> :  특정 문자나 문자열에서 해당하는 문자의 인덱스 값을 반환하고 찾지 못했을 경우 '-1'을 반환하는 메소드 입니다.</li>
+                        <li data-name="slice"><strong>slice</strong> : 함수는 배열로 부터 특정 범위를 복사한 값들을 담고 있는 새로운 배열을 만드는데 사용합니다.</li>
+                        <li data-name="trim"><strong>trim</strong> : 문자열 좌우에서 공백을 제거하는 함수가 trim() 함수 입니다.</li>
+                        <li data-name="trimStart"><strong>trimStart</strong> : 현재 문자열에서 선행 공백 문자를 모두 제거합니다.</li>
+                        <li data-name="split"><strong>split</strong> : 지정된 구분 문자 및 옵션(필요에 따라)에 따라 문자열을 최대 개수의 부분 문자열로 분할합니다.</li>
+                        <li data-name="substring"><strong>substring</strong> : 문자열에서 특정 부분만 골라낼 때 사용하는 메서드입니다.</li>
+                        <li data-name="substr"><strong>substr</strong> : 문자열에서 특정 부분만 골라낼 때 사용하는 메서드입니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+
+    <script>
+        // 선택자
+        const searchBox = document.querySelector(".search__box input"); //검색  박스
+        const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
+
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+            searchList.forEach(el => {
+                const cssName = el.dataset.name;
+
+                if (cssName.indexOf(searchWord)) {
+                    el.classList.add("hide");
+                } else {
+                    el.classList.remove("hide"); //indexOf 값이 0이되는 값이 hide를 지워줍니다.
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

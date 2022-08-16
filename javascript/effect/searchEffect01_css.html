@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/search.css">
+
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/earlyfont/EF_Diary.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Search</h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="quizEffect01.html">1</a>
+                    <ul class="sub">
+                        <li class="active"><a href="searchEffect01.html">HTML</a></li>
+                        <li><a href="searchEffect01_css.html">CSS</a></li>
+                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
+                    </ul>
+                </li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="search__wrap">
+            <span>indexOf()를 이용하여 CSS 속성 검색하기</span>
+            <h1>CSS 태그 검색하기</h1>
+
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="HTML 테그를 입력해 주세요.">
+            </div>
+            <div class="search__list">
+                <div class="css">
+                    <ul>
+                        <li data-name="aLign-content"><strong>aLign-content</strong> : aLign-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="aLign-content"><strong>aLign-items</strong> : aLign-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="aLign-content"><strong>aLign-self</strong> : aLign-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다. </li>
+                        <li data-name="aLign-content"><strong>all</strong> : all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                        <li data-name="aLign-content"><strong>animation</strong> : animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="aLign-content"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션 지연 시간을 설정합니다. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+
+    <script>
+        // 선택자
+        const searchBox = document.querySelector(".search__box input"); //검색  박스
+        const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
+
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+            searchList.forEach(el => {
+                const cssName = el.dataset.name;
+
+                if (cssName.indexOf(searchWord)) {
+                    el.classList.add("hide");
+                } else {
+                    el.classList.remove("hide"); //indexOf 값이 0이되는 값이 hide를 지워줍니다.
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
