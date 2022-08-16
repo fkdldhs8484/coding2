@@ -31,6 +31,220 @@
                 <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
                     target="_blank">원본 소스 보기</a>
             </div>
+            <hr>
+            <h2 class="t_tit">HTML</h2>
+                <div class="t_code">
+<pre><code>&lt main id="main">
+    &ltdiv class="search__wrap">
+        &ltspan>indexOf()를 이용하여 CSS 속성 검색하기</span>
+        &lth1>HTML 태그 검색하기</h1>
+        
+        &ltdiv class="search__box">
+            &ltlabel for="search">검색하기&lt/label>
+            &ltinput type="text" id="search" placeholder="HTML 테그를 입력해 주세요.">
+        &lt/div>
+        &ltdiv class="search__list">
+            &ltdiv class="html">
+                &ltul>
+                    &ltli data-name="a">&ltstrong>a&lt/strong> : a 태그는 다른 페이지 이동을 설정합니다.&lt/li>
+                    &ltli data-name="abbr">&ltstrong>abbr&lt/strong> : abbr 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.&ltli>
+                    &ltli data-name="acronym">&ltstrong>acronym&lt/strong> : acronym &lt/li>
+                    &ltli data-name="address">&ltstrong>address&lt/strong> : address 연락처 정보를 나타낸다.&lt/li>
+                    &ltli data-name="applet">&ltstrong>applet&lt/strong> : applet 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.&lt/li>
+                    &ltli data-name="area">&ltstrong>area&lt/strong> : area 이미지의 핫스팟 영역을 정의, 하이퍼 링크를 추가 할 수 있다.&lt/li>
+                    &ltli data-name="article">&ltstrong>article&lt/strong> : article 태그는 문서, 페이지 등 사이트 안에서 독릭적으로 구분해 배포하거나 재사용할 수 있는 구획 설정합니다.&lt/li>
+                    &ltli data-name="aside">&ltstrong>aside&lt/strong> : aside 태그는 주요 내용관 간접적으로만 연관된 부분(사이드바 등) 설정합니다.&lt/li>
+                    &ltli data-name="audio">&ltstrong>audio&lt/strong> : audio 태그는 소리 콘텐츠를 포함할 때 사용. 한개 이상읜 오디오 소스를 지정 할 수 있다.&lt/li>
+                    &ltli data-name="b">&ltstrong>b&lt/strong> : b 독자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다.&lt/li>
+                    &ltli data-name="base">&ltstrong>base&lt/strong> : base 태그는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정합니다.&lt/li>
+                    &ltli data-name="bdi">&ltstrong>bdi&lt/strong> : bdi 태그는 주위의 텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용합니다.&lt/li>
+                    &ltli data-name="bdo">&ltstrong>bdo&lt/strong> : bdo 태그는 자식 요소의 텍스트 방향성 을 정의할 때 사용&lt/li>
+                    &ltli data-name="bgsound">&ltstrong>bgsound&lt/strong> : bgsound 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.&lt/li>
+                    &ltli data-name="big">&ltstrong>big&lt/strong> : big 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.&lt/li>
+                    &ltli data-name="blink">&ltstrong>blink&lt/strong> : blink 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.&lt/li>
+                    &ltli data-name="blockquote">&ltstrong>blockquote&lt/strong> : blockquote 태그는 줄 다른 출처로부터 인용된 블록을 정의할 때 사용 합니다.&lt/li>
+
+                &lt/ul>
+            &lt/div>
+        &lt/div>
+    &lt/div>
+&lt/main>
+</code></pre>
+<pre><code>&ltscript>
+    // 선택자
+    const searchBox = document.querySelector(".search__box input"); //검색  박스
+    const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
+
+    searchBox.addEventListener("keyup", () => {
+        const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+        searchList.forEach(el => {
+            const cssName = el.dataset.name;
+
+            if (cssName.indexOf(searchWord)) {
+                el.classList.add("hide");
+            } else {
+                el.classList.remove("hide"); //indexOf 값이 0이되는 값이 hide를 지워줍니다.
+            }
+        });
+    });
+&lt/script>
+</code></pre>
+                </div>
+
+                <hr>
+                <h2 class="t_tit">CSS</h2>
+                <div class="t_code">
+<pre><code>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EF_Diary';
+    color: #223547;
+}
+*, *:before, *:after {
+    box-sizing:border-box;
+}
+a {
+    color: #223547;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+:root {
+    --htmlColor : #223547;
+    --cssColor : #8667ad;
+    --javascriptColor : #aa6655;
+}
+/* header */
+#header {
+    display: flex;
+    justify-content: space-between;
+}
+#header h1 {
+    margin: 10px;
+    font-family: 'Tmon';
+    font-size: 40px;
+}
+#header nav {
+    margin: 10px;
+}
+#header nav li {
+    position: relative;
+    display: inline;
+}
+#header nav li a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--htmlColor);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'EF_Diary';
+}
+#header nav li.active a {
+    background-color: #223547;
+    color: #fff;
+}
+#header nav li .sub {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 400px;
+}
+#header nav li .sub li a {
+    width: auto;
+    background-color: transparent;
+    color: #223547;
+    border: 0;
+    text-align: left;
+    line-height: 1.2;
+}
+#header nav li .sub li.active a {
+    text-decoration: underline;
+}
+/* main */
+#main {
+    margin: 50px 10px;
+}
+.search__wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 3px solid var(--htmlColor);
+    border-radius: 20px;
+    background-color: #F1F3F6;
+    padding: 30px;
+    text-align: center;
+}
+.search__wrap > span {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.search__wrap > h1 {
+    font-family: 'Tmon';
+    color: #223547;
+    font-size: 6vw;
+    margin-bottom: 10px;
+}
+.search__box {
+    margin-bottom: 40px;
+}
+.search__box label {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+}
+.search__box input {
+    border: 2px solid var(--htmlColor);
+    padding: 15px 40px;
+    width: 70%;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.search__list li {
+    text-align: left;
+    line-height: 1.7;
+}
+.search__list li.hide{
+    display: none;
+}
+@media (max-width: 600px){
+    .search__wrap {
+        padding: 20px;
+    }
+    .search__wrap > span {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .search__wrap > h1 {
+        font-size: 44px;
+    }
+    .search__box input {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+/* footer */
+#footer {
+    text-align: center;
+}
+#footer a {
+    color: #000;
+    font-family: 'EF_Diary';
+    padding-bottom: 50px;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+</code></pre>
+                </div>
         </div>
     </main>
     <!-- //main -->
