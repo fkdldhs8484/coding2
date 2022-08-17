@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서치 02</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">이미지 유형 02</h2>
+            <p class="t_desc2">1번과 마찬가지로 이미지 않에 글자가 있으며, background biur 효과를 주었다. 마우스를 갖다대면 블라인더 효과가 올라온다.</p>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D778%253A65" allowfullscreen></iframe>
+            <hr>
+            <h2 class="t_tit">HTML</h2>
+            <div class="t_code">
+<pre><code>&ltsection id="imageType02" class="image__wrap  section gmarket ">
+    &lth2>북극 동물들</h2>
+    &ltp>북극동물들 의 귀여움을 알아보자.</p>
+    &ltdiv class="image__inner container">
+        &ltarticle class="image img1">
+            &ltfigure class="image__box">
+                &ltimg src="img/imgType02_1.jpg" alt="/">
+            &lt/figure>
+            &ltdiv class="imge__desc">
+                &lth3>북극동물</h3>
+                &lta href="/" class="more" title="자세히보기">자세히보기</a>
+            &lt/div>
+        &lt/article>
+        &ltarticle class="image img1">
+            &ltfigure class="image__box">
+                &ltimg src="img/imgType02_2.jpg" alt="/">
+            &lt/figure>
+            &ltdiv class="imge__desc">
+                &lth3>북극동물</h3>
+                &lta href="/" class="more" title="자세히보기">자세히보기</a>
+            &lt/div>
+        &lt/article>
+        &ltarticle class="image img1">
+            &ltfigure class="image__box">
+                &ltimg src="img/imgType02_3.jpg" alt="/">
+            &lt/figure>
+            &ltdiv class="imge__desc">
+                &lth3>북극동물</h3>
+                &lta href="/" class="more" title="자세히보기">자세히보기</a>
+            &lt/div>
+        &lt/article>
+    &lt/div>
+&lt/section>
+</code></pre>
+            </div>
+            <hr>
+            <h2 class="t_tit">CSS</h2>
+            <div class="t_code">
+<pre><code>/* fonts */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+.gmarket {
+font-family: 'GmarketSans';
+font-weight: 400;
+}
+
+/* reset */
+* {
+margin: 0;
+padding: 0;
+}
+
+a {
+text-decoration: none;
+color: #000;
+}
+
+img {
+width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-weight: normal;
+}
+
+/* common */
+.container {
+width: 1160px;
+padding: 0 20px;
+margin: 0 auto;
+min-width: 1160px;
+}
+
+.section {
+padding: 120px 0;
+}
+
+/* '+' 형제, '>' 자식? */
+.section>h2 {
+font-size: 50px;
+line-height: 1;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.section>p {
+font-size: 22px;
+font-weight: 300;
+color: #666;
+text-align: center;
+margin-bottom: 70px;
+}
+.image__inner {
+display: flex;
+justify-content: space-between;
+}
+.image {
+width: 32%;
+position: relative;
+overflow: hidden;
+}
+.image__box {}
+
+.image__box img {
+vertical-align: top;
+transition: all 0.6s ease-in-out;
+}
+.imge__desc {
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+backdrop-filter: blur(10px );
+padding: 23px 20px;
+box-sizing: border-box;
+background: rgba(0, 0, 0, 0.1);
+bottom: -100px;
+transition: all 0.3s ease-in-out;
+}
+.imge__desc h3 {
+font-size: 24px;
+margin-bottom: 5px;
+}
+.img1 .imge__desc{ background: rgba(0, 0, 0, 0.1);}
+.img2 .imge__desc{ background: rgba(0, 0, 0, 0.1);}
+.img3 .imge__desc{ background: rgba(0, 0, 0, 0.1);}
+.img1 .imge__desc h3 { color: #000;}
+.img2 .imge__desc h3 { color: #000;}
+.img3 .imge__desc h3 { color: #000;}
+.img1 .imge__desc.more{ color: #055977;}
+.img2 .imge__desc.more{ color: #7E88A0;}
+.img3 .imge__desc.more{ color: #8A6071;}
+
+.img1:hover .imge__desc {
+bottom: 0;
+}
+.img1:hover .imge__box img {
+transform: scale(1.03);
+}
+.imge__desc .more {
+font-size: 16px;
+}
+.imge__desc .more:hover {
+text-decoration: underline;
+}
+</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/site/imageType/image02.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html" target="_blank">원본소스 보기</a>
+            </div>
+            <div class="t_link">
+                <a href="http://127.0.0.1:5500/site/cardType/cardType03_22.08.11.html">원본 페이지 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
