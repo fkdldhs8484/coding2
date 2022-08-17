@@ -36,14 +36,196 @@
                 <div class="t_code">
 <pre><code>
 </code></pre>
-<pre><code>
+<pre><code>// 선택자
+const searchBox = document.querySelector(".search__box input"); //검색  박스
+const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
+const searchInfo = document.querySelector(".search__info") //전체 갯수
+
+// 전체 갯수 구하기
+searchInfo.textContent = searchList.length;
+
+// 검색 영역
+searchBox.addEventListener("keyup", ()=>{
+const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+searchList.forEach(el => {
+const cssName = el.dataset.name; //css 속성 모든 값
+//console.log(cssName)
+
+if(cssName.includes(searchWord)){
+el.classList.add("hide");
+}else{
+el.classList.remove("hide");
+}
+});
+});
 </code></pre>
                 </div>
 
                 <hr>
                 <h2 class="t_tit">CSS</h2>
                 <div class="t_code">
-<pre><code>
+<pre><code>* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'EF_Diary';
+color: #223547;
+}
+*, *:before, *:after {
+box-sizing:border-box;
+}
+a {
+color: #223547;
+text-decoration: none;
+}
+li {
+list-style: none;
+}
+:root {
+--htmlColor : #223547;
+--cssColor : #8667ad;
+--javascriptColor : #aa6655;
+}
+/* header */
+#header {
+display: flex;
+justify-content: space-between;
+}
+#header h1 {
+margin: 10px;
+font-family: 'Tmon';
+font-size: 40px;
+}
+#header nav {
+margin: 10px;
+}
+#header nav li {
+position: relative;
+display: inline;
+}
+#header nav li a {
+width: 30px;
+height: 30px;
+border: 1px solid var(--htmlColor);
+border-radius: 50%;
+display: inline-block;
+text-align: center;
+line-height: 30px;
+font-family: 'EF_Diary';
+}
+#header nav li.active a {
+background-color: #223547;
+color: #fff;
+}
+#header nav li .sub {
+position: absolute;
+left: 0;
+top: 35px;
+width: 400px;
+}
+#header nav li .sub li a {
+width: auto;
+background-color: transparent;
+color: #223547;
+border: 0;
+text-align: left;
+line-height: 1.2;
+}
+#header nav li .sub li.active a {
+text-decoration: underline;
+}
+/* main */
+#main {
+margin: 50px 10px;
+}
+.search__wrap {
+max-width: 1400px;
+margin: 0 auto;
+border: 3px solid var(--htmlColor);
+border-radius: 20px;
+background-color: #F1F3F6;
+padding: 30px;
+text-align: center;
+}
+.search__wrap > span {
+font-size: 20px;
+margin-bottom: 20px;
+display: inline-block;
+}
+.search__wrap > h1 {
+font-family: 'Tmon';
+color: #223547;
+font-size: 6vw;
+margin-bottom: 10px;
+}
+.search__box {
+margin-bottom: 40px;
+}
+.search__box label {
+position:absolute;
+clip:rect(0 0 0 0);
+width:1px;
+height:1px;
+margin:-1px;
+overflow:hidden;
+}
+.search__box input {
+border: 2px solid var(--htmlColor);
+padding: 15px 40px;
+width: 70%;
+border-radius: 50px;
+font-size: 20px;
+}
+
+.search__list li {
+text-align: left;
+line-height: 1.7;
+}
+.search__list li.hide{
+display: none;
+}
+.search__list li.show{
+display: block;
+}
+.search__info {
+text-align: right;
+margin-bottom: 30px;
+padding-bottom: 10px;
+border-bottom: 2px dashed var(--htmlColor);
+}
+.search__info .type {
+text-align: center;
+margin-bottom: 10px;
+}
+@media (max-width: 600px){
+.search__wrap {
+padding: 20px;
+}
+.search__wrap > span {
+font-size: 16px;
+margin-bottom: 10px;
+}
+.search__wrap > h1 {
+font-size: 44px;
+}
+.search__box input {
+font-size: 16px;
+padding: 12px 30px;
+}
+}
+/* footer */
+#footer {
+text-align: center;
+}
+#footer a {
+color: #000;
+font-family: 'EF_Diary';
+padding-bottom: 50px;
+}
+#footer a:hover {
+text-decoration: underline;
+}
 </code></pre>
                 </div>
         </div>
