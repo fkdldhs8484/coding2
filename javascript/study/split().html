@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split()</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit2">split()</h2>
+            <div class="t_box">문자열에서 원하는 값을 배열로 반환합니다.<br>
+                // "문자열".split(구분자);
+                // "문자열".split(정규식 표현 가능);
+                // "문자열".split(구분자,갯수);
+            </div>
+            <div class="t_code">
+<pre><code>const str1 = "javascript reference" //split 알고리즘 많이 사용 중복된것을 삭제하거나 바꿀 수 잇다. 합칠수도 있음.
+const currentStr1 = str1.split('')  // ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', ' ', 'r', 'e', 'f', 'e', 'r', 'e', 'n', 'c', 'e']
+const currentStr2 = str1.split(' ')  // ['javascript', 'reference']
+const currentStr3 = str1.split('', 1)  // ['j']
+const currentStr4 = str1.split('', 2)  // ['j', 'a']
+const currentStr5 = str1.split(' ', 1)  // ['javascript']
+const currentStr6 = str1.split(' ', 2)  // ['javascript', 'reference']
+const currentStr7 = str1.split('j')  // ['javascript', 'reference']
+const currentStr8 = str1.split('a')  // ['j', 'v', 'script reference']
+const currentStr9 = str1.split('e')  // ['javascript r', 'f', 'r', 'nc', '']
+
+const str2 = "java/script/refer/ence"
+const currentStr10 = str2.split('/') //['java', 'script', 'refer', 'ence']
+
+const str3 = "java&script&refer!ence"; //특수기호가 있을 때 
+const currentStr11 = str3.split('!'); //['java&script&refer', 'ence']
+const currentStr12 = str3.split('&'); //['java', 'script', 'refer!ence'] //split & 를 다 찾지 못해서
+const currentStr13 = str3.split(/&|\!/); //['java', 'script', 'refer', 'ence'] ///&|\!/ 에 &을 넣어준다.
+
+const str4 = "javascript reference";
+const currentStr14 = str4.split('').join(); //j,a,v,a,&,s,c,r,i,p,t,&,r,e,f,e,r,!,e,n,c,e 
+const currentStr15 = str4.split('').reverse('*'); //['e', 'c', 'n', 'e', 'r', 'e', 'f', 'e', 'r', ' ', 't', 'p', 'i', 'r', 'c', 's', 'a', 'v', 'a', 'j'] //reverse 을 사용하여 반대로 출력
+const currentStr16 = str4.split('').reverse().join(); //e,c,n,e,r,e,f,e,r, ,t,p,i,r,c,s,a,v,a,j
+const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t/p/i/r/c/s/a/v/a/j 
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

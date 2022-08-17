@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concat ()</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">concat()</h2>
+            <div class="t_box">concat() 메서드는 둘 이상의 문자열을 결합하여, 새로운 문자열을 반환합니다.<br>
+                // "문자열",concat()(문자열)
+                // "문자열",concat()(문자열,문자열...)
+            </div>
+            <div class="t_code">
+<pre><code>const str1 = "javascript";
+const currentStr1 = str1.concat("reference");                       //javascriptreference
+const currentStr2 = str1.concat(" ", "reference");                  //javascript reference
+const currentStr3 = str1.concat(", ", "reference");                 //javascript, reference
+const currentStr4 = str1.concat(", ", "reference", ", ", "book");   //javascript, reference, book
+const currentStr5 = str1.concat(",", ["reference","book"]);         //javascript,reference,book
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

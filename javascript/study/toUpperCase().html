@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 결합 / 템플릿 문자열</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit2"> toUpperCase() / ToLowerCase()</h2>
+            <p class="t_desc2">문자열을 소문자/대문자로 바꿔준다.</p>
+            
+        </div>
+        
+        <div class="document">
+            <div class="t_code">
+<pre><code>const str1 = "javascript";
+const currentStr1 = str1.toLocaleUpperCase();
+
+document.querySelector(".sample02_N1").innerHTML = "1";
+document.querySelector(".sample02_Q1").innerHTML = "javascript";
+document.querySelector(".sample02_M1").innerHTML = "문자열(string) 결합";
+document.querySelector(".sample02_P1").innerHTML = currentStr1;
+
+const str2 = "javascript"
+const currentStr2 = str1.toLowerCase();
+
+document.querySelector(".sample02_N2").innerHTML = "2";
+document.querySelector(".sample02_Q2").innerHTML = "javascript";
+document.querySelector(".sample02_M2").innerHTML = "문자열(string) 결합";
+document.querySelector(".sample02_P2").innerHTML = currentStr2;
+</code></pre>
+            </div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>리턴값</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>javascript</td>
+                        <td>문자열(string) 결합</td>
+                        <td>JAVASCRIPT</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>javascript</td>
+                        <td>문자열(string) 결합</td>
+                        <td>javascript</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

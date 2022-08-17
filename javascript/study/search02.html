@@ -34,7 +34,62 @@
             <hr>
             <h2 class="t_tit">HTML</h2>
                 <div class="t_code">
-<pre><code>
+<pre><code>&ltdiv class="search__wrap">
+    &ltspan>inclides()를 이용하여 CSS 속성 검색하기&lt/span>
+    &lth1>CSS 태그 검색하기&lt/h1>
+    
+    &ltdiv class="search__box">
+        &ltlabel for="search">검색하기&lt/label>
+        &ltinput type="text" id="search" placeholder="CSS 속성 및 유형을 입력해 주세요.">
+    &lt/div>
+    &ltdiv class="search__info">
+        &ltdiv class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요.&lt/div>
+        &ltdiv>전체 속성 갯수 : &ltspan class="num">0&lt/span>&lt/div>
+    &lt/div>
+    &ltdiv class="search__list">
+        &ltdiv class="css">
+            &ltul>
+                &ltli data-name="aLign-content" data-type="플렉스">&ltstrong>aLign-content&lt/strong> : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.&lt/li>
+                &ltli data-name="aLign-items" data-type="플렉스">&ltstrong>aLign-items&lt/strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.&lt/li>
+                &ltli data-name="aLign-self" data-type="플렉스">&ltstrong>aLign-self&lt/strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다. &lt/li>
+                &ltli data-name="all" data-type="기타">&ltstrong>all&lt/strong> : 요소의 속성을 초기화 또는 상속을 설정합니다.&lt/li>
+                &ltli data-name="animation" data-type="애니메이션">&ltstrong>animation&lt/strong> : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.&lt/li>
+                &ltli data-name="animation-delay" data-type="애니메이션">&ltstrong>animation-delay&lt/strong> : 애니메이션 지연 시간을 설정합니다. &lt/li>
+                &ltli data-name="animation-direction" data-type="애니메이션">&ltstrong>animation-direction&lt/strong> : 속성은 애니메이션 움직임 방향 설정한다. &lt/li>
+                &ltli data-name="animation-duration" data-type="애니메이션">&ltstrong>animation-duration&lt/strong> : 속성은 애니메이션 움직임 시간을 설정한다.&lt/li>
+                &ltli data-name="animation-fill-mode" data-type="애니메이션">&ltstrong>animation-fill-mode&lt/strong> : 속성은 애니메이션이 끝난 후 상태를 설정한다.&lt/li>
+                &ltli data-name="animation-iteration-count" data-type="애니메이션">&ltstrong>animation-iteration-count&lt/strong> : 애니메이션 반복 횟수를 설정한다.&lt/li>
+                &ltli data-name="animation-name" data-type="애니메이션">&ltstrong>animation-name&lt/strong> : 애니메이션 keyframe 이름 설정한다.&lt/li>
+                &ltli data-name="	animation-play-state" data-type="애니메이션">&ltstrong>	animation-play-state&lt/strong> : 애니메이션 진행상태를 설정합니다.&lt/li>
+                &ltli data-name="animation-timeline" data-type="애니메이션">&ltstrong>animation-timeline&lt/strong> : 요소에 적용할 스크롤 애니메이션을 설명하는 하나 이상의 이름을 지정합니다.&lt/li>
+                &ltli data-name="animation-timing-function" data-type="애니메이션">&ltstrong>animation-timing-function&lt/strong> : 애니메이션 움직임의 속도를 설정합니다.&lt/li>
+                &ltli data-name="appearance" data-type="기타">&ltstrong>appearance&lt/strong> : 운영 체제의 테마를 기반으로 하는 UI 컨트롤의 기본 모양을 제어하는 ​​데 사용됩니다. &lt/li>
+                &ltli data-name="aspect-ratio" data-type="기타">&ltstrong>aspect-ratio&lt/strong> : 디스플레이 화면 가로와 세로 길이의 비율을 설정합니다.&lt/li>
+                &ltli data-name="backdrop-filter"data-type="효과">&ltstrong>backdrop-filter&lt/strong> : 요소 뒤 영역에 흐림 또는 색상 이동과 같은 그래픽 효과를 적용할 수 있습니다.&lt/li>
+                &ltli data-name="backface-visibility"data-type="기타">&ltstrong>backface-visibility&lt/strong> : 사용자를 향할 때 요소의 뒷면을 볼 수 있는지 여부를 설정합니다. &lt/li>
+                &ltli data-name="background"data-type="백그라운드">&ltstrong>background&lt/strong> : 백그라운드 속성을 일괄적으로 설정합니다.&lt/li>
+                &ltli data-name="background-attachment"data-type="백그라운드">&ltstrong>background-attachment&lt/strong> : 배경 이미지의 고정 여부를 설정합니다.&lt/li>
+                &ltli data-name="background-blend-mode"data-type="백그라운드">&ltstrong>background-blend-mode&lt/strong> : 배경을 혼합했을 때 그래픽 효과를 설정합니다.&lt/li>
+                &ltli data-name="background-clip"data-type="백그라운드">&ltstrong>background-clip&lt/strong> : 백그라운드 이미지의 위치 기준점을 설정합니다.&lt/li>
+                &ltli data-name="background-color"data-type="백그라운드">&ltstrong>background-color&lt/strong> : 백그라운드 색을 설정합니다.&lt/li>
+                &ltli data-name="background-image"data-type="백그라운드">&ltstrong>background-image&lt/strong> : 백그라운드 이미지 속성을 설정합니다.&lt/li>
+                &ltli data-name="background-origin"data-type="백그라운드">&ltstrong>background-origin&lt/strong> : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt/li>
+                &ltli data-name="background-position"data-type="백그라운드">&ltstrong>background-position&lt/strong> : 백그라운드 이미지의 위치 영역을 설정합니다.&lt/li>
+                &ltli data-name="background-position-x"data-type="백그라운드">&ltstrong>background-position-x&lt/strong> : 백그라운드 이미지의 x축 위치 영역을 설정합니다.&lt/li>
+                &ltli data-name="background-position-y"data-type="백그라운드">&ltstrong>background-position-y&lt/strong> : 백그라운드 이미지의 y축 위치 영역을 설정합니다.&lt/li>
+                &ltli data-name="background-repeat"data-type="백그라운드">&ltstrong>background-repeat&lt/strong> : 백그라운드 이미지 반복 여부를 설정합니다.&lt/li>
+                &ltli data-name="background-size"data-type="백그라운드">&ltstrong>background-size&lt/strong> : 백그라운드 이미지 사이즈를 설정합니다.&lt/li>
+                &ltli data-name="block-size"data-type="백그라운드">&ltstrong>block-size&lt/strong> : 블록의 가로 또는 세로 크기를 정의합니다.&lt/li>
+                &ltli data-name="border"data-type="백그라운드">&ltstrong>border&lt/strong> : 테두리 속성을 일괄적으로 설정합니다.&lt/li>
+                &ltli data-name="border-block"data-type="백그라운드">&ltstrong>border-block&lt/strong> : 블록 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성 입니다.&lt/li>
+                &ltli data-name="border-block-color"data-type="백그라운드">&ltstrong>border-block-color&lt/strong> : 블록 테두리 색상을 정의합니다.&lt/li>
+                &ltli data-name="border-block-end"data-type="백그라운드">&ltstrong>border-block-end&lt/strong> : 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li>
+                &ltli data-name="block-size"data-type="백그라운드">&ltstrong>block-size&lt/strong> : 블록의 가로 또는 세로 크기를 정의합니다.&lt/li>
+                &ltli data-name="block-size"data-type="백그라운드">&ltstrong>block-size&lt/strong> : 블록의 가로 또는 세로 크기를 정의합니다.&lt/li>
+            &lt/ul>
+        &lt/div>
+    &lt/div>
+&lt/div>
 </code></pre>
 <pre><code>// 선택자
 const searchBox = document.querySelector(".search__box input"); //검색  박스
