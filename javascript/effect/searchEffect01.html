@@ -17,14 +17,8 @@
         <h1>Search</h1>
         <nav>
             <ul>
-                <li class="active"><a href="quizEffect01.html">1</a>
-                    <ul class="sub">
-                        <li class="active"><a href="searchEffect01.html">HTML</a></li>
-                        <li><a href="searchEffect01_css.html">CSS</a></li>
-                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
-                    </ul>
-                </li>
-                <li><a href="quizEffect02.html">2</a></li>
+                <li class="active"><a href="searchEffect01.html">1</a>
+                <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="quizEffect03.html">3</a></li>
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
@@ -36,33 +30,38 @@
     <main id="main">
         <div class="search__wrap">
             <span>indexOf()를 이용하여 CSS 속성 검색하기</span>
-            <h1>HTML 태그 검색하기</h1>
+            <h1>CSS 태그 검색하기</h1>
             
             <div class="search__box">
                 <label for="search">검색하기</label>
-                <input type="text" id="search" placeholder="HTML 테그를 입력해 주세요.">
+                <input type="text" id="search" placeholder="CSS 테그를 입력해 주세요.">
+            </div>
+            <div class="search__info">
+                <div>CSS 속성 갯수 : <span class="num">0</span></div>
             </div>
             <div class="search__list">
                 <div class="html">
                     <ul>
-                        <li data-name="a"><strong>a</strong> : a 태그는 다른 페이지 이동을 설정합니다.</li>
-                        <li data-name="abbr"><strong>abbr</strong> : abbr 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.</li>
-                        <li data-name="acronym"><strong>acronym</strong> : acronym </li>
-                        <li data-name="address"><strong>address</strong> : address 연락처 정보를 나타낸다.</li>
-                        <li data-name="applet"><strong>applet</strong> : applet 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.</li>
-                        <li data-name="area"><strong>area</strong> : area 이미지의 핫스팟 영역을 정의, 하이퍼 링크를 추가 할 수 있다.</li>
-                        <li data-name="article"><strong>article</strong> : article 태그는 문서, 페이지 등 사이트 안에서 독릭적으로 구분해 배포하거나 재사용할 수 있는 구획 설정합니다.</li>
-                        <li data-name="aside"><strong>aside</strong> : aside 태그는 주요 내용관 간접적으로만 연관된 부분(사이드바 등) 설정합니다.</li>
-                        <li data-name="audio"><strong>audio</strong> : audio 태그는 소리 콘텐츠를 포함할 때 사용. 한개 이상읜 오디오 소스를 지정 할 수 있다.</li>
-                        <li data-name="b"><strong>b</strong> : b 독자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다.</li>
-                        <li data-name="base"><strong>base</strong> : base 태그는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정합니다.</li>
-                        <li data-name="bdi"><strong>bdi</strong> : bdi 태그는 주위의 텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용합니다.</li>
-                        <li data-name="bdo"><strong>bdo</strong> : bdo 태그는 자식 요소의 텍스트 방향성 을 정의할 때 사용</li>
-                        <li data-name="bgsound"><strong>bgsound</strong> : bgsound 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.</li>
-                        <li data-name="big"><strong>big</strong> : big 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.</li>
-                        <li data-name="blink"><strong>blink</strong> : blink 태그는 줄임말이나 머리글자를 표현하는데 설정합니다.</li>
-                        <li data-name="blockquote"><strong>blockquote</strong> : blockquote 태그는 줄 다른 출처로부터 인용된 블록을 정의할 때 사용 합니다.</li>
-    
+                        <li data-name="aLign-content"><strong>aLign-content</strong> : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="aLign-items"><strong>aLign-items</strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="aLign-self"><strong>aLign-self</strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다. </li>
+                        <li data-name="all"><strong>all</strong> : 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                        <li data-name="animation"><strong>animation</strong> : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="animation-delay"><strong>animation-delay</strong> : 애니메이션 지연 시간을 설정합니다. </li>
+                        <li data-name="animation-direction"><strong>animation-direction</strong> : 속성은 애니메이션 움직임 방향 설정한다. </li>
+                        <li data-name="animation-duration"><strong>animation-duration</strong> : 속성은 애니메이션 움직임 시간을 설정한다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : 속성은 애니메이션이 끝난 후 상태를 설정한다.</li>
+                        <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : 애니메이션 반복 횟수를 설정한다.</li>
+                        <li data-name="animation-name"><strong>animation-name</strong> : 애니메이션 keyframe 이름 설정한다.</li>
+                        <li data-name="	animation-play-state"><strong>	animation-play-state</strong> : 애니메이션 진행상태를 설정합니다.</li>
+                        <li data-name="animation-timeline"><strong>animation-timeline</strong> : 요소에 적용할 스크롤 애니메이션을 설명하는 하나 이상의 이름을 지정합니다.</li>
+                        <li data-name="animation-timing-function"><strong>animation-timing-function</strong> : 애니메이션 움직임의 속도를 설정합니다.</li>
+                        <li data-name="appearance"><strong>appearance</strong> : 운영 체제의 테마를 기반으로 하는 UI 컨트롤의 기본 모양을 제어하는 ​​데 사용됩니다. </li>
+                        <li data-name="aspect-ratio"><strong>aspect-ratio</strong> : 디스플레이 화면 가로와 세로 길이의 비율을 설정합니다. </li>
+                        <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : 요소 뒤 영역에 흐림 또는 색상 이동과 같은 그래픽 효과를 적용할 수 있습니다.</li>
+                        <li data-name="backface-visibility"><strong>backface-visibility</strong> : 사용자를 향할 때 요소의 뒷면을 볼 수 있는지 여부를 설정합니다. </li>
+                        <li data-name="background"><strong>background</strong> : 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="background-attachment"><strong>background-attachment</strong> : 배경 이미지의 고정 여부를 설정합니다.</li>
                     </ul>
                 </div>
             </div>
@@ -77,7 +76,12 @@
         // 선택자
         const searchBox = document.querySelector(".search__box input"); //검색  박스
         const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
+        const searchInfo = document.querySelector(".search__info") //전체 갯수
+        
+        // 정체 갯수 구하기
+        searchInfo.textContent = searchList.length;
 
+        //검색 영역
         searchBox.addEventListener("keyup", () => {
             const searchWord = searchBox.value; //사용자가 입력한 키워드
 

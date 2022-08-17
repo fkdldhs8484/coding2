@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형 02</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        /* '+' 형제, '>' 자식? */
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image {
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+        .image__box {}
+
+        .image__box img {
+            vertical-align: top;
+            transition: all 0.6s ease-in-out;
+        }
+        .imge__desc {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px );
+            padding: 23px 20px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.1);
+            bottom: -100px;
+            transition: all 0.3s ease-in-out;
+        }
+        .imge__desc h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .img1 .imge__desc{ background: rgba(0, 0, 0, 0.1);}
+        .img2 .imge__desc{ background: rgba(0, 0, 0, 0.1);}
+        .img3 .imge__desc{ background: rgba(0, 0, 0, 0.1);}
+        .img1 .imge__desc h3 { color: #000;}
+        .img2 .imge__desc h3 { color: #000;}
+        .img3 .imge__desc h3 { color: #000;}
+
+        .img1:hover .imge__desc {
+            bottom: 0;
+        }
+        .img1:hover .imge__box img {
+            transform: scale(1.03);
+        }
+        .imge__desc .more {
+            font-size: 16px;
+        }
+        .imge__desc .more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="imageType02" class="image__wrap  section NexonLv1Gothic ">
+        <h2>북극 동물들</h2>
+        <p>북극동물들 의 귀여움을 알아보자.</p>
+        <div class="image__inner container">
+            <article class="image img1">
+                <figure class="image__box">
+                    <img src="img/Rectangle 3.jpg" alt="/">
+                </figure>
+                <div class="imge__desc">
+                    <h3>북극동물</h3>
+                    <a href="/" class="more" title="자세히보기">자세히보기</a>
+                </div>
+            </article>
+            <article class="image img2">
+                <figure class="image__box">
+                    <img src="img/Rectangle 4.jpg" alt="/">
+                </figure>
+                <div class="imge__desc">
+                    <h3>북극동물</h3>
+                    <a href="/" class="more" title="자세히보기">자세히보기</a>
+                </div>
+            </article>
+            <article class="image img3">
+                <figure class="image__box">
+                    <img src="img/Rectangle 5.jpg" alt="/">
+                </figure>
+                <div class="imge__desc">
+                    <h3>북극동물</h3>
+                    <a href="/" class="more" title="자세히보기">자세히보기</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>
