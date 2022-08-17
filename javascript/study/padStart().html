@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>repeat()</title>
+    <title>padStart / padEnd</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -19,15 +19,35 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">repeat()</h2>
-            <div class="t_box">repeat() 메서드는 문자열을 복사하여, 복사한 새로운 문자열을 반환합니다.<br>
-                
+            <h2 class="t_tit">padStart / padEnd</h2>
+            <div class="t_box">// "문자열".padStart(길이)<br>
+                // "문자열".padStart(길이, 문자열)
             </div>
             <div class="t_code">
-<pre><code>const str1 = "javascript";
-const currentStr1 = str1.repeat(0); //'' 안나옴
-const currentStr2 = str1.repeat(1); //javascript
-const currentStr3 = str1.repeat(2); //javascriptjavascript
+<pre><code>const str1 = "456";
+const currentStr1 = str1.padStart(1, "0"); //456
+const currentStr2 = str1.padStart(2, "0"); //456
+const currentStr3 = str1.padStart(3, "0"); //456
+const currentStr4 = str1.padStart(4, "0"); //0456 앞의 숫자 길이값
+const currentStr5 = str1.padStart(5, "0"); //00456 
+const currentStr6 = str1.padStart(6, "0"); //000456 
+const currentStr7 = str1.padStart(6, "1"); //111456
+const currentStr8 = str1.padStart(6, "12"); //121456
+const currentStr9 = str1.padStart(6, "123"); //123456
+const currentStr10 = str1.padStart(6, "1234"); //123456
+const currentStr11 = str1.padStart(6); //   456 앞에 공백처리 됌.
+
+const currentStr12 = str1.padEnd(1, "0"); //456
+const currentStr13 = str1.padEnd(2, "0"); //456
+const currentStr14 = str1.padEnd(3, "0"); //456
+const currentStr15 = str1.padEnd(4, "0"); //4560
+const currentStr16 = str1.padEnd(5, "0"); //45600
+const currentStr17 = str1.padEnd(6, "0"); //456000
+const currentStr18 = str1.padEnd(6, "1"); //456111
+const currentStr19 = str1.padEnd(6, "12"); //456121
+const currentStr20 = str1.padEnd(6, "123"); //456123
+const currentStr21 = str1.padEnd(6, "1231"); //456123
+const currentStr22 = str1.padEnd(6); //456   뒤에 공백처리 됌.
 </code></pre>
             </div>
         </div>
