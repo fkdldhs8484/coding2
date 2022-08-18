@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html"></a></h1>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">강아지 애니메이션 만들기</h2>
+            <p class="t_desc2">이번에는 강아지 애니메이션을 만들어 보았습니다. 평소에 하던 방법이 아닌 SCSS를 이용해서 일일이 강아지를 조합? 해보았습니다.
+            </p>
+            <hr>
+            <h3 class="t_tit2">pug</h3>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="t_code">
+<pre><code>
+.dog   ->   HTML로 바꾸면 &ltdiv class="dog">
+.dog-body
+    .dog-tail
+        .dog-tail
+            .dog-tail
+                .dog-tail
+                    .dog-tail
+                        .dog-tail
+                            .dog-tail
+                                .dog-tail
+.dog-torso
+.dog-head
+    .dog-ears
+        .dog-ear
+        .dog-ear
+    .dog-eyes
+        .dog-eye
+        .dog-eye
+    .dog-muzzle
+        .dog-tongue                   
+</code></pre>
+                    </div>
+            </div>
+            </details>
+            <hr>
+            <h3 class="t_tit2">SCSS</h3>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="t_code">
+<pre><code>$dog-width: 100px;
+    $interval: 200ms;
+    $color-gray: #111;
+    $easing: ease-in-out;
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    html, body {
+        background: #111;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    *, *:before, *:after {
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    // dog
+    .dog {
+        width: $dog-width;
+        height: $dog-width;
+        z-index: 1;
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(black, 0.03);
+            transform: translatey(-30%) scale(1.5);
+        }
+        
+        * {
+            position: absolute;
+        }
+    }
+    
+    .dog-body, .dog-head, .dog-torso {
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    // dog-body
+    .dog-body {
+        top: -50%;
+        box-shadow: inset 0 -15px 0 0 $color-gray;
+        animation: dog-body $interval $easing infinite alternate;
+        
+        &:before {
+            content:'';
+            position: absolute;
+            bottom: 90%;
+            right: 50%;
+            width: 90%;
+            height: 90%;
+            background: rgba(black, 0.4);
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 10%;
+            border-top-right-radius: 10%;
+            transform-origin: right bottom;
+            animation: dog-tail-blur $interval $interval / 6 $easing infinite alternate both;
+            
+            @keyframes dog-tail-blur {
+                0% {
+                    transform: rotate(0);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        @keyframes dog-body {
+            from {transform: translatex(-10%)}
+            to {transform: translatex(10%)}
+        }
+    }
+    // dog-head
+    .dog-head {
+        animation: dog-head $interval * 9 cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+        
+        @keyframes dog-head {
+            0% {transform: rotate(45deg)}
+            33% {transform: rotate(-45deg)}
+            66% {transform: rotate(0deg)}
+            100% {transform: rotate(45deg)}
+        }
+    }
+    //dog-torso
+    .dog-torso {
+        top: -20%;
+        background: black;
+        box-shadow: inset 0 -15px 0 0 $color-gray;
+        animation: dog-torso $interval $easing infinite alternate-reverse;
+        
+        @keyframes dog-torso {
+            0% {transform: translatex(-5%);}
+            100% {transform: tranlatex(5%);}
+        }
+    }
+    
+    // dog-eyes
+    .dog-eyes {
+        width: 60%;
+        top: 55%;
+        left: 20%;
+        z-index: 1;
+        
+        &:before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            //background: orange;
+                position: absolute;
+            top: -10px;
+            left: -10px;
+            z-index: 0;
+            border: 4px solid black;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            border-top-width: 0;
+            transform: rotate(-45deg)
+        }
+    }
+    
+    .dog-eye {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: red;
+        z-index: 1;
+        
+        &:first-child {
+            left: 0;
+        }
+        &:last-child {
+            right: 0;
+        }
+    }
+    
+    .dog-muzzle {
+        width: 60%;
+        left: 20%;
+        height: 50%;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        bottom: -15%;
+        background: black;
+        
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+        
+        &:before {
+            width: 6px;
+            height: 20px;
+            bottom: 0;
+            background: $color-gray;
+            left: calc(50% - 3px);
+        }
+        
+        &:after {
+            background: red;
+            width: 20px;
+            height: 15px;
+            bottom: 12px;
+            left: calc(50% - 10px);
+            border-bottom-left-radius: 60% 60%;
+            border-bottom-right-radius: 60% 60%;
+            border-top-left-radius: 50% 40%;
+            border-top-right-radius: 50% 40%;
+        }
+    }
+    
+    // dog-ears
+    .dog-ears {
+        width: 40%;
+        top: 25%;
+        left: 30%;
+    
+    }
+    .dog-ear {
+        bottom: -10px;
+        height: 50px;
+        width: 50px;
+        background: $color-gray;
+        
+        &:first-child {
+            right: 100%;
+            border-bottom-left-radius: 80%;
+            border-top-right-radius: 80%;
+            box-shadow: inset -15px 15px 0 1px black;
+            transform: rotate(10deg);
+        }
+        &:last-child {
+            left: 100%;
+            border-bottom-right-radius: 80%;
+            border-top-left-radius: 80%;
+            box-shadow: inset 15px 15px 0 0 black;
+            transform: rotate(-10deg);
+        }
+    }
+    .dog-tongue {
+        width: 40%;
+        height: 100%;
+        left: calc(50% - 20px);
+        z-index: -1;
+        transform-origin: center top;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            background: #fd3163;
+            animation: dog-tongue-inner $interval / 2 $easing infinite alternate;
+            
+            @keyframes dog-tongue-inner {
+                from {transform: translatey(5%)}
+                to {transform: translatey(22%)}
+            }
+        }
+    }
+    // dog-tail
+    .dog-tail {
+        $tail-width: 22px;
+        width: $tail-width;
+        height: $tail-width * 1.1;
+        background: black;
+        bottom: 40%;
+        border-radius: $tail-width / 2;
+        left: calc(50% - #{$tail-width / 2});
+        transform-origin: center bottom;
+        
+        .dog-tail {
+            animation: dog-tail-segment $interval $easing infinite alternate;
+            
+            @keyframes dog-tail-segment {
+                0% {transform: rotate(-10deg)}
+                100% {transform: rotate(10deg)}
+            }
+        }
+    }
+    .dog-body > .dog-tail {
+        bottom: 90%;
+    }
+</code></pre>
+                                    </div>
+            </div>
+            <hr>
+            <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="PoRXJEP"
+                data-user="fkdldhs8484"
+                style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/PoRXJEP">
+                        CSS Dog</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+    </main>
+    <!-- //main -->
+
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
