@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 관련 요소</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">블록 구조 / 인라인 구조</h2>
+            <p class="t_desc2">블록 구조의 특징은 한 줄 하나만 표현 됩니다. 가로로 정렬이 되지 않습니다. 또한 영역을 포현하는 부분이기 때문에, 마진 값이나 패딩 값이
+                먹힙니다.<br>인라인 구조의 경우에는 한 줄에 여러개가 표현이 되며, 가로로 정렬이 됩니다. 같은 인라인요소를 포함하지만, 블록 요소는 포함 불가능이다.
+            </p>
+
+            <hr>
+
+            <h2 class="t_tit2">블록 구조(block)</h2>
+            <div class="t_box">div, p, h1~h6, ul, li, ol, table, form, section, footer 등 자주 사용하는 태그들이다.</div>
+            <div class="t_code">
+<pre><code>div {
+display: block;
+}
+</code></pre>
+            </div>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="PoRVpXX"
+                data-user="fkdldhs8484"
+                style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/PoRVpXX">
+                        Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <hr>
+            <div class="document">
+                <h2 class="t_tit2">인라인 구조(inline)</h2>
+                <div class="t_box">span, a, em, i, strong, b, del, ins, sub, sup, textarea 등 자주 사용하는 태그들이다. 참고로 padding 값은 적용이 됩니다.</div>
+                <div class="t_code">
+<pre><code>li {
+display: inline;
+}
+</code></pre>
+                </div>
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWVLpOW"
+                    data-user="fkdldhs8484"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/MWVLpOW">
+                            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

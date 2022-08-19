@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드 유형 05</title>
-    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
-
+    <title>이미지 유형03</title>
+    <link href="https://webfontworld.github.io/yangheeryu/GowunBatang.css" rel="stylesheet">
     <style>
         /* fonts */
-        @import url('https://webfontworld.github.io/score/SCoreDream.css');
-
-        .NexonLv1Gothic {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+        .gowun {
+            font-family: GowunBatang;
+            font-weight: 400;
         }
-
         /* reset */
         * {
             margin: 0;
             padding: 0;
         }
-
         a {
             text-decoration: none;
             color: #000;
         }
-
         img {
             width: 100%;
+            vertical-align: top;
         }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
-
         /* common */
         .container {
             width: 1160px;
@@ -48,85 +36,137 @@
             margin: 0 auto;
             min-width: 1160px;
         }
-
+        .container-fluid {
+            width: 100%;
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
         .section {
             padding: 120px 0;
         }
-
-        .section>h2 {
+        .section > h2 {
             font-size: 50px;
-            margin-bottom: 20px;
+            line-height: 1;
             text-align: center;
+            margin-bottom: 20px;
         }
-
-        .section>p {
+        .section > p {
             font-size: 22px;
             font-weight: 300;
-            margin-bottom: 70px;
+            color: #666;
             text-align: center;
-            color: #777;
+            margin-bottom: 70px;
         }
-
-        /* image */
+        /* imageType */
         .image__inner {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-areas:
+                "box1 box1 box2 box3"
+                "box1 box1 box4 box5";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
         }
-        .image {
-            width: 48%;
-            height: 370px;
-            padding: 200px 20px 20px 20px;
-            color: #fff;
-            box-sizing: border-box;
+        .image__inner .image:nth-child(1) {
+            grid-area: box1;
+            background: url(img/image_bg03_01.jpg);
+            background-size: cover;
         }
-        .image.img1{
-            background: url(img/imgType01_1.jpg) center no-repeat;
+        .image__inner .image:nth-child(2) {
+            grid-area: box2;
         }
-        .image.img2{
-            background: url(img/imgType01_2.jpg) center no-repeat;
+        .image__inner .image:nth-child(3) {
+            grid-area: box3;
         }
-        .image__tit{
-            font-size: 32px;
-            margin-bottom: 10px;
+        .image__inner .image:nth-child(4) {
+            grid-area: box4;
         }
-        .image__desc{
-            font-size: 16px;
-            margin-bottom: 10px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            padding-right: 100px;
-            text-overflow: ellipsis;
+        .image__inner .image:nth-child(5) {
+            grid-area: box5;
         }
-        .image__btn{
-            display: inline-block;
-            background-color: #B59140;
-            padding: 10px 20px;
-            color: #fff;
-            position: absolute;
+        .image__box {}
+        .image__desc {
+            display: none;
+        }
+        .image__sns {
+            display: none;
         }
     </style>
 </head>
-
 <body>
-    <section id="imageType" class="image__wrap section NexonLv1Gothic">
-        <h2>레서판다</h2>
-        <p>레서판다의 귀여움을 알아보자.</p>
-        <div class="image__inner container">
-            <article class="image img1">
-                <h3 class="image__tit">레서판다가 줄 타는 모습</h3>
-                <p class="image__desc">레서판다가 줄타는 모습을 보십시오. 너무 귀엽지 않나요.. 귀여워서 깨물고 싶어요...너구리랑 햇갈리지 맙시다.</p>
-                <a class="image__btn" href="/">자세히 보기</a>
+    <section id="imageType03" class="image__wrap gowun section">
+        <h2>세상에서 가장 아름다운 건물</h2>
+        <p>
+            웹쓰가 선정한 죽기전에 가봐야 할 건축물 베스트5입니다.<br>
+            전세계에서 가장 유명한 건축가가 제작한 건축물로써 한번은 꼭 가봐야 하는 곳입니다.
+        </p>
+        <div class="image__inner container-fluid">
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imgType03_03.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세계에서 가장 유명한 건물입니다. 최고의 건출물이나 현재는 전쟁으로 인해서 많이 파괴되었지만. 아직도 살 수 있다고 말한...</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span>페이스북</span></a>
+                    <a href="#" class="link"><span>페이지이동</span></a>
+                </div>
             </article>
-            <article class="image img2">
-                <h3 class="image__tit">레서판다가 줄 타는 모습</h3>
-                <p class="image__desc">레서판다가 줄타는 모습을 보십시오. 너무 귀엽지 않나요.. 귀여워서 깨물고 싶어요...너구리랑 햇갈리지 맙시다.</p>
-                <a class="image__btn" href="/">자세히 보기</a>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imgType03_02.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세계에서 가장 유명한 건물입니다. 최고의 건출물이나 현재는 전쟁으로 인해서 많이 파괴되었지만. 아직도 살 수 있다고 말한...</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span>페이스북</span></a>
+                    <a href="#" class="link"><span>페이지이동</span></a>
+                </div>
             </article>
-        </div>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imgType03_03.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세계에서 가장 유명한 건물입니다. 최고의 건출물이나 현재는 전쟁으로 인해서 많이 파괴되었지만. 아직도 살 수 있다고 말한...</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span>페이스북</span></a>
+                    <a href="#" class="link"><span>페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imgType03_03.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세계에서 가장 유명한 건물입니다. 최고의 건출물이나 현재는 전쟁으로 인해서 많이 파괴되었지만. 아직도 살 수 있다고 말한...</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span>페이스북</span></a>
+                    <a href="#" class="link"><span>페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imgType03_03.jpg" alt="셰이크 로트폴라 모스크">
+                </figure>
+                <div class="image__desc">
+                    <h3>셰이크 로트폴라 모스크</h3>
+                    <p>세계에서 가장 유명한 건물입니다. 최고의 건출물이나 현재는 전쟁으로 인해서 많이 파괴되었지만. 아직도 살 수 있다고 말한...</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span>페이스북</span></a>
+                    <a href="#" class="link"><span>페이지이동</span></a>
+                </div>
+            </article>
         </div>
     </section>
 </body>
-
 </html>

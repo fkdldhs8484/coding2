@@ -42,7 +42,6 @@
             font-weight: normal;
         }
 
-        /* ir효과(이미지 대체 효과 == alt) 중요 */
         .ir {
             display: block;
             overflow: hidden;
@@ -50,6 +49,7 @@
             line-height: 0;
             text-indent: -9999px;
         }
+
 
         /* common */
         .container {
@@ -69,129 +69,109 @@
             padding: 120px 0;
         }
 
-        /* '+' 형제, '>' 자식? */
         .section>h2 {
             font-size: 50px;
             line-height: 1;
-            text-align: center;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .section>p {
             font-size: 22px;
             font-weight: 300;
             color: #666;
-            text-align: center;
             margin-bottom: 70px;
+            text-align: center;
         }
-
-        /* imageType */
-
-        .image__inner {
+        /* imageType03 */
+       .image__inner {
             display: grid;
             grid-template-areas:
-                "box1 box2 box3"
-                "box1 box4 box5";
-            grid-template-columns: 50% 25% 25%;
-            grid-gap: 2%;
-
-        }
-
-        .imge {
+                "box1 box1 box2 box3"
+                "box1 box1 box4 box5"
+            ;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
+       }
+       .image {
             position: relative;
             overflow: hidden;
-        }
-
-        .image__inner .image {}
-
-        .image__inner .image:nth-child(1) {
+       }
+       .image__inner .image:nth-child(1) {
             grid-area: box1;
             background: url(img/imgType03_01.jpg);
             background-size: cover;
-        }
-
-        .image__inner .image:nth-child(2) {
+       }
+       .image__inner .image:nth-child(2) {
             grid-area: box2;
-        }
-
-        .image__inner .image:nth-child(3) {
+       }
+       .image__inner .image:nth-child(3) {
             grid-area: box3;
-        }
-
-        .image__inner .image:nth-child(4) {
+       }
+       .image__inner .image:nth-child(4) {
             grid-area: box4;
-        }
-
-        .image__inner .image:nth-child(5) {
+       }
+       .image__inner .image:nth-child(5) {
             grid-area: box5;
-        }
-
-        .image__box {}
-
-        .image__desc {
+       }
+       .image__Box {}
+       .image__desc {
             position: absolute;
             left: 0;
             bottom: -100%;
             width: 100%;
-            backdrop-filter: blur(6px);
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255,255,255, 0.3);
+            backdrop-filter: blur(10px);
             padding: 16px;
             box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        image:hover .image__desc {
+            transition: all 0.4s ease;
+       }
+       .image:hover .image__desc {
             bottom: 0;
         }
-
-        .image__desc h3 {
+       .image__desc h3 {
             font-size: 20px;
-        }
-
-        .image__desc p {
+       }
+       .image__desc p {
             font-size: 16px;
+            color: #111;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            color: #666;
-        }
 
-        .image__sns {
+       }
+       .image__sns {
             position: absolute;
-            right: -100px;
+            right: 10px;
+            opacity: 0;
             top: 10px;
             transition: all 0.4s ease;
-        }
-
-        .image__sns a {
-            widows: 36px;
+       }
+       .image__sns a {
+            width: 36px;
             height: 36px;
             background: #fff;
             border-radius: 50%;
             display: block;
             margin-bottom: 5px;
             background: url(img/imag_bg_03_01.svg) no-repeat;
-        }
-
-        .image__sns a:nth-child(2) {
+       }
+       .image__sns a:nth-child(2){
             background-position: -50px 0;
-        }
-
-        .image__sns a:nth-child(3) {
+       }
+       .image__sns a:nth-child(3){
             background-position: -100px 0;
-        }
-
-        .image__sns a:nth-child(4) {
+       }
+       .image__sns a:nth-child(4){
             background-position: -150px 0;
-        }
-
-        .image__sns a:nth-child(5) {
+       }
+       .image__sns a:nth-child(5){
             background-position: -200px 0;
-        }
-
-        .image:hover .image__sns {
-            right: 10px;
-        }
+       }
+       .image:hover .image__sns{
+            opacity: 1;
+       }
     </style>
 </head>
 
@@ -209,11 +189,11 @@
                     <p>팬케이크에대해 알아보자.</p>
                 </div>
                 <div class="image__sns">
-                    <a href="/" class="link"><span class="ir"></span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir">페이스북</span></a>
+                    <a href="#" class="link"><span class="ir">트위터</span></a>
+                    <a href="#" class="link"><span class="ir">인스타그램</span></a>
+                    <a href="#" class="link"><span class="ir">유튜브</span></a>
+                    <a href="#" class="link"><span class="ir">링크</span></a>
                 </div>
             </article>
             <article class="image">
@@ -225,8 +205,8 @@
                     <p>팬케이크에대해 알아보자.</p>
                 </div>
                 <div class="image__sns">
-                    <a href="/" class="link"><span class="ir"></span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir"></span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
                 </div>
             </article>
             <article class="image">
@@ -238,8 +218,8 @@
                     <p>팬케이크에대해 알아보자.</p>
                 </div>
                 <div class="image__sns">
-                    <a href="/" class="link"><span class="ir"></span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir"></span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
                 </div>
             </article>
             <article class="image">
@@ -251,8 +231,8 @@
                     <p>팬케이크에대해 알아보자.</p>
                 </div>
                 <div class="image__sns">
-                    <a href="/" class="link"><span class="ir"></span></a>
-                    <a href="/" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir"></span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
                 </div>
             </article>
             <article class="image">
@@ -264,8 +244,8 @@
                     <p>팬케이크에대해 알아보자.</p>
                 </div>
                 <div class="image__sns">
-                    <a href="/" class="link"><span class="ir"></span></a>
-                    <a href="/" class="link"><span class="ir"></span></a>
+                    <a href="#" class="link"><span class="ir"></span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
                 </div>
             </article>
         </div>

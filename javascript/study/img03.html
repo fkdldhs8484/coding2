@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형 03</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">이미지 유형 03</h2>
+            <p class="t_desc2">이번 이미지는 큰 사진을 메인?으로 잡고 작은 이미지 4개의 구조가 있는 유형입니다. 이미지 유형 2번과 마찬가지로 사진에 마우스를 가져가 대면 제목과 설명 박스가 나옵니다. 이미지 유형 3번에는 sns 아이콘을 추가 했습니다.</p>
+            <div class="t_iframe" style="min-height: 250px; padding-top: 350px;">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D933%253A50" allowfullscreen></iframe></div>
+            <hr>
+            <h2 class="t_tit">HTML</h2>
+            <div class="t_code">
+<pre><code>&ltdiv class="image__inner container-fluid">
+    &ltarticle class="image">
+        <!-- <figure class="image__box">
+            <img src="img/imgType03_01.jpg" alt="/">
+        </figure> -->
+        &ltdiv class="image__desc">
+            &lth3>팬케이크&lt/h3>
+            &ltp>팬케이크에대해 알아보자.&lt/p>
+        &lt/div>
+        &ltdiv class="image__sns">
+            &lta href="#" class="link">&ltspan class="ir">페이스북&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">트위터&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">인스타그램&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">유튜브&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">링크&lt/span>&lt/a>
+            &lt/div>
+    &lt/article>
+    &ltarticle class="image">
+        &ltfigure class="image__box">
+            &ltimg src="img/imgType03_02.jpg" alt="/">
+        &lt/figure>
+        &ltdiv class="image__desc">
+            &lth3>팬케이크&lt/h3>
+            &ltp>팬케이크에대해 알아보자.&lt/p>
+        &lt/div>
+        &ltdiv class="image__sns">
+            &lta href="#" class="link">&ltspan class="ir">&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">페이지이동&lt/span>&lt/a>
+        &lt/div>
+    &lt/article>
+    &ltarticle class="image">
+        &ltfigure class="image__box">
+            &ltimg src="img/imgType03_03.jpg" alt="/">
+        &lt/figure>
+        &ltdiv class="image__desc">
+            &lth3>팬케이크&lt/h3>
+            &ltp>팬케이크에대해 알아보자.&lt/p>
+        &lt/div>
+        &ltdiv class="image__sns">
+            &lta href="#" class="link">&ltspan class="ir">&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">페이지이동&lt/span>&lt/a>
+        &lt/div>
+    &lt/article>
+    &ltarticle class="image">
+        &ltfigure class="image__box">
+            &ltimg src="img/imgType03_04.jpg" alt="/">
+        &lt/figure>
+        &ltdiv class="image__desc">
+            &lth3>팬케이크&lt/h3>
+            &ltp>팬케이크에대해 알아보자.&lt/p>
+        &lt/div>
+        &ltdiv class="image__sns">
+            &lta href="#" class="link">&ltspan class="ir">&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">페이지이동&lt/span>&lt/a>
+        &lt/div>
+    &lt/article>
+    &ltarticle class="image">
+        &ltfigure class="image__box">
+            &ltimg src="img/imgType03_05.jpg" alt="/">
+        &lt/figure>
+        &ltdiv class="image__desc">
+            &lth3>팬케이크&lt/h3>
+            &ltp>팬케이크에대해 알아보자.&lt/p>
+        &lt/div>
+        &ltdiv class="image__sns">
+            &lta href="#" class="link">&ltspan class="ir">&lt/span>&lt/a>
+            &lta href="#" class="link">&ltspan class="ir">페이지이동&lt/span>&lt/a>
+        &lt/div>
+    &lt/article>
+&lt/div>
+</code></pre>
+            </div>
+            <hr>
+            <h2 class="t_tit">CSS</h2>
+            <div class="t_code">
+<pre><code> /* imageType03 */
+.image__inner {
+        display: grid;
+        grid-template-areas:
+            "box1 box1 box2 box3"
+            "box1 box1 box4 box5"
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+}
+.image {
+        position: relative;
+        overflow: hidden;
+}
+.image__inner .image:nth-child(1) {
+        grid-area: box1;
+        background: url(img/imgType03_01.jpg);
+        background-size: cover;
+}
+.image__inner .image:nth-child(2) {
+        grid-area: box2;
+}
+.image__inner .image:nth-child(3) {
+        grid-area: box3;
+}
+.image__inner .image:nth-child(4) {
+        grid-area: box4;
+}
+.image__inner .image:nth-child(5) {
+        grid-area: box5;
+}
+.image__Box {}
+.image__desc {
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        background: rgba(255,255,255, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 16px;
+        box-sizing: border-box;
+        transition: all 0.4s ease;
+}
+.image:hover .image__desc {
+        bottom: 0;
+    }
+.image__desc h3 {
+        font-size: 20px;
+}
+.image__desc p {
+        font-size: 16px;
+        color: #111;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+}
+.image__sns {
+        position: absolute;
+        right: 10px;
+        opacity: 0;
+        top: 10px;
+        transition: all 0.4s ease;
+}
+.image__sns a {
+        width: 36px;
+        height: 36px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 5px;
+        background: url(img/imag_bg_03_01.svg) no-repeat;
+}
+.image__sns a:nth-child(2){
+        background-position: -50px 0;
+}
+.image__sns a:nth-child(3){
+        background-position: -100px 0;
+}
+.image__sns a:nth-child(4){
+        background-position: -150px 0;
+}
+.image__sns a:nth-child(5){
+        background-position: -200px 0;
+}
+.image:hover .image__sns{
+        opacity: 1;
+}
+</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 500px; padding-top: 350px;">
+                <iframe src="http://127.0.0.1:5500/site/imageType/image03.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html" target="_blank">원본소스 보기</a>
+            </div>
+            <div class="t_link">
+                <a href="http://127.0.0.1:5500/site/imageType/image03.html">원본 페이지 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
