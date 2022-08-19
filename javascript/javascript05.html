@@ -225,11 +225,11 @@ document.querySelector(".sample02_Q1").innerHTML = "javascript";
 document.querySelector(".sample02_M1").innerHTML = "문자열(string) 결합";
 document.querySelector(".sample02_P1").innerHTML = currentStr1;
 
-const str2 = "javascript"
+const str2 = "Javascript"
 const currentStr2 = str1.toLowerCase();
 
 document.querySelector(".sample02_N2").innerHTML = "2";
-document.querySelector(".sample02_Q2").innerHTML = "javascript";
+document.querySelector(".sample02_Q2").innerHTML = "Javascript";
 document.querySelector(".sample02_M2").innerHTML = "문자열(string) 결합";
 document.querySelector(".sample02_P2").innerHTML = currentStr2;
 </code></pre>
@@ -319,16 +319,16 @@ document.querySelector(".sample03_P3").innerHTML = currentStr3;
                 <div class="script">
 <pre><code class="language-js">const str1 = "javascript relerence"
 const currentStr1 = str1.slice(0); //javascript relerence
-const currentStr2 = str1.slice(1); //javascript relerence
+const currentStr2 = str1.slice(1); //avascript reference
 const currentStr3 = str1.slice(2); //vescript relerence
-const currentStr4 = str1.slice(0, 1); //1
+const currentStr4 = str1.slice(0, 1); //j
 const currentStr5 = str1.slice(0, 2); //ja
 const currentStr6 = str1.slice(0, 3); //jav
 const currentStr7 = str1.slice(1, 2); //a
 const currentStr8 = str1.slice(1, 3); //av
-const currentStr9 = str1.slice(1, 4); //avs
+const currentStr9 = str1.slice(1, 4); //ava
 const currentStr10 = str1.slice(-1); //e
-const currentStr11 = str1.slice(-2); //ec
+const currentStr11 = str1.slice(-2); //ce
 const currentStr12 = str1.slice(-3); //nce
 const currentStr13 = str1.slice(-3, -1); //nc
 const currentStr14 = str1.slice(-3, -2); //n
@@ -388,7 +388,7 @@ const currentStr13 = str3.split(/&|\!/); //['java', 'script', 'refer', 'ence'] /
 
 
 const str4 = "javascript reference";
-const currentStr14 = str4.split('').join(); //j,a,v,a,&,s,c,r,i,p,t,&,r,e,f,e,r,!,e,n,c,e 
+const currentStr14 = str4.split('').join(); //j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
 const currentStr15 = str4.split('').reverse('*'); //['e', 'c', 'n', 'e', 'r', 'e', 'f', 'e', 'r', ' ', 't', 'p', 'i', 'r', 'c', 's', 'a', 'v', 'a', 'j'] //reverse 을 사용하여 반대로 출력
 const currentStr16 = str4.split('').reverse().join(); //e,c,n,e,r,e,f,e,r, ,t,p,i,r,c,s,a,v,a,j
 const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t/p/i/r/c/s/a/v/a/j
@@ -414,7 +414,7 @@ const cirrentStr5 = str1.replace(/e/g, "E");                    //javascript rEf
 const cirrentStr6 = str1.replace(/e/gi, "E");                   //javascript rEfErEncE e가 다 바뀐다.
 
 const str2 = "https://www.naver.com/img01.jpg";
-const cirrentStr7 = str2.replace("img01","img02");
+const cirrentStr7 = str2.replace("img01","img02");  //https://www.naver.com/img02.jpg
 
 const str3 = "010-2000-1000";
 // 01020001000
@@ -623,11 +623,11 @@ const currentStr7 = str1.includes("reference", 12);     //false
             document.querySelector(".sample02_M1").innerHTML = "문자열(string) 결합";
             document.querySelector(".sample02_P1").innerHTML = currentStr1;
 
-            const str2 = "javascript"
-            const currentStr2 = str1.toLowerCase();
+            const str2 = "Javascript"
+            const currentStr2 = str2.toLowerCase();
 
             document.querySelector(".sample02_N2").innerHTML = "2";
-            document.querySelector(".sample02_Q2").innerHTML = "javascript";
+            document.querySelector(".sample02_Q2").innerHTML = "Javascript";
             document.querySelector(".sample02_M2").innerHTML = "문자열(string) 결합";
             document.querySelector(".sample02_P2").innerHTML = currentStr2;
         }
@@ -668,16 +668,16 @@ const currentStr7 = str1.includes("reference", 12);     //false
             // substr(시작위치,길이)
             const str1 = "javascript reference"
             const currentStr1 = str1.slice(0); //javascript reference
-            const currentStr2 = str1.slice(1); //javascript reference
+            const currentStr2 = str1.slice(1); //avascript reference
             const currentStr3 = str1.slice(2); //vescript reference
-            const currentStr4 = str1.slice(0, 1); //1
+            const currentStr4 = str1.slice(0, 1); //j
             const currentStr5 = str1.slice(0, 2); //ja
             const currentStr6 = str1.slice(0, 3); //jav
             const currentStr7 = str1.slice(1, 2); //a
             const currentStr8 = str1.slice(1, 3); //av
-            const currentStr9 = str1.slice(1, 4); //avs
+            const currentStr9 = str1.slice(1, 4); //ava
             const currentStr10 = str1.slice(-1); //e
-            const currentStr11 = str1.slice(-2); //ec
+            const currentStr11 = str1.slice(-2); //ce
             const currentStr12 = str1.slice(-3); //nce
             const currentStr13 = str1.slice(-3, -1); //nc
             const currentStr14 = str1.slice(-3, -2); //n
@@ -704,7 +704,7 @@ const currentStr7 = str1.includes("reference", 12);     //false
             const currentStr33 = str1.substr(-2, 2); //ce
             const currentStr34 = str1.substr(-3, 3); //nce
 
-            //console.log(currentStr17);
+            //console.log(currentStr11);
         }
         // 05
         {
@@ -719,7 +719,7 @@ const currentStr7 = str1.includes("reference", 12);     //false
             const currentStr4 = str1.split('', 2)  // ['j', 'a']
             const currentStr5 = str1.split(' ', 1)  // ['javascript']
             const currentStr6 = str1.split(' ', 2)  // ['javascript', 'reference']
-            const currentStr7 = str1.split('j')  // ['javascript', 'reference']
+            const currentStr7 = str1.split('j')  // ['avascript reference']
             const currentStr8 = str1.split('a')  // ['j', 'v', 'script reference']
             const currentStr9 = str1.split('e')  // ['javascript r', 'f', 'r', 'nc', '']
             // const currentStr10 = str1.split('').join('/'); //j/a/v/a/s/c/r/i/p/t/ /r/e/f/e/r/e/n/c/e
@@ -734,12 +734,12 @@ const currentStr7 = str1.includes("reference", 12);     //false
 
             
             const str4 = "javascript reference";
-            const currentStr14 = str4.split('').join(); //j,a,v,a,&,s,c,r,i,p,t,&,r,e,f,e,r,!,e,n,c,e 
+            const currentStr14 = str4.split('').join(); //j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
             const currentStr15 = str4.split('').reverse('*'); //['e', 'c', 'n', 'e', 'r', 'e', 'f', 'e', 'r', ' ', 't', 'p', 'i', 'r', 'c', 's', 'a', 'v', 'a', 'j'] //reverse 을 사용하여 반대로 출력
             const currentStr16 = str4.split('').reverse().join(); //e,c,n,e,r,e,f,e,r, ,t,p,i,r,c,s,a,v,a,j
             const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t/p/i/r/c/s/a/v/a/j
 
-           //console.log(currentStr17);
+           console.log(currentStr7);
         }
         // 06
         {
@@ -756,7 +756,7 @@ const currentStr7 = str1.includes("reference", 12);     //false
             const cirrentStr6 = str1.replace(/e/gi, "E");                   //javascript rEfErEncE e가 다 바뀐다.
 
             const str2 = "https://www.naver.com/img01.jpg";
-            const cirrentStr7 = str2.replace("img01","img02");
+            const cirrentStr7 = str2.replace("img01","img02"); //https://www.naver.com/img02.jpg
 
             const str3 = "010-2000-1000";
             // 01020001000
@@ -767,7 +767,7 @@ const currentStr7 = str1.includes("reference", 12);     //false
             const cirrentStr12 = str3.replaceAll("-", "*");         //010*2000*1000
             const cirrentStr13 = str3.replaceAll(/[1-9]/g, "*");    //0*0-*000-*000
 
-            //console.log(cirrentStr13);
+            console.log(cirrentStr7);
         }
         // 07
         {
