@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="searchEffect01.html">1</a>
                 <li class="active"><a href="searchEffect02.html">2</a></li>
-                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
@@ -163,7 +163,8 @@
             const searchWord = searchBox.value; //사용자가 입력한 키워드
 
             searchList.forEach(el => {
-                const cssName = el.dataset.name; //css 속성 모든 값
+                const cssType = el.dataset.type; //css 속성 모든 값
+                const cssName = el.querySelector("strong")
                 //console.log(cssName)
 
                 if(cssName.includes(searchWord)){

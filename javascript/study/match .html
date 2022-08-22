@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>match  ()</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">match : 반환 (배열)</h2>
+            <div class="t_box">셀 범위에서 지정된 항목을 검색하고 범위에서 해당 항목이 차지하는 상대 위치를 반환합니다. <br>
+                // "문자열".search("검색값"); <br>
+                // "문자열".search(정규식 표현);
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.match("javascript");        //javascript
+const currentStr2 = str1.match("reference");         //reference
+const currentStr3 = str1.match("r");                 //r
+const currentStr4 = str1.match(/reference/);         //reference
+const currentStr5 = str1.match(/Reference/);         //null
+const currentStr6 = str1.match(/Reference/i);        //reference
+const currentStr7 = str1.match(/r/g);                //'r', 'r', 'r' 알고리즘 때 많이 사용
+const currentStr8 = str1.match(/e/g);                //'e', 'e', 'e', 'e' 
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

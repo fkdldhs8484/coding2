@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서치 02</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">search02</h2>
+            <p class="t_desc2">CSS 의 속성들이 있는 구조이다. 검색하고 지우면 목록이 없어진다.</p>
+            
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/javascript/effect/searchEffect03.html"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+            <hr>
+            <h2 class="t_tit">HTML</h2>
+                <div class="t_code">
+<pre><code><div class="ketword">&ltspan>a&lt/span>
+&ltspan>b&lt/span>
+&ltspan>c&lt/span>
+&ltspan>d&lt/span>
+&ltspan>e&lt/span>
+&ltspan>f&lt/span>
+&ltspan>g&lt/span>
+&ltspan>h&lt/span>
+&ltspan>i&lt/span>
+&ltspan>j&lt/span>
+&ltspan>k&lt/span>
+&ltspan>l&lt/span>
+&ltspan>m&lt/span>
+&ltspan>n&lt/span>
+&ltspan>o&lt/span>
+&ltspan>p&lt/span>
+&ltspan>q&lt/span>
+&ltspan>r&lt/span>
+&ltspan>s&lt/span>
+&ltspan>t&lt/span>
+&ltspan>u&lt/span>
+&ltspan>v&lt/span>
+&ltspan>w&lt/span>
+&ltspan>x&lt/span>
+&ltspan>y&lt/span>
+&ltspan>z&lt/span>
+</div>
+</code></pre>
+<pre><code>// 선택자
+const searchKeyword = document.querySelectorAll(".search__info .ketword span"); //검색  박스
+const searchList = document.querySelectorAll(".search__list ul li");        //목록 리스트
+const searchInfo = document.querySelector(".num")                           //전체 갯수
+
+
+// 전체 갯수 구하기
+searchInfo.textContent = searchList.length;
+
+searchKeyword.forEach(el => {
+el.addEventListener("click", ()=> {
+const searchWord = el.innerText;    //사용자가 클릭한 알파벳
+
+//console.log(searchWord)
+
+searchList.forEach(el => {
+const cssName = el.querySelector("strong").innerHTML;   //css속성 텍스트
+//console.log(cssName)
+
+// 알파벳 철글자 == css 속성 첫글자
+if(searchWord.charAt(0) === cssName.charAt(0)){
+el.classList.remove("hide");
+count++
+} else {
+el.classList.add("hide");
+}
+searchInfo.textContent = count;
+});
+count = 0 ;
+});
+});
+</code></pre>
+                </div>
+
+                <hr>
+                <h2 class="t_tit">CSS</h2>
+                <div class="t_code">
+<pre><code> * 추가함
+.search__info .ketword {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.search__info .ketword  span{
+    border: 2px solid var(--htmlColor);
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.search__info .ketword span:hover{
+    background-color: var(--htmlColor);
+    color: #fff;
+   
+</code></pre>
+                </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
