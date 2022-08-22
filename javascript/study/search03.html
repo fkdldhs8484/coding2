@@ -89,14 +89,11 @@ const cssName = el.querySelector("strong").innerHTML;   //css속성 텍스트
 
 // 알파벳 철글자 == css 속성 첫글자
 if(searchWord.charAt(0) === cssName.charAt(0)){
-el.classList.remove("hide");
-count++
+    el.classList.remove("hide");
 } else {
-el.classList.add("hide");
+    el.classList.add("hide");
 }
-searchInfo.textContent = count;
 });
-count = 0 ;
 });
 });
 </code></pre>
