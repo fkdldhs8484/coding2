@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">css</a></h1>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">CSS 단위</h2>
+            <p class="t_desc2">속성 페이지에서 &ltcolor> 또는 &ltlength>. 와 같이 꺽쇠 괄호로 묶여 있는 값을 찾을 수 있습니다.<br> &ltcolor> 값이 특정 속성에
+                유효한 것으로 표시되면 유효한 속성을 해당 속성의 값으로 사용할 수 있습니다.</p>
+
+            <hr>
+            <h3 class="t_tit2">절대 길이 단위</h3>
+            <div class="t_box">
+                모두 절대 길이 단위이며 — 다른 것과 관련이 없으며 일반적으로 항상 동일한 크기로 간주됩니다. 보통 사용하는 유일한 값은 px (픽셀) 입니다.
+            </div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>단위
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">cm</td>
+                        <td>1cm = 96px/2.54</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">mm </td>
+                        <td>1mm = 1/10th of 1cm</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">Q </td>
+                        <td>1Q = 1/40th of 1cm</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">in</td>
+                        <td>1in = 2.54cm = 96px</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">pc</td>
+                        <td>1pc = 1/6th of 1in</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">pt</td>
+                        <td>1pt = 1/72th of 1in</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">px</td>
+                        <td>1px = 1/96th of 1in</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t_tit2">상대 길이 단위</h3>
+            <div class="t_box">
+                상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든 것에 비례하여 조정되도록 신중하게 계획할 수 있다는 이점이 있습니다.
+            </div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>단위
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">em</td>
+                        <td>요소의 글꼴 크기.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">ex </td>
+                        <td>요소 글꼴의 x-height.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">ch </td>
+                        <td>요소 글꼴의 glyph "0" 의 사전 길이 (너비) 입니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">rem</td>
+                        <td>루트 요소의 글꼴 크기.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">lh</td>
+                        <td>요소의 라인 높이.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">vw</td>
+                        <td>viewport 너비의 1%.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">vh</td>
+                        <td>viewport 높이의 1%.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">vmin</td>
+                        <td>viewport 의 작은 치수의 1%.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">vmax</td>
+                        <td>viewport 의 큰 치수의 1%.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

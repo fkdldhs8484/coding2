@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 색상 표현 방법</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">css</a></h1>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">CSS 색상 표현 방법</h2>
+            <p class="t_desc2">css에서 색을 표현하는 방법<br> 👉색상 이름으로 표현 <br>👉RGB 색상값으로 표현<br>👉16진수 색상값으로 표현</p>
+
+            <hr>
+            <h3 class="t_tit2">색상 이름으로 표현</h3>
+            <div class="t_box">
+                W3C에서 정의한 16개의 HTML4 표준 색상 이름은 다음과 같다.
+            </div>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <td class="ce">aqua</td>
+                        <td class="ce">black</td>
+                        <td class="ce">blue</td>
+                        <td class="ce">fuchsia</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">gray</td>
+                        <td class="ce">green</td>
+                        <td class="ce">lime</td>
+                        <td class="ce">maroon</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">navy</td>
+                        <td class="ce">olive</td>
+                        <td class="ce">purple</td>
+                        <td class="ce">red</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">silver</td>
+                        <td class="ce">teal</td>
+                        <td class="ce">white</td>
+                        <td class="ce">yellow</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t_tit2">RGB 색상값으로 표현</h3>
+            <div class="t_box">
+                모니터나 스크린은 빨간색(Red), 녹색(Green), 파란색(Blue)을 혼합하여 색을 표현하는데 HTML 에서도 이 세 가지 색을 가지고 RGB색상을 사용한다.<br> RGB 색상의
+                기본색(Red, Green, Blue)은 각각 0부터 255까지의 범위를 가진다.
+            </div>
+            <div class="t_code">
+<pre><code>&ltstyle>
+.blue { color: rgb(0,0,255); }
+.green { color: rgb(0,128,0); }
+.silver { color: rgb(192,192,192); }
+&lt/style>
+</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2">16진수 색상값으로 표현</h3>
+            <div class="t_box">
+                16진수 색상값은 RGB 색상값을 각각 16진수로 변화한 것이다. RGB 색상의 기본색(Red, Green, Blue)은 각각 00부터 FF까지의 범위를 가진다.<br> 예를 들면, 빨강을 나타내는 RGB 색상값 rgb(255, 0, 0)은 16진수 색상값으로는 #FF0000이 된다.
+            </div>
+            <div class="t_code">
+<pre><code>&ltstyle>
+.blue { color: rgb(0,0,255); }
+.green { color: rgb(0,128,0); }
+.silver { color: rgb(192,192,192); }
+&lt/style>
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>
