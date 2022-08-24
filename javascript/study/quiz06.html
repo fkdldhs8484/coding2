@@ -97,6 +97,20 @@ const choiceSelected = (answer) => {
     }
     quizConfirm.style.display = "block";
 }
+// 전체 문제수
+        console.log(quizInfo.length)
+        // 내가 맞힌 수
+        console.log(quizScore)
+
+        // 정답 확인 버튼
+        const answerQuiz = () => {
+            quizCount++;
+            updateQuiz(quizCount);
+            quizView.classList.remove("like", "dislike");
+
+            // 마지막 문제
+            if(quizInfo.length -1 == quizCount){
+        quizConfirm.textContent = `총 ${quizCount} 문제 중에 ${quizScore} 문제를 맞추었습니다.`
 </code></pre>
             </div>
             <h3 class="t_tit2">정답 확인 버튼</h3>
@@ -107,7 +121,6 @@ const choiceSelected = (answer) => {
     quizView.classList.remove("like", "dislike");
 
     quizConfirm.addEventListener("click", answerQuiz);
-
 </code></pre>
             </div>
             <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
@@ -116,7 +129,7 @@ const choiceSelected = (answer) => {
             </div>
 
             <div class="t_link">
-                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/quizEffect06.html"
                     target="_blank">원본 소스 보기</a>
             </div>
         </div>

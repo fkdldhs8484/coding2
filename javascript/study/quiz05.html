@@ -120,13 +120,22 @@
             console.log("오답");
             quizView[number].classList.add("dislike");
             const divBox = document.createElement("div");
-            quizSelectsWrap.appendChild(divBox).innerHTML = `<p class="result">${question.answerEx}</p>`;
+            quizSelectsWrap.appendChild(divBox).innerHTML = `&ltp class="result">${question.answerEx}&lt/p>`;
         };
     });
     // 전체 문제수
     console.log(quizInfo.length)
     // 내가 맞힌 수
     console.log(quizScore)
+
+    document.querySelector(".ex").innerHTML = `${quizInfo.length} 문제 중 ${quizScore}문제가 맞았습니다.`
+
+    if (quizScore == 36) {
+        console.log("합격입니다.")
+    } else
+        console.log("불합격입니다.")
+
+}
 </code></pre>
             </div>
             <h3 class="t_tit2">정답 클릭</h3>
@@ -140,7 +149,7 @@
             </div>
 
             <div class="t_link">
-                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/quizEffect05.html"
                     target="_blank">원본 소스 보기</a>
             </div>
             <div class="t_link">
