@@ -21,107 +21,117 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">quiz05</h2>
-            <p class="t_box">문제 맞은 갯수가 나오는 구조이다.</p>
+            <p class="t_box">문제를 맞추면 갯수가 나오는 구조이다.</p>
 
             <h3 class="t_tit2"></h3>
             <p class="t_desc"></p>
             <div class="t_code">
-<pre><code class="language-js">&ltdiv class="quiz__selects">&lt/div>
-&ltdiv class="quiz__selects">
-&ltlabel for="select1">
-&ltinput type="radio" id="select1" class="select" name="select" value="1">
-&ltspan class="choice">&lt/span>
-&lt/label>
-&ltlabel>
-&ltinput type="radio" id="select2" class="select" name="select" value="2">
-&ltspan class="choice">&lt/span>
-&lt/label>
-&ltlabel>
-&ltinput type="radio" id="select3" class="select" name="select" value="3">
-&ltspan class="choice">&lt/span>
-&lt/label>
-&ltlabel>
-&ltinput type="radio" id="select4" class="select" name="select" value="4">
-&ltspan class="choice">&lt/span>
-&lt/label>
-&lt/div>
+<pre><code class="language-js">const quizWrap = document.querySelector(".quiz__wrap");
+    let quizScore = "";
+
+    const updateQuiz = () => {
+        const exam = [];
+
+        quizInfo.forEach((question, number) => {
+            exam.push(`
+            &ltdiv class="quiz">
+                &ltpan class="quiz__type">${question.answerType}&lt/span>
+                &lth2 class="quiz__question">
+                    &ltspan class="number">${question.ansWerNum}&lt/span>
+                    &ltdiv class="ask">${question.answerAsk}&lt/div>
+                &lt/h2>
+                &ltdiv class="quiz__view">
+                    &ltdiv class="true">정답입니다!&lt/div>
+                    &ltdiv class="false">틀렸습니다!&lt/div>
+                    &ltdiv class="dog">
+                       &ltdiv class="head">
+                            &ltdiv class="ears">&lt/div>
+                            &ltdiv class="face">&lt/div>
+                            &ltdiv class="eyes">
+                                &ltdiv class="teardrop">&lt/div>
+                            &lt/div>
+                            &ltdiv class="nose">&lt/div>
+                            &ltdiv class="mouth">
+                                &ltdiv class="tongue">&lt/div>
+                            &lt/div>
+                            &ltdiv class="chin">&lt/div>
+                        &lt/div>
+                        &ltdiv class="body">
+                            &ltdiv class="tail">&lt/div>
+                            &ltdiv class="legs">&lt/div>
+                            &lt/div>
+                            &lt/div>
+                &lt/div>
+                &ltdiv class="quiz__answer">
+                    &ltdiv class="quiz__selects">
+                        &ltlabel for="select1${number}">
+                            &ltinput type="radio" id="select1${number}" class="select" name="select${number}" value="1">
+                            &ltspan class="choice">${question.answerChoice[0]}&lt/span>
+                        &lt/label>
+                        &ltlabel for="select2${number}">
+                            &ltinput type="radio" id="select2${number}" class="select" name="select${number}" value="2">
+                            &ltspan class="choice">${question.answerChoice[1]}&lt/span>
+                        &lt/label>
+                        &ltlabel for="select3${number}">
+                            &ltinput type="radio" id="select3${number}" class="select" name="select${number}" value="3">
+                            &ltspan class="choice">${question.answerChoice[2]}&lt/span>
+                        &lt/label>
+                        &ltlabel for="select4${number}">
+                            &ltinput type="radio" id="select4${number}" class="select" name="select${number}" value="4">
+                            &ltspan class="choice">${question.answerChoice[3]}&lt/span>
+                        &lt/label>
+                    &lt/div>
+                &lt/div>
+            &lt/div>
+        `);
+        });
+
+        exam.push(`
+            &ltdiv class="quiz__confirm">
+                &ltbutton class="check">정답 확인하기&lt/button>
+                &ltdiv class="ex">&lt/div>
+            &lt/div>
+        `);
+
+        quizWrap.innerHTML = exam.join('');
+    }
+    updateQuiz();
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">선택자</h3>
+            <h3 class="t_tit2">정답 확인</h3>
             <p class="t_desc"></p>
             <div class="t_code">
-<pre><code class="language-js">const quizType = document.querySelector(".quiz__type");   //퀴즈종류
-const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈번호
-const quizAsk = document.querySelector(".quiz__question .ask"); //퀴즈 질문
-const quizConfirm = document.querySelector(".quiz__answer .confirm"); //정답확인버튼
-const quizResult = document.querySelector(".quiz__answer .result"); //정답결과
-const quizview = document.querySelector(".quiz__view"); //강아지
-const quizSelects = document.querySelector(".quiz__selects"); //객관식보기
-const quizChoice = quizSelects.querySelectorAll(".choice"); //객관식보기
-const quizSelect = quizSelects.querySelectorAll(".select"); //객관식보기
-</code></pre>
-            </div>
+<pre><code class="language-js">const ansWerQuiz = () => {
+    const quizSelects = document.querySelectorAll(".quiz__selects");    //객관식 보기
+    // 사용자가 체크한 보기 == 문제 정답 
+    quizInfo.forEach((question, number) => {
+        const userSelector = `input[name=select${number}]:checked`;  //사용자가 체크한 것
+        const quizSelectsWrap = quizSelects[number];
+        const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
+        const quizView = document.querySelectorAll(".quiz__view"); //강아지
 
-            <h3 class="t_tit2">문제정보</h3>
-            <div class="t_code">
-<pre><code class="language-js"> const quizInfo = [
-{
-answerType: "웹디자인기능사 2022년 01회",
-ansWerNum: "1",
-answerAsk: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는?",
-answerChoice: ["아바타", "쿠키", "포털", "허브"],
-answerResult: "1",
-answerEx: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는 아바타라고 한다."
-}
-];
-</code></pre>
-            </div>
-
-            <h3 class="t_tit2">문제출력</h3>
-            <p class="t_desc">for이 충돌할수도 있어서... function updateQuiz 를 써서 한덩어리로 묶어준다.</p>
-            <div class="t_code">
-<pre><code class="language-js">function updateQuiz() {
-quizType.textContent = quizInfo[0].answerType;
-quizNumber.textContent = quizInfo[0].ansWerNum + ". ";
-quizAsk.textContent = quizInfo[0].answerAsk;
-quizResult.textContent = quizInfo[0].answerEx;
-//보기출력
-for (let i = 0; i &lt 4; i++) {
-quizChoice[i].textContent = quizInfo[0].answerChoice[i];
-}
-//해설 숨기기
-quizResult.style.display = "none";
-}
-updateQuiz();
-</code></pre>
-            </div>
-            <h3 class="t_tit2">정답 확인 버튼</h3>
-            <p class="t_desc"> </p>
-            <div class="t_code">
-<pre><code class="language-js">function answerQuiz() {
-//사용자 선택한 정답 == 문제정답
-//사용자가 클릭한 iuput --> checked
-for (let i = 0; i &lt quizSelect.length; i++) {
-if (quizSelect[i].checked == true) { //보기에 체크가 된 상태
-//체크된 번호 == 문제번호가 일치하는지..
-if (quizSelect[i].value == quizInfo[0].answerResult) {
-// alert("정답")
-quizview.classList.add("like");
-} else {
-// alert("오답")
-quizview.classList.add("dislike");
-quizResult.style.display = "block";
-quizConfirm.style.display = "none";
-}
-}
-}
-}
+        console.log(userAnswer)
+        if (userAnswer == question.answerResult) {
+            console.log("정답");
+            quizScore++;
+            quizView[number].classList.add("like");
+        } else {
+            console.log("오답");
+            quizView[number].classList.add("dislike");
+            const divBox = document.createElement("div");
+            quizSelectsWrap.appendChild(divBox).innerHTML = `<p class="result">${question.answerEx}</p>`;
+        };
+    });
+    // 전체 문제수
+    console.log(quizInfo.length)
+    // 내가 맞힌 수
+    console.log(quizScore)
 </code></pre>
             </div>
             <h3 class="t_tit2">정답 클릭</h3>
             <div class="t_code">
-<pre><code class="language-js">quizConfirm.addEventListener("click", answerQuiz);
+<pre><code class="language-js">document.querySelector(".quiz__confirm .check").addEventListener("click", ansWerQuiz);
 </code></pre>
             </div>
             <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
