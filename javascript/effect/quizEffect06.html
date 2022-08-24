@@ -156,7 +156,7 @@
                     "경제성",
                 ],
                 answerResult: "합목적성",
-                answerEx: "기능과 실용성이 가장중요시 되며, 사용목적에 적합한 것이어야하며, 남과 다르게 독창적인 것으로서 디자인에 최종적으로 생명을 불터넣고, 미를 뜻하는 것으로 시대성등, 최소의 자재,경비,노력으로 최대 효과를 얻는다."
+                answerEx: "합목적성 기능과 실용성이 가장중요시 되며, 사용목적에 적합한 것이어야하며, 남과 다르게 독창적인 것으로서 디자인에 최종적으로 생명을 불터넣고, 미를 뜻하는 것으로 시대성등, 최소의 자재,경비,노력으로 최대 효과를 얻는다."
             },
         ];
 
@@ -243,10 +243,10 @@
             // 마지막 문제
             if (quizInfo.length - 1 == quizCount) {
                 
-                if(quizConfirm > 5) {
-                    quizConfirm.textContent = "총 몇 문제 중에 몇 문제를 맞추었습니다.";
+                if(quizInfo > 5){
+                    quizConfirm.textContent = "총" + quizCount + "중에" + quizScore + "문제를 맞추었습니다.";
                 }else{
-                    quizConfirm.textContent = "총 몇 문제 중에 몇 문제를 맞추었습니다.";
+                    quizConfirm.textContent = "총" + quizCount + "중에" + quizScore + "불합격 입니다.";
                 }
             }
         }
