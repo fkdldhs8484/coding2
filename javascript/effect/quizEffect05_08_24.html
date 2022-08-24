@@ -22,8 +22,8 @@
                 <li><a href="quizEffect01.html">1</a></li>
                 <li><a href="quizEffect02.html">2</a></li>
                 <li><a href="quizEffect03.html">3</a></li>
-                <li class="active"><a href="quizEffect04.html">4</a></li>
-                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li class="active"><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
             </ul>
         </nav>
@@ -31,69 +31,25 @@
 
     <main id="main">
         <div class="quiz__wrap">
-            <!-- <div class="quiz">
-                <span class="quiz__type"></span>
-                <h2 class="quiz__question">
-                    <span class="number"></span>
-                    <div class="ask"></div>
-                </h2>
-                <div class="quiz__view">
-                    <div class="true">정답입니다!</div>
-                    <div class="false">틀렸습니다!</div>
-                    <div class="dog">
-                        <div class="head">
-                            <div class="ears"></div>
-                            <div class="face"></div>
-                            <div class="eyes">
-                                <div class="teardrop"></div>
-                            </div>
-                            <div class="nose"></div>
-                            <div class="mouth">
-                                <div class="tongue"></div>
-                            </div>
-                            <div class="chin"></div>
-                        </div>
-                        <div class="body">
-                            <div class="tail"></div>
-                            <div class="legs"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz__answer">
-                    <div class="quiz__selects">
-                        <label for="select1">
-                            <input type="radio" id="select1" class="select" name="select" value="1">
-                            <span class="choice"></span>
-                        </label>
-                        <label for="select2">
-                            <input type="radio" id="select2" class="select" name="select" value="2">
-                            <span class="choice"></span>
-                        </label>
-                        <label for="select3">
-                            <input type="radio" id="select3" class="select" name="select" value="3">
-                            <span class="choice"></span>
-                        </label>
-                        <label for="select4">
-                            <input type="radio" id="select4" class="select" name="select" value="4">
-                            <span class="choice"></span>
-                        </label>
-                    </div>
-
-                    <button class="confirm">정답 확인하기</button>
-                    <div class="result"></div>
-                </div>
-            </div> -->
 
         </div>
     </main>
     <!-- main -->
-
+    <!-- 웹표준 W3c 웹접근성 웹호환성 정리하기! label 인라인구조-->
     <footer id="footer">
         <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
     </footer>
     <!-- footer -->
+
     <script>
-        // 문제정보
+        // const num = [100, 200, 300, 400, 500];
+
+        // num.forEach((el) => {
+        //     console.log(el) //100,200,300,400,500
+        //     // document.querySelector(".quiz__wrap").innerHTML= el; //500 
+        //     document.querySelector(".quiz__wrap").innerHTML += el; // '+'를 붙이면 100,200,300,400,500
+        // });
+        //문제정보
         const quizInfo = [
             {
                 answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
@@ -117,7 +73,7 @@
                 answerAsk: "디자인의 원리 중 비례에 대한 설명이 잘못된 것은?",
                 answerChoice: ["1.균형을 가장 많이 고려하여 구성해야 한다.", "2.부분과 부분, 부분과 전체에 균형이 잡혀있음을 말한다", "3.조형을 구성하는 모든 단위의 크기를 결정한다.", "4.객관적 질서와 과학적 근거를 명확하게 드러내는 구성 형식이다."],
                 answerResult: "1",
-                answerEx: "비례란? 부분과 부분, 부분과 전체와의 수량적 관계"
+                answerEx:"비례란? 부분과 부분, 부분과 전체와의 수량적 관계"
             },
             {
                 answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
@@ -267,7 +223,7 @@
                 answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
                 ansWerNum: "22.",
                 answerAsk: "다음 중 스타일시트와 〈BODY〉 태그 속성과의 연결이 틀린 것은?",
-                answerChoice: ["1.A:link{color:#ff0000;} - <body link='#ff0000'>", "2.A:active{color:#ff0000;} - <body alink='#ff0000'>", "3.A:hover{color:#ff0000;} - <body hink='#ff0000'>", "4.A:visited{color:#ff0000;} - <body vink='#ff0000'>"],
+                answerChoice: ["1.A:link{color:#ff0000;} - <body link='#ff0000'>","2.A:active{color:#ff0000;} - <body alink='#ff0000'>","3.A:hover{color:#ff0000;} - <body hink='#ff0000'>","4.A:visited{color:#ff0000;} - <body vink='#ff0000'>"],
                 answerResult: "3",
                 answerEx: ""
             },
@@ -467,7 +423,7 @@
                 answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
                 ansWerNum: "47.",
                 answerAsk: "컴퓨터 그래픽스 시스템의 출력장치에 대한 설명으로 틀린 것은?",
-                answerChoice: ["1.그래픽 정보를 외부로 출력하는 것을 말한다.", "2.대표적인 출력장치로 프린터, 모니터, 디지타이저 등이 있다.", "3.빔 프로젝터는 인쇄된 사진이나 문자, 혹은 영상을 확대 투영해주는 광학장치이다.", "4.처리장치를 통해 처리된 결과는 출력장치를 통해 나타낸다."],
+                answerChoice: ["1.그래픽 정보를 외부로 출력하는 것을 말한다.","2.대표적인 출력장치로 프린터, 모니터, 디지타이저 등이 있다.","3.빔 프로젝터는 인쇄된 사진이나 문자, 혹은 영상을 확대 투영해주는 광학장치이다.","4.처리장치를 통해 처리된 결과는 출력장치를 통해 나타낸다."],
                 answerResult: "2",
                 answerEx: "디지타이저(타블렛)은 입력장치 입니다."
             },
@@ -555,7 +511,7 @@
                 answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
                 ansWerNum: "58.",
                 answerAsk: "다음 중 웹페이지 제작 및 관리 순서를 옳게 나열한 것은? ㄱ. 홈페이지 제작 ㄴ. 웹서버에 업로드 ㄷ.자료수집과정리 ㄹ.내용 업데이트 및 유지보수 관리 ㅁ.검색 엔젠 등록과 홍보 ㅂ.주제 결정과 구성도 작성",
-                answerChoice: ["1.ㄹ-ㄱ-ㄴ-ㅁ-ㄷ-ㅂ", "2.ㅂ-ㄷ-ㄱ-ㄴ-ㅁ-ㄹ", "3.ㄷ-ㄹ-ㅁ-ㄴ-ㄱ-ㅂ", "4.ㄱ-ㄴ-ㄹ-ㅂ-ㄷ-ㅁ"],
+                answerChoice: ["1.ㄹ-ㄱ-ㄴ-ㅁ-ㄷ-ㅂ","2.ㅂ-ㄷ-ㄱ-ㄴ-ㅁ-ㄹ","3.ㄷ-ㄹ-ㅁ-ㄴ-ㄱ-ㅂ","4.ㄱ-ㄴ-ㄹ-ㅂ-ㄷ-ㅁ"],
                 answerResult: "2",
                 answerEx: ""
             },
@@ -576,14 +532,13 @@
                 answerEx: "Frame 이란? 움직임을 이루는 그림의 하나의 동작"
             },
         ];
-   
-        const quizWrap = document.querySelector(".quiz__wrap");
-        let quizScore= "";
-
-        const updateQuiz = () => {
+        // 선택자
+        const quizwrap = document.querySelector(".quiz__wrap")
+        function updateQuiz(){
             const exam = [];
-
+            
             quizInfo.forEach((question, number)=>{
+                console.log(question)    
                 exam.push(`
                 <div class="quiz">
                     <span class="quiz__type">${question.answerType}</span>
@@ -634,55 +589,42 @@
                         </div>
                     </div>
                 </div>
-            `);
+                
+                `)
             });
-
             exam.push(`
                 <div class="quiz__confirm">
-                    <button class="check">정답 확인하기</button>
+                    <button class="check"> 정답확인하기 </button>
                     <div class="ex"></div>
                 </div>
-            `);
+            `)
 
-            quizWrap.innerHTML = exam.join('');
+            quizwrap.innerHTML = exam.join('');
         }
         updateQuiz();
-
-        // 정답 확인
-        const ansWerQuiz = () => {
-            const quizSelects = document.querySelectorAll(".quiz__selects");    //객관식 보기
-            
-
-            // 사용자가 체크한 보기 == 문제 정답 
+        //정답 확인
+        function answerQuiz(){
+            const quizSelects = document.querySelectorAll(".quiz__selects");    //보기
+            const quizView = document.querySelectorAll(".quiz__view");          //강아지
+            //사용자가 체크한 라디오 박스  == 문제 정답
             quizInfo.forEach((question, number) => {
-                const userSelector = `input[name=select${number}]:checked`;  //사용자가 체크한 것
-                const quizSelectsWrap = quizSelects[number];
-                const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
-                const quizView = document.querySelectorAll(".quiz__view"); //강아지
-
-                console.log(userAnswer)
+                const quizSelectsWrap = quizSelects[number];                    //전체 보기 박스
+                const userSelector = `input[name=select${number}]:checked`;         //사용자가 클린한 라디오 박스
+                const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
+                const quizView = document.querySelectorAll(".quiz__view");
+                console.log(quizSelects)
                 if(userAnswer == question.answerResult){
-                    console.log("정답");
-                    quizScore++;
+                    console.log("정답")
                     quizView[number].classList.add("like");
-                }else{
-                    console.log("오답");
+                } else {
+                    console.log("오답")
                     quizView[number].classList.add("dislike");
-                    const divBox = document.createComment("div");
-                    quizSelectsWrap.appendChild(divBox).innerHTML = `<p class="result">${question.answerEx}</p>`
+                    const div = document.createElement("div");
+                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="result">${question.answerEx}</p>`;
                 }
             });
-
-            // 전체 문제수
-            console.log(quizInfo.length)
-            // 내가 맞힌 수
-            console.log(quizScore)          
         }
-
-        
-        // 정답 확인 클릭
-        document.querySelector(".quiz__confirm .check").addEventListener("click", ansWerQuiz);
-
+        document.querySelector(".quiz__confirm .check").addEventListener("click", answerQuiz);
     </script>
 </body>
 

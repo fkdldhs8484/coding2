@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트 06</title>
+
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
+
+</head>
+<!-- header -->
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript01.html">Quiz</a> <em>객관식(여러문제) 확인하기 : 슬라이드 형식</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li class="active"><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <!-- <span class="number"></span>
+                    <div class="ask"></div> -->
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <div class="quiz__selects">
+                        <!-- <label for="select1">
+                            <input type="radio" id="select1" class="select" name="select" value="1">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select2">
+                            <input type="radio" id="select2" class="select" name="select" value="2">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select3">
+                            <input type="radio" id="select3" class="select" name="select" value="3">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select4">
+                            <input type="radio" id="select4" class="select" name="select" value="4">
+                            <span class="choice"></span>
+                        </label> -->
+                    </div>
+                    <div class="result"></div>
+                    <button class="confirm">다음 문제 보기</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+    <!-- footer -->
+    <script>
+        // 문제정보
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
+                ansWerNum: "1.",
+                answerAsk: "색의 3속성 중 사람의 눈이 가장 예민하고 강하게 반응하는 대비는?",
+                answerChoice: [
+                    "명도대비",
+                    "색상대비",
+                    "보색대비",
+                    "채도대비",
+                ],
+                answerResult: "명도대비",
+                answerEx: "명도대비는 색의 3속성 중 사람의 눈이 가장 예민하고 강하게 반응하는 대비입니다."
+            },
+            {
+                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
+                ansWerNum: "2.",
+                answerAsk: "색의 주목성에 대한 설명으로 옳지 않은 것은?",
+                answerChoice: [
+                    "명시도가 높으면 색의 주목성이 높다.",
+                    "채도 차이가 클수록 주목성이 높다.",
+                    "빨강은 초록보다 주목성이 높다.",
+                    "명도와 채도가 낮은 색이 주목성이 높다.",
+                ],
+                answerResult: "명도와 채도가 낮은 색이 주목성이 높다.",
+                answerEx: "색의 주목성 이란 색 자체가 자극성이 강하여 눈에 잘띄는 색으로 빨강, 다홍, 주황 등 난색계통의 면도와 채도가 높은색.. 자극적이며 눈에 잘 띈다. 명도와 채도가 낮으면 주목성도 함께 낮아진다"
+            },
+            {
+                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
+                ansWerNum: "3.",
+                answerAsk: "디자인의 원리 중 비례에 대한 설명이 잘못된 것은?",
+                answerChoice: [
+                    "균형을 가장 많이 고려하여 구성해야 한다.",
+                    "부분과 부분, 부분과 전체에 균형이 잡혀있음을 말한다",
+                    "조형을 구성하는 모든 단위의 크기를 결정한다.",
+                    "객관적 질서와 과학적 근거를 명확하게 드러내는 구성 형식이다."
+                ],
+                answerResult: "균형을 가장 많이 고려하여 구성해야 한다.",
+                answerEx: "비례란? 부분과 부분, 부분과 전체와의 수량적 관계"
+            },
+            {
+                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
+                ansWerNum: "4.",
+                answerAsk: "색의 감정에서 저채도의 배색이 주는 느낌은?",
+                answerChoice: [
+                    "부드러운 느낌",
+                    "명쾌한 느낌",
+                    "화려한 느낌",
+                    "활기찬 느낌",
+                ],
+                answerResult: "부드러운 느낌",
+                answerEx: "색의 감정에서 저채도의 배색이 주는 느낌은? 부드러운 느낌"
+            },
+            {
+                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
+                ansWerNum: "5.",
+                answerAsk: "디자인의 조건 중 실용성과 요구되는 기능이 모두 갖추어져 있는지를 의미하는 것은?",
+                answerChoice: [
+                    "합목적성",
+                    "독창성",
+                    "심미성",
+                    "경제성",
+                ],
+                answerResult: "합목적성",
+                answerEx: "기능과 실용성이 가장중요시 되며, 사용목적에 적합한 것이어야하며, 남과 다르게 독창적인 것으로서 디자인에 최종적으로 생명을 불터넣고, 미를 뜻하는 것으로 시대성등, 최소의 자재,경비,노력으로 최대 효과를 얻는다."
+            },
+        ];
+
+        // 선택자
+        const quizType = document.querySelector(".quiz__type");     //퀴즈 타입
+        const quizQuestion = document.querySelector(".quiz__question");  //문제번호, 
+        const quizSelects = document.querySelector(".quiz__selects");   //객관식 보기
+        const quizResult = document.querySelector(".quiz__answer .result")  //해설
+        const quizConfirm = document.querySelector(".quiz__answer .confirm") //정답확인 버튼
+        const quizView = document.querySelector(".quiz__view") //강아지
+
+
+        let quizCount = 0;
+        let quizScore = 0;
+
+        // 문제 출력
+        const updateQuiz = (index) => {
+            const questionTag = `
+            <span class="number">${quizInfo[index].ansWerNum}</span>
+            <div class="ask">${quizInfo[index].answerAsk}</div>
+            `;
+            const choiceTag = `
+            <label for="select1">
+                <input type="radio" id="select1" class="select" name="select" value="1">
+                <span class="choice">${quizInfo[index].answerChoice[0]}</span>
+            </label>
+            <label for="select2">
+                <input type="radio" id="select2" class="select" name="select" value="2">
+                <span class="choice">${quizInfo[index].answerChoice[1]}</span>
+            </label>
+            <label for="select3">
+                <input type="radio" id="select3" class="select" name="select" value="3">
+                <span class="choice">${quizInfo[index].answerChoice[2]}</span>
+            </label>
+            <label for="select4">
+                <input type="radio" id="select4" class="select" name="select" value="4">
+                <span class="choice">${quizInfo[index].answerChoice[3]}</span>
+            </label>
+            `;
+            //문제출력
+            quizType.innerHTML = quizInfo[index].answerType;    //퀴즈 유형
+            quizQuestion.innerHTML = questionTag;   //번호, 질문
+            quizSelects.innerHTML = choiceTag;  //객관식
+            quizResult.innerHTML = quizInfo[index].answerEx;    //해설
+
+            const quizChoice = quizSelects.querySelectorAll(".choice");
+
+            for (let i = 0; i < quizChoice.length; i++) {
+                quizChoice[i].setAttribute("onclick", "choiceSelected(this)")
+            }
+            // 문제, 해설 숨기기
+            quizResult.style.display = "none";
+            quizConfirm.style.display = "none";
+        }
+        updateQuiz(quizCount);
+
+        const choiceSelected = (answer) => {
+            let userAnswer = answer.textContent;    //사용자가 체크한 정답
+            let currentAnswer = quizInfo[quizCount].answerResult;   //문제 정답
+
+            if (userAnswer == currentAnswer) {
+                console.log("정답");
+                quizScore++;
+                quizView.classList.add("like");
+            } else {
+                console.log("오답")
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+            }
+            quizConfirm.style.display = "block";
+        }
+
+        // 전체 문제수
+        console.log(quizInfo.length)
+        // 내가 맞힌 수
+        console.log(quizScore)
+
+        // 정답 확인 버튼
+        const answerQuiz = () => {
+            quizCount++;
+            updateQuiz(quizCount);
+            quizView.classList.remove("like", "dislike");
+
+            // 마지막 문제
+            if (quizInfo.length - 1 == quizCount) {
+                
+                if(quizConfirm > 5) {
+                    quizConfirm.textContent = "총 몇 문제 중에 몇 문제를 맞추었습니다.";
+                }else{
+                    quizConfirm.textContent = "총 몇 문제 중에 몇 문제를 맞추었습니다.";
+                }
+            }
+        }
+
+        quizConfirm.addEventListener("click", answerQuiz);
+    </script>
+</body>
+
+</html>
