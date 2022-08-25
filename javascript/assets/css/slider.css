@@ -56,8 +56,26 @@ a {
     color: #fff;
     text-decoration: none;
 }
+/* scroll */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #282936;
+}
+::-webkit-scrollbar-thumb {
+    background: #d6d8fe;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 /* header */
 #header {
+    position: absolute;
+    left: 0;
+    top: 0;
     color: #fff;
     padding: 20px;
 }
@@ -83,6 +101,10 @@ a {
     line-height: 30px;
     font-size: 14px;
 }
+#header li.active a {
+    background-color: #fff;
+    color: #33377d;
+}
 /* footer */
 #footer .source {
     position: absolute;
@@ -95,8 +117,22 @@ a {
 }
 /* modal__wrap */
 .modal__wrap {}
-.modal__btn {}
-.modal__btn .btn {}
+.modal__btn {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.modal__btn:hover {
+    background-color: #fff;
+    color: #3B3D63;
+}
 .modal__cont {
     width: 100%;
     height: 100vh;
@@ -108,17 +144,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(0);
 }
 .modal__box {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    height: 600px;
+    width: 70%;
+    height: 70vh;
     overflow-y: auto;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    background-color: #fff;
+    border-radius: 0.6rem;
     box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
+    transform: scale(0);
 }
 .modal__box .title {
     padding-inline: 1rem;
@@ -207,4 +241,104 @@ a {
 }
 .modal__box .cont > div.active {
     display: block;
+    height: 100%;
 }
+.modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #1f224a;
+    padding: 1rem 1rem 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 7px -5px hsl(180deg 2% 10%);
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.modal__close:hover {
+    background-color: #33377d;
+}
+.modal__close svg {
+    color: #fff;
+}
+/* 모달 애니메이션 */
+/* 전체 배경 */
+.modal__cont.show {    
+    animation: foldOut 1s ease forwards;
+}
+/* 스크립트 박스 */
+.modal__cont.show .modal__box {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+/* 닫기 버튼 */
+.modal__cont.show .modal__close {
+    animation: opacityOut 0.5s 1s ease forwards;
+}
+.modal__cont.show.hide {
+    animation: foldIn 0.3s 0.5s ease backwards;
+}
+.modal__cont.show.hide .modal__box {
+    animation: zoomIn 0.5s ease forwards;
+}
+.modal__cont.show.hide .modal__close {
+    animation: opacityIn 0.5s ease forwards;
+}
+@keyframes foldOut {
+    0%      {transform: scaleX(0) scaleY(0.001);}
+    50%     {transform: scaleX(1) scaleY(0.001);}
+    100%    {transform: scaleX(1) scaleY(1);}
+}
+@keyframes foldIn {
+    0%      {transform: scaleX(1) scaleY(1);}
+    50%     {transform: scaleX(1) scaleY(0.001);}
+    100%    {transform: scaleX(0) scaleY(0.001);}
+}
+@keyframes zoomOut {
+    0%      {transform: scale(0);}
+    100%    {transform: scale(1);}
+}
+@keyframes zoomIn {
+    0%      {transform: scale(1);}
+    100%    {transform: scale(0);}
+}
+@keyframes opacityOut {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes opacityIn {
+    0%   {opacity:1;}
+    100% {opacity:0;}
+}
+@media (max-width: 1100px){
+    .modal__box .title {
+        overflow: hidden;
+    }
+    .modal__box .title .dot {
+        display: none;
+     }
+     .modal__box .title .tabs {
+        margin-left: 0;
+     }
+     .modal__box .title .tabs > div .close {
+        display: none;
+     }
+}
+@media (max-width: 600px){
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+    #header h1 {
+        line-height: 1.4;
+    }
+    .modal__box {
+        width: 96%;
+    }   
+}
+/* 요소를 안보이게 하는 방법 
+    1.display: none;        (애니메이션x, 영역x)
+    2.opacity: 0;           (애니메이션o, 영역o)
+    3.visibility: hidden;   (애니메이션x, 영역x)
+    4.width: 0; height: 0;  (애니메이션x, 영역x) : blind
+    5.transform: scale(0); (애니메이션o, 영역x)
+*/

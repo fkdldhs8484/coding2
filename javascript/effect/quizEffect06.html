@@ -93,70 +93,330 @@
     <script>
         // 문제정보
         const quizInfo = [
-            {
-                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
-                ansWerNum: "1.",
-                answerAsk: "색의 3속성 중 사람의 눈이 가장 예민하고 강하게 반응하는 대비는?",
-                answerChoice: [
-                    "명도대비",
-                    "색상대비",
-                    "보색대비",
-                    "채도대비",
-                ],
-                answerResult: "명도대비",
-                answerEx: "명도대비는 색의 3속성 중 사람의 눈이 가장 예민하고 강하게 반응하는 대비입니다."
+        {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "1",
+                answerAsk: "일반적으로 환경 디자인의 종류에 해당하는 것은?",
+                answerChoice: {
+                    1: "가전제품 디자인",
+                    2: "스트리트 퍼니처 디자인",
+                    3: "기업이미지 디자인",
+                    4: "캘린더 디자인"
+                },
+                answerResult: "2",
+                answerEx: "환경 디자인의 종류에는 인테리어 디자인, 디스플레이 디자인, 스트리트 퍼니쳐 디자인, 무대 디자인 등이 있습니다."
             },
             {
-                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
-                ansWerNum: "2.",
-                answerAsk: "색의 주목성에 대한 설명으로 옳지 않은 것은?",
-                answerChoice: [
-                    "명시도가 높으면 색의 주목성이 높다.",
-                    "채도 차이가 클수록 주목성이 높다.",
-                    "빨강은 초록보다 주목성이 높다.",
-                    "명도와 채도가 낮은 색이 주목성이 높다.",
-                ],
-                answerResult: "명도와 채도가 낮은 색이 주목성이 높다.",
-                answerEx: "색의 주목성 이란 색 자체가 자극성이 강하여 눈에 잘띄는 색으로 빨강, 다홍, 주황 등 난색계통의 면도와 채도가 높은색.. 자극적이며 눈에 잘 띈다. 명도와 채도가 낮으면 주목성도 함께 낮아진다"
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "2",
+                answerAsk: "디자인의 원리에서 율동에 해당되는 것은?",
+                answerChoice: {
+                    1: "유사, 대비",
+                    2: "대칭, 비례",
+                    3: "통일, 변화",
+                    4: "점이, 반복"
+                },
+                answerResult: "4",
+                answerEx: "율동의 원리는 반복과 교차, 점이(점증), 방사가 있습니다."
             },
             {
-                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
-                ansWerNum: "3.",
-                answerAsk: "디자인의 원리 중 비례에 대한 설명이 잘못된 것은?",
-                answerChoice: [
-                    "균형을 가장 많이 고려하여 구성해야 한다.",
-                    "부분과 부분, 부분과 전체에 균형이 잡혀있음을 말한다",
-                    "조형을 구성하는 모든 단위의 크기를 결정한다.",
-                    "객관적 질서와 과학적 근거를 명확하게 드러내는 구성 형식이다."
-                ],
-                answerResult: "균형을 가장 많이 고려하여 구성해야 한다.",
-                answerEx: "비례란? 부분과 부분, 부분과 전체와의 수량적 관계"
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "3",
+                answerAsk: "불투명한 물체가 빛을 반사시킴으로써 나타나는 물체의 색을 의미하는 것은?",
+                answerChoice: {
+                    1: "광원색",
+                    2: "조명색",
+                    3: "경영색",
+                    4: "표면색"
+                },
+                answerResult: "4",
+                answerEx: "불투명한 물체가 빛을 반사시킴으로써 나타나는 물체의 색을 의미하는 것은 표면색입니다."
             },
             {
-                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
-                ansWerNum: "4.",
-                answerAsk: "색의 감정에서 저채도의 배색이 주는 느낌은?",
-                answerChoice: [
-                    "부드러운 느낌",
-                    "명쾌한 느낌",
-                    "화려한 느낌",
-                    "활기찬 느낌",
-                ],
-                answerResult: "부드러운 느낌",
-                answerEx: "색의 감정에서 저채도의 배색이 주는 느낌은? 부드러운 느낌"
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "8",
+                answerAsk: "다음 중 사회 변화에 따른 디자인의 변화에 대한 설명으로 맞는 것은?",
+                answerChoice: {
+                    1: "농경 사회 : 의식주, 생존개념, 생활 수공예",
+                    2: "정보화 사회 : 공업의 발달 및 빛의 개념, 디자인 성장",
+                    3: "산업 사회 : 기술의 첨단화, 즐기는 개념, 디자인 성숙",
+                    4: "후기 산업사회 : 대량생산, 성장개념, 디자인 태동"
+                },
+                answerResult: "1",
+                answerEx: "공업의 발달은 산업 사회에 해당하며, 기술의 첨단화는 후기 산업사회 및 정보화 사회에 해당하는 설명입니다."
             },
             {
-                answerType: "웹디자인기능사 필기 (2015년 4회 기출문제)",
-                ansWerNum: "5.",
-                answerAsk: "디자인의 조건 중 실용성과 요구되는 기능이 모두 갖추어져 있는지를 의미하는 것은?",
-                answerChoice: [
-                    "합목적성",
-                    "독창성",
-                    "심미성",
-                    "경제성",
-                ],
-                answerResult: "합목적성",
-                answerEx: "합목적성 기능과 실용성이 가장중요시 되며, 사용목적에 적합한 것이어야하며, 남과 다르게 독창적인 것으로서 디자인에 최종적으로 생명을 불터넣고, 미를 뜻하는 것으로 시대성등, 최소의 자재,경비,노력으로 최대 효과를 얻는다."
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "9",
+                answerAsk: "선명한 빨강 바탕에 주황색을 놓았을 때와, 회색 바탕에 주황색을 놓았을 때의 설명으로 옳은 것은?",
+                answerChoice: {
+                    1: "빨강 바탕의 주황색이 채도가 높아 보인다.",
+                    2: "회색 바탕의 주황색이 채도가 높아 보인다.",
+                    3: "두 경우 모두 채도의 변화가 없다.",
+                    4: "두 경우 모두 채도가 높아진다."
+                },
+                answerResult: "2",
+                answerEx: "선명할수록 채도가 높습니다. 같은 색상이더라도 채도가 다른 바탕색 위에 있으면, 채도가 낮은 바탕색 위에 있는 색상이 더 채도가 높은 것처럼 보이게 됩니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "10",
+                answerAsk: "'빨강 기미의 노랑'과 같이 기본 색명에다 색상, 명도, 채도를 나타내는 수식어를 붙인 색명은?",
+                answerChoice: {
+                    1: "관용색명",
+                    2: "고유색명",
+                    3: "일반색명",
+                    4: "기본색명"
+                },
+                answerResult: "3",
+                answerEx: "일반색명은 기본색명에 형용사나 수식어를 덧붙여서 색명을 표현한 것으로, 관용색명의 단점을 보완한 것입니다. '흐린 초록', '칠흑 같은 빨강' 등이 그 예시입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "13",
+                answerAsk: "색채조화에서 하나의 색상을 여러 단계의 명도로 배색할 때 나타나는 단계의 조화는?",
+                answerChoice: {
+                    1: "색상 대비에 따른 조화",
+                    2: "보색 대비에 따른 조화",
+                    3: "명도에 따른 조화",
+                    4: "주조색에 따른 조화"
+                },
+                answerResult: "3",
+                answerEx: "명도에 따른 조화는 하나의 색상에 대한 명도의 차이로 인해 얻어지는 조화입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "22",
+                answerAsk: "스타일시트의 적용 시 우선순위가 높은 것부터 낮은 순으로 차례로 나열한 것은?",
+                answerChoice: {
+                    1: "Inline, Class 선택자, Id 선택자, 태그 선택자",
+                    2: "Inline, Id 선택자, Class 선택자, 태그 선택자",
+                    3: "Inline, 태그 선택자, Id 선택자, Class 선택자",
+                    4: "Inline, 태그 선택자, Class 선택자, Id 선택자"
+                },
+                answerResult: "2",
+                answerEx: "id 선택자 내에 class 선택자를 사용할 수 있지만, class 선택자 내에 id 선택자를 사용할 수는 없습니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "25",
+                answerAsk: "CGI에 대한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1: "사용자의 프로그램 수행요구에 대한 표준 인터페이스이다.",
+                    2: "Computer Graphic Interface 의 약자이다.",
+                    3: "CGI 프로그래밍 언어로 PHP, JSP, ASP 등이 있다.",
+                    4: "클라이언트와 서버 중간에서 정보 전달을 한다."
+                },
+                answerResult: "2",
+                answerEx: "CGI 의 약자는 'Common Gateway Interface'입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "27",
+                answerAsk: "HTML 문서에서 &lt;FONT&gt; 태그에서 사용할 수 있는 속성이 아닌 것은?",
+                answerChoice: {
+                    1: "size",
+                    2: "color",
+                    3: "input",
+                    4: "face"
+                },
+                answerResult: "3",
+                answerEx: "&lt;FONT&gt; 태그의 속성은 family 및 face(글꼴), size(크기), weight(두께), variant(대문자 변환), color(색상), spacing(글자 간격), height(행 간격)가 있습니다. input은 속성이 아닌 태그에 속합니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "28",
+                answerAsk: "인터넷상의 보안 문제로 특정 네트워크를 격리시키는데 사용되는 시스템으로서 네트워크의 출입 경로를 단절시켜 보안 관리 범위를 좁히고 제어를 효과적으로 할 수 있는 시스템은?",
+                answerChoice: {
+                    1: "POP server",
+                    2: "TCP",
+                    3: "Firewall",
+                    4: "IP"
+                },
+                answerResult: "3",
+                answerEx: "Firewall(방화벽)은 외부 사용자(WAN)들이 내부 네트웍(LAN)에 접근하지 못하도록 하는 일종의 내부 네트웍 방어도구입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "30",
+                answerAsk: "자바스크립트의 Window 객체 중 일반적으로 다이얼로그 박스를 나타내며, 사용자에게 메시지를 알려서 확인과 취소를 선택하게 하는 메소드는?",
+                answerChoice: {
+                    1: "Open()",
+                    2: "Prompt()",
+                    3: "Alert()",
+                    4: "Confirm()"
+                },
+                answerResult: "4",
+                answerEx: "자바스크립트에서 사용자에게 메시지를 알려서 확인, 취소를 선택하는 대화상자를 만드는 메소드는 confirm()입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "31",
+                answerAsk: "1988년 핀란드의 Jarkko Oikarinen이라는 학생에 의해 개발된 대화방(채널, channel) 서비스를 말하는 것은?",
+                answerChoice: {
+                    1: "Telnet",
+                    2: "FTP",
+                    3: "Usenet",
+                    4: "IRC"
+                },
+                answerResult: "4",
+                answerEx: "Telnet - 다른컴퓨터를 원격으로 사용할 수 있도록 지원해 주는 포로토콜입니다. <br> FT - 파일을 다른 시스템으로 전송할때 이용하는 프로토콜입니다. <br> Usenet - 인터넷을 이용해서 이야기를 나누는 토론 공간입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "34",
+                answerAsk: "자바스크립트 브라우저 내장 객체가 아닌 것은?",
+                answerChoice: {
+                    1: "Location 객체",
+                    2: "Image 객체",
+                    3: "History 객체",
+                    4: "Vision 객체"
+                },
+                answerResult: "4",
+                answerEx: "자바스크립트 내장객체의 종류로는 Window 객체, Document 객체, Frame 객체, History 객체, Location 객체, Image 객체 등이 있습니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "35",
+                answerAsk: "OSI 7계층 중 종단 간 오류제어와 흐름제어를 하는 것은?",
+                answerChoice: {
+                    1: "응용 계층",
+                    2: "물리 계층",
+                    3: "표현 계층",
+                    4: "전송 계층"
+                },
+                answerResult: "4",
+                answerEx: "응용계층(Layer7) - 사용자 인터페이스를 제공하고 여러 종류의 응용프로그램 서비스를 제공합니다. <br>물리계층(Layer1) - 전송매체를 통해 전기적 신호를 전송하는 서비스를 제공합니다.<br>표현계층(Layer6) - 암호화,데이터 압축 등의 기능을 수행하는 계층입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "37",
+                answerAsk: "하이퍼링크를 클릭하였을 때 나타나는 문서의 위치를 지정할 수 있는 TARGET 속성의 설명으로 틀린 것은?",
+                answerChoice: {
+                    1: "TARGET='_blank' : 새로운 창에 링크된 문서가 나타난다.",
+                    2: "TARGET='_self' : 현재 창에 링크된 문서가 나타난다.",
+                    3: "TARGET='_parent' : 현재 창의 부모 프레임(현재의 프레임 구조로 들어오기 이전의 한 단계 상위 페이지)에 링크된 문서가 나타난다.",
+                    4: "TARGET='_top' : 현재 여러 프레임 가운데 가장 위의 프레임에 링크된 문서가 나타난다."
+                },
+                answerResult: "4",
+                answerEx: "Target에서 '_top' 의 속성은 현재 프레임의 최상위 프레임을 링크하는 것입니다. 문제에서는 '현재 여러 프레임'이라고 서술되어 있기 때문에 틀린 설명이 됩니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "38",
+                answerAsk: "IPv4에서 멀티캐스트를 위해 예약되어 있는 클래스는?",
+                answerChoice: {
+                    1: "클래스 A",
+                    2: "클래스 B",
+                    3: "클래스 C",
+                    4: "클래스 D"
+                },
+                answerResult: "4",
+                answerEx: "IPv4에서 클래스별로 사용하는 용도는 다음과 같습니다.<br>A클래스 - 국가나 대형 통신망<br>B클래스 - 중대형 통신망<br>C클래스 - 소규모 통신망<br>D클래스 - 멀티태스킹용으로 예약<br>E클래스 - 실험용으로 예약"
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "42",
+                answerAsk: "컴퓨터 그래픽스에 사용되는 기술들은 계속 개발되고 있다. 3차원 그래픽스 기법에 해당하지 않는 것은?",
+                answerChoice: {
+                    1: "와이어 프레임(Wire Frame)",
+                    2: "표면(Surface)",
+                    3: "고형(Solid)",
+                    4: "색상(Coloring)"
+                },
+                answerResult: "4",
+                answerEx: "3D Modeling의 종류에는 Wire frame(와이어프레임), Surface(서페이스, 표면), Solid(고형, 솔리드), Parametric(곡면), Fractal, Particle 등이 있습니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "46",
+                answerAsk: "웹 페이지에 들어갈 그림, 사진, 글자, 음악 등을 종이 위에 표현하여 줄거리가 전개되듯이 표현하는 기법은?",
+                answerChoice: {
+                    1: "스토리 보드(story board)",
+                    2: "사이트 맵(site map)",
+                    3: "레이아웃(layout)",
+                    4: "내비게이션(navigation)"
+                },
+                answerResult: "1",
+                answerEx: "글자, 그림, 사진 음악 등을 시각화하여 한눈에 알아보기 쉽게 하는 것은 스토리보드에 대한 설명입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "51",
+                answerAsk: "다음 중 웹사이트의 정보를 한눈에 검색하기 위한 시각적 콘텐츠 모형으로 웹페이지 전체 자료를 계층형으로 표현한 것은?",
+                answerChoice: {
+                    1: "CSS",
+                    2: "Story board",
+                    3: "Site map",
+                    4: "HTML5"
+                },
+                answerResult: "3",
+                answerEx: "웹사이트의 정보를 한눈에 검색하기 위한 시각적 콘텐츠 모형은 사이트 맵입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "52",
+                answerAsk: "컴퓨터 그래픽스 시스템에서 그래픽 보드의 특성을 결정하는 요소로 옳지 않은 것은?",
+                answerChoice: {
+                    1: "사운드",
+                    2: "해상도",
+                    3: "컬러 수",
+                    4: "메모리 용량"
+                },
+                answerResult: "1",
+                answerEx: "사운드는 그래픽 보드와 관련이 없습니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "54",
+                answerAsk: "다음 중 3차원 입력 장치에 해당하는 것은?",
+                answerChoice: {
+                    1: "그래픽스 태블렛",
+                    2: "조이스틱",
+                    3: "라이트 펜",
+                    4: "모션 캡쳐 장치"
+                },
+                answerResult: "4",
+                answerEx: "그래픽스 태블렛, 조이스틱, 라이트 펜은 2차원 입력 장치에 해당합니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "56",
+                answerAsk: "빗방울, 불, 연기, 바람 등 자연현상을 표현할 때 사용하며, 입자들의 집합에 대해 그 행동과 특성을 부여하여 컴퓨터로 시뮬레이션하여 제작하는 기법은?",
+                answerChoice: {
+                    1: "모핑(Morphing)",
+                    2: "키네틱(Kinetic)",
+                    3: "미립자 시스템(Particle system)",
+                    4: "스프라이트(Sprite)"
+                },
+                answerResult: "3",
+                answerEx: "미립자 시스템에 대한 설명입니다. 미립자 시스템은 모핑 기법과 유사한데, 모핑 기법은 2개의 서로 다른 이미지나 3차원 모델 사이에 점진적으로 변화해가는 모습을 보여주는 기법입니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "57",
+                answerAsk: "곡선(곡면)이나 사선(사면)을 표현할 때 바탕과 이미지 사이의 경계를 부드럽게 처리해 주는 것은?",
+                answerChoice: {
+                    1: "매핑",
+                    2: "앨리어싱",
+                    3: "안티앨리어싱",
+                    4: "디더링"
+                },
+                answerResult: "3",
+                answerEx: "안티앨리어싱은 비트맵 이미지의 곡선이나 사선 부분의 계단 현상을 완화시킬 수 있습니다."
+            },
+            {
+                answerType: "웹디자인기능사 2015년 2회",
+                answerNum: "58",
+                answerAsk: "다음의 특성을 가진 파일의 확장자는? <br>① 웹에서 스캔 이미지에 비해 파일 용량이 작다.<br>② 사용자와 상호작용이 가능하며, 확장성과 호환성이 뛰어나다.<br>③ 다운로드와 동시에 실시간 플레이가 가능하다. <br>④ 확대나 축소 시 이미지 손상 없이 재생이 가능하다.",
+                answerChoice: {
+                    1: "PNG",
+                    2: "SWF",
+                    3: "PSD",
+                    4: "ASP"
+                },
+                answerResult: "2",
+                answerEx: "파일 용량이 적고 이미지 손상이 없는 파일은 벡터 방식이며, 플래시로 실시간 플레이가 가능한 포맷은 SWF파일입니다."
             },
         ];
 
