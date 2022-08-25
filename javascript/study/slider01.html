@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서치 01</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">요소를 안보이게 하는 방법 </h2>
+            <div class="t_desc2">1. display <br> 2. opacity <br> 3. visibility <br>4. width, height<br>5.transform</div>
+            
+            <hr>
+            <h3 class="t_tit2">display</h3>
+            <div class="t_box">👉요소를 어떤 형태로 나타나게 할 것인지를 말하는 속성 입니다.<br> (애니메이션x, 영역x)</div>
+            <div class="t_code">
+<pre><code>display : none
+</code></pre>
+            </div>
+            <h3 class="t_tit2">opacity</h3>
+            <div class="t_box">👉opacity는 요소의 투명도를 지정하는 속성입니다. <br>(애니메이션o, 영역o)</div>
+            <div class="t_code">
+<pre><code>opacity: 0;
+</code></pre>
+            </div>
+            <h3 class="t_tit2">visibility</h3>
+            <div class="t_box">👉문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다.<br>(애니메이션x, 영역x)</div>
+            <div class="t_code">
+<pre><code>visibility: hidden;
+</code></pre>
+            </div>
+            <h3 class="t_tit2">width , height</h3>
+            <div class="t_box">👉특정 요소의 너비와 높이를 0으로 설정하여 숨기는 방식 입니다. <br> (애니메이션x, 영역x)</div>
+            <div class="t_code">
+<pre><code>width: 0;
+height: 0; 
+</code></pre>
+            </div>
+            <h3 class="t_tit2">transform</h3>
+            <div class="t_box">👉시각적으로 엘리먼트를 감추지만, 빈공간이 남습니다.<br>(애니메이션o, 영역x)</div>
+            <div class="t_code">
+<pre><code>transform: scale(0);
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

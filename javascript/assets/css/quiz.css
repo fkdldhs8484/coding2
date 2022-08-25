@@ -306,8 +306,8 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     margin: 40px 0;
     transition: background 0.3s;
 }
-.quiz_confirm .check:hover {
-    background: #f5524f58;
+.quiz__confirm .check:hover {
+    background-color: #936da1;
 }
 @keyframes wobble {
     0% {

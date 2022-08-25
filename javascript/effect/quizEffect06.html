@@ -418,6 +418,7 @@
                 answerResult: "2",
                 answerEx: "파일 용량이 적고 이미지 손상이 없는 파일은 벡터 방식이며, 플래시로 실시간 플레이가 가능한 포맷은 SWF파일입니다."
             },
+            
         ];
 
         // 선택자
@@ -435,27 +436,28 @@
         // 문제 출력
         const updateQuiz = (index) => {
             const questionTag = `
-            <span class="number">${quizInfo[index].ansWerNum}</span>
-            <div class="ask">${quizInfo[index].answerAsk}</div>
+                <span class="number">${quizInfo[index].answerNum}</span>
+                <div class="ask">${quizInfo[index].answerAsk}</div>
             `;
             const choiceTag = `
             <label for="select1">
                 <input type="radio" id="select1" class="select" name="select" value="1">
-                <span class="choice">${quizInfo[index].answerChoice[0]}</span>
+                <span class="choice">${quizInfo[index].answerChoice[1]}</span>
             </label>
             <label for="select2">
                 <input type="radio" id="select2" class="select" name="select" value="2">
-                <span class="choice">${quizInfo[index].answerChoice[1]}</span>
+                <span class="choice">${quizInfo[index].answerChoice[2]}</span>
             </label>
             <label for="select3">
                 <input type="radio" id="select3" class="select" name="select" value="3">
-                <span class="choice">${quizInfo[index].answerChoice[2]}</span>
+                <span class="choice">${quizInfo[index].answerChoice[3]}</span>
             </label>
             <label for="select4">
                 <input type="radio" id="select4" class="select" name="select" value="4">
-                <span class="choice">${quizInfo[index].answerChoice[3]}</span>
+                <span class="choice">${quizInfo[index].answerChoice[4]}</span>
             </label>
             `;
+            
             //문제출력
             quizType.innerHTML = quizInfo[index].answerType;    //퀴즈 유형
             quizQuestion.innerHTML = questionTag;   //번호, 질문

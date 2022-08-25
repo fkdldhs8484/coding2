@@ -537,60 +537,56 @@
         function updateQuiz(){
             const exam = [];
             
-            quizInfo.forEach((question, number)=>{
-                console.log(question)    
-                exam.push(`
-                <div class="quiz">
-                    <span class="quiz__type">${question.answerType}</span>
-                    <h2 class="quiz__question">
-                        <span class="number">${question.ansWerNum}</span>
-                        <div class="ask">${question.answerAsk}</div>
-                    </h2>
-                    <div class="quiz__view">
-                        <div class="true">정답입니다!</div>
-                        <div class="false">틀렸습니다!</div>
-                        <div class="dog">
-                            <div class="head">
-                                <div class="ears"></div>
-                                <div class="face"></div>
-                                <div class="eyes">
-                                    <div class="teardrop"></div>
-                                </div>
-                                <div class="nose"></div>
-                                <div class="mouth">
-                                    <div class="tongue"></div>
-                                </div>
-                                <div class="chin"></div>
+            quizInfo.forEach((question, number) => {
+                exam.push(`<div class="quiz">
+                <span class="quiz__type">${question.answerType}</span>
+                <h2 class="quiz__question">
+                    <span class="number">${question.answerNum}</span>
+                    <div class="ask">${question.answerAsk}</div>
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다 !</div>
+                    <div class="false">틀렸습니다 !</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
                             </div>
-                            <div class="body">
-                                <div class="tail"></div>
-                                <div class="legs"></div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
                             </div>
+                            <div class="chin"></div>
                         </div>
-                    </div>
-                    <div class="quiz__answer">
-                        <div class="quiz__selects">
-                            <label for="select1${number}">
-                                <input type="radio" id="select1${number}" class="select" name="select${number}" value="1">
-                                <span class="choice">${question.answerChoice[0]}</span>
-                            </label>
-                            <label for="select2${number}">
-                                <input type="radio" id="select2${number}" class="select" name="select${number}" value="2">
-                                <span class="choice">${question.answerChoice[1]}</span>
-                            </label>
-                            <label for="select3${number}">
-                                <input type="radio" id="select3${number}" class="select" name="select${number}" value="3">
-                                <span class="choice">${question.answerChoice[2]}</span>
-                            </label>
-                            <label for="select4${number}">
-                                <input type="radio" id="select4${number}" class="select" name="select${number}" value="4">
-                                <span class="choice">${question.answerChoice[3]}</span>
-                            </label>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
                         </div>
                     </div>
                 </div>
-                
-                `)
+                <div class="quiz__answer">
+                    <div class="quiz__selects">
+                        <label for="select1${number}">
+                            <input type="radio" id="select1${number}" class="select" name="select${number}" value="1">
+                            <span class="choice">${question.answerChoice[1]}</span>
+                        </label>
+                        <label for="select2${number}">
+                            <input type="radio" id="select2${number}" class="select" name="select${number}" value="2">
+                            <span class="choice">${question.answerChoice[2]}</span>
+                        </label>
+                        <label for="select3${number}">
+                            <input type="radio" id="select3${number}" class="select" name="select${number}" value="3">
+                            <span class="choice">${question.answerChoice[3]}</span>
+                        </label>
+                        <label for="select4${number}">
+                            <input type="radio" id="select4${number}" class="select" name="select${number}" value="4">
+                            <span class="choice">${question.answerChoice[4]}</span>
+                        </label>
+                        </div>
+                </div>
+            </div>`);
             });
             exam.push(`
                 <div class="quiz__confirm">
