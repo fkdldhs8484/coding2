@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/prism.css">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
 </head>
+
 <body>
     <header id="header">
         <nav>
@@ -26,7 +28,7 @@
             <div class="test_box">
                 <h3 class="title">1.1 while문을 이용해서 1부터 100까지 출력하시요!</h3>
                 <div class="code">
-<pre><code class="line-numbers language-js">{
+                    <pre><code class="line-numbers language-js">{
     let num = 1;
     while(num &lt;= 100){
         document.write(num);
@@ -48,11 +50,9 @@
             <div class="test_box">
                 <h3 class="title">1.2 for문을 이용해서 1부터 100까지 출력하시요!</h3>
                 <div class="code">
-<pre><code class="line-numbers language-js">{
-    let num = 1;
-    while(num &lt;= 100){
-        document.write(num);
-        num++;
+                    <pre><code class="line-numbers language-js">{
+    for(let i=1; i&lt=100; i++){
+        document.write(i)
     }
 }
 </code></pre>
@@ -61,7 +61,7 @@
                     <details>
                         <summary>결과보기</summary>
                         <div class="sample01_result">
-                            1234566778900
+                            123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100
                         </div>
                     </details>
                 </div>
@@ -71,10 +71,13 @@
                 <h3 class="title">1.3 for문을 이용해서 1부터 100까지 출력하시요!(짝수, 홀수)</h3>
                 <div class="code">
 <pre><code class="line-numbers language-js">{
-    let num = 1;
-    while(num &lt;= 100){
-        document.write(num);
-        num++;
+    for (let i = 2; i &lt= 100; i += 2) {
+        document.write(i);
+    }
+}
+{
+    for (let i = 1; i  &lt = 100; i+= 2) {
+        document.write(i);
     }
 }
 </code></pre>
@@ -83,16 +86,17 @@
                     <details>
                         <summary>결과보기</summary>
                         <div class="sample01_result">
-                            1234566778900
+                            2468101214161820222426283032343638404244464850525456586062646668707274767880828486889092949698100<br>
+                            13579111315171921232527293133353739414345474951535557596163656769717375777981838587899193959799
                         </div>
                     </details>
                 </div>
             </div>
-             <!-- sample03 -->
-             <div class="test_box">
+            <!-- sample03 -->
+            <div class="test_box">
                 <h3 class="title">1.4 for문을 이용해서 1부터 100까지 합을 출력하시요!</h3>
                 <div class="code">
-<pre><code class="line-numbers language-js">{
+                    <pre><code class="line-numbers language-js">{
     let num = 1;
     while(num &lt;= 100){
         document.write(num);
@@ -110,12 +114,27 @@
                     </details>
                 </div>
             </div>
-             <!-- sample04 -->
+            <!-- sample04 -->
         </div>
     </main>
     <script src="../assets/js/prism.min.js"></script>
     <script>
+        // {
+        //     for(let i=1; i<=100; i++){
+        //         document.write(i)
+        //     }
+        // }
         // let sum = 0;
+        // {
+        //     for (let i = 2; i <= 100; i += 2) {
+        //         document.write(i);
+        //     }
+        // }
+        // {
+        //     for (let i = 1; i <= 100; i+= 2) {
+        //         document.write(i);
+        //     }
+        // }
 
         // for(let i=1; i<=100; i++){
         //     //document.write(i);
@@ -127,4 +146,5 @@
         // document.write(sum);
     </script>
 </body>
+
 </html>
