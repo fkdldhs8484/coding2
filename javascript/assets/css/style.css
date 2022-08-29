@@ -364,12 +364,13 @@ body {
 .document .t_link a {
     display: block;
     width: 200px;
-    background: #f5f5f5;
+    background: #997ca3;
     margin: 40px auto;
     border-radius: 5px;
     text-align: center;
     padding: 10px;
     transition: all 0.3s;
+    color: #fff;
 }
 
 .document .t_link a:hover {

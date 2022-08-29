@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">jQuery</h2>
+            <div class="t_desc2">jQuery란? 오픈 소스 기반의 자바스크립트 라이브러리입니다.<br>제이쿼리를 사용하면 짧고 단순한 코드로도 웹 페이지에 다양한 효과나 연출을 적용할 수 있습니다. <br>달러($) 기호는 제이쿼리를 의미하고, 제이쿼리에 접근할 수 있게 해주는 식별자입니다.<br>
+                JQuery 를 사용하려면 경로를 head 태그 내에 명시해주어야 합니다.
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">&ltscript type="#" src="https://code.jquery.com/jquery-3.2.0.min.js" >&lt/script>
+</code></pre>
+            </div>
+            <hr>
+            <h3 class="t_tit2"></h3>
+            <p class="t_desc"></p>
+            <table class="t_table">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce" rowspan="2">$()함수</td>
+                        <td colspan="2">선택된 HTML 요소를 제이쿼리에서 이용 가능한 형태로 생성해 주는 역할을 한다.</td>
+                    </tr>
+                    <tr>
+                        <td>$() 함수를 통해 생성된 요소를 제이쿼리 객체라고 표현한다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t_tit2">예제1</h3>
+            <div class="t_box">아래코드는 &ltp>태그를 클릭하면 &ltbody>태그의 글자크기가 100px로 바뀌는 예제입니다.</div>
+            <div class="t_code">
+<pre><code class="language-js">$(function() {
+    $("p").on("click", function() {
+      $("body").css("fontSize", "100px");
+    })
+  })
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

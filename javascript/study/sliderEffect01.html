@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트01</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">슬라이드 이펙트01</h2>
+            <p class="t_desc2">트랜지션 효과</p>
+            
+            <div class="t_iframe" style="min-height: 700px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/javascript/effect/sliderEffect01.html"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/sliderEffect01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML</h3>
+                <div class="t_code">
+<pre><code>&ltmain id="main"&gt
+    &ltsection id="sliderType01"&gt
+        &ltdiv class="slider__wrap"&gt
+            &ltdiv class="slider__img"&gt
+                &ltdiv class="slider"&gt&ltimg src="../assets/img3/effect_bg11-min.jpg" alt="이미지"&gt&lt/div&gt
+                &ltdiv class="slider"&gt&ltimg src="../assets/img3/effect_bg12-min.jpg" alt="이미지"&gt&lt/div&gt
+                &ltdiv class="slider"&gt&ltimg src="../assets/img3/effect_bg13-min.jpg" alt="이미지"&gt&lt/div&gt
+                &ltdiv class="slider"&gt&ltimg src="../assets/img3/effect_bg14-min.jpg" alt="이미지"&gt&lt/div&gt
+                &ltdiv class="slider"&gt&ltimg src="../assets/img3/effect_bg15-min.jpg" alt="이미지"&gt&lt/div&gt
+            &lt/div&gt
+        &lt/div&gt
+    &lt/section&gt
+&lt/main&gt
+</code></pre>
+                </div>
+                
+                <hr>
+                <h3 class="t_tit2">CSS</h3>
+                <div class="t_code">
+<pre><code>.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider__img {
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px;
+}
+.slider:nth-child(1)::before {content: '이미지1';}
+.slider:nth-child(2)::before {content: '이미지2';}
+.slider:nth-child(3)::before {content: '이미지3';}
+.slider:nth-child(4)::before {content: '이미지4';}
+.slider:nth-child(5)::before {content: '이미지5';}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+
+@media (max-width : 800px){
+    .slider__img {
+    width: 400px;
+    height: 225px;
+}
+}
+</code></pre>
+                </div>
+                <hr>
+                <h3 class="t_tit2"></h3>
+                <div class="t_code">
+<pre><code>const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = sliderWrap.querySelector(".slider__img");
+const slider = sliderWrap.querySelectorAll(".slider");
+
+let currentIndex = 0;                           //현재 보이는 이미지
+let sliderCount = slider.length;                //이미지 갯수
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % sliderCount ;     //다음 이미지
+    // 1, 2, 3, 4, 5, 6, 7, 8, 9, ....
+    // 1 % 5 = 1, 2, 3, 4, 0, 1, 2, 3, 4, 0 ....
+
+    slider[currentIndex].style.opacity = "0";   //첫번째 이미지를 안보이게
+    slider[nextIndex].style.opacity = "1";      //두번째 이미지를 보이게
+
+    currentIndex = nextIndex;
+    //0 1 2 3 4 0 1 2 3 4...
+},3000);
+</code></pre>
+                </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
