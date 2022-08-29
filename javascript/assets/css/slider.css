@@ -206,12 +206,13 @@ a {
     background:  #282936;
     border-radius: 0.5rem;
     color: #7A7D9D;
+    
 }
 .modal__box .title .tabs {
     display: flex;
     margin-left: 50px;
 }
-.modal__box .title .tabs > div {
+.modal__box .title .tabs>div {
     color: #7A7D9D;
     background-color: #282936;
     padding: 0.35rem 0.8rem 0.25rem 0.8rem;
@@ -222,17 +223,18 @@ a {
     text-transform: uppercase;
     cursor: pointer;
 }
-.modal__box .title .tabs > div.active {
-    background-color: #34364e;
-}
-.modal__box .title .tabs > div em {
+.modal__box .title .tabs>div em {
     font-style: normal;
 }
-.modal__box .title .tabs > div .favicon {
+.modal__box .title .tabs>div.active {
+    background-color: #34364e;
+}
+
+.modal__box .title .tabs>div .favicon {
     margin-right: 0.4rem;
     margin-top: 0.2rem;
 }
-.modal__box .title .tabs > div .close {
+.modal__box .title .tabs>div .close {
     margin-left: 4rem;
 }
 .modal__box .cont {
@@ -245,6 +247,7 @@ a {
 }
 .modal__box .cont > div {
     display: none;
+    height: inherit;
 }
 .modal__box .cont > div.active {
     display: block;
