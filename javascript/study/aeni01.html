@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 01</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">애니메이션 01</h2>
+            <div class="t_box">퉁퉁 튀는 애니메이션을 만들어 보자!
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="VwXJVxG"
+                    data-user="fkdldhs8484"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/VwXJVxG">
+                            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML</h3>
+            <div class="t_code">
+                <pre><code class="language-js">&ltdiv class="box">&lt/div>
+</code></pre>
+            </div>
+            <h3 class="t_tit2">CSS</h3>
+            <div class="t_code">
+                <pre><code class="language-js">body {
+    height: 100vh;
+    background-image: linear-gradient(to top, purple, purple)
+  }
+  .box {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .box::before {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: shadow 0.6s linear infinite;
+  }
+  
+  @keyframes shadow {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.2, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  .box::after {
+    content: '';
+    background: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:0;
+    top:0;
+    border-radius: 3px;
+    animation: load 0.6s linear infinite;
+  }
+  
+  @keyframes load {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+    25% {
+      transform: translatey(9px) rotate(22.5deg)
+    }
+    50% {
+      transform: translatey(18px)
+    scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 40px
+    }
+    75% {
+      transform: translatey(9px) rotate(67.5deg);
+    }
+    100% {
+      transform: translatey(0px) rotate(90deg);
+    }
+  }
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
