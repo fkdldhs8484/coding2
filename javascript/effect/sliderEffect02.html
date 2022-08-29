@@ -10,60 +10,104 @@
     <link rel="stylesheet" href="../assets/css/dracula.css">
     <link href="https://webfontworld.github.io/ChosunGu/ChosunGu.css" rel="stylesheet">
     <style>
-/* slider */
-    .slider__wrap {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .slider__img {
-        position: relative;
-        width: 800px;
-        height: 450px;
-    }
-    .slider {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .slider::before {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        background: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 5px 10px;
-    }
-    .slider:nth-child(1)::before {content: '이미지1';}
-    .slider:nth-child(2)::before {content: '이미지2';}
-    .slider:nth-child(3)::before {content: '이미지3';}
-    .slider:nth-child(4)::before {content: '이미지4';}
-    .slider:nth-child(5)::before {content: '이미지5';}
-    .slider:nth-child(1) {z-index: 5;}
-    .slider:nth-child(2) {z-index: 4;}
-    .slider:nth-child(3) {z-index: 3;}
-    .slider:nth-child(4) {z-index: 2;}
-    .slider:nth-child(5) {z-index: 1;}
+        /* slider */
+        .slider__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    @media (max-width : 800px){
         .slider__img {
-        width: 400px;
-        height: 225px;
-    }
-    }
-</style>
-    
+            /* 이미지 보이는 영역 */
+            position: relative;
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .slider__inner {
+            /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+            display: flex;
+            flex-wrap: wrap;
+            width: 4000px;
+            height: 450px;
+        }
+
+        .slider {
+            /* 개별적인 이미지 */
+            position: relative;
+            width: 800px;
+            height: 450px;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        .slider:nth-child(1)::before {
+            content: '이미지1';
+        }
+
+        .slider:nth-child(2)::before {
+            content: '이미지2';
+        }
+
+        .slider:nth-child(3)::before {
+            content: '이미지3';
+        }
+
+        .slider:nth-child(4)::before {
+            content: '이미지4';
+        }
+
+        .slider:nth-child(5)::before {
+            content: '이미지5';
+        }
+
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
+
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+        .slider:nth-child(3) {
+            z-index: 3;
+        }
+
+        .slider:nth-child(4) {
+            z-index: 2;
+        }
+
+        .slider:nth-child(5) {
+            z-index: 1;
+        }
+
+        @media (max-width : 800px) {
+            .slider__img {
+                width: 400px;
+                height: 225px;
+            }
+        }
+    </style>
+
 </head>
 
-<body class="img01">
+<body class="img02">
     <header id="header">
-        <h1>Javascript Slider Effect01</h1>
-        <p>슬라이드 이펙트 - 트랜지션 효과</p>
+        <h1>Javascript Slider Effect02</h1>
+        <p>슬라이드 이펙트 - 좌로 움직이기</p>
         <ul>
-            <li class="active"><a href="sliderEffect01.html">1</a></li>
-            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li class="active"><a href="sliderEffect02.html">2</a></li>
             <li><a href="sliderEffect03.html">3</a></li>
             <li><a href="sliderEffect04.html">4</a></li>
             <li><a href="sliderEffect05.html">5</a></li>
@@ -76,11 +120,13 @@
         <section id="sliderType01">
             <div class="slider__wrap">
                 <div class="slider__img">
-                    <div class="slider"><img src="../assets/img3/effect_bg11-min.jpg" alt="이미지"></div>
-                    <div class="slider"><img src="../assets/img3/effect_bg12-min.jpg" alt="이미지"></div>
-                    <div class="slider"><img src="../assets/img3/effect_bg13-min.jpg" alt="이미지"></div>
-                    <div class="slider"><img src="../assets/img3/effect_bg14-min.jpg" alt="이미지"></div>
-                    <div class="slider"><img src="../assets/img3/effect_bg15-min.jpg" alt="이미지"></div>
+                    <div class="slider__inner">
+                        <div class="slider"><img src="../assets/img3/effect_bg11-min.jpg" alt="이미지"></div>
+                        <div class="slider"><img src="../assets/img3/effect_bg12-min.jpg" alt="이미지"></div>
+                        <div class="slider"><img src="../assets/img3/effect_bg13-min.jpg" alt="이미지"></div>
+                        <div class="slider"><img src="../assets/img3/effect_bg14-min.jpg" alt="이미지"></div>
+                        <div class="slider"><img src="../assets/img3/effect_bg15-min.jpg" alt="이미지"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -131,7 +177,7 @@
                                             fill="#FCE2DB"></path>
                                     </svg>
                                 </span>
-                                <em>HTML</em>
+                                <em>jQuery</em>
                                 <span class="close">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
                                         focusable="false">
@@ -155,7 +201,7 @@
                                             fill="#9C9EFE"></path>
                                     </svg>
                                 </span>
-                                <em>CSS</em>
+                                <em>gsap</em>
                                 <span class="close">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
                                         focusable="false">
@@ -179,80 +225,41 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
-const sliderImg = sliderWrap.querySelector(".slider__img");
-const slider = sliderWrap.querySelectorAll(".slider");
+<pre><code class="language-js">const sliderInner = document.querySelector(".slider__inner");   //움직이는 영역
+const slider = document.querySelectorAll(".slider");               //이미지
 
-let currentIndex = 0;                           //현재 보이는 이미지
-let sliderCount = slider.length;                //이미지 갯수
+let currentIndex = 0;               //현재 이미지
+
+sliderInner.style.transition = "all 0.6s";
 
 setInterval(() => {
-    let nextIndex = (currentIndex + 1) % 5;     //다음 이미지
+    currentIndex = (currentIndex + 1) % slider.length;
 
-    slider[currentIndex].style.opacity = "0";   //첫번째 이미지를 안보이게
-    slider[nextIndex].style.opacity = "1";      //두번째 이미지를 보이게
+    sliderInner.style.transform = "translateX(" + -800 * currentIndex + "px)";
 
-    currentIndex = nextIndex;
-    //0 1 2 3 4 0 1 2 3 4...
-},3000);
+}, 2000);
 </code></pre>
-                        </div>
-                        <div>
-<pre><code class="language-js">&ltdiv class="slider__wrap"&gt;
-&ltdiv class="slider__img"&gt;
-    &ltdiv class="slider"&gt;&ltimg src="../assets/img3/effect_bg11-min.jpg" alt="이미지"&gt;&lt/div&gt;
-    &ltdiv class="slider"&gt;&ltimg src="../assets/img3/effect_bg12-min.jpg" alt="이미지"&gt;&lt/div&gt;
-    &ltdiv class="slider"&gt;&ltimg src="../assets/img3/effect_bg13-min.jpg" alt="이미지"&gt;&lt/div&gt;
-    &ltdiv class="slider"&gt;&ltimg src="../assets/img3/effect_bg14-min.jpg" alt="이미지"&gt;&lt/div&gt;
-    &ltdiv class="slider"&gt;&ltimg src="../assets/img3/effect_bg15-min.jpg" alt="이미지"&gt;&lt/div&gt;
-&lt/div&gt;
-&lt/div&gt;
-</code></pre>
-                        </div>
-                        <div>
-<pre><code class="language-js">/* slider */
-.slider__wrap {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.slider__img {
-    position: relative;
-    width: 800px;
-    height: 450px;
-}
-.slider {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.slider::before {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 5px 10px;
-}
-.slider:nth-child(1)::before {content: '이미지1';}
-.slider:nth-child(2)::before {content: '이미지2';}
-.slider:nth-child(3)::before {content: '이미지3';}
-.slider:nth-child(4)::before {content: '이미지4';}
-.slider:nth-child(5)::before {content: '이미지5';}
-.slider:nth-child(1) {z-index: 5;}
-.slider:nth-child(2) {z-index: 4;}
-.slider:nth-child(3) {z-index: 3;}
-.slider:nth-child(4) {z-index: 2;}
-.slider:nth-child(5) {z-index: 1;}
+</div>
+<div>
+<pre><code class="language-js">let currentIndex = 0 ;
+setInterval(() => {
+    currentIndex = ( currentIndex + 1 ) % (".slider").length; 
 
-@media (max-width : 800px){
-    .slider__img {
-    width: 400px;
-    height: 225px;
-}
-}
+    $(".slider__inner").css("position", "relative");
+
+    $(".slider__inner").animate({left : -800 * currentIndex}, 600);
+},2000); -->
+</code></pre>
+</div>
+<div>
+<pre><code class="language-js">const slider = document.querySelectorAll(".slider")
+let currentIndex = 0;
+setInterval(() => {
+    currentIndex = ( currentIndex + 1 ) % slider.length;
+    gsap.to(".slider__inner", {
+        x : -800 * currentIndex
+    });
+}, 2000);
 </code></pre>
                         </div>
                     </div>
@@ -272,36 +279,84 @@ setInterval(() => {
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common"></script>
     <script>
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = sliderWrap.querySelector(".slider__img");
-        const slider = sliderWrap.querySelectorAll(".slider");
+        // const sliderWrap = document.querySelector(".slider__wrap");
+        // const sliderImg = document.querySelector(".slider__img");       //보여지는 영역
+        // const sliderInner = document.querySelector(".slider__inner");   //움직이는 영역
+        // const slider = document.querySelectorAll(".slider");               //이미지
 
-        let currentIndex = 0;                           //현재 보이는 이미지
-        let sliderCount = slider.length;                //이미지 갯수
+        // let currentIndex = 0;               //현재 이미지
+        // let sliderCount = slider.length;    //이미지 갯수
+
+        // sliderInner.style.transition = "all 0.6s";                  //이미지 슬라이드 효과
+
+        // // sliderInner.style.transform += "translateX(0px)";        첫번째 이미지   -800 * 0
+        // // sliderInner.style.transform += "translateX(-800px)";     두번째 이미지   -800 * 1
+        // // sliderInner.style.transform += "translateX(-1600px)";    세번째 이미지   -800 * 2
+        // // sliderInner.style.transform += "translateX(-2400px)";    네번째 이미지   -800 * 3
+        // // sliderInner.style.transform += "translateX(-3200px)";    다섯번째 이미지 -800 * 4
+
+
+        // setInterval(()=>{
+        //     // currentIndex++
+        //     currentIndex = ( currentIndex + 1 ) % sliderCount;     //1 2 3 4 0 1 2 3 4 0 ...
+        //     // if (currentIndex < 4){                      //1 2 3 4 0 1 2 3 4 0 ...
+        //     //     currentIndex++;
+        //     // }else{
+        //     //     currentIndex = 0 ;
+        //     // }
+
+        //     //currentIndex < 4 ? currentIndex++ : currentIndex = 0;    //1 2 3 4 0 1 2 3 4 0 ...
+        //     console.log(currentIndex);
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex + "px)";
+
+        // },2000);
+
+
+    </script>
+    <!-- java -->
+    <script>
+        const sliderInner = document.querySelector(".slider__inner");   //움직이는 영역
+        const slider = document.querySelectorAll(".slider");               //이미지
+
+        let currentIndex = 0;               //현재 이미지
+
+        sliderInner.style.transition = "all 0.6s";
 
         setInterval(() => {
-            let nextIndex = (currentIndex + 1) % sliderCount ;     //다음 이미지
-            // 1, 2, 3, 4, 5, 6, 7, 8, 9, ....
-            // 1 % 5 = 1, 2, 3, 4, 0, 1, 2, 3, 4, 0 ....
+            currentIndex = (currentIndex + 1) % slider.length;
 
-            slider[currentIndex].style.opacity = "0";   //첫번째 이미지를 안보이게
-            slider[nextIndex].style.opacity = "1";      //두번째 이미지를 보이게
+            sliderInner.style.transform = "translateX(" + -800 * currentIndex + "px)";
 
-            currentIndex = nextIndex;
-            //0 1 2 3 4 0 1 2 3 4...
-        },3000);
+        }, 2000);
 
-        //     slider[1].style.opacity = "0";  //두번째 이미지를 안보이게
-        //     slider[2].style.opacity = "1";  //세번째 이미지를 보이게
+    </script>
+    <!-- gsap  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script> -->
+    <script>
+        // const slider = document.querySelectorAll(".slider")
+        // let currentIndex = 0;
 
-        //     slider[2].style.opacity = "0";  //세번째 이미지를 안보이게
-        //     slider[3].style.opacity = "1";  //네번째 이미지를 보이게
+        // setInterval(() => {
+        //     currentIndex = ( currentIndex + 1 ) % slider.length;
 
-        //     slider[4].style.opacity = "0";  //네번째 이미지를 안보이게
-        //     slider[5].style.opacity = "1";  //다섯번째 이미지를 보이게
+        //     gsap.to(".slider__inner", {
+        //         x : -800 * currentIndex
+        //     });
+        // }, 2000);
+    </script>
+    <!-- // jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let currentIndex = 0 ;
 
-        //     slider[4].style.opacity = "0";  //다섯번째 이미지를 안보이게
-        //     slider[0].style.opacity = "1";  //첫번째 이미지를 보이게
+        setInterval(() => {
+            currentIndex = ( currentIndex + 1 ) % (".slider").length; 
+
+            $(".slider__inner").css("position", "relative");
+
+            $(".slider__inner").animate({left : -800 * currentIndex}, 600);
+        },2000); -->
     </script>
 </body>
 
