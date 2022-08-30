@@ -45,96 +45,173 @@
             padding: 0 20px;
             margin: 0 auto;
             min-width: 1160px;
+            
         }
 
         .section {
             padding: 120px 0;
+            overflow: hidden;
         }
 
         /* '+' 형제, '>' 자식? */
         .section>h2 {
             font-size: 50px;
-            line-height: 1;
+            margin-bottom: 20px;
             text-align: center;
-            margin-bottom: 65px;
         }
 
         .section>p {
-            font-size: 16px;
+            font-size: 22px;
             font-weight: 300;
             color: #666;
-            text-align: center;
             margin-bottom: 70px;
+            text-align: center;
         }
 
         .gray {
             border-color: #f5f5f5;
+            
+        }
+
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* text 01 */
+        #textType01>p {
+            font-size: 16px;
+            color: #000;
+            font-weight: normal;
+            text-decoration-line: underline;
+            margin-bottom: 10px;
+        }
+
+        #textType01>h2 {
+            font-size: 50px;
+            margin-bottom: 60px;
         }
 
         .text__inner {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            
         }
 
-        .text__inner .card {
-            width: 37%;
-            background: #f5f5f5;
-            position: relative;
+        .text {
+            width: 29%;
+            margin-bottom: 20px;
+            padding: 20px;
+            
         }
 
-        .text__header img {
+        .text:hover {
+            background-color: #f5f5f5;
+            
+        }
+
+        .text .icon {
             width: 60px;
+            height: 60px;
+            border-radius: 50%;
             margin-bottom: 10px;
-            border-right: 10px;
-            padding-left: 10px;
+            background: url(img/text_bg01.svg);
+            
         }
 
-        .card__contents .tit {
+        .text:nth-child(1) .icon {
+            background-color: #D5BFF0;
+        }
+        .text:nth-child(2) .icon {
+            background-color: #BFF0C1;
+            background-position: -87px 600px;
+        } 
+        .text:nth-child(3) .icon {
+            background-color: #F8CCF9;
+            background-position: -180px 600px;
+        }
+        .text:nth-child(4) .icon {
+            background-color: #F8CCF9;
+            background-position: -268px 600px;
+        }
+        .text:nth-child(5) .icon {
+            background-color: #F8CCF9;
+            background-position: -355px 600px;
+        }
+        .text:nth-child(6) .icon {
+            background-color: #F8CCF9;
+            background-position: -444px 600px;
+        }
+
+        .text .tit {
             font-size: 24px;
             margin-bottom: 10px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding-left: 10px;
         }
 
-        .desc {
+        .text .desc {
             font-size: 18px;
             color: #666;
             margin-bottom: 20px;
-            padding-left: 10px;
         }
 
-        .text__footer a {
-            color: #666;
-            margin-bottom: 20px;
-            padding-left: 10px;
+        .text a {
+            text-decoration-line: underline;
         }
     </style>
 </head>
 
 <body>
     <section id="textType01" class="text__wrap  NexonLv1GothicLow section">
+        <p>텍스트 유형01</p>
         <h2>귀여운 우리집 강아지</h2>
         <div class="text__inner container">
-            <article class="card">
-                <figure class="text__header">
-                    <img src="img/text_bg01_01.jpg" alt="#">
-                </figure>
-                <div class="card__contents">
-                    <h3 class="tit">귀여운 강아지</h3>
-                    <p class="desc">자바스크립트의 기본 메서드를 통해 검색
-                        스크립트를 완성하는 튜토리얼입니다. 메서
-                        드를 통해 쉽게 검색을 만들 수 있습니다
-                    </p>
-                    <div class="text__footer">
-                        <a href="#">더보기</a>
-                    </div>
-                </div>
+            <article class="text">
+                <div class="icon"></div>
+                <h3 class="tit">귀여운 강아지</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+                </p>
+                <a href="#">더보기</a>
             </article>
-            
+            <article class="text">
+                <div class="icon"></div>
+                <h3 class="tit">귀여운 강아지</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+                </p>
+                <a href="#">더보기</a>
+            </article>
+            <article class="text">
+                <div class="icon"></div>
+                <h3 class="tit">귀여운 강아지</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+                </p>
+                <a href="#">더보기</a>
+            </article>
+            <article class="text">
+                <div class="icon"></div>
+                <h3 class="tit">귀여운 강아지</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+                </p>
+                <a href="#">더보기</a>
+            </article>
+            <article class="text">
+                <div class="icon"></div>
+                <h3 class="tit">귀여운 강아지</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+                </p>
+                <a href="#">더보기</a>
+            </article>
+            <article class="text">
+                <div class="icon"></div>
+                <h3 class="tit">귀여운 강아지</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+                </p>
+                <a href="#">더보기</a>
+            </article>
         </div>
-
     </section>
 </body>
 

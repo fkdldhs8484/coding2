@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 결합 / 템플릿 문자열</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit"> 텍스트 유형 01 </h2>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D1377%253A93" allowfullscreen></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/site/textType/text01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+            <div class="t_link">
+                <a href="https://fkdldhs8484.github.io/coding2/site/textType/text01.html"
+                    target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h2 class="t_tit">html</h2>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <p class="t_desc"></p>
+                    <div class="t_code">
+<pre><code class="language-js">&ltsection id="textType01" class="text__wrap  NexonLv1GothicLow section"&gt
+    &ltp&gt텍스트 유형01&lt/p&gt
+    &lth2&gt귀여운 우리집 강아지&lt/h2&gt
+    &ltdiv class="text__inner container"&gt
+        &ltarticle class="text"&gt
+            &ltdiv class="icon"&gt&lt/div&gt
+            &lth3 class="tit"&gt귀여운 강아지&lt/h3&gt
+            &ltp class="desc"&gt강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+            &lt/p&gt
+            &lta href="#"&gt더보기&lt/a&gt
+        &lt/article&gt
+        &ltarticle class="text"&gt
+            &ltdiv class="icon"&gt&lt/div&gt
+            &lth3 class="tit"&gt귀여운 강아지&lt/h3&gt
+            &ltp class="desc"&gt강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+            &lt/p&gt
+            &lta href="#"&gt더보기&lt/a&gt
+        &lt/article&gt
+        &ltarticle class="text"&gt
+            &ltdiv class="icon"&gt&lt/div&gt
+            &lth3 class="tit"&gt귀여운 강아지&lt/h3&gt
+            &ltp class="desc"&gt강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+            &lt/p&gt
+            &lta href="#"&gt더보기&lt/a&gt
+        &lt/article&gt
+        &ltarticle class="text"&gt
+            &ltdiv class="icon"&gt&lt/div&gt
+            &lth3 class="tit"&gt귀여운 강아지&lt/h3&gt
+            &ltp class="desc"&gt강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+            &lt/p&gt
+            &lta href="#"&gt더보기&lt/a&gt
+        &lt/article&gt
+        &ltarticle class="text"&gt
+            &ltdiv class="icon"&gt&lt/div&gt
+            &lth3 class="tit"&gt귀여운 강아지&lt/h3&gt
+            &ltp class="desc"&gt강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+            &lt/p&gt
+            &lta href="#"&gt더보기&lt/a&gt
+        &lt/article&gt
+        &ltarticle class="text"&gt
+            &ltdiv class="icon"&gt&lt/div&gt
+            &lth3 class="tit"&gt귀여운 강아지&lt/h3&gt
+            &ltp class="desc"&gt강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
+            &lt/p&gt
+            &lta href="#"&gt더보기&lt/a&gt
+        &lt/article&gt
+    &lt/div&gt
+&lt/section&gt
+</code></pre>
+                    </div>
+                </details>
+            </div>
+            
+            
+            <hr>
+            <h2 class="t_tit">css</h2>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <p class="t_desc"></p>
+            <div class="t_code">
+<pre><code class="language-js">/* text 01 */
+#textType01>p {
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+    text-decoration-line: underline;
+    margin-bottom: 10px;
+}
+
+#textType01>h2 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.text__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.text {
+    width: 29%;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+}
+
+.text:hover {
+    background-color: #f5f5f5;
+    
+}
+
+.text .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: url(img/text_bg01.svg);
+    
+}
+
+.text:nth-child(1) .icon {
+    background-color: #D5BFF0;
+}
+.text:nth-child(2) .icon {
+    background-color: #BFF0C1;
+    background-position: -87px 600px;
+} 
+.text:nth-child(3) .icon {
+    background-color: #F8CCF9;
+    background-position: -180px 600px;
+}
+.text:nth-child(4) .icon {
+    background-color: #F8CCF9;
+    background-position: -268px 600px;
+}
+.text:nth-child(5) .icon {
+    background-color: #F8CCF9;
+    background-position: -355px 600px;
+}
+.text:nth-child(6) .icon {
+    background-color: #F8CCF9;
+    background-position: -444px 600px;
+}
+
+.text .tit {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text .desc {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.text a {
+    text-decoration-line: underline;
+}
+</code></pre>
+            </div>
+                </details>
+            </div>
+            
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

@@ -366,23 +366,127 @@ $(document).ready(function () {
                         <td class="ce">$("input:radio")</td>
                         <td class="ce">&ltinput type="radio">요소를 선택합니다.</td>
                     </tr>
-
+                    <tr>
+                        <td class="ce">:submit</td>
+                        <td class="ce">$("input:submit")</td>
+                        <td class="ce">&ltinput type="submit">요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:reset</td>
+                        <td class="ce">$("input:reset")</td>
+                        <td class="ce">&ltinput type="reset">요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:input</td>
+                        <td class="ce">$(":input")</td>
+                        <td class="ce">모든 &ltinput> 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:checked</td>
+                        <td class="ce">$("input:checked")</td>
+                        <td class="ce">&ltinput> 요소에 checked 속성이 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:selected</td>
+                        <td class="ce">$("option:selected")</td>
+                        <td class="ce">&ltoption> 요소에 selected 속성이 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:focus</td>
+                        <td class="ce">$("input:focus")</td>
+                        <td class="ce">현재 &ltinput>에 포커스가 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:disabled</td>
+                        <td class="ce">$("input:disabled")</td>
+                        <td class="ce">&ltinput> 요소에 disabled 속성이 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:enabled</td> 
+                        <td class="ce">$("input:enabled")</td>
+                        <td class="ce">&ltinput> 요소중 enabled가 아닌 요소를 선택합니다.</td>
+                    </tr>
                 </tbody>
             </table>
             <h3 class="t_tit2">예제1</h3>
             <div class="t_code">
-<pre><code class="language-js">
+<pre><code class="language-js">&ltscript&gt
+$(document).ready(function () {
+    $("input:text").css("background", "red");
+    $("input:password").css("background", "orange");
+    $(":button").css("background", "yellow");
+    $("input:checked + label").css("background", "green");
+    $("option:selected").css("color", "blue");
+    $("textarea:disabled").css("background", "pink");
+});
+&lt/script&gt
 </code></pre>
             </div>
             <div class="t_link">
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="wvmVrGr" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/wvmVrGr">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBoexZW" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/qBoexZW">
                     Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
                     on <a href="https://codepen.io">CodePen</a>.</span>
                   </p>
                   <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
             </div>
             <hr>
+            <h3 class="t_tit2">가시성 필터 선택자</h3>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>선택자 종류</th>
+                        <th colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">:hidden</td>
+                        <td class="ce">div:hidden</td>
+                        <td class="ce">div 요소 중 hidden인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">:visible</td>
+                        <td class="ce">div:visible</td>
+                        <td class="ce">div 요소 중 visible인 요소를 선택합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예제1</h3>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gtvidibility 필터 선택자&lt/title&gt
+    &ltscript src="jquery-3.6.1.min.js"&gt&lt/script&gt
+    &ltstyle&gt
+        #vis {
+            display: none;
+        }
+    &lt/style&gt
+    &ltscript&gt
+        $(document).ready(function () {
+            console.log($("div:hidden").text());
+            $("div:visible").css("background","orange");
+        });
+        &lt/script&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv id="vis"&gt내용1&lt/div&gt
+    &ltdiv&gt내용2&lt/div&gt
+&lt/body&gt
+&lt/html&gt
+</code></pre>
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="eYMqVWX" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/eYMqVWX">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
         </div>
     </main>
     <!-- //main -->

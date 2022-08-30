@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">jQuery 탐색 선택자</h2>
+            <div class="t_box">탐색 선택자를 사용하면 기본 선택자로 선택한 요소 중 원하는 요소를 좀 더 정확하게 선택할 수 있습니다.</div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>선택자 종류</th>
+                        <th colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">children()</td>
+                        <td class="ce">$("div").children()</td>
+                        <td class="ce">div 요소의 자식 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">parent()</td>
+                        <td class="ce">$("p").parent()</td>
+                        <td class="ce">p 요소의 부모 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">parents()</td>
+                        <td class="ce">$("p").parents()</td>
+                        <td class="ce">p 요소의 부모가 되는 모든 div 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">closest()</td>
+                        <td class="ce">$("p").closest(div)</td>
+                        <td class="ce">p 요소의 부모가 되는 첫 번째 div 요소를</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">next()</td>
+                        <td class="ce">$("div.m").next()</td>
+                        <td class="ce">div.m 요소의 다음 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">nextAll()</td>
+                        <td class="ce">$("div.m").nextAll()</td>
+                        <td class="ce">div.m 요소의 다음 요소들을 모두 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">nextUntil()</td>
+                        <td class="ce">$("div.m").nextUntil("p")</td>
+                        <td class="ce">div.m 요소부터 p요소 전까지의 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">prev()</td>
+                        <td class="ce">$("div.m").prev()</td>
+                        <td class="ce">div.m 요소의 이전 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">prevAll()</td>
+                        <td class="ce">$("div.m").prevAll()</td>
+                        <td class="ce">div.m 요소의 이전 요소들을 모두 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">prevUntil()</td>
+                        <td class="ce">$("div.m").prevUntil("p")</td>
+                        <td class="ce">div.m 이전 요소부터 p 요소 다음 요소까지를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">siblings()</td>
+                        <td class="ce">$("div.m").siblings("p")</td>
+                        <td class="ce">div 요소의 형제 요소 중 p 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">find()</td>
+                        <td class="ce">$("div.m").find("span")</td>
+                        <td class="ce">div 요소의 하위 요소 중 span 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">filter()</td>
+                        <td class="ce">$("div.m").filter(".m")</td>
+                        <td class="ce">div 요소 중 class가 "m인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">not()</td>
+                        <td class="ce">$("div.m").not(".m")</td>
+                        <td class="ce">div 요소 중 class가 "m이 아닌 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">has()</td>
+                        <td class="ce">$("div.m").has("span")</td>
+                        <td class="ce">div 요소 중 span 요소를 포함하고 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">eq()</td>
+                        <td class="ce">$("div").eq(0)</td>
+                        <td class="ce">div 요소 중 index가 0인 요소들을 선택합니다. <br>index 0번은 첫 번째 요소입니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">gt()</td>
+                        <td class="ce">$("div").gt(0)</td>
+                        <td class="ce">index가 0보다 큰 div 요소들을 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">lt()</td>
+                        <td class="ce">$("div").lt(3)</td>
+                        <td class="ce">index가 3보다 작은 div 요소들을 선택합니다.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예제1</h3>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt탐색 선택자&lt/title&gt
+    &ltscript src="jquery-3.6.1.min.js"&gt&lt/script&gt
+    &ltstyle&gt
+        * {
+            margin: 5px;
+        }
+    &lt/style&gt
+    &ltscript&gt
+        $(document).ready(function () {
+            $("#m1").children().css("border", "2px solid red")
+            $("#m2").children().children("span").css("border", "2px solid orange")
+            $("#m3 span").closest("div").css("border", "2px solid yellow").end().find("em")
+            $("#m4 &gt span.m").nextUntil("em").css("border", "2px solid green")
+            $("#m5 &gt span").filter(".m").css("border", "2px solid blue")
+            $("#m6 &gt div").has("span").css("border", "2px solid blue")
+        });
+    &lt/script&gt
+&lt/head&gt
+&ltbody&gt
+    &ltdiv id="m1"&gt
+        &lta href="#"&gt내용1_1&lt/a&gt&ltspan&gt내용1_2&lt/span&gt
+    &lt/div&gt
+    &ltdiv id="m2"&gt
+        &ltdiv&gt
+            &lta href="#"&gt내용2_1&lt/a&gt&ltspan&gt내용2_2&lt/span&gt
+        &lt/div&gt
+    &lt/div&gt
+    &ltdiv id="m3"&gt
+        &ltdiv&gt&ltspan&gt내용3_1&lt/span&gt&lt/div&gt
+    &lt/div&gt
+    &ltdiv id="m4"&gt
+        &ltspan class="m"&gt내용4_1&lt/span&gt&ltspan&gt내용4_2&lt/span&gt&ltspan&gt내용4_3&lt/span&gt&ltem&gt내용4_4&lt/em&gt
+    &lt/div&gt
+    &ltdiv id="m5"&gt
+        &ltspan class="m"&gt내용5_1&lt/span&gt&ltspan&gt내용5_2&lt/span&gt&ltspan&gt내용5_3&lt/span&gt
+    &lt/div&gt
+    &ltdiv id="m6"&gt
+        &ltdiv&gt&ltspan&gt내용6_1&lt/span&gt&lt/div&gt
+        &ltdiv&gt내용6_2&lt/div&gt
+    &lt/div&gt
+&lt/body&gt
+&lt/html&gt
+</code></pre>
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="BarXrjq" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/BarXrjq">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">기타 탐색 선택자</h3>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>선택자 종류</th>
+                        <th colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">add()</td>
+                        <td>$("div").add("p") <br> div 요소와 p 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">addBack()</td>
+                        <td>$("div").children("p").addBack() <br> p요소와 이전 선택요소 div를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">end()</td>
+                        <td>$("div").find("span").css(...).end().find("em").css(...) <br> $("div").find("span").css(...)의 실행이 끝나면 처음 선택자 $("div")로 다시 돌아와 $("div").find("span").css(...).end().find("em").css(...)가 실행됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">is()</td>
+                        <td>선택한 요소를 판별해 주는 선택자로 보통 if 문의 조건식에 사용됩니다. <br>if("div").children().is("p")){<br>
+                            console.log("p 요소가 맞습니다.");<br>
+                        }</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">예제1</h3>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt기타 탐색 선택자&lt/title&gt
+    &ltscript src="jquery-3.6.1.min.js"&gt&lt/script&gt
+    &ltstyle&gt
+        * {
+            margin: 5px;
+        }
+    &lt/style&gt
+    &ltscript&gt
+        $(document).ready(function () {
+            $("#m1 &gt div").add("#m1 &gt p").css("border", "2px solid red")
+            $("#m2").children("p").addBack().css("border", "2px solid orange")
+            $("#m3").find("span").css("border", "2px solid yellow").end().find("em").css("border", "2px solid green")
+            if ($("#m4").children().is("p")){
+                console.log("p 요소가 존재합니다.");
+            }
+        });
+    &lt/script&gt
+&lt/head&gt
+
+&ltbody&gt
+    &ltdiv id="m1"&gt 
+        &ltdiv&gt내용1_1&lt/div&gt&ltp&gt내용1_2&lt/p&gt
+    &lt/div&gt
+    &ltdiv id="m2"&gt
+        &ltp&gt내용2&lt/p&gt
+    &lt/div&gt
+    &ltdiv id="m3"&gt
+        &ltspan&gt내용3_1&lt/span&gt&ltem&gt내용3_2&lt/em&gt
+    &lt/div&gt
+    &ltdiv id="m4"&gt
+        &ltp&gt내용4&lt/p&gt
+    &lt/div&gt
+&lt/body&gt
+&lt/html&gt
+</code></pre>
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="XWEvExM" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/XWEvExM">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
