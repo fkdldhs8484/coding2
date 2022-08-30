@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">jQuery 기본 선택자</h2>
+            <div class="t_box">jQuery는 html 요소와 관련된 기능구현이 많아 그만큼 CSS와 매우 밀접한 관계가 있습니다.</div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>선택자 종류</th>
+                        <th colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">태그 선택자</td>
+                        <td class="ce">$("p")</td>
+                        <td class="ce">p요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">id 선택자</td>
+                        <td class="ce">$("#gnb")</td>
+                        <td class="ce">#gnb 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">class 선택자</td>
+                        <td class="ce">$(".logo")</td>
+                        <td class="ce">.logo인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">자식 선택자</td>
+                        <td class="ce">$("#gnb > ul > li")</td>
+                        <td class="ce">#gnb의 자식 요소의 자식 요소 li를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">하위 선택자</td>
+                        <td class="ce">$("#gnb ul")</td>
+                        <td class="ce">#gnb의 하위에 있는 모든 ul요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">인접 선택자</td>
+                        <td class="ce">$("#visual + #content")</td>
+                        <td class="ce">#visual 다음에 오는 #content 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">형제 선택자</td>
+                        <td class="ce">$("#visual ~ #footer")</td>
+                        <td class="ce">#visual의 형제요소 #footer를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">종속 선택자</td>
+                        <td class="ce">$("div.util")</td>
+                        <td class="ce">div 요소 중 class가 util인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">그룹 선택자</td>
+                        <td class="ce">$(".left, .right, #banner")</td>
+                        <td class="ce">.left, .right, #banner 요소들을 선택합니다. </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">전체 선택자</td>
+                        <td class="ce">$("*")</td>
+                        <td class="ce">모든 요소를 선택합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t_tit2">예제1</h3>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt기본선택자&lt/title&gt
+    &ltstyle&gt
+        * {
+            margin: 5px;
+        }
+    &lt/style&gt
+    &ltscript src="jquery-3.6.1.min.js"&gt&lt/script&gt
+    &ltscript&gt
+        $(document).ready(function () {
+            $("p").css("border", "4px solid red");
+            $("#gnb").css("border", "4px solid orange");
+            $(".logo").css("border", "4px solid yellow");
+            $("#gnb &gt ul &gt li").css("border", "4px solid green");
+            $("#gnb ul").css("border", "4px solid blue");
+            $("#visual + #content").css("border", "4px solid navy");
+            $("#visual ~ #footer").css("border", "4px solid red");
+            $("div.util").css("border", "4px solid pink");
+            $(".left, .right, #banner").css("border", "4px solid gray");
+        });
+    &lt/script&gt
+&lt/head&gt
+
+&ltbody&gt
+    &ltheader id="header"&gt
+        &ltdiv class="logo"&gt로고&lt/div&gt
+        &ltdiv class="util"&gt회원가입&lt/div&gt
+        &ltnav id="gnb"&gt
+            &ltul&gt
+                &ltli&gt메뉴1
+                    &ltul&gt
+                        &ltli&gt메뉴1_1&lt/li&gt
+                    &lt/ul&gt
+                &lt/li&gt
+            &lt/ul&gt
+        &lt/nav&gt
+        &ltdiv class="visual"&gt
+            &ltp&gt비주얼&lt/p&gt
+        &lt/div&gt
+        &ltdiv class="content"&gt
+            &ltdiv class="left"&gt왼쪽&lt/div&gt
+            &ltdiv class="right"&gt
+                &ltdiv class="util"&gt오른쪽&lt/div&gt
+            &lt/div&gt
+        &lt/div&gt
+        &ltdiv id="banner"&gt배너&lt/div&gt
+        &ltfooter id="footer"&gt푸터&lt/footer&gt
+    &lt/header&gt
+&lt/body&gt
+
+&lt/html&gt
+</code></pre>
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="abYeWrN" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/abYeWrN">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

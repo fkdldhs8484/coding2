@@ -1,0 +1,52 @@
+&lt!DOCTYPE html>
+&lthtml lang="ko">
+
+&lthead>
+    &ltmeta charset="UTF-8">
+    &lttitle>자식 필터 선택자&lt/title>
+    &ltstyle>
+        *{
+            margin: 5px;
+        }
+        #m1 > p:last-child {
+            height: 20px;
+        }
+        span {
+            display: inline-block;
+            height: 20px;
+        }
+    &lt/style>
+    &ltscript src="jquery-3.6.1.min.js">&lt/script>
+    &ltscript>
+        $(document).ready(function () {
+            $("#m1 > p:contains('html')").css("border", "4px solid red");
+            $("#m1 > p:empty").css("border", "4px solid  orange");
+            $("#m2 > span:parent").css("border", "4px solid  yellow");
+            $("#m3 > section:has(article)").css("border", "4px solid green");
+        });
+    &lt/script>
+&lt/head>
+
+&ltbody>
+    &ltdiv id="m1">
+        &ltp>html, css, Javascript&lt/p>
+        &ltp>html5와 웹표준&lt/p>
+        &ltp>&lt/p>
+    &lt/div>
+    &ltdiv id="m2">
+        &ltspan>&lt/span>
+        &ltspan>내용1&lt/span>
+    &lt/div>
+    &ltdiv id="m3">
+        &ltsection>
+            &ltarticle>내용2_1&lt/article>
+        &lt/section>
+        &ltsection>
+            &ltdiv>
+                &ltarticle>내용2_2&lt/article>
+            &lt/div>
+        &lt/section>
+    &lt/div>
+&lt/body>
+
+&lt/html>

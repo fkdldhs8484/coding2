@@ -20,38 +20,66 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">jQuery</h2>
-            <div class="t_desc2">jQuery란? 오픈 소스 기반의 자바스크립트 라이브러리입니다.<br>제이쿼리를 사용하면 짧고 단순한 코드로도 웹 페이지에 다양한 효과나 연출을 적용할 수 있습니다. <br>달러($) 기호는 제이쿼리를 의미하고, 제이쿼리에 접근할 수 있게 해주는 식별자입니다.<br>
-                JQuery 를 사용하려면 경로를 head 태그 내에 명시해주어야 합니다.
+            <div class="t_desc2">jQuery란? 오픈 소스 기반의 자바스크립트 라이브러리입니다.<br>제이쿼리를 사용하면 짧고 단순한 코드로도 웹 페이지에 다양한 효과나 연출을 적용할 수
+                있습니다. <br>달러($) 기호는 제이쿼리를 의미하고, 제이쿼리에 접근할 수 있게 해주는 식별자입니다.<br>
+            </div>
+            <hr>
+            <h3 class="t_tit2">Download 방식</h3>
+            <div class="t_box">01. JQuery 를 사용하려면 인터넷 익스플로러에서 https://jquery.com/download 에 접속하여 다운받으시기 바랍니다.
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">&ltscript type="#" src="https://code.jquery.com/jquery-3.2.0.min.js" >&lt/script>
+</code></pre>
+            </div>
+            <h3 class="t_tit2">CDN 방식</h3>
+            <div class="t_box">02. JQuery 를 사용하려면 경로를 head 태그 내에 명시해주어야 합니다.
             </div>
             <div class="t_code">
 <pre><code class="language-js">&ltscript type="#" src="https://code.jquery.com/jquery-3.2.0.min.js" >&lt/script>
 </code></pre>
             </div>
             <hr>
-            <h3 class="t_tit2"></h3>
-            <p class="t_desc"></p>
-            <table class="t_table">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="ce" rowspan="2">$()함수</td>
-                        <td colspan="2">선택된 HTML 요소를 제이쿼리에서 이용 가능한 형태로 생성해 주는 역할을 한다.</td>
-                    </tr>
-                    <tr>
-                        <td>$() 함수를 통해 생성된 요소를 제이쿼리 객체라고 표현한다.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr>
-            <h3 class="t_tit2">예제1</h3>
-            <div class="t_box">아래코드는 &ltp>태그를 클릭하면 &ltbody>태그의 글자크기가 100px로 바뀌는 예제입니다.</div>
+            <h3 class="t_tit2">jQuery 기본 형식</h3>
+            <div class="t_box">jQuery는 기본적으로 &(docment).ready()로 시작합니다.<br>ready()는 jQuery 이벤트로 자바스크립트의 load 이벤트와 유사한
+                기능을 가지고 있습니다.
+            </div>
             <div class="t_code">
-<pre><code class="language-js">$(function() {
-    $("p").on("click", function() {
-      $("body").css("fontSize", "100px");
-    })
-  })
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt기본 형식&lt/title&gt
+    &ltscript src="jquery-3.3.1.min.js"&gt&lt/script&gt
+    &ltscript&gt
+        $(document).ready(function(){
+            실행문;
+        });
+    &lt/script&gt
+&lt/head&gt
+&ltbody&gt
+&lt/body&gt
+&lt/html&gt
+</code></pre>
+            </div>
+            <h3 class="t_tit2"></h3>
+            <div class="t_box">&(docment).ready()를 짧게도 표현할 수도 있습니다.
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gtjQuery Migrate Plugin&lt/title&gt
+    &ltscript src="jquery-3.3.1.min.js"&gt&lt/script&gt
+    &ltscript&gt
+        $(function(){
+            실행문;
+        });
+    &lt/script&gt
+&lt/head&gt
+&ltbody&gt
+&lt/body&gt
+&lt/html&gt
 </code></pre>
             </div>
         </div>

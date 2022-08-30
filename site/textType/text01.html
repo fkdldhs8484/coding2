@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text 유형 01</title>
+    <style>
+        /* fonst */
+        @import url('https://webfontworld.github.io/NexonLv1GothicLow/NexonLv1GothicLow.css');
+
+        .Nexon {
+            font-family: 'NexonLv1GothicLow';
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        /* '+' 형제, '>' 자식? */
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 65px;
+        }
+
+        .section>p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .gray {
+            border-color: #f5f5f5;
+        }
+
+        .text__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .text__inner .card {
+            width: 37%;
+            background: #f5f5f5;
+            position: relative;
+        }
+
+        .text__header img {
+            width: 60px;
+            margin-bottom: 10px;
+            border-right: 10px;
+            padding-left: 10px;
+        }
+
+        .card__contents .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 10px;
+        }
+
+        .desc {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .text__footer a {
+            color: #666;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="textType01" class="text__wrap  NexonLv1GothicLow section">
+        <h2>귀여운 우리집 강아지</h2>
+        <div class="text__inner container">
+            <article class="card">
+                <figure class="text__header">
+                    <img src="img/text_bg01_01.jpg" alt="#">
+                </figure>
+                <div class="card__contents">
+                    <h3 class="tit">귀여운 강아지</h3>
+                    <p class="desc">자바스크립트의 기본 메서드를 통해 검색
+                        스크립트를 완성하는 튜토리얼입니다. 메서
+                        드를 통해 쉽게 검색을 만들 수 있습니다
+                    </p>
+                    <div class="text__footer">
+                        <a href="#">더보기</a>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+
+    </section>
+</body>
+
+</html>

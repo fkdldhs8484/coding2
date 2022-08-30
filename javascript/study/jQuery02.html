@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">jQuery 속성 선택자</h2>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>선택자 종류</th>
+                        <th colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">요소[속성]</td>
+                        <td class="ce">$("span[class]")</td>
+                        <td class="ce">span 요소 중 class 속성을 가지고 있는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성='값']</td>
+                        <td class="ce">$("span[class='abc'])</td>
+                        <td class="ce">span 요소 중 class가 'abc'인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성!='값']</td>
+                        <td class="ce">$("span[class!='abc'])</td>
+                        <td class="ce">span 요소 중 class가 'abc'가 아닌 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성~='값']</td>
+                        <td class="ce">$("span[class~='abc'])</td>
+                        <td class="ce">span 요소 중 class가 'abc'를 포함하는 요소를 선택합니다. <br> 'abc' 앞뒤로 연결된 문자가 없어야 합니다. 'bg abc'는
+                            선택되나 'bg_abc'는 선택되지 않습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성*='값']</td>
+                        <td class="ce">$("span[class*='abc'])</td>
+                        <td class="ce">span 요소 중 class가 'abc'를 포함하는 요소를 모두 선택합니다.<br> 'bg abc', 'bg_abc' 모두 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성|='값']</td>
+                        <td class="ce">$("span[class|='abc'])</td>
+                        <td class="ce">span 요소중 class가 'abc'나 'abc-'로 시작하는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성^='값']</td>
+                        <td class="ce">$("span[class^='abc'])</td>
+                        <td class="ce">span 요소중 class가 'abc'로 시작하는 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">요소[속성$='값']</td>
+                        <td class="ce">$("span[class$='abc'])</td>
+                        <td class="ce">span 요소중 class가 'abc'로 끝나는 요소를 선택합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3 class="t_tit2">예제1</h3>
+            <div class="t_code">
+                <pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="ko"&gt
+
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gt속성 선택자&lt/title&gt
+    &ltstyle&gt
+        li {
+            margin: 5px;
+        }
+    &lt/style&gt
+    &ltscript src="jquery-3.6.1.min.js"&gt&lt/script&gt
+    &ltscript&gt
+        $(document).ready(function () {
+            $(".list1 &gt li[class='list_1']").css("border", "2px solid red");
+            $(".list1 &gt li[class!='list_1']").css("border", "2px solid orange");
+            $(".list2 &gt li[class~='list']").css("border", "yellow");
+            $(".list2 &gt li[class*='list']").css("border", "2px solid green");
+            $(".list3 &gt li[class|='list']").css("border", "2px solid blue");
+            $(".list4 &gt li[class^='list']").css("border", "2px solid navy");
+            $(".list4 &gt li[class$='bg']").css("background", "purple");
+        });
+    &lt/script&gt
+&lt/head&gt
+
+&ltbody&gt
+    &ltul class="list1"&gt
+        &ltli class="list_1"&gt내용1_1&lt/li&gt
+        &ltli class="list_2"&gt내용1_2&lt/li&gt
+        &ltli class="list_3"&gt내용1_3&lt/li&gt
+    &lt/ul&gt
+    &ltul class="list2"&gt
+        &ltli class="list bg"&gt내용2_1&lt/li&gt
+        &ltli class="list_1"&gt내용2_2&lt/li&gt
+        &ltli class="list_2"&gt내용2_3&lt/li&gt
+    &lt/ul&gt
+    &ltul class="list3"&gt
+        &ltli class="list"&gt내용3_1&lt/li&gt
+        &ltli class="list-1"&gt내용3_2&lt/li&gt
+        &ltli class="list-bg"&gt내용3_3&lt/li&gt
+    &lt/ul&gt
+    &ltul class="list4"&gt
+        &ltli class="list"&gt내용3_1&lt/li&gt
+        &ltli class="list-1"&gt내용3_2&lt/li&gt
+        &ltli class="list-bg"&gt내용3_3&lt/li&gt
+    &lt/ul&gt
+&lt/body&gt
+
+&lt/html&gt
+</code></pre>
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="MWVNoKY"
+                    data-user="fkdldhs8484"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/MWVNoKY">
+                            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
