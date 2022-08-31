@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>text 유형 01</title>
+    <title>text 유형 02</title>
     <style>
         /* fonst */
-        @import url('https://webfontworld.github.io/NexonLv1GothicLow/NexonLv1GothicLow.css');
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
-        .Nexon {
-            font-family: 'NexonLv1GothicLow';
+        .gmarket {
+            font-family: 'GmarketSans';
             font-weight: 500;
         }
 
@@ -39,40 +39,12 @@
             font-weight: normal;
         }
 
-        /* common */
-        .container {
-            width: 1160px;
-            padding: 0 20px;
-            margin: 0 auto;
-            min-width: 1160px;
-            
+        .font {
+            font-family: 'GmarketSans';
+            font-weight: 500;
         }
 
-        .section {
-            padding: 120px 0;
-            overflow: hidden;
-        }
-
-        /* '+' 형제, '>' 자식? */
-        .section>h2 {
-            font-size: 50px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .section>p {
-            font-size: 22px;
-            font-weight: 300;
-            color: #666;
-            margin-bottom: 70px;
-            text-align: center;
-        }
-
-        .gray {
-            border-color: #f5f5f5;
-            
-        }
-
+        /* ir 효과(이미지 대체 효과 == alt) */
         .ir {
             display: block;
             overflow: hidden;
@@ -81,137 +53,149 @@
             text-indent: -9999px;
         }
 
-        /* text 01 */
-        #textType01>p {
-            font-size: 16px;
-            color: #000;
-            font-weight: normal;
-            text-decoration-line: underline;
-            margin-bottom: 10px;
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            min-width: 1160px;
         }
 
-        #textType01>h2 {
+        .section {
+            padding: 120px 0;
+            display: flex;
+            margin: 0 auto;
+            width: 1160px;
+        }
+
+        .section>h2 {
             font-size: 50px;
-            margin-bottom: 60px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section>p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        /* text 02 */
+        .text1 {
+            padding-right: 100px;
+        }
+
+        .text1 .icon1 {
+            width: 160px;
+            height: 25px;
+            line-height: 30px;
+            color: #fff;
+            background-color: #FA5E5E;
+            text-align: center;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .text1>h2 {
+            font-size: 35px;
+            line-height: 1;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+        .text1>p {
+            font-size: 18px;
+            color: #333;
         }
 
         .text__inner {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            
+            width: 800px;
         }
+        
 
-        .text {
-            width: 29%;
-            margin-bottom: 20px;
-            padding: 20px;
-            
-        }
-
-        .text:hover {
-            background-color: #f5f5f5;
-            
-        }
-
-        .text .icon {
+        .text__box .icon2 {
             width: 60px;
             height: 60px;
+            margin-bottom: 10px;
             border-radius: 50%;
-            margin-bottom: 10px;
-            background: url(img/text_bg01.svg);
-            
+            background: #000;
+            background: url(img/text_bg02.svg) no-repeat;
         }
 
-        .text:nth-child(1) .icon {
-            background-color: #D5BFF0;
-        }
-        .text:nth-child(2) .icon {
-            background-color: #BFF0C1;
-            background-position: -87px 600px;
-        } 
-        .text:nth-child(3) .icon {
-            background-color: #F8CCF9;
-            background-position: -180px 600px;
-        }
-        .text:nth-child(4) .icon {
-            background-color: #F8CCF9;
-            background-position: -268px 600px;
-        }
-        .text:nth-child(5) .icon {
-            background-color: #F8CCF9;
-            background-position: -355px 600px;
-        }
-        .text:nth-child(6) .icon {
-            background-color: #F8CCF9;
-            background-position: -444px 600px;
-        }
-
-        .text .tit {
+        .text__box .tit {
             font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .text .desc {
-            font-size: 18px;
-            color: #666;
             margin-bottom: 20px;
         }
 
-        .text a {
-            text-decoration-line: underline;
+        .text__box .desc {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .text__box {
+            padding: 0 20px 20px 20px;
+            width: 40%;
+            margin-bottom: 50px;
+        }
+
+        .text__box:nth-child(1) .icon2 {
+        }
+
+        .text__box:nth-child(2) .icon2 {
+            background-position: -87px;
+        }
+
+        .text__box:nth-child(3) .icon2 {
+            background-position: -267px ;
+        }
+
+        .text__box:nth-child(4) .icon2 {
+            background-position: -355px;
         }
     </style>
 </head>
 
 <body>
-    <section id="textType01" class="text__wrap  NexonLv1GothicLow section">
-        <p>텍스트 유형01</p>
-        <h2>귀여운 우리집 강아지</h2>
-        <div class="text__inner container">
-            <article class="text">
-                <div class="icon"></div>
-                <h3 class="tit">귀여운 강아지</h3>
-                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
-                </p>
-                <a href="#">더보기</a>
+    <section id="textType02" class="text__wrap section gmarket">
+        <div class="text1">
+            <p class="icon1">FRONTEND</p>
+            <h2>강아지에 <br>대하여...</h2>
+            <p>시대가 지나도 늘 함께 하는 반려동물!<br>
+                반려동물에 대하여 알아보자!
+                여러분도 함께!
+            </p>
+        </div>
+        <div class="text__inner">
+            <article class="text__box">
+                <p class="icon2"></p>
+                <h3 class="tit">강아지의 귀여움</h3>
+                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워</p>
             </article>
-            <article class="text">
-                <div class="icon"></div>
-                <h3 class="tit">귀여운 강아지</h3>
-                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
-                </p>
-                <a href="#">더보기</a>
+            <article class="text__box">
+                <p class="icon2"></p>
+                <h3 class="tit">강아지가 싫어 하는 것</h3>
+                <p class="desc">우리집 강아지가 싫어하는 건 목욕, 우리집 강아지가 싫어하는 건 목욕, 우리집 강아지가 싫어하는 건 목욕 </p>
             </article>
-            <article class="text">
-                <div class="icon"></div>
-                <h3 class="tit">귀여운 강아지</h3>
-                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
-                </p>
-                <a href="#">더보기</a>
+            <article class="text__box">
+                <p class="icon2"></p>
+                <h3 class="tit">강아지가 좋아하는 것</h3>
+                <p class="desc">우리집 강아지가 좋아하는 건 간식, 우리집 강아지가 좋아하는 건 간식, 우리집 강아지가 좋아하는 건 간식</p>
             </article>
-            <article class="text">
-                <div class="icon"></div>
-                <h3 class="tit">귀여운 강아지</h3>
-                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
-                </p>
-                <a href="#">더보기</a>
-            </article>
-            <article class="text">
-                <div class="icon"></div>
-                <h3 class="tit">귀여운 강아지</h3>
-                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
-                </p>
-                <a href="#">더보기</a>
-            </article>
-            <article class="text">
-                <div class="icon"></div>
-                <h3 class="tit">귀여운 강아지</h3>
-                <p class="desc">강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워, 강아지 귀여워
-                </p>
-                <a href="#">더보기</a>
+            <article class="text__box">
+                <p class="icon2"></p>
+                <h3 class="tit">강아지의 대한 기본 지식</h3>
+                <p class="desc">우리집 강아지는 말티즈, 우리집 강아지는 말티즈, 우리집 강아지는 말티즈, 우리집 강아지는 말티즈</p>
             </article>
         </div>
+
     </section>
 </body>
 

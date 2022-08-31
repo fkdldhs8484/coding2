@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text 유형 03</title>
+    <style>
+        /* fonst */
+        @import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
+
+        .NexonLv2Gothic {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section>p {
+            font-size: 25px;
+            font-weight: 300;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* textType03 */
+        body {
+            background-color: #E5F6FF;
+        }
+
+        .text__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .text {
+            width: 30%;
+            border-radius: 5%;
+            background-color: #fff;
+            padding: 10px;
+
+        }
+
+        .text .desc {
+            font-size: 25px;
+            font-weight: lighter;
+            padding: 20px 10px 70px 10px;
+
+        }
+
+        .text .desc:nth-child(1) {
+            border-bottom: 1px solid #d8d8d8;
+            margin-bottom: 10px;
+
+        }
+
+
+        .text__body {
+            display: flex;
+        }
+
+        .text__body .box {
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .text__body .icon {
+            width: 67px;
+            height: 67px;
+            border-radius: 70%;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background: url(img/text_bg03.svg) no-repeat;
+        }
+
+        .text:nth-child(1) .icon {
+        }
+        .text:nth-child(2) .icon {
+            background-position: -87px;
+        } 
+        .text:nth-child(3) .icon {
+            background-position: -175px;
+        }
+
+        .text .text__body:nth-child(2) {
+            border-bottom: 1px solid #d8d8d8;
+            margin-bottom: 20px;
+        }
+
+        .text__body .tit {
+            font-size: 25px;
+            font-weight: 500;
+            padding: 5px;
+        }
+
+        .text__body span {
+            font-size: 15px;
+            font-weight: 100;
+            color: #666;
+        }
+
+        .text__body .star {
+            width: 100%;
+            height: 22px;
+            background: url(img/text_bg03_01.png) no-repeat;
+        }
+
+        .text__footer {}
+
+        .text__footer a {
+            display: block;
+            margin: 0 auto;
+            width: 143px;
+            height: 32px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: lighter;
+            background-color: #2171EA;
+            text-align: center;
+            border-radius: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="textType03" class="text__wrap  NexonLv2Gothic section">
+        <h2>애견카페 후기</h2>
+        <p>애견카페에 있는 멤버를 소개합니다.</p>
+        <div class="text__inner container">
+            <article class="text">
+                <div class="text__header">
+                    <p class="desc">애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고
+                        싶다.애견카페 가고 싶다.애견카페 가고 싶다.</p>
+                </div>
+                <div class="text__body">
+                    <p class="icon"></p>
+                    <div class="box">
+                        <h3 class="tit">강아지1<span>카페 24기</span></h3>
+                        <div class="star"></div>
+                    </div>
+                </div>
+                <div class="text__footer">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </article>
+            <article class="text">
+                <div class="text__header">
+                    <p class="desc">애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고
+                        싶다.애견카페 가고 싶다.애견카페 가고 싶다.</p>
+                </div>
+                <div class="text__body">
+                    <p class="icon"></p>
+                    <div class="box">
+                        <h3 class="tit">강아지2<span>카페 24기</span></h3>
+                        <div class="star"></div>
+                    </div>
+                </div>
+                <div class="text__footer">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </article>
+            <article class="text">
+                <div class="text__header">
+                    <p class="desc">애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고 싶다.애견카페 가고
+                        싶다.애견카페 가고 싶다.애견카페 가고 싶다.</p>
+                </div>
+                <div class="text__body">
+                    <p class="icon"></p>
+                    <div class="box">
+                        <h3 class="tit">강아지3<span>카페 24기</span></h3>
+                        <div class="star"></div>
+                    </div>
+                </div>
+                <div class="text__footer">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</body>
+
+</html>
