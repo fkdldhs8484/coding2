@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Inconsolata");
-html {
-  box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #FF9AE0;
-  font-family: "Inconsolata", monospace;
-}
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
 .window {
   min-width: 360px;
@@ -196,39 +169,3 @@ body {
 .scroll.-row > .end::after {
   transform: rotate(90deg);
 }
-    </style>
-</head>
-<body>
-    
-<div class="window">
-    <div class="title-bar">
-      <div class="minimize">
-        <div class="symbol"></div>
-      </div>
-      <div class="maximize">
-        <div class="symbol"></div>
-      </div>
-      <div class="close">
-        <div class="symbol"></div>
-      </div>
-    </div>
-    <div class="menu-bar"><span>File</span><span>Edit</span><span>View</span><span>Help</span></div>
-    <div class="content-container">
-      <div class="content">
-        <div class="main"></div>
-        <div class="scroll">
-          <div class="start"></div>
-          <div class="progress"></div>
-          <div class="end"></div>
-        </div>
-      </div>
-      <div class="scroll -row">
-        <div class="start"></div>
-        <div class="progress"></div>
-        <div class="end"></div>
-      </div>
-    </div>
-    <div class="footer"></div>
-  </div>
-</body>
-</html>
