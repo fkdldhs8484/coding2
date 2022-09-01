@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 크기 메서드 정리</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">위치 및 크기를 표현하는 속성 및 메서드</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <td class="ce" rowspan="9">요소<br> 속성</td>
+                        <td class="ce" rowspan="9">크기 및 <br> 위치</td>
+                        <td>element.clientWidth()</td>
+                        <td>인라인 요소나 CSS 상에 존재하지 않는 요소에 대해서는 0을 나타내고, 그렇지 않다면 엘리먼트의 내부 너비를 픽셀로 나타냅니다. (마진/보더 미포함)</td>
+                    </tr>
+                    <tr>
+                        <td>element.clientHeight()</td>
+                        <td>엘리먼트의 내부 높이를 픽셀로 반환합니다. 여백O 스크롤바 높이, 경계선, 외부 여백X</td>
+                    </tr>
+                    <tr>
+                        <td>element.clientTop()</td>
+                        <td>요소의 Y축값 너비(픽셀)입니다.(부모기준)</td>
+                    </tr>
+                    <tr>
+                        <td>element.clientLeft()</td>
+                        <td>엘리먼트의 X축값 너비 (픽셀 단위)입니다. (부모기준)</td>
+                    </tr>
+                    <tr>
+                        <td>element.offsetWidth()</td>
+                        <td>요소의 레이아웃 너비를 정수로 반환합니다. (보더/패딩 포함) </td>
+                    </tr>
+                    <tr>
+                        <td>element.offsetHeight()</td>
+                        <td>요소의 레이아웃 높이를 정수로 반환합니다.(보더/패딩 포함)</td>
+                    </tr>
+                    <tr>
+                        <td>element.offsetTop()</td>
+                        <td>상위 위치(픽셀 단위)를 반환합니다. (문서기준)</td>
+                    </tr>
+                    <tr>
+                        <td>element.offsetLeft()</td>
+                        <td>왼쪽 위치(픽셀)를 반환합니다. (문서기준)</td>
+                    </tr>
+                    <tr>
+                        <td>element.getBoundingClientRect()</td>
+                        <td> 요소의 크기와 뷰포트에 상대적인 위치를 반환합니다.<br> (왼쪽, 위쪽, 오른쪽, 아래쪽, x, y, 너비, 높이의 8가지 속성)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

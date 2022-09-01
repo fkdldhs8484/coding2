@@ -29,6 +29,7 @@
                 <li><a href="javascript09.html">브라우저 객체</a></li>
                 <li class="active"><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
+                <li><a href="javascript12.html">제이쿼리</a></li>
             </ul>
             <ul class="effect">
                 <li><a href="effect/searchEffect.html">검색 효과</a></li>
@@ -62,12 +63,48 @@
                     <li><a href="#">01. 요소 메서드 : 클래스 : classList.remove() : 클래스 삭제 </a></li>
                     <li><a href="#">01. 요소 메서드 : 클래스 : classList.toggle() : 클래스 추가/삭제 </a></li>
                     <li><a href="#">01. 요소 메서드 : 클래스 : classList.contains() : 클래스 존재 여부 확인하기 </a></li>
+                    <br>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientWidth() : 요소의 가로값 (마진/보더 미포함) </a></li>
+                    <li><a href="#">02. 요소 속성 : 크기 및 위치 : element.clientHeight() : 요소의 높이값 (마진/보더 미포함) </a></li>
+                    <li><a href="#">03. 요소 속성 : 크기 및 위치 : element.clientTop() : 요소의 Y축값(부모기준) </a></li>
+                    <li><a href="#">04. 요소 속성 : 크기 및 위치 : element.clientLeft() : 요소의 X축값(부모기준) </a></li>
+                    <li><a href="#">05. 요소 속성 : 크기 및 위치 : element.offsetWidth() : 요소의 가로값 (보더/패딩 포함) </a></li>
+                    <li><a href="#">06. 요소 속성 : 크기 및 위치 : element.offsetHeight() : 요소의 높이값 (보더/패딩 포함) </a></li>
+                    <li><a href="#">07. 요소 속성 : 크기 및 위치 : element.offsetTop() : 요소의 X축값 (문서기준) </a></li>
+                    <li><a href="#">08. 요소 속성 : 크기 및 위치 : element.offsetLeft() : 요소의 Y축값 (문서기준) </a></li>
+                    <li><a href="#">09. 요소 속성 : 크기 및 위치 : element.getBoundingClientRect() : 크기 및 위치 top, left, right, bootom, width, height</a></li>
                 </ul>
+            </div>
+            <div class="main_sample">
+                <div id="sample01" class="sample">
+                    <h3 class="blue">위치 및 크기를 표현하는 속성 및 메서드</h3>
+                    <div class="view">
+                        <div class="sbox">
+                            <span>
+                                width : 400px <br>
+                                margin : 20px <br>
+                                border : 1px <br>
+                                padding : 20px
+                            </span>
+                        </div>
+                        <p class="sResult">여기에 결과값이 표시됩니다.</p>
+                    </div>
+                    <div class="button">
+                        <a href="#" class="btn1">박스의 가로값을(clientWidth) 구합니다.</a>
+                        <a href="#" class="btn2">박스의 세로값을(clientHeight) 구합니다.</a>
+                        <a href="#" class="btn3">박스의 X값을(clientTop) 구합니다.</a>
+                        <a href="#" class="btn4">박스의 Y값을(clientLeft) 구합니다.</a>
+                        <a href="#" class="btn5">박스의 가로값을(offsetWidth) 구합니다.</a>
+                        <a href="#" class="btn6">박스의 세로값을(offsetHeight) 구합니다.</a>
+                        <a href="#" class="btn7">박스의 가로값을(offsetTop) 구합니다.</a>
+                        <a href="#" class="btn8">박스의 세로값을(offsetLeft) 구합니다.</a>
+                        <a href="#" class="btn9">박스의 getBoundingClientRect()을 구합니다.</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <!-- //main -->
-
+    <!-- //main_menu -->
     <footer id="footer">
         <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
     </footer>
@@ -78,7 +115,57 @@
         hljs.highlightAll();
     </script>
     <script>
+        const box1 = document.querySelector("#sample01 .sbox");
 
+        document.querySelector("#sample01 .btn1").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 가로값은 " + box1.clientWidth + "px(마진/보더 불포함) 입니다.";
+        })
+        document.querySelector("#sample01 .btn2").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 세로값을 " + box1.clientHeight + "px(마진/보더 불포함) 입니다.";
+        })
+        document.querySelector("#sample01 .btn3").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 X값을 " + box1.clientTop + "px(부모기준) 입니다.";
+        })
+        document.querySelector("#sample01 .btn4").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 Y값을 " + box1.clientLeft + "px(부모기준) 입니다.";
+        })
+        document.querySelector("#sample01 .btn5").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 가로값을 " + box1.offsetWidth + "px(마진/보더 포함) 입니다.";
+        })
+        document.querySelector("#sample01 .btn6").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 세로값을 " + box1.offsetHeight + "px(마진/보더 포함) 입니다.";
+        })
+        document.querySelector("#sample01 .btn7").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 가로값은 " + box1.offsetTop + "px(문서기준) 입니다.";
+        })
+        document.querySelector("#sample01 .btn8").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 세로값을 " + box1.offsetLeft + "px(문서기준) 입니다.";
+        })
+        document.querySelector("#sample01 .btn9").addEventListener("click", (e) => {
+            e.preventDefault();
+            const box = document.querySelector("#sample01 .sbox");
+            const result = document.querySelector("#sample01 .sResult");
+            const rect = box.getBoundingClientRect();
+
+            result.innerHTML = "";
+
+            for (let key in rect) {
+                if (typeof rect[key] !== "function") {    //key값에서 함수가 아닌걸 찾아낸다.
+                    let span = document.createElement("span");
+                    span.textContent = `${key}: ${rect[key]}`;
+                    result.appendChild(span);
+                }
+
+            }
+        })
     </script>
 </body>
 

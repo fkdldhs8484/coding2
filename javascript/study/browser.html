@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 크기 메서드 정리</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">브라우저 크기를 표현하는 속성 및 메서드</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <td class="ce" rowspan="14">요소<br> 속성</td>
+                        <td class="ce" rowspan="14">브라우저</td>
+                        <td>window.innerWidth</td>
+                        <td>요소의 가로값(스크롤바 미포함)</td>
+                    </tr>
+                    <tr>
+                        <td>window.innderHeight</td>
+                        <td>요소의 높이값(스크롤바 미포함)</td>
+                    </tr>
+                    <tr>
+                        <td> window.outerWidth</td>
+                        <td>요소의 가로값(스크롤바 포함)</td>
+                    </tr>
+                    <tr>
+                        <td>window.outerHeight</td>
+                        <td>요소의 높이값(스크롤바 포함)</td>
+                    </tr>
+                    <tr>
+                        <td>window.pageXOffset</td>
+                        <td>가로 스크롤 값 (브라우저 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>window.pageYOffset</td>
+                        <td>세로 스크롤 값 (브라우저 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>window.scrollX</td>
+                        <td>가로 스크롤 값 (브라우저 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>window.scrollY </td>
+                        <td>세로 스크롤 값 (브라우저 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>window.scroll()</td>
+                        <td>스크롤 값 설정</td>
+                    </tr>
+                    <tr>
+                        <td>window.scrollTo()</td>
+                        <td>스크롤 값 설정(절대 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>window.scrollBy()</td>
+                        <td>스크롤 값 설정(상대 기준)</td>
+                    </tr>
+                    <tr>
+                        <td>element.scrollLeft()</td>
+                        <td>가로 스크롤 값</td>
+                    </tr>
+                    <tr>
+                        <td>element.scrollTop()</td>
+                        <td>세로 스크롤 값</td>
+                    </tr>
+                    <tr>
+                        <td>element.scrollIntoView()</td>
+                        <td>스크롤 이동 및 설정</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

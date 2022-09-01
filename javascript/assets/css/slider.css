@@ -136,7 +136,7 @@ a {
     right: 20px;
     bottom: 20px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; 
 }
 .modal__btn:hover {
     background-color: #fff;
@@ -161,6 +161,7 @@ a {
     border-radius: 0.6rem;
     box-shadow: 0 10px 20px -30px hsl(180deg 2% 10%);
     transform: scale(0);
+    position: absolute;
 }
 .modal__box .title {
     padding-inline: 1rem;
