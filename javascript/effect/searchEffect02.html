@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>검색 이펙트</title>
     <link rel="stylesheet" href="../assets/css/search.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
 
     <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/earlyfont/EF_Diary.css" rel="stylesheet">
@@ -26,6 +27,416 @@
             </ul>
         </nav>
     </header>
+
+    <div class="modal__btn">소스 보기</div>
+    <div class="modal__cont">
+        <div class="modal__box">
+            <div class="title">
+                <span class="dot" aria-label="true"></span>
+                <div class="tabs">
+                    <div class="active">
+                        <span class="favicon" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <circle cx="9" cy="9" r="9" fill="#B1D7B4"></circle>
+                                <path
+                                    d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#A2B38B"></path>
+                                <path
+                                    d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#FFB3B3"></path>
+                            </svg>
+                        </span>
+                        <em>Javascript</em>
+                        <span class="close">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="favicon" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <circle cx="9" cy="9" r="9" fill="#7A4495"></circle>
+                                <path
+                                    d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#B270A2"></path>
+                                <path
+                                    d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#FCE2DB"></path>
+                            </svg>
+                        </span>
+                        <em>HTML</em>
+                        <span class="close">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="favicon" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <circle cx="9" cy="9" r="9" fill="#A66CFF"></circle>
+                                <path
+                                    d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#B1E1FF"></path>
+                                <path
+                                    d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#9C9EFE"></path>
+                            </svg>
+                        </span>
+                        <em>CSS</em>
+                        <span class="close">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <span class="plus" aria-label="true">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="cont">
+                <div class="active">
+<pre><code class="language-js"> // 선택자
+    const searchBox = document.querySelector(".search__box input"); //검색  박스
+    const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
+    const searchInfo = document.querySelector(".num") //전체 갯수
+    const searchType = document.querySelector(".type");//검색 유형 
+    
+
+    //검색 유형 
+    let str = '플렉스, 애니메이션, 백그라운드, 기타, border';
+    let pos1 = str.indexOf('플렉스')
+    
+    // 전체 갯수 구하기
+    searchInfo.textContent = searchList.length;
+
+    searchList.forEach(el => {
+        el.classList.add("show");
+    });
+            
+    // 검색 영역
+    searchBox.addEventListener("keyup", ()=>{
+        const searchWord = searchBox.value; //사용자가 입력한 키워드
+
+        searchList.forEach(el => {
+            const cssType = el.dataset.type; //css 속성 모든 값
+            const cssName = el.querySelector("strong")
+            //console.log(cssName)
+
+            if(cssName.includes(searchWord)){
+                el.classList.add("hide");
+            }else{
+                el.classList.remove("hide");
+            }
+        });
+    });
+</code></pre>
+                </div>
+                <div>
+<pre><code class="language-js">&ltdiv class="search__wrap"&gt
+    &ltspan&gtinclides()를 이용하여 CSS 속성 검색하기&lt/span&gt
+    &lth1&gtCSS 태그 검색하기&lt/h1&gt
+    
+    &ltdiv class="search__box"&gt
+        &ltlabel for="search"&gt검색하기&lt/label&gt
+        &ltinput type="text" id="search" placeholder="CSS 속성 및 유형을 입력해 주세요."&gt
+    &lt/div&gt
+    &ltdiv class="search__info"&gt
+        &ltdiv class="type"&gt플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요.&lt/div&gt
+        &ltdiv&gt전체 속성 갯수 : &ltspan class="num"&gt&lt/span&gt&lt/div&gt
+    &lt/div&gt
+    &ltdiv class="search__list"&gt
+        &ltdiv class="css"&gt
+            &ltul&gt
+                &ltli data-name="aLign-content" data-type="플렉스"&gt&ltstrong&gtaLign-content&lt/strong&gt : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.&lt/li&gt
+                &ltli data-name="aLign-items" data-type="플렉스"&gt&ltstrong&gtaLign-items&lt/strong&gt : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.&lt/li&gt
+                &ltli data-name="aLign-self" data-type="플렉스"&gt&ltstrong&gtaLign-self&lt/strong&gt : 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다. &lt/li&gt
+                &ltli data-name="all" data-type="기타"&gt&ltstrong&gtall&lt/strong&gt : 요소의 속성을 초기화 또는 상속을 설정합니다.&lt/li&gt
+                &ltli data-name="animation" data-type="애니메이션"&gt&ltstrong&gtanimation&lt/strong&gt : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="animation-delay" data-type="애니메이션"&gt&ltstrong&gtanimation-delay&lt/strong&gt : 애니메이션 지연 시간을 설정합니다. &lt/li&gt
+                &ltli data-name="animation-direction" data-type="애니메이션"&gt&ltstrong&gtanimation-direction&lt/strong&gt : 속성은 애니메이션 움직임 방향 설정한다. &lt/li&gt
+                &ltli data-name="animation-duration" data-type="애니메이션"&gt&ltstrong&gtanimation-duration&lt/strong&gt : 속성은 애니메이션 움직임 시간을 설정한다.&lt/li&gt
+                &ltli data-name="animation-fill-mode" data-type="애니메이션"&gt&ltstrong&gtanimation-fill-mode&lt/strong&gt : 속성은 애니메이션이 끝난 후 상태를 설정한다.&lt/li&gt
+                &ltli data-name="animation-iteration-count" data-type="애니메이션"&gt&ltstrong&gtanimation-iteration-count&lt/strong&gt : 애니메이션 반복 횟수를 설정한다.&lt/li&gt
+                &ltli data-name="animation-name" data-type="애니메이션"&gt&ltstrong&gtanimation-name&lt/strong&gt : 애니메이션 keyframe 이름 설정한다.&lt/li&gt
+                &ltli data-name="	animation-play-state" data-type="애니메이션"&gt&ltstrong&gt	animation-play-state&lt/strong&gt : 애니메이션 진행상태를 설정합니다.&lt/li&gt
+                &ltli data-name="animation-timeline" data-type="애니메이션"&gt&ltstrong&gtanimation-timeline&lt/strong&gt : 요소에 적용할 스크롤 애니메이션을 설명하는 하나 이상의 이름을 지정합니다.&lt/li&gt
+                &ltli data-name="animation-timing-function" data-type="애니메이션"&gt&ltstrong&gtanimation-timing-function&lt/strong&gt : 애니메이션 움직임의 속도를 설정합니다.&lt/li&gt
+                &ltli data-name="appearance" data-type="기타"&gt&ltstrong&gtappearance&lt/strong&gt : 운영 체제의 테마를 기반으로 하는 UI 컨트롤의 기본 모양을 제어하는 ​​데 사용됩니다. &lt/li&gt
+                &ltli data-name="aspect-ratio" data-type="기타"&gt&ltstrong&gtaspect-ratio&lt/strong&gt : 디스플레이 화면 가로와 세로 길이의 비율을 설정합니다. &lt/li&gt
+                &ltli data-name="backdrop-filter"data-type="효과"&gt&ltstrong&gtbackdrop-filter&lt/strong&gt : 요소 뒤 영역에 흐림 또는 색상 이동과 같은 그래픽 효과를 적용할 수 있습니다.&lt/li&gt
+                &ltli data-name="backface-visibility"data-type="기타"&gt&ltstrong&gtbackface-visibility&lt/strong&gt : 사용자를 향할 때 요소의 뒷면을 볼 수 있는지 여부를 설정합니다. &lt/li&gt
+                &ltli data-name="background"data-type="백그라운드"&gt&ltstrong&gtbackground&lt/strong&gt : 백그라운드 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="background-attachment"data-type="백그라운드"&gt&ltstrong&gtbackground-attachment&lt/strong&gt : 배경 이미지의 고정 여부를 설정합니다.&lt/li&gt
+                &ltli data-name="background-blend-mode"data-type="백그라운드"&gt&ltstrong&gtbackground-blend-mode&lt/strong&gt : 배경을 혼합했을 때 그래픽 효과를 설정합니다.&lt/li&gt
+                &ltli data-name="background-clip"data-type="백그라운드"&gt&ltstrong&gtbackground-clip&lt/strong&gt : 백그라운드 이미지의 위치 기준점을 설정합니다.&lt/li&gt
+                &ltli data-name="background-color"data-type="백그라운드"&gt&ltstrong&gtbackground-color&lt/strong&gt : 백그라운드 색을 설정합니다.&lt/li&gt
+                &ltli data-name="background-image"data-type="백그라운드"&gt&ltstrong&gtbackground-image&lt/strong&gt : 백그라운드 이미지 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="background-origin"data-type="백그라운드"&gt&ltstrong&gtbackground-origin&lt/strong&gt : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt/li&gt
+                &ltli data-name="background-position"data-type="백그라운드"&gt&ltstrong&gtbackground-position&lt/strong&gt : 백그라운드 이미지의 위치 영역을 설정합니다.&lt/li&gt
+                &ltli data-name="background-position-x"data-type="백그라운드"&gt&ltstrong&gtbackground-position-x&lt/strong&gt : 백그라운드 이미지의 x축 위치 영역을 설정합니다.&lt/li&gt
+                &ltli data-name="background-position-y"data-type="백그라운드"&gt&ltstrong&gtbackground-position-y&lt/strong&gt : 백그라운드 이미지의 y축 위치 영역을 설정합니다.&lt/li&gt
+                &ltli data-name="background-repeat"data-type="백그라운드"&gt&ltstrong&gtbackground-repeat&lt/strong&gt : 백그라운드 이미지 반복 여부를 설정합니다.&lt/li&gt
+                &ltli data-name="background-size"data-type="백그라운드"&gt&ltstrong&gtbackground-size&lt/strong&gt : 백그라운드 이미지 사이즈를 설정합니다.&lt/li&gt
+                &ltli data-name="block-size"data-type="기타"&gt&ltstrong&gtblock-size&lt/strong&gt : 블록의 가로 또는 세로 크기를 정의합니다.&lt/li&gt
+                &ltli data-name="border"data-type="기타"&gt&ltstrong&gtborder&lt/strong&gt : 테두리 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="border-block"data-type="기타"&gt&ltstrong&gtborder-block&lt/strong&gt : 블록 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성 입니다.&lt/li&gt
+                &ltli data-name="border-block-color"data-type="기타"&gt&ltstrong&gtborder-block-color&lt/strong&gt : 블록 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-end"data-type="기타"&gt&ltstrong&gtborder-block-end&lt/strong&gt : 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li&gt
+                &ltli data-name="border-block-end-color"data-type="기타"&gt&ltstrong&gtborder-block-end-color&lt/strong&gt : 테두리 색상에 매핑되는 요소의 논리적 블록 끝 테두리 색상을 정의합니다&lt/li&gt
+                &ltli data-name="border-block-end-style"data-type="기타"&gt&ltstrong&gtborder-block-end-style&lt/strong&gt : 테두리 스타일에 매핑되는 요소의 논리적 블록 끝 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-end-width"data-type="기타"&gt&ltstrong&gtborder-block-end-width&lt/strong&gt : 블록 끝 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start"data-type="기타"&gt&ltstrong&gtborder-block-start&lt/strong&gt : 개별 논리적 블록 시작 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li&gt
+                &ltli data-name="border-block-start-color"data-type="기타"&gt&ltstrong&gtborder-block-start-color&lt/strong&gt : 테두리 색상에 매핑되는 요소의 논리적 블록 시작 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start-style"data-type="기타"&gt&ltstrong&gtborder-block-start-style&lt/strong&gt : 테두리 스타일에 매핑되는 요소의 논리적 블록 시작 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-end-width"data-type="기타"&gt&ltstrong&gtborder-block-end-width&lt/strong&gt : 너비에 매핑되는 요소의 논리적 블록 끝 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start"data-type="기타"&gt&ltstrong&gtborder-block-start&lt/strong&gt : 블록 시작 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li&gt
+                &ltli data-name="border-block-start-color"data-type="기타"&gt&ltstrong&gtborder-block-start-color&lt/strong&gt : 테두리 색상에 매핑되는 요소의 논리적 블록 시작 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start-style"data-type="기타"&gt&ltstrong&gtborder-block-start-style&lt/strong&gt : 스타일에 매핑되는 요소의 논리적 블록 시작 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start-width"data-type="기타"&gt&ltstrong&gtborder-block-start-width&lt/strong&gt : 블록 시작 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-style"data-type="기타"&gt&ltstrong&gtborder-block-style&lt/strong&gt :  블록 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-width"data-type="기타"&gt&ltstrong&gtborder-block-width&lt/strong&gt :  블록 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-bottom"data-type="기타"&gt&ltstrong&gtborder-bottom&lt/strong&gt :  아래쪽 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-color"data-type="기타"&gt&ltstrong&gtborder-bottom-color&lt/strong&gt :  테두리 아래쪽 색 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-left-radius"data-type="기타"&gt&ltstrong&gtborder-bottom-left-radius&lt/strong&gt :  아래 왼쪽 모서리 굴곡을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-right-radius"data-type="기타"&gt&ltstrong&gtborder-bottom-right-radius&lt/strong&gt :  아래 오른쪽 모서리 굴곡을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-style"data-type="기타"&gt&ltstrong&gtborder-bottom-style&lt/strong&gt :  테두리 아래쪽 스타일 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-width"data-type="기타"&gt&ltstrong&gtborder-bottom-width&lt/strong&gt :  테두리 아래쪽 두께 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-collapse"data-type="기타"&gt&ltstrong&gtborder-collapse&lt/strong&gt :  테두리 사이의 간격을 설정합니다.&lt/li&gt
+                &ltli data-name="border-color"data-type="기타"&gt&ltstrong&gtborder-color&lt/strong&gt :  모든 면의 테두리를 설정합니다.&lt/li&gt
+                &ltli data-name="border-end-end-radius"data-type="기타"&gt&ltstrong&gtborder-end-end-radius&lt/strong&gt :  방향에 따라 달라지는 물리적 테두리 반경에 매핑되는 요소의 논리적 테두리 반경을 정의합니다.&lt/li&gt
+                &ltli data-name="border-end-start-radiusv"data-type="기타"&gt&ltstrong&gtborder-end-start-radius&lt/strong&gt : 테두리 반경에 매핑되는 요소의 논리적 테두리 반경을 정의합니다.&lt/li&gt
+                &ltli data-name="border-image"data-type="기타"&gt&ltstrong&gtborder-image&lt/strong&gt : 주어진 요소 주위에 이미지를 그립니다 .&lt/li&gt
+                &ltli data-name="border-image-outset"data-type="기타"&gt&ltstrong&gtborder-image-outset&lt/strong&gt : 테두리 상자에서 설정되는 거리를 설정합니다.&lt/li&gt
+                &ltli data-name="border-image-repeat"data-type="기타"&gt&ltstrong&gtborder-image-repeat&lt/strong&gt : 이미지 크기에 맞게 조정되는 방법을 정의합니다.&lt/li&gt
+                &ltli data-name="border-image-slice"data-type="기타"&gt&ltstrong&gtborder-image-slice&lt/strong&gt : 	지정된 이미지를 영역으로 나눕니다.&lt/li&gt
+                &ltli data-name="border-image-source"data-type="기타"&gt&ltstrong&gtborder-image-source&lt/strong&gt : 	테두리 이미지를 만드는 데 사용되는 소스 이미지를 설정합니다.&lt/li&gt
+                &ltli data-name="border-image-width"data-type="기타"&gt&ltstrong&gtborder-image-width&lt/strong&gt : 테두리 이미지 너비를 설정합니다.&lt/li&gt
+                &ltli data-name="border-inline"data-type="기타"&gt&ltstrong&gtborder-inline&lt/strong&gt : 인라인 테두리 속성 값을 설정한다.&lt/li&gt
+                &ltli data-name="border-inline-color"data-type="기타"&gt&ltstrong&gtborder-inline-color&lt/strong&gt : 모드,방향 및 텍스트 방향에 따라 인라인 테두리 색상을 정의한다.&lt/li&gt
+                &ltli data-name="border-inline-end"data-type="기타"&gt&ltstrong&gtborder-inline-end&lt/strong&gt : 인라인 끝 테두리 속성 값을 설정 합니다.&lt/li&gt
+                &ltli data-name="border-inline-end-color"data-type="기타"&gt&ltstrong&gtborder-inline-end-color&lt/strong&gt : 인라인 끝 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-end-style"data-type="기타"&gt&ltstrong&gtborder-inline-end-style&lt/strong&gt : 인라인 끝 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-end-width"data-type="기타"&gt&ltstrong&gtborder-inline-end-width&lt/strong&gt : 인라인 끝 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-start"data-type="기타"&gt&ltstrong&gtborder-inline-start&lt/strong&gt : 테두리 속성 값을 설정하는 약식속성이다.&lt/li&gt
+                &ltli data-name="border-inline-start-color"data-type="기타"&gt&ltstrong&gtborder-inline-start-color&lt/strong&gt : 인라인 시작 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-start-style"data-type="기타"&gt&ltstrong&gtborder-inline-start-style&lt/strong&gt : 인라인 시작 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-start-width"data-type="기타"&gt&ltstrong&gtborder-inline-start-width&lt/strong&gt : 인라인 시작 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-style"data-type="기타"&gt&ltstrong&gtborder-inline-style&lt/strong&gt : 인라인 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-width"data-type="기타"&gt&ltstrong&gtborder-inline-width&lt/strong&gt : 인라인 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-left"data-type="기타"&gt&ltstrong&gtborder-left&lt/strong&gt : 왼쪽 테두리의 모든 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-left-color"data-type="기타"&gt&ltstrong&gtborder-left-color&lt/strong&gt : 왼쪽 테두리 색상을 설정합니다.&lt/li&gt
+                &ltli data-name="border-left-style"data-type="기타"&gt&ltstrong&gtborder-left-style&lt/strong&gt : 요소의 왼쪽 테두리 선 스타일을 설정합니다.&lt/li&gt
+                &ltli data-name="border-left-width"data-type="기타"&gt&ltstrong&gtborder-left-width&lt/strong&gt : 왼쪽 테두리 너비를 설정합니다.&lt/li&gt
+                &ltli data-name="border-radius"data-type="기타"&gt&ltstrong&gtborder-radius&lt/strong&gt : 요소의 바깥쪽 테두리 모서리를 둥글게 만듭니다.&lt/li&gt
+                &ltli data-name="border-right"data-type="기타"&gt&ltstrong&gtborder-right&lt/strong&gt : 오른쪽 테두리의 모든 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-right-color"data-type="기타"&gt&ltstrong&gtborder-right-color&lt/strong&gt : 오른쪽 테두리 색상을 설정합니다.&lt/li&gt
+                &ltli data-name="border-right-style"data-type="기타"&gt&ltstrong&gtborder-right-style&lt/strong&gt : 오른쪽 테두리 선 스타일을 설정합니다.&lt/li&gt
+                &ltli data-name="border-right-width"data-type="기타"&gt&ltstrong&gtborder-right-width&lt/strong&gt : 요소의 오른쪽 테두리 너비를 설정합니다.&lt/li&gt
+                &ltli data-name="border-spacing"data-type="기타"&gt&ltstrong&gtborder-spacing&lt/strong&gt : 셀의 테두리 사이의 거리를 설정합니다.&lt/li&gt
+            &lt/ul&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt
+</code></pre>
+                </div>
+                <div>
+<pre><code class="language-js">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EF_Diary';
+    color: #223547;
+    }
+    *, *:before, *:after {
+    box-sizing:border-box;
+    }
+    a {
+    color: #223547;
+    text-decoration: none;
+    }
+    li {
+    list-style: none;
+    }
+    :root {
+    --htmlColor : #223547;
+    --cssColor : #8667ad;
+    --javascriptColor : #aa6655;
+    }
+    /* header */
+    #header {
+    display: flex;
+    justify-content: space-between;
+    }
+    #header h1 {
+    margin: 10px;
+    font-family: 'Tmon';
+    font-size: 40px;
+    }
+    #header nav {
+    margin: 10px;
+    }
+    #header nav li {
+    position: relative;
+    display: inline;
+    }
+    #header nav li a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--htmlColor);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'EF_Diary';
+    }
+    #header nav li.active a {
+    background-color: #223547;
+    color: #fff;
+    }
+    #header nav li .sub {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 400px;
+    }
+    #header nav li .sub li a {
+    width: auto;
+    background-color: transparent;
+    color: #223547;
+    border: 0;
+    text-align: left;
+    line-height: 1.2;
+    }
+    #header nav li .sub li.active a {
+    text-decoration: underline;
+    }
+    /* main */
+    #main {
+    margin: 50px 10px;
+    }
+    .search__wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 3px solid var(--htmlColor);
+    border-radius: 20px;
+    background-color: #F1F3F6;
+    padding: 30px;
+    text-align: center;
+    }
+    .search__wrap > span {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    }
+    .search__wrap > h1 {
+    font-family: 'Tmon';
+    color: #223547;
+    font-size: 6vw;
+    margin-bottom: 10px;
+    }
+    .search__box {
+    margin-bottom: 40px;
+    }
+    .search__box label {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    }
+    .search__box input {
+    border: 2px solid var(--htmlColor);
+    padding: 15px 40px;
+    width: 70%;
+    border-radius: 50px;
+    font-size: 20px;
+    }
+    
+    .search__list li {
+    text-align: left;
+    line-height: 1.7;
+    }
+    .search__list li.hide{
+    display: none;
+    }
+    .search__list li.show{
+    display: block;
+    }
+    .search__info {
+    text-align: right;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--htmlColor);
+    }
+    .search__info .type {
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    @media (max-width: 600px){
+    .search__wrap {
+    padding: 20px;
+    }
+    .search__wrap > span {
+    font-size: 16px;
+    margin-bottom: 10px;
+    }
+    .search__wrap > h1 {
+    font-size: 44px;
+    }
+    .search__box input {
+    font-size: 16px;
+    padding: 12px 30px;
+    }
+    }
+    /* footer */
+    #footer {
+    text-align: center;
+    }
+    #footer a {
+    color: #000;
+    font-family: 'EF_Diary';
+    padding-bottom: 50px;
+    }
+    #footer a:hover {
+    text-decoration: underline;
+    }
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="modal__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </div>
+    </div>
 
     <main id="main">
         <div class="search__wrap">
@@ -138,6 +549,9 @@
     <footer id="footer">
         <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
     </footer>
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/common"></script>
 
     <script>
         // 선택자

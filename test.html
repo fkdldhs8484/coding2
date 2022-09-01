@@ -1,24 +1,105 @@
-&ltsection id="imgTextType" class="imgText__wrap section NexonLv1Gothic gray"&gt
-    &lth2 class="blind"&gt유용한 사이트 살펴보기&lt/h2&gt
-    &ltdiv class="imgText__inner container"&gt
-        &ltdiv class="imgText__txt"&gt
-            &ltspan&gt이미지 텍스트 유형 01&lt/span&gt
-            &lth3&gt유용한 사이트 살펴보기&lt/h3&gt
-            &ltp&gt웹디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 유용한 사이트입니다.&lt/p&gt
+&ltdiv class="search__wrap"&gt
+    &ltspan&gtinclides()를 이용하여 CSS 속성 검색하기&lt/span&gt
+    &lth1&gtCSS 태그 검색하기&lt/h1&gt
+    
+    &ltdiv class="search__box"&gt
+        &ltlabel for="search"&gt검색하기&lt/label&gt
+        &ltinput type="text" id="search" placeholder="CSS 속성 및 유형을 입력해 주세요."&gt
+    &lt/div&gt
+    &ltdiv class="search__info"&gt
+        &ltdiv class="type"&gt플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요.&lt/div&gt
+        &ltdiv&gt전체 속성 갯수 : &ltspan class="num"&gt&lt/span&gt&lt/div&gt
+    &lt/div&gt
+    &ltdiv class="search__list"&gt
+        &ltdiv class="css"&gt
             &ltul&gt
-                &ltli&gt&lta href="/"&gt튜토리얼 사이트&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="/"&gt레퍼런스 사이트&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="/"&gt웹폰트 사이트&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="/"&gtCSS 사이트&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="/"&gtWebGL 사이트&lt/a&gt&lt/li&gt
-                &ltli&gt&lta href="/"&gtYoutube 사이트&lt/a&gt&lt/li&gt
+                &ltli data-name="aLign-content" data-type="플렉스"&gt&ltstrong&gtaLign-content&lt/strong&gt : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.&lt/li&gt
+                &ltli data-name="aLign-items" data-type="플렉스"&gt&ltstrong&gtaLign-items&lt/strong&gt : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.&lt/li&gt
+                &ltli data-name="aLign-self" data-type="플렉스"&gt&ltstrong&gtaLign-self&lt/strong&gt : 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다. &lt/li&gt
+                &ltli data-name="all" data-type="기타"&gt&ltstrong&gtall&lt/strong&gt : 요소의 속성을 초기화 또는 상속을 설정합니다.&lt/li&gt
+                &ltli data-name="animation" data-type="애니메이션"&gt&ltstrong&gtanimation&lt/strong&gt : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="animation-delay" data-type="애니메이션"&gt&ltstrong&gtanimation-delay&lt/strong&gt : 애니메이션 지연 시간을 설정합니다. &lt/li&gt
+                &ltli data-name="animation-direction" data-type="애니메이션"&gt&ltstrong&gtanimation-direction&lt/strong&gt : 속성은 애니메이션 움직임 방향 설정한다. &lt/li&gt
+                &ltli data-name="animation-duration" data-type="애니메이션"&gt&ltstrong&gtanimation-duration&lt/strong&gt : 속성은 애니메이션 움직임 시간을 설정한다.&lt/li&gt
+                &ltli data-name="animation-fill-mode" data-type="애니메이션"&gt&ltstrong&gtanimation-fill-mode&lt/strong&gt : 속성은 애니메이션이 끝난 후 상태를 설정한다.&lt/li&gt
+                &ltli data-name="animation-iteration-count" data-type="애니메이션"&gt&ltstrong&gtanimation-iteration-count&lt/strong&gt : 애니메이션 반복 횟수를 설정한다.&lt/li&gt
+                &ltli data-name="animation-name" data-type="애니메이션"&gt&ltstrong&gtanimation-name&lt/strong&gt : 애니메이션 keyframe 이름 설정한다.&lt/li&gt
+                &ltli data-name="	animation-play-state" data-type="애니메이션"&gt&ltstrong&gt	animation-play-state&lt/strong&gt : 애니메이션 진행상태를 설정합니다.&lt/li&gt
+                &ltli data-name="animation-timeline" data-type="애니메이션"&gt&ltstrong&gtanimation-timeline&lt/strong&gt : 요소에 적용할 스크롤 애니메이션을 설명하는 하나 이상의 이름을 지정합니다.&lt/li&gt
+                &ltli data-name="animation-timing-function" data-type="애니메이션"&gt&ltstrong&gtanimation-timing-function&lt/strong&gt : 애니메이션 움직임의 속도를 설정합니다.&lt/li&gt
+                &ltli data-name="appearance" data-type="기타"&gt&ltstrong&gtappearance&lt/strong&gt : 운영 체제의 테마를 기반으로 하는 UI 컨트롤의 기본 모양을 제어하는 ​​데 사용됩니다. &lt/li&gt
+                &ltli data-name="aspect-ratio" data-type="기타"&gt&ltstrong&gtaspect-ratio&lt/strong&gt : 디스플레이 화면 가로와 세로 길이의 비율을 설정합니다. &lt/li&gt
+                &ltli data-name="backdrop-filter"data-type="효과"&gt&ltstrong&gtbackdrop-filter&lt/strong&gt : 요소 뒤 영역에 흐림 또는 색상 이동과 같은 그래픽 효과를 적용할 수 있습니다.&lt/li&gt
+                &ltli data-name="backface-visibility"data-type="기타"&gt&ltstrong&gtbackface-visibility&lt/strong&gt : 사용자를 향할 때 요소의 뒷면을 볼 수 있는지 여부를 설정합니다. &lt/li&gt
+                &ltli data-name="background"data-type="백그라운드"&gt&ltstrong&gtbackground&lt/strong&gt : 백그라운드 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="background-attachment"data-type="백그라운드"&gt&ltstrong&gtbackground-attachment&lt/strong&gt : 배경 이미지의 고정 여부를 설정합니다.&lt/li&gt
+                &ltli data-name="background-blend-mode"data-type="백그라운드"&gt&ltstrong&gtbackground-blend-mode&lt/strong&gt : 배경을 혼합했을 때 그래픽 효과를 설정합니다.&lt/li&gt
+                &ltli data-name="background-clip"data-type="백그라운드"&gt&ltstrong&gtbackground-clip&lt/strong&gt : 백그라운드 이미지의 위치 기준점을 설정합니다.&lt/li&gt
+                &ltli data-name="background-color"data-type="백그라운드"&gt&ltstrong&gtbackground-color&lt/strong&gt : 백그라운드 색을 설정합니다.&lt/li&gt
+                &ltli data-name="background-image"data-type="백그라운드"&gt&ltstrong&gtbackground-image&lt/strong&gt : 백그라운드 이미지 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="background-origin"data-type="백그라운드"&gt&ltstrong&gtbackground-origin&lt/strong&gt : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt/li&gt
+                &ltli data-name="background-position"data-type="백그라운드"&gt&ltstrong&gtbackground-position&lt/strong&gt : 백그라운드 이미지의 위치 영역을 설정합니다.&lt/li&gt
+                &ltli data-name="background-position-x"data-type="백그라운드"&gt&ltstrong&gtbackground-position-x&lt/strong&gt : 백그라운드 이미지의 x축 위치 영역을 설정합니다.&lt/li&gt
+                &ltli data-name="background-position-y"data-type="백그라운드"&gt&ltstrong&gtbackground-position-y&lt/strong&gt : 백그라운드 이미지의 y축 위치 영역을 설정합니다.&lt/li&gt
+                &ltli data-name="background-repeat"data-type="백그라운드"&gt&ltstrong&gtbackground-repeat&lt/strong&gt : 백그라운드 이미지 반복 여부를 설정합니다.&lt/li&gt
+                &ltli data-name="background-size"data-type="백그라운드"&gt&ltstrong&gtbackground-size&lt/strong&gt : 백그라운드 이미지 사이즈를 설정합니다.&lt/li&gt
+                &ltli data-name="block-size"data-type="기타"&gt&ltstrong&gtblock-size&lt/strong&gt : 블록의 가로 또는 세로 크기를 정의합니다.&lt/li&gt
+                &ltli data-name="border"data-type="기타"&gt&ltstrong&gtborder&lt/strong&gt : 테두리 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="border-block"data-type="기타"&gt&ltstrong&gtborder-block&lt/strong&gt : 블록 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성 입니다.&lt/li&gt
+                &ltli data-name="border-block-color"data-type="기타"&gt&ltstrong&gtborder-block-color&lt/strong&gt : 블록 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-end"data-type="기타"&gt&ltstrong&gtborder-block-end&lt/strong&gt : 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li&gt
+                &ltli data-name="border-block-end-color"data-type="기타"&gt&ltstrong&gtborder-block-end-color&lt/strong&gt : 테두리 색상에 매핑되는 요소의 논리적 블록 끝 테두리 색상을 정의합니다&lt/li&gt
+                &ltli data-name="border-block-end-style"data-type="기타"&gt&ltstrong&gtborder-block-end-style&lt/strong&gt : 테두리 스타일에 매핑되는 요소의 논리적 블록 끝 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-end-width"data-type="기타"&gt&ltstrong&gtborder-block-end-width&lt/strong&gt : 블록 끝 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start"data-type="기타"&gt&ltstrong&gtborder-block-start&lt/strong&gt : 개별 논리적 블록 시작 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li&gt
+                &ltli data-name="border-block-start-color"data-type="기타"&gt&ltstrong&gtborder-block-start-color&lt/strong&gt : 테두리 색상에 매핑되는 요소의 논리적 블록 시작 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start-style"data-type="기타"&gt&ltstrong&gtborder-block-start-style&lt/strong&gt : 테두리 스타일에 매핑되는 요소의 논리적 블록 시작 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-end-width"data-type="기타"&gt&ltstrong&gtborder-block-end-width&lt/strong&gt : 너비에 매핑되는 요소의 논리적 블록 끝 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start"data-type="기타"&gt&ltstrong&gtborder-block-start&lt/strong&gt : 블록 시작 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성입니다.&lt/li&gt
+                &ltli data-name="border-block-start-color"data-type="기타"&gt&ltstrong&gtborder-block-start-color&lt/strong&gt : 테두리 색상에 매핑되는 요소의 논리적 블록 시작 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start-style"data-type="기타"&gt&ltstrong&gtborder-block-start-style&lt/strong&gt : 스타일에 매핑되는 요소의 논리적 블록 시작 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-start-width"data-type="기타"&gt&ltstrong&gtborder-block-start-width&lt/strong&gt : 블록 시작 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-style"data-type="기타"&gt&ltstrong&gtborder-block-style&lt/strong&gt :  블록 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-block-width"data-type="기타"&gt&ltstrong&gtborder-block-width&lt/strong&gt :  블록 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-bottom"data-type="기타"&gt&ltstrong&gtborder-bottom&lt/strong&gt :  아래쪽 속성을 일괄적으로 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-color"data-type="기타"&gt&ltstrong&gtborder-bottom-color&lt/strong&gt :  테두리 아래쪽 색 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-left-radius"data-type="기타"&gt&ltstrong&gtborder-bottom-left-radius&lt/strong&gt :  아래 왼쪽 모서리 굴곡을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-right-radius"data-type="기타"&gt&ltstrong&gtborder-bottom-right-radius&lt/strong&gt :  아래 오른쪽 모서리 굴곡을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-style"data-type="기타"&gt&ltstrong&gtborder-bottom-style&lt/strong&gt :  테두리 아래쪽 스타일 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-bottom-width"data-type="기타"&gt&ltstrong&gtborder-bottom-width&lt/strong&gt :  테두리 아래쪽 두께 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-collapse"data-type="기타"&gt&ltstrong&gtborder-collapse&lt/strong&gt :  테두리 사이의 간격을 설정합니다.&lt/li&gt
+                &ltli data-name="border-color"data-type="기타"&gt&ltstrong&gtborder-color&lt/strong&gt :  모든 면의 테두리를 설정합니다.&lt/li&gt
+                &ltli data-name="border-end-end-radius"data-type="기타"&gt&ltstrong&gtborder-end-end-radius&lt/strong&gt :  방향에 따라 달라지는 물리적 테두리 반경에 매핑되는 요소의 논리적 테두리 반경을 정의합니다.&lt/li&gt
+                &ltli data-name="border-end-start-radiusv"data-type="기타"&gt&ltstrong&gtborder-end-start-radius&lt/strong&gt : 테두리 반경에 매핑되는 요소의 논리적 테두리 반경을 정의합니다.&lt/li&gt
+                &ltli data-name="border-image"data-type="기타"&gt&ltstrong&gtborder-image&lt/strong&gt : 주어진 요소 주위에 이미지를 그립니다 .&lt/li&gt
+                &ltli data-name="border-image-outset"data-type="기타"&gt&ltstrong&gtborder-image-outset&lt/strong&gt : 테두리 상자에서 설정되는 거리를 설정합니다.&lt/li&gt
+                &ltli data-name="border-image-repeat"data-type="기타"&gt&ltstrong&gtborder-image-repeat&lt/strong&gt : 이미지 크기에 맞게 조정되는 방법을 정의합니다.&lt/li&gt
+                &ltli data-name="border-image-slice"data-type="기타"&gt&ltstrong&gtborder-image-slice&lt/strong&gt : 	지정된 이미지를 영역으로 나눕니다.&lt/li&gt
+                &ltli data-name="border-image-source"data-type="기타"&gt&ltstrong&gtborder-image-source&lt/strong&gt : 	테두리 이미지를 만드는 데 사용되는 소스 이미지를 설정합니다.&lt/li&gt
+                &ltli data-name="border-image-width"data-type="기타"&gt&ltstrong&gtborder-image-width&lt/strong&gt : 테두리 이미지 너비를 설정합니다.&lt/li&gt
+                &ltli data-name="border-inline"data-type="기타"&gt&ltstrong&gtborder-inline&lt/strong&gt : 인라인 테두리 속성 값을 설정한다.&lt/li&gt
+                &ltli data-name="border-inline-color"data-type="기타"&gt&ltstrong&gtborder-inline-color&lt/strong&gt : 모드,방향 및 텍스트 방향에 따라 인라인 테두리 색상을 정의한다.&lt/li&gt
+                &ltli data-name="border-inline-end"data-type="기타"&gt&ltstrong&gtborder-inline-end&lt/strong&gt : 인라인 끝 테두리 속성 값을 설정 합니다.&lt/li&gt
+                &ltli data-name="border-inline-end-color"data-type="기타"&gt&ltstrong&gtborder-inline-end-color&lt/strong&gt : 인라인 끝 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-end-style"data-type="기타"&gt&ltstrong&gtborder-inline-end-style&lt/strong&gt : 인라인 끝 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-end-width"data-type="기타"&gt&ltstrong&gtborder-inline-end-width&lt/strong&gt : 인라인 끝 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-start"data-type="기타"&gt&ltstrong&gtborder-inline-start&lt/strong&gt : 테두리 속성 값을 설정하는 약식속성이다.&lt/li&gt
+                &ltli data-name="border-inline-start-color"data-type="기타"&gt&ltstrong&gtborder-inline-start-color&lt/strong&gt : 인라인 시작 테두리 색상을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-start-style"data-type="기타"&gt&ltstrong&gtborder-inline-start-style&lt/strong&gt : 인라인 시작 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-start-width"data-type="기타"&gt&ltstrong&gtborder-inline-start-width&lt/strong&gt : 인라인 시작 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-style"data-type="기타"&gt&ltstrong&gtborder-inline-style&lt/strong&gt : 인라인 테두리 스타일을 정의합니다.&lt/li&gt
+                &ltli data-name="border-inline-width"data-type="기타"&gt&ltstrong&gtborder-inline-width&lt/strong&gt : 인라인 테두리 너비를 정의합니다.&lt/li&gt
+                &ltli data-name="border-left"data-type="기타"&gt&ltstrong&gtborder-left&lt/strong&gt : 왼쪽 테두리의 모든 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-left-color"data-type="기타"&gt&ltstrong&gtborder-left-color&lt/strong&gt : 왼쪽 테두리 색상을 설정합니다.&lt/li&gt
+                &ltli data-name="border-left-style"data-type="기타"&gt&ltstrong&gtborder-left-style&lt/strong&gt : 요소의 왼쪽 테두리 선 스타일을 설정합니다.&lt/li&gt
+                &ltli data-name="border-left-width"data-type="기타"&gt&ltstrong&gtborder-left-width&lt/strong&gt : 왼쪽 테두리 너비를 설정합니다.&lt/li&gt
+                &ltli data-name="border-radius"data-type="기타"&gt&ltstrong&gtborder-radius&lt/strong&gt : 요소의 바깥쪽 테두리 모서리를 둥글게 만듭니다.&lt/li&gt
+                &ltli data-name="border-right"data-type="기타"&gt&ltstrong&gtborder-right&lt/strong&gt : 오른쪽 테두리의 모든 속성을 설정합니다.&lt/li&gt
+                &ltli data-name="border-right-color"data-type="기타"&gt&ltstrong&gtborder-right-color&lt/strong&gt : 오른쪽 테두리 색상을 설정합니다.&lt/li&gt
+                &ltli data-name="border-right-style"data-type="기타"&gt&ltstrong&gtborder-right-style&lt/strong&gt : 오른쪽 테두리 선 스타일을 설정합니다.&lt/li&gt
+                &ltli data-name="border-right-width"data-type="기타"&gt&ltstrong&gtborder-right-width&lt/strong&gt : 요소의 오른쪽 테두리 너비를 설정합니다.&lt/li&gt
+                &ltli data-name="border-spacing"data-type="기타"&gt&ltstrong&gtborder-spacing&lt/strong&gt : 셀의 테두리 사이의 거리를 설정합니다.&lt/li&gt
             &lt/ul&gt
         &lt/div&gt
-        &ltdiv class="imgText__img img1"&gt
-            &lta href="/"&gt튜토리얼 사이트&lt/a&gt
-        &lt/div&gt
-        &ltdiv class="imgText__img img2"&gt
-            &lta href="/" class="blue"&gt튜토리얼 사이트&lt/a&gt
-        &lt/div&gt
-    &lt/div&gt 
-&lt/section&gt
+    &lt/div&gt
+&lt/div&gt
