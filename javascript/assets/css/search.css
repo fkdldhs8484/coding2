@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'EF_Diary';
-    color: #223547;
 }
 *, *:before, *:after {
     box-sizing:border-box;
@@ -19,6 +18,18 @@ li {
     --htmlColor : #223547;
     --cssColor : #8667ad;
     --javascriptColor : #aa6655;
+}
+/* scroll */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #223547;
+}
+::-webkit-scrollbar-thumb {
+    background: #F1F3F6;
+    border-radius: 20px;
 }
 /* header */
 #header {
@@ -72,16 +83,23 @@ li {
 #main {
     margin: 50px 10px;
 }
+
+/* midal */
 .modal__btn {
-    width: 150px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #223547;
-    display: block;
+    color: #3B3D63;
+    border: 1px solid #3B3D63;
+    background: #F1F3F6;
     border-radius: 50px;
-    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    position: absolute;
+    cursor: pointer;
+    right: 260px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.modal__btn:hover {
+    background-color: #3B3D63;
+    color: #F1F3F6;
 }
 .modal__cont {
     width: 100%;
@@ -95,6 +113,7 @@ li {
     justify-content: center;
     align-items: center;
     transform: scale(0);
+    
 }
 .modal__box {
     width: 70%;
@@ -103,10 +122,11 @@ li {
     box-shadow: 0 10px 20px -30px hsl(180deg 2% 10%);
     transform: scale(0);
     position: absolute;
+    
 }
 .modal__box .title {
     padding-inline: 1rem;
-    background-color: #1b1c2e;
+    background-color: #F1F3F6;
     display: flex;
     align-items: center;
     color: #fff;
@@ -145,9 +165,9 @@ li {
 }
 .modal__box .title .plus {
     padding: 0.5rem 0.5rem 0.3rem 0.5rem;
-    background:  #282936;
+    background:  #d0d7e2;
     border-radius: 0.5rem;
-    color: #7A7D9D;
+    
     
 }
 .modal__box .title .tabs {
@@ -155,8 +175,8 @@ li {
     margin-left: 50px;
 }
 .modal__box .title .tabs>div {
-    color: #7A7D9D;
-    background-color: #282936;
+    color: #282936;
+    background-color: #d0d7e2;
     padding: 0.35rem 0.8rem 0.25rem 0.8rem;
     margin-right: 0.8rem;
     display: flex;
@@ -166,10 +186,11 @@ li {
     cursor: pointer;
 }
 .modal__box .title .tabs>div em {
+    color: #7A7D9D;
     font-style: normal;
 }
 .modal__box .title .tabs>div.active {
-    background-color: #34364e;
+    background-color: #223547;
 }
 
 .modal__box .title .tabs>div .favicon {
@@ -195,6 +216,8 @@ li {
     display: block;
     height: 100%;
 }
+
+
 .modal__close {
     position: absolute;
     right: 20px;
@@ -213,6 +236,87 @@ li {
 .modal__close svg {
     color: #fff;
 }
+/* 모달 애니메이션 */
+.modal__cont.show {     /* 전체 배경 */
+    animation: foldOut 1s ease forwards;
+}
+.modal__cont.show .modal__box {     /* 스크립트 박스 */
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+.modal__cont.show .modal__close {   /* 닫기 버튼 */
+    animation: opacityOut 0.5s 1s ease forwards;
+}
+
+.modal__cont.show.hide {    
+    animation: foldIn 0.3s 0.5s ease backwards;
+}
+.modal__cont.show.hide .modal__box {
+    animation: zoomIn 0.5s ease forwards;
+}
+.modal__cont.show.hide .modal__close {
+    animation: opacityIn 0.5s ease forwards;
+}
+@keyframes foldOut {
+    0%      {transform: scaleX(0) scaleY(0.001);}
+    50%     {transform: scaleX(1) scaleY(0.001);}
+    100%    {transform: scaleX(1) scaleY(1);}
+}
+@keyframes foldIn {
+    0%      {transform: scaleX(1) scaleY(1);}
+    50%     {transform: scaleX(1) scaleY(0.001);}
+    100%    {transform: scaleX(0) scaleY(0.001);}
+}
+@keyframes zoomOut {
+    0%      {transform: scale(0);}
+    100%    {transform: scale(1);}
+}
+@keyframes zoomIn {
+    0%      {transform: scale(1);}
+    100%    {transform: scale(0);}
+}
+@keyframes opacityOut {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes opacityIn {
+    0%   {opacity:1;}
+    100% {opacity:0;}
+}
+
+@media (max-width: 1100px){
+    .modal__box .title {
+        overflow: hidden;
+    }
+    .modal__box .title .dot {
+        display: none;
+    }
+    .modal__box .title .tabs {
+        margin-left: 0;
+    }
+    .modal__box .title .tabs > div .close {
+        display: none;
+    }
+    .modal__btn {
+        right: 15px
+    }
+}
+@media (max-width: 800px){
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+    #header h1 {
+        line-height: 1.4;
+    }
+    .modal__box {
+        width: 96%;
+    }   
+    .modal__btn {
+        right: 15px
+    }
+}
+
+/*.search__wrap*/
 .search__wrap {
     max-width: 1400px;
     margin: 0 auto;
@@ -287,22 +391,8 @@ li {
     color: #fff;
     cursor: pointer;
 }
-@media (max-width: 600px){
-    .search__wrap {
-        padding: 20px;
-    }
-    .search__wrap > span {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    .search__wrap > h1 {
-        font-size: 44px;
-    }
-    .search__box input {
-        font-size: 16px;
-        padding: 12px 30px;
-    }
-}
+
+
 /* footer */
 #footer {
     text-align: center;
