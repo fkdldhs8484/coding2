@@ -1,0 +1,12 @@
+.card__inner {
+   display: flex;
+   flex-wrap: wrap-reverse;
+   overflow: hidden; 
+}
+.card {
+    width: 35px;
+    height: 35px;
+}
+.box h3 {
+    font-size: 20px;
+}
