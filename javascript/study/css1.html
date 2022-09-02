@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 클래스 관련 메서드</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">css</a></h1>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h3 class="t_tit2">addClass() 메서드</h3>
+            <div class="t_box">요소에 class 속성을 추가합니다.</div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>추가</td>
+                        <td>$("div").addClass("클래스명");</td>
+                    </tr>
+                    <tr>
+                        <td>콜백 함수</td>
+                        <td>$("div").addClass(function(<i>index</i>, <i>className</i>){<br>
+                                // <i>index</i>는 각 div 요소의 index 0, 1, 2<br>
+                                // <i>className</i> 은 각 div에 class속성<br>
+                                <i>return</i> class 속성 // 각 div에 class속성을 추가합니다.<br>
+                            });<br>
+                            ....<br>
+                            <i>&ltdiv>내용1&lt/div></i><br>
+                            <i>&ltdiv>내용2&lt/div></i><br>
+                            <i>&ltdiv>내용3&lt/div></i><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="XWqWpmv" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/XWqWpmv">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">removeClass() 메서드</h3>
+            <div class="t_box">요소에 class 속성을 제거합니다.</div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>제거</td>
+                        <td>$("div").removeClass("클래스명");</td>
+                    </tr>
+                    <tr>
+                        <td>콜백 함수</td>
+                        <td>$("div").removeClass(function(<i>index</i>, <i>className</i>){<br>
+                                // <i>index</i>는 각 div 요소의 index 0, 1, 2<br>
+                                // <i>className</i> 은 각 div의 class 속성 m1, m2, m3<br>
+                                <i>return</i> class 속성 // 각 div에 class속성을 제거합니다.<br>
+                            });<br>
+                            ....<br>
+                            <i>&ltdiv class="m1">내용1&lt/div></i><br>
+                            <i>&ltdiv class="m2">내용2&lt/div></i><br>
+                            <i>&ltdiv class="m3">내용3&lt/div></i><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyeyNvN" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/dyeyNvN">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">toggleClass () 메서드</h3>
+            <div class="t_box">요소에 class 속성이 없으면 addClass()가 적용되고 class속성이 있으면 removeClass()가 적용됩니다.</div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>추가, 제거</td>
+                        <td>&("div").toggleClass("클래스명");</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+               
+            </div>
+            <hr>
+            
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

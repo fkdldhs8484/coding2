@@ -1,84 +1,42 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin : 0;
-  padding : 0;
-}
-.wrapper{
-  position: absolute;
-  animation: x 0.5s ease-in-out alternate infinite 0s both;
-}
-.wrapper:nth-of-type(2){
-  animation-delay: 0.1s;
-}
-.wrapper:nth-of-type(3){
-   animation-delay: 0.2s;
-}
-.wrapper:nth-of-type(4){
-   animation-delay: 0.3s;
-}
-.wrapper:nth-of-type(5){
-   animation-delay: 0.4s;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.wrapper>div{
-  width : 50px;
-  height: 50px;
-  background-color : #fff;
-  border-radius : 100%;
-  margin : 40px;
-  animation: y 1s linear infinite 0s both;
-}
-.wrapper:nth-of-type(2)>div{
-  animation-delay: 0.1s;
-  height: 40px;
-  width: 40px;
-  opacity : 0.8;
-}
-.wrapper:nth-of-type(3)>div{
-  animation-delay: 0.2s;
-  height: 30px;
-  width: 30px;
-  opacity : 0.6;
-}
-.wrapper:nth-of-type(4)>div{
-  animation-delay: 0.3s;
-  height: 20px;
-  width: 20px;
-  opacity : 0.4;
-}
-.wrapper:nth-of-type(5)>div{
-  animation-delay: 0.4s;
-  height: 10px;
-  width: 10px;
-  opacity : 0.2;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    $(document).ready(function () {
+      $("#m_menu a.m").click(function () {
+        $(this).next().addBack().toggleClass("on").end().find(".m, ul").removeClass("on").end().parent().siblings().find(".m, ul").removeClass("on");
+        return false;
+      });
+    });
+  </script>
+</head>
 
-@keyframes x {
-  0% {
-    transform: translatex(-100px);
-  }
-  100% {
-    transform: translatex(100px);
-  }
-}
-@keyframes y {
-  25% {
-    transform:translatey(-50px);
-  }
-  0%,
-  50%,
-  100%{
-    transform:translatey(0px);
-  }
-  75%{
-    transform:translatey(50px);
-  }
-}
+<body>
+</body>
+<div id="m1">
+  <li><a href="#" class="m">메뉴1_1</a>
+    <ul>
+      <li><a href="#">메뉴1_1_1</a></li>
+      <li><a href="#">메뉴1_1_2</a></li>
+    </ul>
+  </li>
+  <li><a href="#" class="m">메뉴1_2</a>
+    <ul>
+      <li><a href="#">메뉴1_2_1</a></li>
+      <li><a href="#">메뉴1_2_2</a></li>
+    </ul>
+  </li>
+  <li><a href="#" class="m">메뉴1_3</a>
+    <ul>
+      <li><a href="#">메뉴1_3_1</a></li>
+      <li><a href="#">메뉴1_3_2</a></li>
+    </ul>
+  </li>
+</div>
+
+</html>
