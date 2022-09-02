@@ -448,67 +448,71 @@
             left: 15%;
             border-radius: 50%;
         }
-        @media (max-height:700px){
+
+        @media (max-height:700px) {
             main::before {
                 display: none;
             }
         }
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             main {
                 min-height: 700px;
             }
+
             h1 {
                 font-size: 40px;
             }
-            nav ul:nth-child(2){
+
+            nav ul:nth-child(2) {
                 display: none;
             }
         }
+
         .link {
             position: absolute;
             right: 30px;
             top: 30px;
-            z-index: 50px;
+            z-index: 10000;
         }
         .link li {
             list-style: none;
             display: inline;
         }
         .link li a {
-            position: absolute;
-            right: 30px;
-            top: 30px;
+            font-family: "GmarketSans";
             width: 30px;
             height: 30px;
             border-radius: 50%;
             text-align: center;
             line-height: 30px;
-            border: 1px solid #936da1;
-            background: #936da1;
-            color: #fff;
+            border: 1px solid #0066FF;
+            display: inline-block;
             text-decoration: none;
             text-transform: uppercase;
-            font-family: "GmarketSans";
             font-size: 14px;
-            transition: all 0.3s ;
+            padding-top: 1px;
+            transition: all 0.3s;
+            background: #0066FF;
+            color: #fff;
         }
         .link li a:hover {
             background: #fff;
-            color: #936da1;
+            color: #0066FF;
         }
     </style>
 </head>
 
 <body>
-    <div class="link">
-        <ul>
-            <li><a href="https://fkdldhs8484.tistory.com/" target="_blank">t</a></li>
-            <li><a href="https://github.com/fkdldhs8484/coding2" target="_blank">g</a></li>
-            <li><a href="https://https://github1s.com/fkdldhs8484/coding2" target="_blank">v</a></li>
-        </ul>
-    </div>
 
     <main>
+        <div class="link">
+            <ul>
+                <li><a href="https://fkdldhs8484.tistory.com/" target="_blank">t</a></li>
+                <li><a href="https://github.com/fkdldhs8484/coding2" target="_blank">g</a></li>
+                <li><a href="https://github1s.com/fkdldhs8484/coding2" target="_blank">v</a></li>
+            </ul>
+        </div>
         <div class="dog">
             <div class="wrap">
                 <div class="body">
@@ -586,10 +590,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script>
-            var $eyes = $('.eyes'),
+        var $eyes = $('.eyes'),
             $snout = $('.snout'),
             $spot = $('.spot'),
-            $nose  = $('.nose'),
+            $nose = $('.nose'),
             $ear = $('.ear'),
             $rightear = $('.right'),
             $leftleg = $('.l'),
@@ -601,128 +605,128 @@
             container_w = $container.width(),
             container_h = $container.height();
 
-            $('body').on('mousemove.parallax', function(event) {
-  var pos_x = event.pageX,
-            pos_y = event.pageY,
-            left  = 0,
-            bottom = 0,
-            top   = 0;
+        $('body').on('mousemove.parallax', function (event) {
+            var pos_x = event.pageX,
+                pos_y = event.pageY,
+                left = 0,
+                bottom = 0,
+                top = 0;
 
             left = container_w / 0.5 - pos_x;
-            top  = container_h / 2 - pos_y;
+            top = container_h / 2 - pos_y;
             bottom = container_h / 0.25 - (pos_y * 2.5);
 
 
             TweenMax.to(
-            $snout,
-            1,
-            {
-                css: {
-                transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 + 'px) translateZ(1px)' 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $snout,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 + 'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $spot,
-            1,
-            {
-                css: {
-                transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -56 + 'px) translateZ(1px)' 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $spot,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -56 + 'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $eyes,
-            1,
-            {
-                css: {
-                transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -40 + 'px) translateZ(0px)' 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $eyes,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -40 + 'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $nose,
-            1,
-            {
-                css: {
-                transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -50 + 'px) translateZ(0px)' 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $nose,
+                1,
+                {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -50 + 'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $ear,
-            1,
-            {
-                css: {
-                transform: 'rotate(' + bottom / -60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)' 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $ear,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + bottom / -60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $rightear,
-            1,
-            {
-                css: {
-                transform: 'rotate(' + bottom / 60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)' 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $rightear,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + bottom / 60 + 'deg) translatex(' + left / 60 + 'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $leftleg,
-            1,
-            {
-                css: {
-                transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)', 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $leftleg,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
 
             TweenMax.to(
-            $rightleg,
-            1,
-            {
-                css: {
-                transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)', 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $rightleg,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 + 'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
             TweenMax.to(
-            $leftpaw,
-            1,
-            {
-                css: {
-                transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)', 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
+                $leftpaw,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
             TweenMax.to(
-            $rightpaw,
-            1,
-            {
-                css: {
-                transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)', 
-      },
-            ease:Expo.easeOut,
-            overwrite: 'all' 
-    });
-  
-  
-});
+                $rightpaw,
+                1,
+                {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 + 'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+
+        });
     </script>
 </body>
 

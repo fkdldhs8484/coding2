@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 02</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">애니메이션 03</h2>
+            <div class="t_box">회전하면서 도는 애니메이션을 만들어 보자!
+            </div>
+            <div class="t_link">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="JjvjXgo" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/JjvjXgo">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML</h3>
+            <div class="t_code">
+<pre><code class="language-js">&ltdiv class="wrapper"&gt
+&ltdiv&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="wrapper"&gt
+&ltdiv&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="wrapper"&gt
+&ltdiv&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="wrapper"&gt
+&ltdiv&gt&lt/div&gt
+&lt/div&gt
+&ltdiv class="wrapper"&gt
+&ltdiv&gt&lt/div&gt
+&lt/div&gt
+</code></pre>
+            </div>
+            <h3 class="t_tit2">CSS</h3>
+            <div class="t_code">
+<pre><code class="language-js">* {
+    box-sizing: border-box;
+  }
+  body {
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0;
+    padding : 0;
+  }
+  .wrapper{
+    position: absolute;
+    animation: x 0.5s ease-in-out alternate infinite 0s both;
+  }
+  .wrapper:nth-of-type(2){
+    animation-delay: 0.1s;
+  }
+  .wrapper:nth-of-type(3){
+     animation-delay: 0.2s;
+  }
+  .wrapper:nth-of-type(4){
+     animation-delay: 0.3s;
+  }
+  .wrapper:nth-of-type(5){
+     animation-delay: 0.4s;
+  }
+  
+  .wrapper>div{
+    width : 50px;
+    height: 50px;
+    background-color : #fff;
+    border-radius : 100%;
+    margin : 40px;
+    animation: y 1s linear infinite 0s both;
+  }
+  .wrapper:nth-of-type(2)>div{
+    animation-delay: 0.1s;
+    height: 40px;
+    width: 40px;
+    opacity : 0.8;
+  }
+  .wrapper:nth-of-type(3)>div{
+    animation-delay: 0.2s;
+    height: 30px;
+    width: 30px;
+    opacity : 0.6;
+  }
+  .wrapper:nth-of-type(4)>div{
+    animation-delay: 0.3s;
+    height: 20px;
+    width: 20px;
+    opacity : 0.4;
+  }
+  .wrapper:nth-of-type(5)>div{
+    animation-delay: 0.4s;
+    height: 10px;
+    width: 10px;
+    opacity : 0.2;
+  }
+  
+  @keyframes x {
+    0% {
+      transform: translatex(-100px);
+    }
+    100% {
+      transform: translatex(100px);
+    }
+  }
+  @keyframes y {
+    25% {
+      transform:translatey(-50px);
+    }
+    0%,
+    50%,
+    100%{
+      transform:translatey(0px);
+    }
+    75%{
+      transform:translatey(50px);
+    }
+  }
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
