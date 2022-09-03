@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 클래스 관련 메서드</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">css</a></h1>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">스타일 관련 메서드</h2>
+
+            <hr>
+
+            <h3 class="t_tit2">css() 메서드</h3>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>실행 분류</th>
+                        <th>형식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>취득</td>
+                        <td>&("div").attr("width");</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">생성, 변경</td>
+                        <td>&("div").css("background-color", "red").css("padding", "10px");</td>
+                    </tr>
+                    <tr>
+                        <td>&("div").css({"background-color", "red", padding: "10px" });</td>    
+                    </tr>
+                    <tr>
+                        <td>콜백 함수</td>    
+                        <td>&("div").css("width", function(index, w) {<br>
+                            // index는 각 div 요소의 index 0, 1, 2 <br>
+                            // w는 각 div요소의 width 값<br>
+                            return css 속성 // 각 div 요소의 css 속성을 변경합니다.
+                            });<br>
+                            ...<br>
+                            &ltdiv>내용&lt/div><br>
+                            &ltdiv>내용&lt/div><br>
+                            &ltdiv>내용&lt/div>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="XWqWobK" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/XWqWobK">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+
+            <hr>
+            <h3 class="t_tit2">prop() 메서드</h3>
+            <div class="t_box">attr()가 html attribute(속성)에 관련된 메서드라면 prop()는 자바스크립트 propetty(프로퍼티)에 관련된 메서드 입니다.<br>
+            prop() 메서드는 요소의 속성을 true, false로 제어할 수 있습니다.
+            </div>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+                &lthtml lang="en"&gt
+                
+                &lthead&gt
+                    &ltmeta charset="UTF-8"&gt
+                    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+                    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+                    &lttitle&gtDocument&lt/title&gt
+                    &ltscript&gt
+                    $(document).ready(function () {
+                        $("#m_menu a.m").click(function () {
+                        $(this).next().addBack().toggleClass("on").end().find(".m, ul").removeClass("on").end().parent().siblings().find(".m, ul").removeClass("on");
+                        return false;
+                        });
+                    });
+                    &lt/script&gt
+                &lt/head&gt
+                &lt/html&gt
+</code></pre>
+                            </div>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWGWZEe" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/MWGWZEe">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">width, height 관련 메서드</h3>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>메서드 종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>width()</td>
+                        <td>요소의 가로 길이를 취득, 변경할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>innerWidth()</td>
+                        <td>padding이 적용된 요소의 가로 길이를 취득, 변경할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>onterWidth()</td>    
+                        <td>border와 margin이 적용된 요소의 가로 길이를 취득, 변경할 수 있습니다.<br>
+                            outerWidth()는 요소의 width값 + 좌/우 border값 <br>
+                            outerWidth(true)는 요소의 Widthr값 + 좌/우 boder값 + 좌/우 margin값
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>height()</td>    
+                        <td>요소의 높이를 취득, 변경할 수 있습니다.</td>    
+                    </tr>
+                    <tr>
+                        <td>innerHeight()</td>    
+                        <td>padding이 적용된 요소의 높이를 취득, 변경할 수 있습니다.</td>    
+                    </tr>
+                    <tr>
+                        <td>outerHeight()</td>    
+                        <td>boder 와 margin이 적용된 요소의 높이를 취득, 변경할 수 있습니다.<br>
+                            outerHeight()는 요소의 height값 + 상/하 boder값<br>
+                            outerHeight(true)는 요소의 height값 = 상/하 boder값 + 상/하 margin값
+                        </td>    
+                    </tr>
+                </tbody>
+            </table>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ZEoEVje" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/ZEoEVje">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <hr>
+            <h3 class="t_tit2">위치 관련 메서드</h3>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>메서드 종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>offset()</td>
+                        <td>$("div").offset().left<br>
+                            $("div").offset().top<br>
+                            $("div").offset({left:10, top:10})<br>
+                            html 기준으로 left, top 값을 취득, 변경할 수 있습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>position()</td>
+                        <td>$("div").position().left<br>
+                            $("div").position().top<br>
+                            부모 요소 기준으로 left, top 값을 취득할 수 있습니다.
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="RwywEXm" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/RwywEXm">
+                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fj2YCMmWIIxLDEcRHT2V1OS%2FUntitled%3Fnode-id%3D59%253A54" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

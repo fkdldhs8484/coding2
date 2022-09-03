@@ -37,9 +37,9 @@
                     <tr>
                         <td>콜백 함수</td>
                         <td>$("div").addClass(function(<i>index</i>, <i>className</i>){<br>
-                                // <i>index</i>는 각 div 요소의 index 0, 1, 2<br>
-                                // <i>className</i> 은 각 div에 class속성<br>
-                                <i>return</i> class 속성 // 각 div에 class속성을 추가합니다.<br>
+                            // <i>index</i>는 각 div 요소의 index 0, 1, 2<br>
+                            // <i>className</i> 은 각 div에 class속성<br>
+                            <i>return</i> class 속성 // 각 div에 class속성을 추가합니다.<br>
                             });<br>
                             ....<br>
                             <i>&ltdiv>내용1&lt/div></i><br>
@@ -50,12 +50,14 @@
                 </tbody>
             </table>
             <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
-                <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="XWqWpmv" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="XWqWpmv"
+                    data-user="fkdldhs8484"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
                     <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/XWqWpmv">
-                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
             </div>
             <hr>
             <h3 class="t_tit2">removeClass() 메서드</h3>
@@ -75,9 +77,9 @@
                     <tr>
                         <td>콜백 함수</td>
                         <td>$("div").removeClass(function(<i>index</i>, <i>className</i>){<br>
-                                // <i>index</i>는 각 div 요소의 index 0, 1, 2<br>
-                                // <i>className</i> 은 각 div의 class 속성 m1, m2, m3<br>
-                                <i>return</i> class 속성 // 각 div에 class속성을 제거합니다.<br>
+                            // <i>index</i>는 각 div 요소의 index 0, 1, 2<br>
+                            // <i>className</i> 은 각 div의 class 속성 m1, m2, m3<br>
+                            <i>return</i> class 속성 // 각 div에 class속성을 제거합니다.<br>
                             });<br>
                             ....<br>
                             <i>&ltdiv class="m1">내용1&lt/div></i><br>
@@ -88,12 +90,14 @@
                 </tbody>
             </table>
             <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyeyNvN" data-user="fkdldhs8484" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyeyNvN"
+                    data-user="fkdldhs8484"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
                     <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/dyeyNvN">
-                    Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
             </div>
             <hr>
             <h3 class="t_tit2">toggleClass () 메서드</h3>
@@ -112,11 +116,60 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="t_code">
+<pre><code class="language-js">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtDocument&lt/title&gt
+    &ltscript&gt
+    $(document).ready(function () {
+        $("#m_menu a.m").click(function () {
+        $(this).next().addBack().toggleClass("on").end().find(".m, ul").removeClass("on").end().parent().siblings().find(".m, ul").removeClass("on");
+        return false;
+        });
+    });
+    &lt/script&gt
+&lt/head&gt
+&lt/html&gt
+</code></pre>
+            </div>
+            <div class="t_box"><i> $(this)</i>.toggleClass("on") // 자신 요소 (.m)의 폰트 컬러를 주황색, 회색으로 toggle 시킵니다.<br>
+                <i> $(this).next()</i>.toggleClass("on") // 자신의 서브 메뉴를 show, hide로 toggle 시킵니다.<br>
+                <i> $(this).next()</i>.find(".m, ul").removeClass("on") // 자신의 하위 서브 메뉴들을 초기화 시킵니다.<br>
+                <i> $(this).next()</i>).parent()).siblings().find(".m, ul").removeClass("on") // 다른 메뉴들을 초기화 시킵니다.
+            </div>
             <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
-               
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fj2YCMmWIIxLDEcRHT2V1OS%2FUntitled%3Fnode-id%3D0%253A1"
+                    allowfullscreen></iframe>
             </div>
             <hr>
-            
+            <h3 class="t_tit2">hasClass () 메서드</h3>
+            <div class="t_box">if문의 조건식으로 사용됩니다. 선택한 요소는 클래스가 있으며 true, 없으면 false를 변환합니다.</div>
+            <div class="t_code">
+<pre><code class="language-js">if($("#box").hasClass("m")){
+console.log("클래스 있음"); // 클래스 있음    
+}else {
+    console.iog("클래스 없음");
+}
+...
+&ltdiv id="#box" class="m">내용&lt/div>
+</code></pre>
+            </div>
+            <div class="t_iframe" style="min-height: 400px; padding-top: 0;">
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyeyNvN"
+                    data-user="fkdldhs8484"
+                    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/fkdldhs8484/pen/dyeyNvN">
+                            Untitled</a> by 이유나 (<a href="https://codepen.io/fkdldhs8484">@fkdldhs8484</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
         </div>
     </main>
     <!-- //main -->
