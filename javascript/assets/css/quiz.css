@@ -341,8 +341,8 @@ cursor: pointer; 커서를 손가락 모양으로.. */
 
 /* modal__wrap */
 .modal__btn {
-    color: #000;
-    border: 1px solid #000;
+    color: #000080;
+    border: 1px solid #000080;
     border-radius: 50px;
     display: inline-block;
     padding: 10px 20px;
@@ -353,8 +353,8 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     transition: background-color 0.3s, color 0.3s; 
 }
 .modal__btn:hover {
-    background-color: #fff;
-    color: #3B3D63;
+    background-color: #000080;
+    color: #c2c2c2;
 }
 .modal__cont {
     width: 100%;
@@ -438,11 +438,8 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     text-transform: uppercase;
     cursor: pointer;
 }
-.modal__box .title .tabs>div em {
-    font-style: normal;
-}
-.modal__box .title .tabs>div.active {
-    background-color: #34364e;
+.modal__box .menu-bar .active {
+    background-color: #aaa9a9;
 }
 
 .modal__box .title .tabs>div .favicon {
@@ -453,7 +450,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     margin-left: 4rem;
 }
 .modal__box .cont {
-    background-color: #282936;
+    background-color: #fff;
     height: 100%;
     overflow-y: auto;
     box-sizing: border-box;
@@ -472,7 +469,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     position: absolute;
     right: 20px;
     top: 20px;
-    background-color: #1f224a;
+    background-color: #c7c7c7;
     padding: 1rem 1rem 0.8rem 1rem;
     border-radius: 5px;
     box-shadow: 0 0 7px -10px rgba(25, 26, 26, 0.698);
@@ -484,7 +481,7 @@ cursor: pointer; 커서를 손가락 모양으로.. */
     background-color: #33377d;
 }
 .modal__close svg {
-    color: #fff;
+    color: #000080;
 }
 /* 모달 애니메이션 */
 .modal__cont.show {     /* 전체 배경 */
@@ -970,3 +967,4 @@ cursor: pointer; 커서를 손가락 모양으로.. */
         visibility: visible;
     }
 }
+

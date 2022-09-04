@@ -8,6 +8,8 @@
     <title>퀴즈 이펙트</title>
 
     <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
     
@@ -70,8 +72,261 @@
     <!-- main -->
     <footer id="footer">
         <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+        <div class="modal__btn">소스 보기</div>
+        <div class="modal__cont">
+            <div class="modal__box">
+                <div class="window">
+                    <div class="title-bar">
+                        <div class="minimize">
+                            <div class="symbol"></div>
+                        </div>
+                        <div class="maximize">
+                            <div class="symbol"></div>
+                        </div>
+                        <div class="close">
+                            <div class="symbol"></div>
+                        </div>
+                    </div>
+                    <div class="menu-bar"> <span class="active">HTML</span><span>CSS</span><span>javascript</span></div>
+                    <div class="content-container">
+                        <div class="cont">
+                            <div class="active">
+<pre><code class="language-js">&ltdiv class="quiz__wrap"&gt
+    &ltdiv class="quiz"&gt
+        &ltspan class="quiz__type"&gt&lt/span&gt
+        &lth2 class="quiz__question"&gt
+            &ltspan class="number"&gt&lt/span&gt
+            &ltdiv class="ask"&gt
+        &lt/h2&gt
+        &ltdiv class="quiz__view"&gt
+            &ltdiv class="true"&gt정답입니다!&lt/div&gt
+            &ltdiv class="false"&gt틀렸습니다!&lt/div&gt
+            &ltdiv class="dog"&gt
+                &ltdiv class="head"&gt
+                    &ltdiv class="ears"&gt&lt/div&gt
+                    &ltdiv class="face"&gt&lt/div&gt
+                    &ltdiv class="eyes"&gt
+                        &ltdiv class="teardrop"&gt&lt/div&gt
+                    &lt/div&gt
+                    &ltdiv class="nose"&gt&lt/div&gt
+                    &ltdiv class="mouth"&gt
+                        &ltdiv class="tongue"&gt&lt/div&gt
+                    &lt/div&gt
+                    &ltdiv class="chin"&gt&lt/div&gt
+                &lt/div&gt
+                &ltdiv class="body"&gt
+                    &ltdiv class="tail"&gt&lt/div&gt
+                    &ltdiv class="legs"&gt&lt/div&gt
+                &lt/div&gt
+            &lt/div&gt
+        &lt/div&gt
+        &ltdiv class="quiz__answer"&gt
+            &ltinput type="text" class="input" placeholder="정답을 적어주세요!"&gt
+            &ltbutton class="confirm"&gt정답확인하기&lt/button&gt
+            &ltdiv class="Result"&gt&lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-js">/* quiz__wrap  */
+    .quiz__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 150px;
+        flex-wrap: wrap;
+    }
+    
+    .quiz {
+        max-width: 500px;
+        width: 100%;
+        background-color: #fff;
+        border: 8px ridge #cacaca;
+        margin: 10px;
+    }
+    
+    .quiz__type {
+        background-color: #cacaca;
+        text-align: center;
+        display: block;
+        font-size: 16px;
+        border: 3px ridge #cacaca;
+        color: #3b3b3b;
+        font-family: "DungGeunMo";
+        padding: 4px;
+    }
+    
+    .quiz__question {
+        border-top: 6px ridge #cacaca;
+        border-bottom: 6px ridge #cacaca;
+        padding: 20px;
+        font-family: "Cafe24Dangdanghae";
+        line-height: 1.3;
+    }
+    
+    .quiz__question .number {
+        color: rgb(160, 86, 86);
+    }
+    
+    .quiz__question .ask {
+        display: inline;
+    }
+    
+    .quiz__answer {
+        border-top: 6px ridge #cacaca;
+        padding: 10px;
+        background-color: #f5f5f5;
+    }
+    
+    .quiz__answer .confirm {
+        border: 6px ridge #cacaca;
+        width: 100%;
+        font-size: 22px;
+        background-color: #d6d6d6;
+        font-family: "Cafe24Dangdanghae";
+        cursor: pointer;
+        padding: 13px 20px;
+    }
+    
+    .quiz__answer .result {
+        width: 100%;
+        padding: 13px 20px;
+        font-size: 22px;
+        line-height: 1.3;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: "Cafe24Dangdanghae";
+        border: 6px ridge #cacaca;
+    }
+    
+    .quiz__answer .input {
+        width: 100%;
+        border: 6px ridge #cacaca;
+        font-size: 22px;
+        padding: 13px 20px;
+        background-color: #fff;
+        font-family: "Cafe24Dangdanghae";
+        margin-bottom: 10px;
+    }
+    
+    .quiz__view {
+        background-color: #f5f5f5;
+        font-family: "Cafe24Dangdanghae";
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .quiz__view .true {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        background-color: rgb(160, 86, 86);
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        left: 70%;
+        top: 100px;
+        opacity: 0;
+    }
+    
+    .quiz__view .false {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        right: 70%;
+        top: 100px;
+        opacity: 0;
+    }
+    
+    .quiz__view.like .true {
+        opacity: 1;
+        animation: wobble 0.6s;
+    }
+    
+    .quiz__view.dislike .false {
+        opacity: 1;
+        animation: wobble 0.6s;
+    }
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-js">//선택자
+const quizType = document.querySelector(".quiz__type");   //퀴즈종류
+const quizNum = document.querySelector(".quiz__question .number "); //퀴즈번호
+const quizask = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+const quizconfirm = document.querySelector(".quiz__answer .confirm"); //정답확인버튼
+const quizResult = document.querySelector(".quiz__answer .Result"); //정답결과
+const quizinput = document.querySelector(".quiz__answer .input"); //사용자 정답
+const quizview = document.querySelector(".quiz__view"); //강아지
+//문제 정보
+const answeType = "웹디자인기능사";
+const answerNum = "2";
+const answerask = "기업의 새로운 이념 구축에 필요한 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지 통합 전력은 무엇인가요?"
+let answerResult = "CIP"; //let변하는 값
+
+//문제 출력
+quizType.innerText = answeType;
+quizNum.innerText = answerNum + ".";
+quizask.innerText = answerask;
+quizResult.innerText ="정답은 : " + answerResult.toLowerCase() + "입니다."; //toLowerCase 소문자로 바꿔줌
+
+//정답 숨기기
+quizResult.style.display = "none";
+
+//정답 확인
+quizconfirm.addEventListener("click", () => {
+    quizinput.style.display = "none";
+    quizResult.style.display = "block";
+    quizconfirm.style.display = "none";
+
+    //사용자 정답
+    const userWord = quizinput.value.toLowerCase().trim(); //toLowerCase 소문자로 바꿔줌 trim 여백
+    answerResult = answerResult.toLowerCase().trim(); //변하는 값('='우변을 좌변으로?)
+    // console.log(userWord)
+    // console.log(answerResult)
+
+    //사용자 정답 == 문제 정답
+    if (userWord == answerResult) {
+        //정답 일때
+        quizview.classList.add("like");
+        
+        // alert("정답입니다.")
+    } else {
+        //오답 일때
+        quizview.classList.add("dislike");
+        // alert("오답입니다.")
+    }
+});  //정답버튼을 클릭 했을 때
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </div>
+        </div>
     </footer>
     <!-- footer -->
+
+    <script src="../assets/js/prism.min.js"></script>
+    <script src="../assets/js/common02.js"></script>
+
+
     <script>
         //선택자
         const quizType = document.querySelector(".quiz__type");   //퀴즈종류
