@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="assets/css/imge.css">
     <link rel="stylesheet" href="assets/css/text.css">
     <link rel="stylesheet" href="assets/css/imgeText.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/slder.css">
+
 </head>
 
 <body>
@@ -63,6 +67,33 @@
     <main id="mainType">
         <section id="sliderType" class="slder__wrap">
             <h2>슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="silder__img">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h3>NEW PROJECT</h3>
+                            <p>너무 무리하지 말아요! 이미 당신은 잘하고 있고!<br>
+                                앞으로도 잘 할 수 있어요! </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                        <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="ir">1</span></a>
+                        <a href="#" class="dot"><span class="ir">2</span></a>
+                        <a href="#" class="dot"><span class="ir">3</span></a>
+                        <a href="#" class="play"><span class="ir">플레이</span></a>
+                        <a href="#" class="stop"><span class="ir">정지</span></a>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--sliderType-->
 
@@ -74,12 +105,12 @@
                     <h3 class="image__tit">레서판다가 줄 타는 모습</h3>
                     <p class="image__desc">레서판다가 줄타는 모습을 보십시오. 너무 귀엽지 않나요.. 귀여워서 깨물고 <br>
                         싶어요...너구리랑 햇갈리지 맙시다.</p>
-                    <a class="image__btn" href="/" title="자세히보기">자세히보기</a>
+                    <a class="image__btn" href="#" title="자세히보기">자세히보기</a>
                 </article>
                 <article class="image img2">
                     <h3 class="image__tit">레서판다의 귀여운 모습</h3>
                     <p class="image__desc">가만히 있어도 귀여운 헤서판다. 래교부리는 모습도 너무 귀엽다. 너구리랑 햇갈리지 맙시다..</p>
-                    <a class="image__btn yellow" href="/" title="자세히보기" >자세히보기</a>
+                    <a class="image__btn yellow" href="/" title="자세히보기">자세히보기</a>
                 </article>
         </section>
         <!--imageType-->
@@ -136,14 +167,17 @@
                     </figure>
                     <div class="card__body">
                         <h3 class="tit">말티즈가 한심하게 처다볼때</h3>
-                        <p class="decs">말티즈는 가끔 아니 자주 주인을 한심하게 처다볼때가 많습니다.성격이 치와와급으로 더럽습니다.자기 마음에 안들면 짖습니다. 간식주면 다 따라갑니다.
+                        <p class="decs">말티즈는 가끔 아니 자주 주인을 한심하게 처다볼때가 많습니다.성격이 치와와급으로 더럽습니다.자기 마음에 안들면 짖습니다. 간식주면 다
+                            따라갑니다.
                         </p>
                         <a class="btn" href="/">
                             더 자세히 보기
                             <span aria-hidden="true">
                                 <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z" fill="black" />
+                                    <path
+                                        d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z"
+                                        fill="black" />
                                 </svg>
                             </span>
                         </a>
@@ -155,13 +189,16 @@
                     </figure>
                     <div class="card__body ">
                         <h3 class="tit">말티즈가 산책할때</h3>
-                        <p class="decs">말티즈는 산책을 아주 좋아합니다. 간식을 들고 가도 산책을 더 좋아해서 간식을 처다도 안봅니다.주인이 멈춰도 알아서 자기가 갈길을 갑니다.</p>
+                        <p class="decs">말티즈는 산책을 아주 좋아합니다. 간식을 들고 가도 산책을 더 좋아해서 간식을 처다도 안봅니다.주인이 멈춰도 알아서 자기가 갈길을 갑니다.
+                        </p>
                         <a class="btn" href="/">
                             더 자세히 보기
                             <span aria-hidden="true">
                                 <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z" fill="black" />
+                                    <path
+                                        d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z"
+                                        fill="black" />
                                 </svg>
                             </span>
                         </a>
@@ -173,14 +210,17 @@
                     </figure>
                     <div class="card__body">
                         <h3 class="tit">말티즈가 간식 달라고 할때</h3>
-                        <p class="decs">말티즈는 간식을 원할 때 주인을 뚫어져라 처다보거나 간식이 있는 곳으로 가 짖습니다.한개만 주면 더 달라고 쪼릅니다. 안주면 주인 다리를 발톱으로 박박
+                        <p class="decs">말티즈는 간식을 원할 때 주인을 뚫어져라 처다보거나 간식이 있는 곳으로 가 짖습니다.한개만 주면 더 달라고 쪼릅니다. 안주면 주인 다리를
+                            발톱으로 박박
                             긁습니다.</p>
                         <a class="btn" href="/">
                             더 자세히 보기
                             <span aria-hidden="true">
                                 <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z" fill="black" />
+                                    <path
+                                        d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269203 60.6597 0.269203 60.4645 0.464466C60.2692 0.659728 60.2692 0.97631 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0L0 4.5Z"
+                                        fill="black" />
                                 </svg>
                             </span>
                         </a>
@@ -191,7 +231,15 @@
         <!--cardType-->
 
         <section id="bannerType" class="banner__wrap">
-            <h2>배너 영역</h2>
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner">
+                <h3 class="title">유튜버 웹보이</h3>
+                <p class="desc">
+                    더 다양한 강의는 유튜브를 통해 제공하고 있습니다.
+                    <a href="#" title="유튜브 페이지로 이동"></a>
+                </p>
+                <span class="small">배너 유형01</span>
+            </div>
         </section>
         <!--bannerType-->
 
@@ -217,20 +265,79 @@
                 <div class="imgText__img img2">
                     <a href="/" class="blue">튜토리얼 사이트</a>
                 </div>
-            </div> 
+            </div>
         </section>
         <!--textType-->
     </main>
     <!-- mainType -->
 
-    <footer id="footerType">
-        <h2>푸터 영역</h2>
+    <footer id="footerType" class="footer__wrap nexon section gray">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><a href="#">웹 표준 사이트</a></li>
+                        <li><a href="#">웹 표준 사이트</a></li>
+                        <li><a href="#">웹 표준 사이트</a></li>
+                        <li><a href="#">웹 표준 사이트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>헤더 영역</h3>
+                    <ul>
+                        <li><a href="#">메뉴 유형01</a></li>
+                        <li><a href="#">메뉴 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>슬라이드 영역</h3>
+                    <ul>
+                        <li><a href="#">슬라이드 유형01</a></li>
+                        <li><a href="#">슬라이드 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>이미지 영역</h3>
+                    <ul>
+                        <li><a href="#">이미지 유형01</a></li>
+                        <li><a href="#">이미지 유형02</a></li>
+                        <li><a href="#">이미지/텍스트 유형01</a></li>
+                        <li><a href="#">이미지/텍스트 유형02</a></li>
+                        <li><a href="#">텍스트 유형01</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>컨텍츠 영역</h3>
+                    <ul>
+                        <li><a href="#">카드 유형01</a></li>
+                        <li><a href="#">카드 유형02</a></li>
+                        <li><a href="#">카드 유형03</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>푸터 영역</h3>
+                    <ul>
+                        <li><a href="#">푸터 메뉴 유형01</a></li>
+                        <li><a href="#">푸터 메뉴 유형02</a></li>
+                        <li><a href="#">푸터 메뉴 유형03</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                2022 Webstoryboy. Portfolio is Power<br>
+                All rights reserved.
+            </div>
+            <div></div>
+        </div>
+        </div>
     </footer>
     <!-- footerType -->
 
-    
-    
-    
+
+
+
 </body>
 
 </html>

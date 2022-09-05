@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "ChosunGu";
+  font-family: "EF_Diary";
 }
 body {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 body.img01 {
   background: #000 url(../img3/effect_bg01@2x-min.jpg) no-repeat center / cover;
@@ -55,6 +56,9 @@ img {
 a {
   color: #fff;
   text-decoration: none;
+}
+li {
+  list-style: none;
 }
 /* scroll */
 ::-webkit-scrollbar {
