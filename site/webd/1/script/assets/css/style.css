@@ -3,36 +3,33 @@
     margin: 0;
     padding: 0;
 }
+li {
+    list-style: none;
+}
 a{
+    color: #333;
     text-decoration: none;
 }
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
 /* layout */
 #wrap {
-    width: 1200px;
+    width: 1000px;
+    height: 1000px;
     margin: 0 auto;
 }
 #header {
-    width: 1200px;
+    background: #ccc;
     height: 100px;
-    background-color: #ccc;
-    overflow: hidden;
-}
-#header .logo {
-    float: left;
-    padding: 20px;
-}
-#header .nav {
-    float: right;
-}
-#header .nav li {
-    display: inline;
-}
-#header .nav li a {
-    display: inline-block;
-    padding: 30px;
-    color: #222328;
-    font-size: 18px;
 }
 #slider {}
 #info {}
 #footer {}
+
+/* header */
+
+#header h1 {float: left;}
+#header h1 img { width: 130px;}
+#header h1 .nav {float: right;}
+#header h1 .nav ul {}
+#header h1 .nav li {float: left;}
+#header h1 .nav li a {display: block ; padding: 30px 15px;}
