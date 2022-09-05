@@ -286,77 +286,92 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-        window.addEventListener("mousemove", (event) => {
-            document.querySelector(".clientX").innerText = event.clientX
-            document.querySelector(".clientY").innerText = event.clientY
-            document.querySelector(".offsetX").innerText = event.offsetX
-            document.querySelector(".offsetY").innerText = event.offsetY
-            document.querySelector(".pageX").innerText = event.pageX
-            document.querySelector(".pageY").innerText = event.pageY
-            document.querySelector(".screenX").innerText = event.screenX
-            document.querySelector(".screenY").innerText = event.screenY
+        window.addEventListener("mousemove", (event) => {   //event : mouse 움직이는 값
+            document.querySelector(".clientX").innerText = event.clientX;
+            document.querySelector(".clientY").innerText = event.clientY;
+            document.querySelector(".offsetX").innerText = event.offsetX;
+            document.querySelector(".offsetY").innerText = event.offsetY;
+            document.querySelector(".pageX").innerText = event.pageX;
+            document.querySelector(".pageY").innerText = event.pageY;
+            document.querySelector(".screenX").innerText = event.screenX;
+            document.querySelector(".screenY").innerText = event.screenY;
         });
 
+        const cursor = document.querySelector(".mouse__cursor");
         window.addEventListener("mousemove", (e) => {
-            const cursor = document.querySelector(".mouse__cursor");
-
-            cursor.style.left = e.clientX - 25 + "px";
+            cursor.style.left = e.clientX - 25 + "px";   //단위 꼭 붙여주기
             cursor.style.top = e.clientY - 25 + "px";
         });
 
-        document.querySelector(".style1").addEventListener("mouseover", () => {
-            cursor.classList.add("style1");
-        })
-
         // document.querySelector(".style1").addEventListener("mouseover", () => {
         //     cursor.classList.add("style1");
-        // })
-        // document.querySelector(".style1").addEventListener("mouseover", () => {
+        // });
+        // document.querySelector(".style1").addEventListener("mouseout", () => {
         //     cursor.classList.remove("style1");
-        // })
+        // });
         // document.querySelector(".style2").addEventListener("mouseover", () => {
         //     cursor.classList.add("style2");
-        // })
-        // document.querySelector(".style2").addEventListener("mouseover", () => {
+        // });
+        // document.querySelector(".style2").addEventListener("mouseout", () => {
         //     cursor.classList.remove("style2");
-        // })
+        // });
         // document.querySelector(".style3").addEventListener("mouseover", () => {
         //     cursor.classList.add("style3");
-        // })
-        // document.querySelector(".style3").addEventListener("mouseover", () => {
+        // });
+        // document.querySelector(".style3").addEventListener("mouseout", () => {
         //     cursor.classList.remove("style3");
-        // })
+        // });
         // document.querySelector(".style4").addEventListener("mouseover", () => {
         //     cursor.classList.add("style4");
-        // })
-        // document.querySelector(".style4").addEventListener("mouseover", () => {
+        // });
+        // document.querySelector(".style4").addEventListener("mouseout", () => {
         //     cursor.classList.remove("style4");
-        // })
-
-        // for 문
-        // for (let i = 0; i <= 6; i++) {
-        //         document.querySelector()
-        // }
-        // forEach 문
-        // document.querySelectorAll(".mouse__wrap span").forEach((span, num) => {
-        //     span.querySelector("mouseover", () => {
-        //         cursor.classList.add("style" + (num + 1));
-        //     });
-        //     span.querySelector("mouseover", () => {
-        //         cursor.classList.remove("style" + (num + 1));
-        //     });
+        // });
+        // document.querySelector(".style5").addEventListener("mouseover", () => {
+        //     cursor.classList.add("style5");
+        // });
+        // document.querySelector(".style5").addEventListener("mouseout", () => {
+        //     cursor.classList.remove("style5");
+        // });
+        // document.querySelector(".style6").addEventListener("mouseover", () => {
+        //     cursor.classList.add("style6");
+        // });
+        // document.querySelector(".style6").addEventListener("mouseout", () => {
+        //     cursor.classList.remove("style6");
         // });
 
-        //getAttribute
+        //for문
+        // for (let i = 1; i < 7; i++) {
+        //     document.querySelector(".style" + i).addEventListener("mouseover", () => {
+        //         cursor.classList.add("style" + i);
+        //     });
+        // }
+        // for (let i = 1; i < 7; i++) {
+        //     document.querySelector(".style" + i).addEventListener("mouseout", () => {
+        //         cursor.classList.remove("style" + i);
+        //     })
+        // }
+
+        //forEach()
+        // document.querySelectorAll(".mouse__wrap span").forEach((span, num) => {
+        //     span.addEventListener("mouseover", () => {
+        //         cursor.classList.add("style" + (num + 1));
+        //     });
+        //     span.addEventListener("mouseout", () => {
+        //         cursor.classList.remove("style" + (num + 1));
+        //     })
+        // });
+
+        //getAttribute()
         document.querySelectorAll(".mouse__wrap span").forEach(span => {
             let attr = span.getAttribute("class");
 
             span.addEventListener("mouseover", () => {
                 cursor.classList.add(attr);
             });
-            span.addEventListener("mouseover", () => {
+            span.addEventListener("mouseout", () => {
                 cursor.classList.remove(attr);
-            });
+            })
         });
     </script>
 </body>

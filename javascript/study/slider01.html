@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서치 01</title>
+    <title>슬라이드 유형</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -19,41 +19,155 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">요소를 안보이게 하는 방법 </h2>
-            <div class="t_desc2">1. display <br> 2. opacity <br> 3. visibility <br>4. width, height<br>5.transform</div>
+            <h2 class="t_tit"> 슬라이드 유형 </h2>
+            <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D1792%253A198" allowfullscreen></iframe>
+            </div>
+            <hr>
+            <h2 class="t_tit">html</h2>
+            <div class="t_box">ir 효과를 써서 화면에는 보이지 않도록 숨김 처리 했습니다.</div>
+            <div class="result">
+                <details>
+                    <summary>코드 보기</summary>
+                    <p class="t_desc"></p>
+                    <div class="t_code">
+<pre><code class="language-js">&ltsection id="sliderType" class="slder__wrap"&gt
+    &lth2&gt슬라이드 영역&lt/h2&gt
+    &ltdiv class="slider__inner"&gt
+        &ltdiv class="slider"&gt
+            &ltdiv class="silder__img"&gt
+                &ltdiv class="desc"&gt
+                    &ltspan&gtDEVELOPER&lt/span&gt
+                    &lth3&gtNEW PROJECT&lt/h3&gt
+                    &ltp&gt너무 무리하지 말아요! 이미 당신은 잘하고 있고!&ltbr&gt
+                        앞으로도 잘 할 수 있어요! &lt/p&gt
+                    &ltdiv class="btn"&gt
+                        &lta href="#"&gt자세히 보기&lt/a&gt
+                        &lta href="#" class="black"&gt사이트 보기&lt/a&gt
+                    &lt/div&gt
+                &lt/div&gt
+            &lt/div&gt
+            &ltdiv class="slider__arrow"&gt
+                &lta href="#" class="left"&gt&ltspan class="ir"&gt이전 이미지&lt/span&gt&lt/a&gt
+                &lta href="#" class="right"&gt&ltspan class="ir"&gt다음 이미지&lt/span&gt&lt/a&gt
+            &lt/div&gt
+            &ltdiv class="slider__dot"&gt
+                &lta href="#" class="dot active"&gt&ltspan class="ir"&gt1&lt/span&gt&lt/a&gt
+                &lta href="#" class="dot"&gt&ltspan class="ir"&gt2&lt/span&gt&lt/a&gt
+                &lta href="#" class="dot"&gt&ltspan class="ir"&gt3&lt/span&gt&lt/a&gt
+                &lta href="#" class="play"&gt&ltspan class="ir"&gt플레이&lt/span&gt&lt/a&gt
+                &lta href="#" class="stop"&gt&ltspan class="ir"&gt정지&lt/span&gt&lt/a&gt
+            &lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+  &lt/section&gt
+</code></pre>
+                    </div>
+                </details>
+            </div>
+            
             
             <hr>
-            <h3 class="t_tit2">display</h3>
-            <div class="t_box">👉요소를 어떤 형태로 나타나게 할 것인지를 말하는 속성 입니다.<br> (애니메이션x, 영역x)</div>
+            <h2 class="t_tit">css</h2>
+            <div class="result">
+                <details>
+                    <summary>코드 보기</summary>
+                    <p class="t_desc"></p>
             <div class="t_code">
-<pre><code>display : none
+<pre><code class="language-js">.slider__inner {
+    margin-top: 70px;
+  }
+  .slider {
+    position: relative;
+  }
+  .silder__img {
+    background: url(/site/site1/img/SLIDER_TYPE01_01.jpg) no-repeat center / cover;
+  }
+  .silder__img .desc {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 100px 20px;
+  }
+  .silder__img .desc span {
+    font-size: 16px;
+    background-color: #fff;
+    padding: 1px 14px 0 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .silder__img .desc h3 {
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    margin-left: -8px;
+  }
+  .silder__img .desc p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 130px;
+  }
+  .silder__img .desc .btn {
+  }
+  .silder__img .desc .btn a {
+    font-size: 16px;
+    background-color: #fff;
+    padding: 11px 50px;
+    display: inline-block;
+  }
+  .silder__img .desc .btn a.black {
+    background: #000;
+    color: #fff;
+  }
+  .slider__arrow a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 56px;
+    background: url(/site/site1/img/slider_icon.svg);
+  }
+  .slider__arrow a.left {
+    left: 20px;
+  }
+  .slider__arrow a.right {
+    right: 20px;
+    background-position: -50px 0;
+  }
+  .slider__dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+  }
+  .slider__dot a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(/site/site1/img/slider_icon.svg);
+    background-position: -20px -70px;
+  }
+  .slider__dot a.active {
+    background-position: 0px -70px;
+  }
+  .slider__dot a.play {
+    background-position: -40px -70px;
+  }
+  .slider__dot a.stop {
+    background-position: -60px -70px;
+  }
+  
 </code></pre>
             </div>
-            <h3 class="t_tit2">opacity</h3>
-            <div class="t_box">👉opacity는 요소의 투명도를 지정하는 속성입니다. <br>(애니메이션o, 영역o)</div>
-            <div class="t_code">
-<pre><code>opacity: 0;
-</code></pre>
+                </details>
             </div>
-            <h3 class="t_tit2">visibility</h3>
-            <div class="t_box">👉문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다.<br>(애니메이션x, 영역x)</div>
-            <div class="t_code">
-<pre><code>visibility: hidden;
-</code></pre>
-            </div>
-            <h3 class="t_tit2">width , height</h3>
-            <div class="t_box">👉특정 요소의 너비와 높이를 0으로 설정하여 숨기는 방식 입니다. <br> (애니메이션x, 영역x)</div>
-            <div class="t_code">
-<pre><code>width: 0;
-height: 0; 
-</code></pre>
-            </div>
-            <h3 class="t_tit2">transform</h3>
-            <div class="t_box">👉시각적으로 엘리먼트를 감추지만, 빈공간이 남습니다.<br>(애니메이션o, 영역x)</div>
-            <div class="t_code">
-<pre><code>transform: scale(0);
-</code></pre>
-            </div>
+            
         </div>
     </main>
     <!-- //main -->
