@@ -258,15 +258,144 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-                            <pre><code class="language-js">
+<pre><code class="language-js">&ltdiv class="mouse__info"&gt
+&ltul&gt
+    &ltli&gtclientX : &ltspan class="clientX"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtclientY : &ltspan class="clientY"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtoffsetX : &ltspan class="offsetX"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtoffsetY : &ltspan class="offsetY"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtpageX : &ltspan class="pageX"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtpageY : &ltspan class="pageY"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtscreenX : &ltspan class="screenX"&gt0&lt/span&gtpx&lt/li&gt
+    &ltli&gtscreenY : &ltspan class="screenY"&gt0&lt/span&gtpx&lt/li&gt
+&lt/ul&gt
+&lt/div&gt
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-html">
+<pre><code class="language-html">  /* mouseType */
+.mouse__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    flex-direction: column;
+    cursor: none;
+}
+
+.mouse__wrap p {
+    font-size: 2vw;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed orange;
+    color: orange;
+}
+
+@media (max-width: 800px) {
+    .mouse__wrap p {
+        padding: 0 20px;
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .mouse__wrap p:last-child {
+        font-size: 40px;
+        line-height: 1.5;
+        text-align: center;
+        word-break: keep-all;
+    }
+}
+
+/* 커서 */
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition:
+        background-color 0.3s,
+        border-color 0.3s,
+        transform 0.6,
+        border-radius 0.3s;
+}
+
+.mouse__cursor.style1 {
+    background-color: rgba(255, 165, 0, 0.4);
+    border-color: orange;
+}
+
+.mouse__cursor.style2 {
+    background-color: rgba(140, 0, 255, 0.4);
+    border-color: rgb(140, 0, 255);
+    transform: scale(2) rotateY(720deg);
+}
+
+.mouse__cursor.style3 {
+    background-color: rgb(0, 47, 255, 0.4);
+    border-color: rgb(0, 47, 255);
+    transform: scale(1.5) rotateX(45deg);
+}
+
+.mouse__cursor.style4 {
+    background-color: rgb(0., 47, 255, 0.4);
+    border-color: rgb(0, 47, 255);
+    transform: scale(10);
+}
+
+.mouse__cursor.style5 {
+    background-color: rgb(255, 0, 85, 0.4);
+    border-color: rgb(255, 0, 85);
+    transform: scale(0.1);
+}
+
+.mouse__cursor.style6 {
+    background-color: rgb(255, 81, 0, 0.4);
+    border-color: rgb(255, 81, 0);
+    border-radius: 0;
+    transform: scale(5);
+}
+
+.mouse__info {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+}
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-css">
+<pre><code class="language-css">//getAttribute()
+document.querySelectorAll(".mouse__wrap span").forEach(span => {
+    let attr = span.getAttribute("class");
+
+    span.addEventListener("mouseover", () => {
+        cursor.classList.add(attr);
+    });
+    span.addEventListener("mouseout", () => {
+        cursor.classList.remove(attr);
+    })
+});
 </code></pre>
                         </div>
                     </div>
