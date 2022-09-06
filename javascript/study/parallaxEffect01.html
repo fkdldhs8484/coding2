@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트 01</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">패럴랙스 01</h2>
+
+            <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/javascript/effect/parallaxEffect01"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/parallaxEffect01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+            <hr>
+            <h2 class="t_tit">HTML</h2>
+            <div class="t_code">
+                <pre><code> &ltmain id="parallax__cont"&gt
+    &ltdiv id="contents"&gt
+        &ltsection id="section1" class="content__item"&gt
+            &ltspan class="content__item__num"&gt01&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt직업에서 행복을 찾아라. 아니면 행복이 무엇인지 절대 모를 것이다 .&lt/p&gt
+        &lt/section&gt
+        &lt!-- section --&gt
+
+
+        &ltsection id="section2" class="content__item"&gt
+            &ltspan class="content__item__num"&gt02&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt행복한 삶을 살기위해 필요한 것은 거의 없다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section2 --&gt
+
+
+        &ltsection id="section3" class="content__item"&gt
+            &ltspan class="content__item__num"&gt03&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt한번의 실패와 영원한 실패를 혼동하지 마라.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section3 --&gt
+
+
+        &ltsection id="section4" class="content__item"&gt
+            &ltspan class="content__item__num"&gt04&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt1퍼센트의 가능성, 그것이 나의 길이다. &lt/p&gt
+        &lt/section&gt
+        &lt!-- section4 --&gt
+
+        &ltsection id="section5" class="content__item"&gt
+            &ltspan class="content__item__num"&gt05&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section5 --&gt
+
+
+        &ltsection id="section6" class="content__item"&gt
+            &ltspan class="content__item__num"&gt06&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt오늘은 당신의 남은 인생 중, 첫 번째 날이다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section6 --&gt
+
+
+        &ltsection id="section7" class="content__item"&gt
+            &ltspan class="content__item__num"&gt07&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt나 자신에 대한 자신감을 잃으면 온 세상이 나의 적이 된다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section7 --&gt
+
+
+        &ltsection id="section8" class="content__item"&gt
+            &ltspan class="content__item__num"&gt08&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt고개 숙이지 마십시오. 세상을 똑바로 정면으로 바라보십시오.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section8 --&gt
+    &lt/div&gt
+
+&lt/main&gt
+</code></pre>
+            </div>
+
+            <hr>
+            <h2 class="t_tit">CSS</h2>
+            <div class="t_code">
+                <pre><code>
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
