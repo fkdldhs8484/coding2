@@ -699,11 +699,11 @@ document.querySelectorAll(".mouse__wrap span").forEach(span => {
             }
         });
 
-        // 스크롤 이동
+        //스크롤 이동
         document.querySelectorAll("#parallax__nav li a").forEach(li => {
             li.addEventListener("click", (e) => {
                 e.preventDefault();
-                document.querySelector(li.qetAttribute("href")).scrollIntoView({
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
                     behavior: "smooth"
                 });
             });

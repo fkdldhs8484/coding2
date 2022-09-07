@@ -67,12 +67,12 @@ document.querySelectorAll(".content__item").forEach((element, index) => {
 </code></pre>
             </div>
             <h4 class="t_tit3">스크롤 이동</h4>
-            <div class="t_box">메뉴에서 클릭하면 이동하는것을 막고, 스크롤을 behavior: "smooth" 를 사용하여 부드럽게 이동하도록 합니다.</div>
+            <div class="t_box">스크롤을 behavior: "smooth" 를 사용하여 부드럽게 이동하도록 합니다.</div>
             <div class="t_code">
-                <pre><code>document.querySelectorAll("#parallax__nav li a").forEach(li => {
+                <pre><code> document.querySelectorAll("#parallax__nav li a").forEach(li => {
     li.addEventListener("click", (e) => {
         e.preventDefault();
-        document.querySelector(li.qetAttribute("href")).scrollIntoView({
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
             behavior: "smooth"
         });
     });
