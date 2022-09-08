@@ -1,0 +1,54 @@
+/* cartType */
+.card__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+}
+
+.card__body {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.card__body .tit {
+  font-size: 24px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tit1 {
+  font-size: 30px;
+  right: 50px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+.tit1 span {
+  font-size: 20px;
+  color: #bbb;
+}
+
+.card__body .decs {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card__body .decs em {
+  font-size: 15px;
+  color: #bbb;
+}
+.card__body img {
+  width: 35px;
+  padding: 0 15px;
+}

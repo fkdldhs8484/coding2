@@ -90,8 +90,9 @@
                         <details>
                             <summary>결과보기</summary>
                             "함수가 실행되었습니다.1"
+                        </details>
                     </div>
-                    </details>
+
                 </div>
                 <!-- //선언적 함수 -->
 
@@ -134,7 +135,7 @@
                             "함수가 실행되었습니다.3"
                         </details>
                     </div>
-                    
+
                 </div>
                 <!-- //매개변수 -->
 
@@ -164,19 +165,19 @@
                     <h3>05.화살표 함수 : 선언적 함수</h3>
                     <p>화살표 함수는 => 을 이용하여 함수를 간결하게 표현할때 사용</p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
     function func(){
     document.write("함수가 실행되었습니다.5<br>")
     }
     func();
     }
     </code></pre>
-    <pre><code class="language-js">func = () => {
+                        <pre><code class="language-js">func = () => {
     document.write("함수가 실행되었습니다.5<br>")
     }
     func();
     </code></pre>
-    <pre><code class="language-js">func = () => document.write("함수가 실행되었습니다.5<br>")       
+                        <pre><code class="language-js">func = () => document.write("함수가 실행되었습니다.5<br>")       
     func();
     </code></pre>
                     </div>
@@ -348,7 +349,7 @@
                     <h3>13. 함수 유형 : 함수와 매개변수를 이용한 형태</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
     function func(num, str1, str2){
         document.write(num + ". " + str1 + "가" + str2 + "되었습니다.<br>");
     }
@@ -373,7 +374,7 @@
                     <h3>14. 함수 유형 : 함수와 변수를 이용한 형태</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
     function func(num, str1, str2) {
         document.write(num + ". " + str1 + "가" + str2 + "되었습니다.<br>");
     }
@@ -410,7 +411,7 @@
                     <h3>15. 함수 유형 : 함수와 배열, 객체를 이용한 형태</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js"> {
+                        <pre><code class="language-js"> {
     function func(num, str1, str2) {
     document.write(num + ". " + str1 + "가" + str2 + "되었습니다.<br>");
     }
@@ -452,7 +453,7 @@
                     <h3>15. 함수 유형 : 함수와 배열, 객체를 이용한 형태</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js"> {
+                        <pre><code class="language-js"> {
     function func(num, str1, str2) {
     document.write(num + ". " + str1 + "가" + str2 + "되었습니다.<br>");
     }
@@ -494,7 +495,7 @@
                     <h3>16. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태 - 재사용 불가</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
     const info = {
         num1: 1,
         name1: "함수",
@@ -538,7 +539,7 @@
                     <h3>17. 함수 유형 : 객체 생성자 함수</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
         function func(num, name, word) {
             this.num = num;
             this.name = name;
@@ -576,7 +577,7 @@
                     <h3>18. 함수 유형 : 프로트타입 함수</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
         function func(num, name, word) {
             this.num = num;
             this.name = name;
@@ -615,7 +616,7 @@
                     <h3>19. 함수 유형 : 객체 리터럴 함수</h3>
                     <p></p>
                     <div class="script">
-    <pre><code class="language-js">{
+                        <pre><code class="language-js">{
         function func(num, name, word) {
             this.num = num;
             this.name = name;
@@ -661,7 +662,7 @@
                     <h3>20. 즉시 실행 함수</h3>
                     <p></p>
                     <div class="script">
-<pre><code class="language-js">(function func (){
+                        <pre><code class="language-js">(function func (){
     document.write("함수가 실행되었습니다.")
 }());
 </code></pre>
@@ -679,7 +680,7 @@
                     <h3>21. 파라미터 함수</h3>
                     <p></p>
                     <div class="script">
-<pre><code class="language-js">function func(str){
+                        <pre><code class="language-js">function func(str){
     document.write(str);
 }
 func("함수가 실행되었습니다.")
@@ -703,7 +704,7 @@ func()
                     <h3>22. 아규먼트 함수</h3>
                     <p></p>
                     <div class="script">
-<pre><code class="language-js">function func (a, b){
+                        <pre><code class="language-js">function func (a, b){
     document.write(arguments[0]);
     document.write(arguments[1]);
 }
@@ -866,7 +867,7 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.");
         //     info.result3();
         // }
 
-        // // 17. 함수 유형 : 객체 생성자 함수 (this !) 
+        // // 17. 함수 유형 : 객체 생성자 함수 (this !)
         // {
         //     function func(num, name, word) {
         //         this.num = num;

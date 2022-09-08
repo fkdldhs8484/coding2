@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트 02</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">패럴랙스 02</h2>
+
+            <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/javascript/effect/parallaxEffect02.html"
+                    frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="http://127.0.0.1:5500/javascript/effect/parallaxEffect02.html">원본 페이지 보기</a>
+            </div>
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/parallaxEffect02.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">Java</h3>
+            <div class="t_box">스크롤바 컴퓨터마다 안되는게 있을수 있으니 3개를 적어줍니다.</div>
+            <div class="t_code">
+                <pre><code>let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+</code></pre>
+            </div>
+            <h4 class="t_tit3"></h4>
+            <div class="t_code">
+                <pre><code> //preventDefault a링크를 차단시켜줌
+document.querySelectorAll("#parallax__dot a").forEach(el => {
+    el.addEventListener("click", e => {
+        e.preventDefault();
+
+        document.querySelector(el.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+
+    })
+});
+
+window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+    document.querySelector("#parallax__info span").innerText = Math.floor(scrollTop);
+
+    document.querySelectorAll(".content__item").forEach((e, i) => {
+        if (scrollTop >= e.offsetTop - 10) {
+            document.querySelectorAll("#parallax__dot li").forEach(li => {
+                li.classList.remove("active");
+            });
+            document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList.add("active");
+        }
+    })
+});
+</code></pre>
+            </div>
+
+            <hr>
+            <h3 class="t_tit2">CSS</h3>
+            <div class="result">
+                <details>
+                    <summary>코드 보기</summary>
+                    <p class="t_desc"></p>
+                    <div class="t_code">
+                        <pre><code class="language-js"> /* .parallax__nav */
+    #parallax__nav {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 20000;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        border-radius: 50px;
+    }
+
+    #parallax__nav li {
+        display: inline;
+        margin: 0 5px;
+    }
+
+    #parallax__nav li a {
+        display: inline-block;
+        height: 30px;
+        padding: 5px 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #parallax__nav li.active a {
+        background: #fff;
+        color: #000;
+        border-radius: 20px;
+        box-sizing: content-box;
+    }
+
+    #parallax__cont {
+        max-width: 1600px;
+        width: 98%;
+        margin: 0 auto;
+        /* background-color: rgba(255, 255, 255, 0.1); */
+    }
+
+    .content__item {
+        width: 1000px;
+        max-width: 70vw;
+        margin: 30vw auto;
+        /* background-color: rgba(255, 255, 255, 0.3); */
+        text-align: left;
+        margin-right: 0;
+        position: relative;
+        padding-top: 7vw;
+    }
+
+    /*  .content__item 의 짝수만 선택 even , 2n = +,* 가능 */
+    .content__item:nth-child(even) {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    /* left 값 초기화 */
+    .content__item:nth-child(even) .content__item__num {
+        left: auto;
+        right: -5vw;
+    }
+
+    .content__item__num {
+        font-size: 35vw;
+        font-family: 'Lato';
+        font-weight: 100;
+        position: absolute;
+        left: -5vw;
+        top: -16vw;
+        opacity: 0.07;
+        z-index: -2;
+    }
+
+    .content__item__title {
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    /* 이미지가 넘쳐서 감춰줌 */
+    .content__item__imgWrap {
+        width: 100%;
+        padding-bottom: 56.25%;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    /* 실제 이미지 크기 */
+    .content__item__img {
+        position: absolute;
+        background: url(../assets/img3/effect_bg01-min.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 110%;
+        height: 110%;
+        left: -5%;
+        top: -5%;
+        filter: saturate(0%);
+        transition: all 1s;
+    }
+
+    .content__item:nth-child(1) .content__item__img {
+        background-image: url(../assets/img3/effect_bg01-min.jpg);
+    }
+
+    .content__item:nth-child(2) .content__item__img {
+        background-image: url(../assets/img3/effect_bg02-min.jpg);
+    }
+
+    .content__item:nth-child(3) .content__item__img {
+        background-image: url(../assets/img3/effect_bg03-min.jpg);
+    }
+
+    .content__item:nth-child(4) .content__item__img {
+        background-image: url(../assets/img3/effect_bg04-min.jpg);
+    }
+
+    .content__item:nth-child(5) .content__item__img {
+        background-image: url(../assets/img3/effect_bg05-min.jpg);
+    }
+
+    .content__item:nth-child(6) .content__item__img {
+        background-image: url(../assets/img3/effect_bg06-min.jpg);
+    }
+
+    .content__item:nth-child(7) .content__item__img {
+        background-image: url(../assets/img3/effect_bg07-min.jpg);
+    }
+
+    .content__item:nth-child(8) .content__item__img {
+        background-image: url(../assets/img3/effect_bg08-min.jpg);
+    }
+
+    .content__item__desc {
+        font-size: 4vw;
+        line-height: 1.4;
+        margin-top: -5vw;
+        margin-left: -4vw;
+        word-break: keep-all;
+    }
+
+    .content__item:nth-child(even) .content__item__desc {
+        margin-left: auto;
+        margin-right: -4vw;
+    }
+
+    #parallax__info {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 2000;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #parallax__info li,
+    .scrollTop {
+        line-height: 1.4;
+    }
+
+    @media (max-width: 800px) {
+        #parallax__cont {
+            margin-top: 70vw;
+        }
+
+        #parallax__nav {
+            padding: 10px;
+            right: auto;
+            left: 10px;
+            top: 10px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #parallax__nav li {
+            display: block;
+            margin: 5px;
+        }
+
+        #parallax__nav li a {
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 5px;
+            height: auto;
+            line-height: 1;
+        }
+
+        #parallax__nav li.active a {
+            border-radius: 5px;
+        }
+
+        #parallax__info {
+            left: 10px;
+            bottom: 10px;
+        }
+    }
+
+    #parallax__dot {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 20px 10px;
+        border-radius: 30px;
+    }
+
+    #parallax__dot li {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 12px 8px;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+        transition: box-shadow .2s ease;
+    }
+
+    #parallax__dot li a {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        transition: transform .2s ease;
+    }
+
+    #parallax__dot li.active {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+    }
+
+    #parallax__dot li.active a {
+        transform: scale(0.4);
+    }
+
+    #parallax__dot li span {
+        display: none;
+    }
+</code></pre>
+                    </div>
+                </details>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML</h3>
+            <div class="result">
+                <details>
+                    <summary>코드 보기</summary>
+                    <p class="t_desc"></p>
+                    <div class="t_code">
+                        <pre><code class="language-js">&ltbody class="img01"&gt
+&ltheader id="header"&gt
+    &lth1&gtJavascript parallax Effect01&lt/h1&gt
+    &ltp&gt패럴랙스 이펙트 - 메뉴 이동&lt/p&gt
+    &ltul&gt
+        &ltli class="active"&gt&lta href="parallaxEffect01.html"&gt1&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="parallaxEffect02.html"&gt2&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="parallaxEffect03.html"&gt3&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="parallaxEffect04.html"&gt4&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="parallaxEffect05.html"&gt5&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="parallaxEffect06.html"&gt6&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="parallaxEffect07.html"&gt7&lt/a&gt&lt/li&gt
+    &lt/ul&gt
+&lt/header&gt
+&lt!-- //header --&gt
+
+&ltnav id="parallax__nav"&gt
+    &ltul&gt
+        &ltli class="active"&gt&lta href="#section1"&gt메뉴1&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section2"&gt메뉴2&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section3"&gt메뉴3&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section4"&gt메뉴4&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section5"&gt메뉴5&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section6"&gt메뉴6&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section7"&gt메뉴7&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section8"&gt메뉴8&lt/a&gt&lt/li&gt
+        &ltli&gt&lta href="#section9"&gt메뉴9&lt/a&gt&lt/li&gt
+    &lt/ul&gt
+&lt/nav&gt
+&lt!-- parallax__nav --&gt
+
+&ltmain id="parallax__cont"&gt
+    &ltdiv id="contents"&gt
+        &ltsection id="section1" class="content__item"&gt
+            &ltspan class="content__item__num"&gt01&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt직업에서 행복을 찾아라. 아니면 행복이 무엇인지 절대 모를 것이다 .&lt/p&gt
+        &lt/section&gt
+        &lt!-- section --&gt
+
+
+        &ltsection id="section2" class="content__item"&gt
+            &ltspan class="content__item__num"&gt02&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt행복한 삶을 살기위해 필요한 것은 거의 없다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section2 --&gt
+
+
+        &ltsection id="section3" class="content__item"&gt
+            &ltspan class="content__item__num"&gt03&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt한번의 실패와 영원한 실패를 혼동하지 마라.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section3 --&gt
+
+
+        &ltsection id="section4" class="content__item"&gt
+            &ltspan class="content__item__num"&gt04&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt1퍼센트의 가능성, 그것이 나의 길이다. &lt/p&gt
+        &lt/section&gt
+        &lt!-- section4 --&gt
+
+        &ltsection id="section5" class="content__item"&gt
+            &ltspan class="content__item__num"&gt05&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section5 --&gt
+
+
+        &ltsection id="section6" class="content__item"&gt
+            &ltspan class="content__item__num"&gt06&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt오늘은 당신의 남은 인생 중, 첫 번째 날이다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section6 --&gt
+
+
+        &ltsection id="section7" class="content__item"&gt
+            &ltspan class="content__item__num"&gt07&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt나 자신에 대한 자신감을 잃으면 온 세상이 나의 적이 된다.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section7 --&gt
+
+
+        &ltsection id="section8" class="content__item"&gt
+            &ltspan class="content__item__num"&gt08&lt/span&gt
+            &lth2 class="content__item__title"&gtsection1&lt/h2&gt
+            &ltfigure class="content__item__imgWrap"&gt
+                &ltdiv class="content__item__img"&gt&lt/div&gt
+            &lt/figure&gt
+            &ltp class="content__item__desc"&gt고개 숙이지 마십시오. 세상을 똑바로 정면으로 바라보십시오.&lt/p&gt
+        &lt/section&gt
+        &lt!-- section8 --&gt
+    &lt/div&gt
+
+&lt/main&gt
+&lt!-- //main --&gt
+
+&ltaside id="parallax__info"&gt
+    &ltdiv class="scroll"&gtscrollTop : &ltspan&gt0&lt/span&gtpx&lt/div&gt
+    &ltdiv class="infoTop"&gt
+        &ltul&gt
+            &ltli&gt#section1 offset() : &ltspan class="offset1"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section2 offset() : &ltspan class="offset2"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section3 offset() : &ltspan class="offset3"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section4 offset() : &ltspan class="offset4"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section5 offset() : &ltspan class="offset5"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section6 offset() : &ltspan class="offset6"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section7 offset() : &ltspan class="offset7"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section8 offset() : &ltspan class="offset8"&gt0&lt/span&gtpx&lt/li&gt
+            &ltli&gt#section9 offset() : &ltspan class="offset9"&gt0&lt/span&gtpx&lt/li&gt
+        &lt/ul&gt
+    &lt/div&gt
+&lt/aside&gt
+&lt!-- parallax__info --&gt
+</code></pre>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

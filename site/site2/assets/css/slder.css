@@ -1,0 +1,14 @@
+.slider__inner {
+  margin-top: 70px;
+}
+.slider {
+  position: relative;
+}
+.silder__img {
+  width: 1000px;
+  height: 370px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #fff;
+  background: url(/site/site2/img/Untitled-2.jpg) no-repeat center / cover;
+}
