@@ -14,154 +14,222 @@
     <meta name="robots" content="all">
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/common.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- css(섹션별) -->
-    <link rel="stylesheet" href="/site/site2/assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/slder.css">
-    <link rel="stylesheet" href="assets/css/img.css">
-    <link rel="stylesheet" href="assets/css/card.css">
+
 
 </head>
 
 <body>
-    <div id="skip">
-        <a href="#">헤더 영역 바로가기</a>
-        <a href="#">슬라이드 영역 바로가기</a>
-        <a href="#">이미지 영역 바로가기</a>
-        <a href="#">이미지/텍스트 영역 바로가기</a>
-        <a href="#">카드 영역 바로가기</a>
-        <a href="#">배너 영역 바로가기</a>
-        <a href="#">텍스트 영역 바로가기</a>
-        <a href="#">푸터 영역 바로가기</a>
-    </div>
-    <!-- skip -->
 
-    <header id="headerType" class="header__wrap score">
-        <div class="header__inner">
-            <div class="header__logo">
-                <img src="/site/site2/img/Untitled-1.jpg" alt="#">
-            </div>
-            <div class="header__menu">
-                <ul>
-                    <li><a href="#">COOKIT소개</a></li>
-                    <li><a href="#">COOKIT메뉴</a></li>
-                    <li><a href="#">리뷰</a></li>
-                    <li><a href="#">이벤트</a></li>
-                    <li><a href="#">MY쿠킷</a></li>
+    <div id="warp">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="img/Untitled-1.jpg" alt="coOkit"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">Cookit 소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cookit 메뉴</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">My쿠킷</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </div>
-        </div>
-    </header>
-    <!-- header -->
+            </nav>
+        </header>
 
-    <main id="mainType">
-        <section id="sliderType" class="slder__wrap  ">
-            <h2>슬라이드 영역</h2>
-            <div class="slider__inner container">
-                <div class="slider">
-                    <div class="silder__img">
-                    </div>
+        <!-- header -->
+        <section id="banner">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>이미지1</h2>
+                    <img src="img/Untitled-2.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트1">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img src="img/Untitled-2.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트2">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img src="img/Untitled-2.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트3">
                 </div>
             </div>
         </section>
-        <!--sliderType-->
 
-        <section id="imageType" class="image__wrap section">
-            <div class="image__inner container">
-                <article class="image">
-                    <h3 class="image__tit">우리집도 COOKIT배송이 되나요?</h3>
-                    <p class="image__desc">배송이 가능한지 알려드려요.</p>
-
-                    <a class="image__btn" href="#" title="#">배송지
-                        검색</a>
-                    <figcaption>
-                        <img src="img/Untitled-3.jpg" alt="#">
-                    </figcaption>
-                </article>
-                <article class="image">
-                    <h3 class="image__tit">7월 30일(화)에 받을 수 있어요</h3>
-                    <p class="image__desc">오전 7시까지 주문하시면 다음날 배송됩니다.</p>
-
-                    <a class="image__btn yellow" href="/" title="#">66:28:32</a>
-                    <figcaption>
-                        <img src="img/Untitled-4.jpg" alt="#">
-                    </figcaption>
-                </article>
+        <!-- banner -->
+        <section id="content1" class="clearfix">
+            <article class="left">
+                <h2 class="title">우리집도 배달되나?</h2>
+                <p class="desc">너네집은 배달 안된다.</p>
+                <a class="btn" href="#">배송지 검색</a>
+            </article>
+            <article class="right">
+                <h2 class="title">우리집도 배달되나?</h2>
+                <p class="desc">너네집은 배달 안된다.</p>
+                <a class="btn" href="#">62:23:10 <em>남은시간</em></a>
+            </article>
         </section>
-        <!--imageType-->
+        <!-- content1 -->
 
-        <section id="cardType" class="card__wrap  ">
-            <h2 class="tit1">실시간 베스트 |<span>생생한 리뷰</span></h2>
-            <div class="card__inner container">
-                <article class="card img1">
-                    <figure class="card__header ">
-                        <img src="img/Untitled-5.jpg" alt="웹표준 사이트 만들기">
-                    </figure>
-                    <div class="card__body">
-                        <h3 class="tit">평양식 어북쟁반</h3>
-                        <p class="decs">33,800원<span><em>/3인분</em></span>
-                        </p>
-                        <figcaption>
-                            <figure><img src="img/Untitled-11.jpg" alt="#"></figure>
-                        </figcaption>
-                    </div>
-                </article>
-                <article class="card img1">
-                    <figure class="card__header ">
-                        <img src="img/Untitled-6.jpg" alt="웹표준 사이트 만들기">
-                    </figure>
-                    <div class="card__body">
-                        <h3 class="tit">새우쭈꾸미삼겹살</h3>
-                        <p class="decs">33,800원<span><em>/3인분</em></span>
-                        </p>
-                        <figcaption>
-                            <figure><img src="img/Untitled-11.jpg" alt="#"></figure>
-                        </figcaption>
-                    </div>
-                </article>
-                <article class="card img1">
-                    <figure class="card__header ">
-                        <img src="img/Untitled-7.jpg" alt="웹표준 사이트 만들기">
-                    </figure>
-                    <div class="card__body">
-                        <h3 class="tit">방풍나물 아귀찜</h3>
-                        <p class="decs">33,800원<span><em>/3인분</em></span>
-                        </p>
-                        <figcaption>
-                            <figure><img src="img/Untitled-11.jpg" alt="#"></figure>
-                        </figcaption>
-                    </div>
-                </article>
+        <section id="content2">
+            <h2>실시간 베스트</h2>
+            <div class="best clearfix">
+                <figure>
+                    <img src="/site/site2/img/Untitled-5.jpg" alt="어복쟁반">
+                    <figcaption>
+                        평양식 어복쟁반
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="/site/site2/img/Untitled-6.jpg" alt="어복쟁반">
+                    <figcaption>
+                        평양식 어복쟁반
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="/site/site2/img/Untitled-7.jpg" alt="어복쟁반">
+                    <figcaption>
+                        평양식 어복쟁반
+                    </figcaption>
+                </figure>
             </div>
         </section>
-        <!--cardType-->
+        <!-- content1 -->
 
-        <section id="bannerType" class="banner__wrap">
+        <!-- mainType -->
 
+        <footer id="footer" class="clearfix"">
+        <h2><img src=" img/Untitled-12.jpg" alt="#">
+            </h2>
+            <div class="foot">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방짐</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자 정보확인</a></li>
+                </ul>
+                <address>
+                    씨제이제일제당주(주) 대표자:신현재<br>
+                    주소 : 서울시 강나무 서초대로 77길 12 사업자 등록번호 : 100-38-30489<br>
+                    통신판매업신고 중구 88903호 개인정보취급방짐
+                </address>
+            </div>
+        </footer>
+        <!-- footerType -->
 
-        </section>
-        <!--bannerType-->
-
-        <section id="imgTextType" class="imgText__wrap section NexonLv1Gothic gray">
-
-
-        </section>
-        <!--textType-->
-    </main>
-    <!-- mainType -->
-
-    <footer id="footerType" class="footer__wrap nexon section gray">
-        <h2 class="blind">푸터 영역</h2>
-        <div class="footer__inner container">
-
+        <!-- layer -->
+        <div class="layer_bg"></div>
+        <div class="layer">
+            <h2>제목</h2>
+            <a href="#" class="close">닫기</a>
         </div>
-        </div>
-    </footer>
-    <!-- footerType -->
+    </div>
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script>
+        //네비게이션
+        $(".nav > ul > li").mouseover(function () {
+            $(this).find(".submenu").stop().slideDown(200);
+        });
+        $(".nav > ul > li").mouseout(function () {
+            $(this).find(".submenu").stop().slideUp(200);
+        });
 
+
+        //currentIndex = 0; 첫번째 이미지 : 0
+        //currentIndex = 1; 두번째 이미지 : -389
+        //currentIndex = 2; 세번째 이미지 : -778
+
+        //이미지 슬라이드(상하)
+        //        var currentIndex = 0; //첫번째 이미지
+        //        
+        //        setInterval(function(){
+        //            if(currentIndex < 2){
+        //                currentIndex++;
+        //            } else {
+        //                currentIndex = 0;
+        //            }
+        //            var slidePosition = currentIndex * (-389)+"px";
+        //            $(".slideList").animate({top: slidePosition},400);
+        //            
+        //        },3000);
+
+        //이미지 슬라이드(좌우)
+        var currentIndex = 0;
+
+        setInterval(function () {
+            if (currentIndex < 2) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            var slidePosition = currentIndex * (-1000) + "px";
+            $(".slideList").animate({ left: slidePosition }, 400);
+        }, 3000);
+
+        //탭메뉴
+        var tabBtn = $(".tab-btn > ul > li");
+        var tabCont = $(".tab-cont > div");
+
+        tabCont.hide().eq(0).show();
+
+        tabBtn.click(function (event) {
+            event.preventDefault();
+            var target = $(this);
+            var index = target.index();
+            //alert(index);
+            tabBtn.removeClass("active");
+            target.addClass("active");
+            tabCont.css("display", "none");
+            tabCont.eq(index).css("display", "block");
+        });
+
+        //레이어 팝업
+        $("#content1 .right").click(function () {
+            $(".layer").slideDown(300);
+            $(".layer_bg").show();
+        });
+        $(".layer .close").click(function () {
+            $(".layer").slideUp(300);
+            $(".layer_bg").hide();
+        });
+
+    </script>
 
 
 

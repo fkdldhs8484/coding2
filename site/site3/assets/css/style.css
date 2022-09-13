@@ -1,0 +1,29 @@
+/* layout */
+* {margin: 0; padding: 0; font-size: 16px;}
+a {
+    color: #333;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.clearfix::before, .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#warp {width: 1000px; margin: 0 auto; background: #ccc; height: 1000px;}
+#header {}
+#banner {}
+#content1 {}
+#content2 {}
+#footer {}
+
+/* header  */
+#header {}
+#header h1 {float: left; padding: 15px 0 10px;}
+#header h1 img {width: 100px;}
+#header .nav {float: right;}
+#header .nav li {float: left; position: relative;}
+#header .nav li a {font-size: 20px; padding: 24px 20px 20px 20px; display: block; font-weight: bold;}
+#header .nav li ul.submenu {position: absolute; left: 0; top: 40px;}

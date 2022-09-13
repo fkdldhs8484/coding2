@@ -1,0 +1,44 @@
+.slider__inner {
+    margin-top: 40px;
+}
+.slider {
+position: relative;
+}
+.silder__img  {
+background: url(/site/site3/img/SLIDER_TYPE01.jpg) no-repeat center / cover;
+}
+.silder__img .desc {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 200px;
+  }
+.silder__img .desc h3 {
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.silder__img .desc p {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+.silder__img .desc .btn {
+    font-size: 25px;
+    padding: 20px 10px;
+   
+}
+.silder__img .desc .btn a {
+    color: #fff;
+}
+.silder__img .desc .btn a span {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #9326C6;
+    border-radius: 30px;
+}
+

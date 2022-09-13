@@ -1,0 +1,41 @@
+.text__wrap {
+    
+}
+.title {
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+.text__inner {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+}
+.text {
+   width: 340px;
+   height: 415px;
+   background-color: #eee;
+   
+}
+.text__header {
+}
+.text__body {
+    padding: 10px 20px;
+}
+.text__body .tit {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.text__body .decs {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 100;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #444;
+}
