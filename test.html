@@ -1,9 +1,15 @@
-&lt;button type="button" class="btn btn-warning start2"&gt;Start&lt;/button&gt;
-&lt;div class="timing bg2"&gt;
-&lt;div class="timing6"&gt;&lt;span&gt;step-start&lt;/span&gt;&lt;/div&gt;
-&lt;div class="timing7"&gt;&lt;span&gt;step-end&lt;/span&gt;&lt;/div&gt;
-&lt;div class="timing8"&gt;&lt;span&gt;steps(4, start)&lt;/span&gt;&lt;/div&gt;
-&lt;div class="timing9"&gt;&lt;span&gt;steps(4, end)&lt;/span&gt;&lt;/div&gt;
-&lt;div class="timing10"&gt;&lt;span&gt;steps(10, start)&lt;/span&gt;&lt;/div&gt;
-&lt;div class="timing11"&gt;&lt;span&gt;steps(10, start)&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;
+&lt;script&gt;
+var swiper = new Swiper(".mySwiper", {
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev",
+},
+autoplay: {
+delay: 2000,
+},
+pagination: {
+el: ".swiper-pagination",
+type: 'bullets',
+},
+});
+&lt;/script&gt;

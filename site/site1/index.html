@@ -28,6 +28,15 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/slder.css">
 
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+
+    <style>
+        #headerType {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -66,9 +75,9 @@
 
     <main id="mainType">
         <section id="sliderType" class="slder__wrap">
-            <h2>슬라이드 영역</h2>
+            <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <!-- <div class="slider">
                     <div class="silder__img">
                         <div class="desc">
                             <span>DEVELOPER</span>
@@ -92,12 +101,56 @@
                         <a href="#" class="play"><span class="ir">플레이</span></a>
                         <a href="#" class="stop"><span class="ir">정지</span></a>
                     </div>
+                </div> -->
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>DEVELOPER</span>
+                                <h3>NEW PROJECT</h3>
+                                <p>너무 무리하지 말아요! 이미 당신은 잘하고 있고!<br>
+                                    앞으로도 잘 할 수 있어요! </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>DEVELOPER</span>
+                                <h3>NEW PROJECT</h3>
+                                <p>너무 무리하지 말아요! 이미 당신은 잘하고 있고!<br>
+                                    앞으로도 잘 할 수 있어요! </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>DEVELOPER</span>
+                                <h3>NEW PROJECT</h3>
+                                <p>너무 무리하지 말아요! 이미 당신은 잘하고 있고!<br>
+                                    앞으로도 잘 할 수 있어요! </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
         <!--sliderType-->
 
-        <section id="imageType" class="image__wrap section NexonLv1Gothic">
+        <section id="imageType" class="image__wrap section NexonLv1Gothic gray">
             <h2>레서판다</h2>
             <p>레서판다의 귀여움을 알아보자.</p>
             <div class="image__inner container">
@@ -116,7 +169,7 @@
         <!--imageType-->
 
         <section id="textType" class="text__wrap Nexon section">
-            <span>텍스트 유형 01</span>
+            <span class="blind">텍스트 유형 01</span>
             <h2 class="mb70">스크립트를 익히는 방법</h2>
             <div class="text__inner container">
                 <div class="text t1">
@@ -243,8 +296,8 @@
         </section>
         <!--bannerType-->
 
-        <section id="imgTextType" class="imgText__wrap section NexonLv1Gothic gray">
-            <h2 class="blind">유용한 사이트 살펴보기</h2>
+        <section id="imgTextType" class="imgText__wrap section NexonLv1Gothic">
+            <h2 class="blind">이미지 텍스트 유형 01</h2>
             <div class="imgText__inner container">
                 <div class="imgText__txt">
                     <span>이미지 텍스트 유형 01</span>
@@ -336,7 +389,23 @@
     <!-- footerType -->
 
 
-
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: 'bullets',
+            },
+        });
+    </script>
 
 </body>
 

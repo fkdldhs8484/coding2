@@ -21,3 +21,16 @@
   padding-top: 40px;
   color: #666;
 }
+
+@media (max-width: 960px) {
+  .footer__menu {
+    display: none;
+  }
+  .footer__right {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .footer__wrap {
+    padding: 40px 0;
+  }
+}
