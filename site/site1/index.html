@@ -31,12 +31,6 @@
     <!-- css -->
     <link rel="stylesheet" href="assets/css/swiper.css" />
 
-    <style>
-        #headerType {
-            display: none;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -59,15 +53,20 @@
             </div>
             <div class="header__menu">
                 <ul>
-                    <li><a href="#">헤더 영역</a></li>
-                    <li><a href="#">슬라이드 영역</a></li>
-                    <li><a href="#">배너 영역</a></li>
-                    <li><a href="#">컨텐츠 영역</a></li>
-                    <li><a href="#">푸터 영역</a></li>
+                    <li><a href="#headerType">헤더 영역</a></li>
+                    <li><a href="#sliderType">슬라이드 영역</a></li>
+                    <li><a href="#bannerType">배너 영역</a></li>
+                    <li><a href="#textType">텍스트 영역</a></li>
+                    <li><a href="#footerType">푸터 영역</a></li>
                 </ul>
             </div>
             <div class="header__member">
                 <a href="#">로그인</a>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -143,14 +142,20 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+
                 </div>
             </div>
         </section>
         <!--sliderType-->
 
         <section id="imageType" class="image__wrap section NexonLv1Gothic gray">
+            <span class="blind">이미지 유형01</span>
             <h2>레서판다</h2>
             <p>레서판다의 귀여움을 알아보자.</p>
             <div class="image__inner container">
@@ -207,6 +212,7 @@
         <!--imgTextType-->
 
         <section id="cardType" class="card__wrap NexonLv1Gothic section">
+            <span class="blind">카드 유형 01</span>
             <h2>말티즈 강의</h2>
             <p>우리집 말티즈의 귀여움을 알아보자.</p>
             <div class="card__inner container">
@@ -398,12 +404,68 @@
                 prevEl: ".swiper-button-prev",
             },
             autoplay: {
-                delay: 2000,
+                delay: 5000,
+                disableOnInteraction: false,
             },
             pagination: {
                 el: ".swiper-pagination",
                 type: 'bullets',
+                clickable: true,
             },
+        });
+
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+        const btnHam = document.querySelector(".header__ham");
+        const btnMenu = document.querySelector(".header__menu");
+        const btnMenuList = btnMenu.querySelectorAll("ul li a");
+
+
+
+        btnStart.style.display = "none";
+
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+
+        btnMenuList.forEach((list) => {
+            list.addEventListener("click", () => {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
+            });
+        });
+
+        btnHam.addEventListener("click", () => {
+            btnHam.classList.toggle("active");
+            btnMenu.classList.toggle("active");
+            document.body.classList.toggle("fixed");
+        });
+
+        window.addEventListener("resize", () => {
+            let width = window.innerWidth;
+            if (width > 1300) {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
+            }
+        });
+
+        //스크롤 이동
+        document.querySelectorAll("a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
         });
     </script>
 

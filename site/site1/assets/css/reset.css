@@ -58,6 +58,12 @@ textarea {
     "맑은 고딕", dotum, 돋움;
 }
 
+/* 가로모드 초기화 */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 /* 링크 초기화 */
 a {
   text-decoration: none;

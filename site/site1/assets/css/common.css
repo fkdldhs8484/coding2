@@ -95,6 +95,16 @@
   background-color: #f5f5f5;
 }
 
+/* fixed */
+body {
+  overflow: overlay;
+}
+body.fixed {
+  height: 100vh;
+  /* overflow: scroll; */
+  overflow: hidden;
+}
+
 /* 간격 셋팅 */
 .mb9 {
   margin-bottom: 0 !important;
