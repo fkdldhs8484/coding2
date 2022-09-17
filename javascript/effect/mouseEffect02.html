@@ -92,6 +92,22 @@
             transform: scale(5);
             background: rgba(255, 166, 0, 0.6);
         }
+
+        .mouse__cursor.active2 {
+        transform: scale(0);
+       }
+       .mouse__cursor2.active2 {
+        transform: scale(3);
+        background: rgba(255, 166, 0, 0.6);
+       }
+
+       .mouse__cursor.active3 {
+        transform: scale(0);
+       }
+       .mouse__cursor2.active3 {
+        transform: scale(3);
+        background: rgba(255, 166, 0, 0.6);
+       }
     </style>
 </head>
 
@@ -253,6 +269,8 @@
         const cursor = document.querySelector(".mouse__cursor");
         const cursor2 = document.querySelector(".mouse__cursor2");
         const span = document.querySelectorAll(".mouse__wrap span");
+        const menu = document.querySelectorAll("#header")
+        const modal = document.querySelectorAll(".modal__btn")
 
 
         window.addEventListener("mousemove", e => {
@@ -279,6 +297,32 @@
                     cursor.classList.remove("active");
                     cursor2.classList.remove("active");
                 });
+            });
+
+             //header 오버
+             menu.forEach(menu => {
+                menu.addEventListener("mouseenter", () => {
+                    cursor.classList.add("active2");
+                    cursor2.classList.add("active2");
+                });
+                menu.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("active2");
+                    cursor2.classList.remove("active2");
+                });
+                
+            });
+
+            //소스보기 오버
+            modal.forEach(modal => {
+                modal.addEventListener("mouseenter", () => {
+                    cursor.classList.add("active3");
+                    cursor2.classList.add("active3");
+                });
+                modal.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("active3");
+                    cursor2.classList.remove("active3");
+                });
+                
             });
         });
     </script>

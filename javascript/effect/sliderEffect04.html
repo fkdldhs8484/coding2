@@ -404,8 +404,11 @@ setInterval(sliderEffect, 2000);
 
         //왼쪽 버튼 클릭
         sliderBtnPrev.addEventListener("click", () => {
-            let nextIndex = (currentIndex + 1) % sliderCount
-            gotoSlider(1);
+            let prevIndex = (currentIndex -1) % sliderCount;
+            if (prevIndex == -1){
+                prevIndex = sliderCount-1;
+            }
+            gotoSlider(prevIndex);
             // 현재값에서 -1 해줌
         });
         // 오른쪽 버튼 클릭
