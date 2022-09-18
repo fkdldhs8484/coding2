@@ -42,3 +42,41 @@ background: url(/site/site3/img/SLIDER_TYPE01.jpg) no-repeat center / cover;
     border-radius: 30px;
 }
 
+/* swiper-slide */
+.swiper-slide {
+    background: url(/site/site3/img/SLIDER_TYPE01.jpg) no-repeat center / cover;
+  }
+  .swiper-slide .desc {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    box-sizing: border-box;
+  }
+/* media */
+@media (max-width: 960px) {
+    .swiper-slide .desc {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+    .swiper-slide .desc h3 {
+      font-size: 70px;
+      color: #fff;
+    }
+  }
+  @media (max-width: 600px) {
+    .swiper-slide .desc {
+      padding: 80px 0;
+    }
+    .swiper-slide .desc h3 {
+      font-size: 40px;
+    }
+    .swiper-slide .desc p {
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+    .swiper-slide .desc .btn a {
+      padding: 10px 25px;
+    }
+  }
+
