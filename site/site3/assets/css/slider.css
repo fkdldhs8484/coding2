@@ -53,7 +53,7 @@ background: url(/site/site3/img/SLIDER_TYPE01.jpg) no-repeat center / cover;
     box-sizing: border-box;
   }
 /* media */
-@media (max-width: 960px) {
+  @media (max-width: 960px) {
     .swiper-slide .desc {
       width: 100%;
       text-align: center;
