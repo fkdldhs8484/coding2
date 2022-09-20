@@ -8,6 +8,35 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
+
+    <style>
+        #parallax__top {
+            position: fixed;
+            left: 50%;
+            bottom: -220px;
+            z-index: 10000;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(123, 80, 134, 0.4);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #parallax__top.show {
+            bottom: 20px;
+        }
+
+        #parallax__top:hover {
+            background: #977d9e;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -41,6 +70,11 @@
         </nav>
     </header>
     <!-- //header -->
+
+    <div id="parallax__top">
+        top
+    </div>
+    <!-- parallax__top -->
 
     <main id="main">
         <div class="container">
@@ -579,6 +613,148 @@
                         </details>
                 </div>
                 <!-- //sample18-->
+                <div id="sample19" class="sample">
+                    <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                    <p>안에 데이터가 있는지 없는지 true,false 알려줌</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+
+const spread = { ...obj }
+document.write(spread.a);
+document.write(spread.b);
+document.write(spread.c);
+
+}
+    </code></pre>
+                    </div>
+
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            100200javascript
+                            </div>
+                        </details>
+                </div>
+                <!-- //sample19-->
+                <div id="sample20" class="sample">
+                    <h3>20. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
+                    <p>안에 데이터가 있는지 없는지 true,false 알려줌</p>
+                    <div class="script">
+<pre><code class="language-js"> {
+    const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+    }
+    const spread = { ...obj, d: "jquery"}
+
+    document.write(spread.a);
+    document.write(spread.b);
+    document.write(spread.c);
+    document.write(spread.d);
+}
+    </code></pre>
+                    </div>
+
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            100200javascriptjquery
+                            </div>
+                        </details>
+                </div>
+                <!-- //sample20-->
+                <div id="sample21" class="sample">
+                    <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
+                    <p>안에 데이터가 있는지 없는지 true,false 알려줌</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const objA = {
+        a: 100,
+        b: 200
+    }
+    const objB = {
+        c : "javascript",
+        b : "jquery"
+    }
+    const spread = { ...objA, ...objB }
+
+    document.write(spread.a);
+    document.write(spread.b);
+    document.write(spread.c);
+    document.write(spread.d);
+}
+    </code></pre>
+                    </div>
+
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            100jqueryjavascriptundefined
+                            </div>
+                        </details>
+                </div>
+                <!-- //sample21-->
+                <div id="sample22" class="sample">
+                    <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
+                    <p>안에 데이터가 있는지 없는지 true,false 알려줌</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const { a, b, c } = obj;
+
+    document.write(a);
+    document.write(b);
+    document.write(c);
+}
+    </code></pre>
+                    </div>
+
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            100200javascript
+                            </div>
+                        </details>
+                </div>
+                <!-- //sample23-->
+                <div id="sample22" class="sample">
+                    <h3>23. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
+                    <p>안에 데이터가 있는지 없는지 true,false 알려줌</p>
+                    <div class="script">
+<pre><code class="language-js">//이름만 변경
+{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const { a:name1, b:name2, c:name3} = obj;
+
+    document.write(name1);
+    document.write(name2);
+    document.write(name3);
+}
+    </code></pre>
+                    </div>
+
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            100200javascript
+                            </div>
+                        </details>
+                </div>
+                <!-- //sample23-->
             </div>
         </div>
     </main>
@@ -590,9 +766,31 @@
     <!-- //footer -->
 
     <script src="assets/js/highlight.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <script>
         hljs.highlightAll();
     </script>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            //  top 버튼 (문서 전체 높이 - 브라우저 높이)
+            let body = document.body.offsetHeight;
+            if (body - 1000 <= scrollTop) {
+                document.querySelector("#parallax__top").classList.add("show");
+            } else {
+                document.querySelector("#parallax__top").classList.remove("show");
+            }
+        });
+
+        //top버튼
+        document.querySelector("#parallax__top").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        })
+    </script>
+    <!-- top버튼 -->
+
     <script>
         
         //01 변수 데이터 저장
@@ -822,137 +1020,214 @@
             // document.write(i);       ar출력
             // document.write(array);
             // });
-        </script>
-        <script>
-            // 
-            // const arr = [1,2,3,4,5,6,7,8,9];
-            // for문을 이용해서 하나씩 출력
-            {
-                const arr = [1,2,3,4,5,6,7,8,9];
+    </script>
+    <script>
+        // 
+        // const arr = [1,2,3,4,5,6,7,8,9];
+        // for문을 이용해서 하나씩 출력
+        // {
+        //     const arr = [1,2,3,4,5,6,7,8,9];
 
-                for(let i=0; i>arr.length; i++){
-                    document.write(arr[i]);
-                }
-            }
-            
-            //foreach 이용해서 하나씩 출력하시오.
-            {
-                const arr = [1,2,3,4,5,6,7,8,9];
+        //     for(let i=0; i>arr.length; i++){
+        //         document.write(arr[i]);
+        //     }
+        // }
+        
+        //foreach 이용해서 하나씩 출력하시오.
+        // {
+        //     const arr = [1,2,3,4,5,6,7,8,9];
 
-                num.forEach(function(el){
-                    document.write(el)
-                });
-                document.write();
-            }
-            // map()이용해서 하나씩 출력하시오.
-            // for in 이용해서 하나씩 출력하시오.
-            // for of 이용해서 하나씩 출력하시오.
-            //11번
-        </script>
-        <script>
-            //11번 펼침연산자(spread operator)  document.write(...mun); 알고리즘 할때 많이 사용한다.
-            // {
-            //     const num = [100, 200, 300, 400, 500];
+        //     num.forEach(function(el){
+        //         document.write(el)
+        //     });
+        //     document.write();
+        // }
+        // map()이용해서 하나씩 출력하시오.
+        // for in 이용해서 하나씩 출력하시오.
+        // for of 이용해서 하나씩 출력하시오.
+        //11번
+    </script>
+    <script>
+        //11번 펼침연산자(spread operator)  document.write(...mun); 알고리즘 할때 많이 사용한다.
+        // {
+        //     const num = [100, 200, 300, 400, 500];
 
-            //     document.write(num,"<br>")
-            //     document.write(num[0],num[1],num[2],num[3],num[4],"<br>");
-            //     document.write(...num);
+        //     document.write(num,"<br>")
+        //     document.write(num[0],num[1],num[2],num[3],num[4],"<br>");
+        //     document.write(...num);
 
-            // }
-            // document.write("<br>");
+        // }
+        // document.write("<br>");
 
-            //12 배열구조할당(Destructruing assignment) 많이 사용
-            // {
-            //     let a, b, c;
+        //12 배열구조할당(Destructruing assignment) 많이 사용
+        // {
+        //     let a, b, c;
 
-            //     [a,b,c] = [100, 200, "javascript"];
+        //     [a,b,c] = [100, 200, "javascript"];
 
-            //     document.write(a);
-            //     document.write(b);
-            //     document.write(c);
-            // }
-            // document.write("<br>");
-            //13 객체 : 데이터 불러오기 : 기본
-            // {
-            //     const obj = {
-            //         a : 100,
-            //         b : 200,
-            //         c : "javascript"
-            //     }
-            //     document.write(obj.a);
-            //     document.write(obj.b);
-            //     document.write(obj.c);
-            // }
-            // document.write("<br>");
-            //14 객체 
-            // {
-            //     const obj = {
-            //         a : 100,
-            //         b : 200,
-            //         c : "javascript"
-            //     }
+        //     document.write(a);
+        //     document.write(b);
+        //     document.write(c);
+        // }
+        // document.write("<br>");
+        //13 객체 : 데이터 불러오기 : 기본
+        // {
+        //     const obj = {
+        //         a : 100,
+        //         b : 200,
+        //         c : "javascript"
+        //     }
+        //     document.write(obj.a);
+        //     document.write(obj.b);
+        //     document.write(obj.c);
+        // }
+        // document.write("<br>");
+        //14 객체 
+        // {
+        //     const obj = {
+        //         a : 100,
+        //         b : 200,
+        //         c : "javascript"
+        //     }
 
-            //     // document.write(Object.keys(obj));
-            //     // document.write(Object.values(obj));
-            //     document.write(Object.entries(obj)); //두개다 불러옴
-            // }
-            // document.write("<br>");
-            //15 객체 : 데이터 불러오기 : 변수
-            // {
-            //     const obj = {
-            //         a : 100,
-            //         b : 200,
-            //         c : "javascript"
-            //     }
-            //     const name1 = obj.a;
-            //     const name2 = obj.b;
-            //     const name3 = obj.c;
+        //     // document.write(Object.keys(obj));
+        //     // document.write(Object.values(obj));
+        //     document.write(Object.entries(obj)); //두개다 불러옴
+        // }
+        // document.write("<br>");
+        //15 객체 : 데이터 불러오기 : 변수
+        // {
+        //     const obj = {
+        //         a : 100,
+        //         b : 200,
+        //         c : "javascript"
+        //     }
+        //     const name1 = obj.a;
+        //     const name2 = obj.b;
+        //     const name3 = obj.c;
 
-            //     document.write(name1);
-            //     document.write(name2);
-            //     document.write(name3);
-            // }
-            //16 객체 : 데이터 불러오기 : for in (뷰에서 많이 씀, key 마음대로 정해도 됌)
-            // {
-            //     const obj = {
-            //         a : 100,
-            //         b : 200,
-            //         c : "javascript"
-            //     }
-            //     for( let key in obj){
-            //         document.write(obj[key]);
-            //     }
-            // }
-            // document.write("<br>");
-            //17 객체 : 데이터 불러오기 : map()
-            // {
-            //     const obj = [
-            //         {a:100, b:200, c:"javascript"}
-            //     ];
+        //     document.write(name1);
+        //     document.write(name2);
+        //     document.write(name3);
+        // }
+        //16 객체 : 데이터 불러오기 : for in (뷰에서 많이 씀, key 마음대로 정해도 됌)
+        // {
+        //     const obj = {
+        //         a : 100,
+        //         b : 200,
+        //         c : "javascript"
+        //     }
+        //     for( let key in obj){
+        //         document.write(obj[key]);
+        //     }
+        // }
+        // document.write("<br>");
+        //17 객체 : 데이터 불러오기 : map()
+        // {
+        //     const obj = [
+        //         {a:100, b:200, c:"javascript"}
+        //     ];
 
-            //     obj.map((el) => {
-            //         document.write(el.a);
-            //         document.write(el.b);
-            //         document.write(el.c);
-            //     });
-            // }
-            // document.write("<br>");
-            //18 객체 : 데이터 불러오기 : hasOwnProperty()  안에 데이터가 있는지 없는지 true,false 알려줌
-            // {
-            //     const obj = {
-            //         a : 100,
-            //         b : 200,
-            //         c : "javascript"
-            //     }
-            //     document.write(obj.hasOwnProperty("a"));
-            //     document.write(obj.hasOwnProperty("b"));
-            //     document.write(obj.hasOwnProperty("c"));
-            //     document.write(obj.hasOwnProperty("d"));
-            //     document.write("a" in obj);
-            //     document.write("b" in obj);
-            //     document.write("c" in obj);
-            //     document.write("d" in obj);
-            // }
-        </script>
+        //     obj.map((el) => {
+        //         document.write(el.a);
+        //         document.write(el.b);
+        //         document.write(el.c);
+        //     });
+        // }
+        // document.write("<br>");
+        //18 객체 : 데이터 불러오기 : hasOwnProperty()  안에 데이터가 있는지 없는지 true,false 알려줌
+        // {
+        //     const obj = {
+        //         a : 100,
+        //         b : 200,
+        //         c : "javascript"
+        //     }
+        //     document.write(obj.hasOwnProperty("a"));
+        //     document.write(obj.hasOwnProperty("b"));
+        //     document.write(obj.hasOwnProperty("c"));
+        //     document.write(obj.hasOwnProperty("d"));
+        //     document.write("a" in obj);
+        //     document.write("b" in obj);
+        //     document.write("c" in obj);
+        //     document.write("d" in obj);
+        // }
+    </script>
+    <script>
+    //복사
+    // {
+    //     const obj = {
+    //     a: 100,
+    //     b: 200,
+    //     c: "javascript"
+    // }
+
+    // const spread = { ...obj }
+    // document.write(spread.a);
+    // document.write(spread.b);
+    // document.write(spread.c);
+
+    // }
+    
+    //추가
+    // {
+    //     const obj = {
+    //     a: 100,
+    //     b: 200,
+    //     c: "javascript"
+    //     }
+    //     const spread = { ...obj, d: "jquery"}
+
+    //     document.write(spread.a);
+    //     document.write(spread.b);
+    //     document.write(spread.c);
+    //     document.write(spread.d);
+    // }
+
+    //결합
+    // {
+    //     const objA = {
+    //         a: 100,
+    //         b: 200
+    //     }
+    //     const objB = {
+    //         c : "javascript",
+    //         b : "jquery"
+    //     }
+    //     const spread = { ...objA, ...objB }
+
+    //     document.write(spread.a);
+    //     document.write(spread.b);
+    //     document.write(spread.c);
+    //     document.write(spread.d);
+    // }
+
+    //22
+    // {
+    //     const obj = {
+    //         a: 100,
+    //         b: 200,
+    //         c: "javascript"
+    //     }
+    //     const { a, b, c } = obj;
+
+    //     document.write(a);
+    //     document.write(b);
+    //     document.write(c);
+    // }
+
+    //23 - 이름만 변경
+    // {
+    //     const obj = {
+    //         a: 100,
+    //         b: 200,
+    //         c: "javascript"
+    //     }
+    //     const { a:name1, b:name2, c:name3} = obj;
+
+    //     document.write(name1);
+    //     document.write(name2);
+    //     document.write(name3);
+    // }
+    </script>
 </body>
 </html>

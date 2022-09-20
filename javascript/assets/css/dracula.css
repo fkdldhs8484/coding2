@@ -3,7 +3,7 @@ pre {
 }
 pre code.hljs {
     display: block;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     padding: 20px;
     font-family: 'NexonLv1Gothic';
     line-height: 1.6;

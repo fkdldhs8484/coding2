@@ -9,6 +9,35 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
+
+    <style>
+        #parallax__top {
+            position: fixed;
+            left: 50%;
+            bottom: -220px;
+            z-index: 10000;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(123, 80, 134, 0.4);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #parallax__top.show {
+            bottom: 20px;
+        }
+
+        #parallax__top:hover {
+            background: #977d9e;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,6 +71,11 @@
             </ul>
     </header>
     <!-- //header -->
+
+    <div id="parallax__top">
+        top
+    </div>
+    <!-- parallax__top -->
 
     <main id="main">
         <div class="container">
@@ -383,9 +417,31 @@
     <!-- //footer -->
 
     <script src="assets/js/highlight.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <script>
         hljs.highlightAll();
     </script>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            //  top 버튼 (문서 전체 높이 - 브라우저 높이)
+            let body = document.body.offsetHeight;
+            if (body - 1000 <= scrollTop) {
+                document.querySelector("#parallax__top").classList.add("show");
+            } else {
+                document.querySelector("#parallax__top").classList.remove("show");
+            }
+        });
+
+        //top버튼
+        document.querySelector("#parallax__top").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        })
+    </script>
+    <!-- top버튼 -->
+
     <script>
         //(제어문:조건문,반복문,중지,건너뛰기)
         //01. if문(제어문) //조건문 정리
