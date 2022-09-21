@@ -993,41 +993,43 @@ info2.result();
                     <h3>30. 클래스 상속</h3>
                     <p></p>
                     <div class="script">
-<pre><code class="language-js">class study {
-    constructor(num, name, job){
-        this.num = num;
-        this.name = name;
-        this.job = job;
+<pre><code class="language-js">  {
+    // 재활용 최적화
+    class study {
+        constructor(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+        }
+
+        result(){
+            document.write(this.num + ".내 이름은" + this.name + "이며, 직업은" + this.job + "입니다.");
+        }
+        result2(){
+            document.write(this.num + ".내 이름은" + this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
+        }
     }
 
-    result(){
-        document.write(this.num + ".내 이름은" + this.name + "이며, 직업은" + this.job + "입니다.");
+    class study2 extends study {
+        constructor(num, name, job, age){
+            super(num, name, job);
+            this.age = age;
+        }
     }
-    result2(){
-        document.write(this.num + ".내 이름은" + this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
-    }
+
+    const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+    const info2 = new study2("2", "웹스토리보이", "프론트앤드 개발자","100");
+    
+    info1.result();
+    info2.result();
+    info2.result2();
 }
-
-class study2 extends study {
-    constructor(num, name, job, age){
-        super(num, name, job);
-        this.age = age;
-    }
-}
-
-const info1 = new study("1", "웹쓰", "웹퍼블리셔");
-const info2 = new study("2", "웹스토리보이", "프론트앤드 개발자",100);
-
-info1.result();
-info2.result();
-info2.result2();
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과보기</summary>
-                            1.내 이름은웹쓰이며, 직업은웹퍼블리셔입니다.2.내 이름은웹스토리보이이며, 직업은프론트앤드 개발자입니다.2.내 이름은웹스토리보이이며, 직업은프론트앤드 개발자이며 나이는undefined살 입니다.
-                    </div>
+                            1.내 이름은웹쓰이며, 직업은웹퍼블리셔입니다.<br>2.내 이름은웹스토리보이이며, 직업은프론트앤드 개발자입니다.<br>2.내 이름은웹스토리보이이며, 직업은프론트앤드 개발자이며 나이는100살 입니다.                    </div>
                     </details>
                 </div>
                 <!-- 클래스 상속-->
@@ -1428,7 +1430,7 @@ info2.result2();
     </script>
     <script>
         // {
-        //     // 재활용 최적환
+        //     // 재활용 최적화
         //     class study {
         //         constructor(num, name, job){
         //             this.num = num;
@@ -1452,7 +1454,7 @@ info2.result2();
         //     }
 
         //     const info1 = new study("1", "웹쓰", "웹퍼블리셔");
-        //     const info2 = new study("2", "웹스토리보이", "프론트앤드 개발자",100);
+        //     const info2 = new study2("2", "웹스토리보이", "프론트앤드 개발자","100");
             
         //     info1.result();
         //     info2.result();
