@@ -1,0 +1,18 @@
+.header__inner {
+  width: 20%;
+  /* height: 1000px; */
+  padding: 10px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  display: block;
+  background-color: #ccc;
+}
+.header img {
+  width: 150px;
+}
+.header__mune {
+  margin-top: 70px;
+}
+.header__mune h3 {
+  padding: 10px;
+}

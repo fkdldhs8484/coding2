@@ -1,0 +1,19 @@
+.footer__inner {
+  width: 100%;
+  background-color: #edf2f8;
+  display: flex;
+}
+.footer {
+  display: flex;
+}
+.footer img {
+  width: 70px;
+}
+.footer .title {
+  font-size: 16px;
+  font-weight: 400;
+  justify-content: flex-end;
+}
+.link {
+  
+}
