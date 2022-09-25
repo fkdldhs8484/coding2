@@ -1,0 +1,117 @@
+/* textType03 */
+.text3__wrap {
+    background-color: #e5f6ff;
+}
+
+.text3__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.text3 {
+    width: 30%;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.text3 .desc {
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 20px 10px 40px 10px;
+    line-height: 1.5;
+    height: 195px;
+}
+
+.text3 .desc:nth-child(1) {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 10px;
+}
+
+.text3__body {
+    display: flex;
+}
+
+.text3__body .box {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text3__body .icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 70%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: url(/site/site4/assets/img/card_ikon02.svg) no-repeat;
+}
+
+.text3:nth-child(1) .icon {
+    background-position: -7px;
+}
+.text3:nth-child(2) .icon {
+    background-position: -94px;
+}
+.text3:nth-child(3) .icon {
+    background-position: -183px;
+}
+
+.text3 .text3__body:nth-child(2) {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 20px;
+}
+
+.text3__body .tit {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.text3__body span {
+    font-size: 16px;
+    font-weight: 100;
+    color: #666;
+    padding: 10px;
+}
+
+.text3__body .star {
+    width: 100%;
+    height: 15px;
+    margin: -1px 6px;
+    background: url(/site/site4/assets/img/card_ikon03.png) no-repeat;
+}
+.text3__body .star2:nth-child(2) {
+    width: 100%;
+    height: 15px;
+    margin: -1px 6px;
+    background: url(/site/site4/assets/img/card_ikon04.png) no-repeat;
+}
+
+.text3__footer a {
+    display: block;
+    margin: 0 auto;
+    width: 108px;
+    height: 29px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: lighter;
+    background-color: #2171ea;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+    .text3__inner {
+        width: 96%;
+        flex-direction: column;
+    }
+    .text3__inner .text3 {
+        width: 380px;
+        height: 380px;
+        margin-bottom: 30px;
+        margin: 0 auto 30px auto;
+    }
+}

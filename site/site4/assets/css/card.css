@@ -1,0 +1,87 @@
+/* cardType02 */
+.card_wrap {
+    background-color: #f6f8fd;
+}
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card__inner .card {
+    width: 24%;
+    position: relative;
+}
+/* position: relative; 기준점 */
+.card__inner .card:nth-child(1) {
+    margin-bottom: 50px;
+}
+.card__inner .card img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+/* overflow ~ text-overflow 제목 길어짐 방짐 */
+.card__inner .card .tit {
+    font-size: 28px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+}
+/* overflow ~ -webkit-box-orient 세줄효과 */
+.card__inner .card .desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.card__inner .card .more {
+    width: 25px;
+    height: 25px;
+    background-image: url(/site/site4/assets/img/card_ikon01.svg);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 219px;
+    border-radius: 5px;
+}
+@media (max-width: 1220px) {
+    #cardType > h2 {
+        width: 96%;
+        text-align: center;
+    }
+    #cardType > p {
+        width: 96%;
+        text-align: center;
+    }
+    .card__inner {
+        width: 100%;
+    }
+    .card__inner .card {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    .card__inner .card:last-child {
+        margin-bottom: 0;
+    }
+    .card__inner .card .tit {
+        font-size: 20px;
+    }
+    .card__inner .card .desc {
+        font-size: 16px;
+    }
+    .card__inner .card .more {
+        display: none;
+    }
+}
+
+@media (max-width: 468px) {
+    .card__inner .card {
+        width: 100%;
+    }
+}

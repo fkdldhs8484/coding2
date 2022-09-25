@@ -1,0 +1,92 @@
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image {
+    width: 32%;
+    position: relative;
+    overflow: hidden;
+}
+.image__box {
+}
+
+.image__box img {
+    vertical-align: top;
+    transition: all 0.6s ease-in-out;
+}
+.imge__desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    padding: 23px 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.1);
+    bottom: -100px;
+    transition: all 0.3s ease-in-out;
+}
+.imge__desc h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.img1 .imge__desc {
+    background: rgba(235, 77, 74, 0.5);
+}
+.img2 .imge__desc {
+    background: rgba(255, 208, 89, 0.5);
+}
+.img3 .imge__desc {
+    background: rgba(188, 181, 215, 0.5);
+}
+.img1 .imge__desc h3 {
+    color: #6c0506;
+}
+.img2 .imge__desc h3 {
+    color: #745a00;
+}
+.img3 .imge__desc h3 {
+    color: #d0c8ff;
+}
+
+/* 이미지 올라오게 해줌 */
+.img1:hover .imge__desc {
+    bottom: 0;
+}
+.img2:hover .imge__desc {
+    bottom: 0;
+}
+.img3:hover .imge__desc {
+    bottom: 0;
+}
+.image:hover .image__box img {
+    transform: scale(1.03); /*사진 확대 효과*/
+    transition: all 0.6s ease-in;
+}
+.img1 .imge__desc a {
+    font-size: 16px;
+    color: #6c0506;
+}
+.img2 .imge__desc a {
+    font-size: 16px;
+    color: #745a00;
+}
+.img3 .imge__desc a {
+    font-size: 16px;
+    color: #d0c8ff;
+}
+.imge__desc .more:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .image {
+        width: 80%;
+    }
+}
+
+@media (max-width: 468px) {
+    .image {
+        width: 100%;
+    }
+}

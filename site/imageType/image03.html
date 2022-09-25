@@ -83,8 +83,9 @@
             margin-bottom: 70px;
             text-align: center;
         }
+
         /* imageType03 */
-       .image__inner {
+        .image__inner {
             display: grid;
             grid-template-areas:
                 "box1 box1 box2 box3"
@@ -93,62 +94,75 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-gap: 20px;
-       }
-       .image {
+        }
+
+        .image {
             position: relative;
             overflow: hidden;
-       }
-       .image__inner .image:nth-child(1) {
+        }
+
+        .image__inner .image:nth-child(1) {
             grid-area: box1;
             background: url(img/imgType03_01.jpg);
             background-size: cover;
-       }
-       .image__inner .image:nth-child(2) {
+        }
+
+        .image__inner .image:nth-child(2) {
             grid-area: box2;
-       }
-       .image__inner .image:nth-child(3) {
+        }
+
+        .image__inner .image:nth-child(3) {
             grid-area: box3;
-       }
-       .image__inner .image:nth-child(4) {
+        }
+
+        .image__inner .image:nth-child(4) {
             grid-area: box4;
-       }
-       .image__inner .image:nth-child(5) {
+        }
+
+        .image__inner .image:nth-child(5) {
             grid-area: box5;
-       }
-       .image__Box {}
-       .image__desc {
+        }
+
+        .image__Box {}
+
+        .image__desc {
             position: absolute;
             left: 0;
             bottom: -100%;
             width: 100%;
-            background: rgba(255,255,255, 0.3);
+            background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
             padding: 16px;
             box-sizing: border-box;
             transition: all 0.4s ease;
-       }
-       .image:hover .image__desc {
+        }
+
+        .image:hover .image__desc {
             bottom: 0;
         }
-       .image__desc h3 {
+
+        .image__desc h3 {
             font-size: 20px;
-       }
-       .image__desc p {
+        }
+
+        .image__desc p {
             font-size: 16px;
             color: #111;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
 
-       }
-       .image__sns {
+        }
+
+        .image__sns {
             position: absolute;
             right: 10px;
             opacity: 0;
             top: 10px;
             transition: all 0.4s ease;
-       }
-       .image__sns a {
+        }
+
+        .image__sns a {
             width: 36px;
             height: 36px;
             background: #fff;
@@ -156,22 +170,27 @@
             display: block;
             margin-bottom: 5px;
             background: url(img/imag_bg_03_01.svg) no-repeat;
-       }
-       .image__sns a:nth-child(2){
+        }
+
+        .image__sns a:nth-child(2) {
             background-position: -50px 0;
-       }
-       .image__sns a:nth-child(3){
+        }
+
+        .image__sns a:nth-child(3) {
             background-position: -100px 0;
-       }
-       .image__sns a:nth-child(4){
+        }
+
+        .image__sns a:nth-child(4) {
             background-position: -150px 0;
-       }
-       .image__sns a:nth-child(5){
+        }
+
+        .image__sns a:nth-child(5) {
             background-position: -200px 0;
-       }
-       .image:hover .image__sns{
+        }
+
+        .image:hover .image__sns {
             opacity: 1;
-       }
+        }
     </style>
 </head>
 
