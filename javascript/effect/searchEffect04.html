@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/search.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/earlyfont/EF_Diary.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Search</h1>
+        <nav>
+            <ul>
+                <li><a href="searchEffect01.html">1</a>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li class="active"><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="modal__btn">소스 보기</div>
+    <div class="modal__cont">
+        <div class="modal__box">
+            <div class="title">
+                <span class="dot" aria-label="true"></span>
+                <div class="tabs">
+                    <div class="active">
+                        <span class="favicon" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <circle cx="9" cy="9" r="9" fill="#B1D7B4"></circle>
+                                <path
+                                    d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#A2B38B"></path>
+                                <path
+                                    d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#FFB3B3"></path>
+                            </svg>
+                        </span>
+                        <em>Javascript</em>
+                        <span class="close">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="favicon" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <circle cx="9" cy="9" r="9" fill="#7A4495"></circle>
+                                <path
+                                    d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#B270A2"></path>
+                                <path
+                                    d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#FCE2DB"></path>
+                            </svg>
+                        </span>
+                        <em>HTML</em>
+                        <span class="close">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="favicon" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <circle cx="9" cy="9" r="9" fill="#A66CFF"></circle>
+                                <path
+                                    d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#B1E1FF"></path>
+                                <path
+                                    d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                                    fill="#9C9EFE"></path>
+                            </svg>
+                        </span>
+                        <em>CSS</em>
+                        <span class="close">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                                focusable="false">
+                                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <span class="plus" aria-label="true">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="cont">
+                <div class="active">
+                    <pre><code class="language-js">const searchKeyword = document.querySelectorAll(".search__info .ketword span"); //검색  박스
+    const searchList = document.querySelectorAll(".search__list ul li");        //목록 리스트
+    const searchInfo = document.querySelector(".num")                           //전체 갯수
+    // 전체 갯수 구하기
+    searchInfo.textContent = searchList.length;
+    searchKeyword.forEach(el => {
+    el.addEventListener("click", ()=> {
+    const searchWord = el.innerText;    //사용자가 클릭한 알파벳
+    //console.log(searchWord)
+    searchList.forEach(el => {
+    const cssName = el.querySelector("strong").innerText;   //css속성 텍스트
+    //console.log(cssName)
+    // 알파벳 철글자 == css 속성 첫글자
+    if(searchWord.charAt(0) === cssName.charAt(0)){
+        el.classList.remove("hide");
+    } else {
+        el.classList.add("hide");
+    }
+    });
+    });
+    });
+</code></pre>
+                </div>
+                <div>
+                    <pre><code class="language-js">&ltdiv class="ketword">
+    &ltdiv class="search__info">
+    &ltdiv class="ketword">
+        &ltspan>a&lt/span>
+        &ltspan>b&lt/span>
+        &ltspan>c&lt/span>
+        &ltspan>d&lt/span>
+        &ltspan>e&lt/span>
+        &ltspan>f&lt/span>
+        &ltspan>g&lt/span>
+        &ltspan>h&lt/span>
+        &ltspan>i&lt/span>
+        &ltspan>j&lt/span>
+        &ltspan>k&lt/span>
+        &ltspan>l&lt/span>
+        &ltspan>m&lt/span>
+        &ltspan>n&lt/span>
+        &ltspan>o&lt/span>
+        &ltspan>p&lt/span>
+        &ltspan>q&lt/span>
+        &ltspan>r&lt/span>
+        &ltspan>s&lt/span>
+        &ltspan>t&lt/span>
+        &ltspan>u&lt/span>
+        &ltspan>v&lt/span>
+        &ltspan>w&lt/span>
+        &ltspan>x&lt/span>
+        &ltspan>y&lt/span>
+        &ltspan>z&lt/span>
+    &lt/div>
+    &ltdiv>전체 속성 갯수 : &ltspan class="num">&lt/span>&lt/div>
+&lt/div>
+&lt/div>
+</code></pre>
+                </div>
+                <div>
+                    <pre><code class="language-js"> * 추가함
+.search__info .ketword {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.search__info .ketword  span{
+    border: 2px solid var(--htmlColor);
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.search__info .ketword span:hover{
+    background-color: var(--htmlColor);
+    color: #fff;
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="modal__close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </div>
+    </div>
+    <main id="main">
+        <div class="search__wrap">
+            <span>find()를 이용하여 속성을 검색하면 설명 보여주기</span>
+            <h1>CSS 속성 검색하기</h1>
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="CSS 속성 및 유형을 입력해 주세요.">
+            </div>
+            <div class="search__desc">
+                속성을 검색하시면 설명이 표시됩니다.!
+            </div>
+            <div class="search__info">
+                <div>전체 속성 갯수 : <span class="num"></span></div>
+            </div>
+            <div class="search__list">
+                <div class="css">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <a href="mailto:fkdldhs8484@gmail.com">fkdldhs8484@gmail.com</a>
+    </footer>
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+
+    <script>
+        const cssProperty = [
+            { name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다." },
+            { name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다." },
+            { name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다." },
+            { name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다." },
+            { name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다." },
+            { name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다." },
+            { name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다." },
+            { name: "animation-name", desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다." },
+            { name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다." },
+            { name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다." },
+            { name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다." },
+            { name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다." },
+            { name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다." },
+            { name: "filter", desc: "filter 속성은 그래픽 효과를 설정합니다." },
+            { name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다." },
+            { name: "grid-template-columns", desc: "grid-template-columns 속성은 가로 컬럼의 크기와 위치 설정합니다." },
+        ];
+
+        const searchList = document.querySelector(".search__list ul");
+        const searcNum = document.querySelector(".search__info .num");
+        const searchBox = document.querySelector(".search__box input");
+        const searchDesc = document.querySelector(".search__desc");
+
+        // 출력하기
+        cssProperty.map((element, index) => {
+            searcNum.innerText = index + 1;
+            searchList.innerHTML += `<li><span>${element.name}</span> : ${element.name}</li>`;
+        });
+
+        //  입력
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value;
+            console.log(searchWord);
+            findProperty(searchWord);
+        });
+
+        // 속성 찾기
+        function findProperty(searchDesc) {
+            const targetData = cssProperty.find((data) => data.name === search);
+
+            if (targetData == null) {
+                searchDesc.textContent = "해당 속성은 존재하지 않습니다, 다시 검색해주세요!";
+
+            }
+
+            searchDesc.textContent = targetData.desc;
+        };
+    </script>
+</body>
+
+</html>
