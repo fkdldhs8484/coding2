@@ -1821,13 +1821,30 @@
 
             // const result2 = number.slice(3, 5);
 
-            const num = ["a,b,c,d,e,f,g,h,i,k"];
 
-            const result = num.filter(el => el);
+            //b d f h k 짝수 수 만 나오게..
+            const num = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            const result = [...num].map(el => el)
+            for (let result = 1; result <= num.length; result = result + 2) {
+                // console.log(num2[result]);
+            }
 
-            //  출력 b d f h k (짝수)
+            const num2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            const result2 = num2.filter(function (e, i) {
+                return i % 2 == 1 ? true : false;
+            });
+            // console.log(result2)
 
-            console.log(result);
+            const num3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            const result3 = num3.splice(0, 10, "b", "d", "f", "h", "k");
+            // console.log(result3)
+
+            const num4 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            for (let i = 0; i <= num4.length; i++) {
+                if (i % 2 == 1) {
+                    console.log(num4[i]);
+                }
+            }
         }
 
     </script>

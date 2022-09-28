@@ -364,6 +364,7 @@ li {
     color: #223547;
     font-size: 6vw;
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 .search__box {
     margin-bottom: 40px;
@@ -402,10 +403,12 @@ li {
     transition: all 0.3s;
     cursor: pointer;
 }
+
 .search__list span:hover {
     background-color: var(--htmlColor);
     color: #fff;
 }
+
 .search__info {
     text-align: right;
     margin-bottom: 30px;
