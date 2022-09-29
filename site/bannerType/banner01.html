@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banner01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+
+
+        /* 블라인드 효과 */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden
+        }
+
+
+
+        /* 이미지 대체(ir) 효과 */
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+
+
+        /* bannerType */
+        .banner__inner {
+            background-image: url(../site1/asset/img/banner_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            padding: 120px 0;
+            color: #fff;
+        }
+
+        .banner__inner .title {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .banner__inner .desc {
+            font-size: 24px;
+            line-height: 1.5;
+            font-weight: 300;
+            margin-bottom: 70px;
+        }
+
+        .banner__inner .desc a {
+            color: #fff;
+            display: block;
+        }
+
+        .banner__inner .desc a:hover {
+            text-decoration: underline;
+        }
+
+        .banner__inner .small {
+            font-size: 16px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section id="bannerType" class="banner__wrap nexon">
+        <h2 class="blind">배너 영역</h2>
+        <div class="banner__inner">
+            <h3 class="title">강렬한 색의 조화</h3>
+            <p class="desc">
+                더 많은 정보는 아래 링크를 참조해 주세요
+                <a href="#">youtube.com/c/Webstoryboy</a>
+            </p>
+            <span class="small">배너 유형01</span>
+        </div>
+    </section>
+    <!-- // bannerType -->
+</body>
+
+
+</html>
