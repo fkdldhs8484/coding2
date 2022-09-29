@@ -84,9 +84,7 @@
             transition: transform 0.3s, opactiy 0.2s;
         }
 
-        .mouse__cursor.active {
-            transform: scale(0);
-        }
+
 
         .mouse__cursor2.active {
             transform: scale(5);
@@ -94,20 +92,22 @@
         }
 
         .mouse__cursor.active2 {
-        transform: scale(0);
-       }
-       .mouse__cursor2.active2 {
-        transform: scale(3);
-        background: rgba(255, 166, 0, 0.6);
-       }
+            transform: scale(0);
+        }
 
-       .mouse__cursor.active3 {
-        transform: scale(0);
-       }
-       .mouse__cursor2.active3 {
-        transform: scale(3);
-        background: rgba(255, 166, 0, 0.6);
-       }
+        .mouse__cursor2.active2 {
+            transform: scale(3);
+            background: rgba(255, 166, 0, 0.6);
+        }
+
+        .mouse__cursor.active3 {
+            transform: scale(0);
+        }
+
+        .mouse__cursor2.active3 {
+            transform: scale(3);
+            background: rgba(255, 166, 0, 0.6);
+        }
     </style>
 </head>
 
@@ -299,8 +299,8 @@
                 });
             });
 
-             //header 오버
-             menu.forEach(menu => {
+            //header 오버
+            menu.forEach(menu => {
                 menu.addEventListener("mouseenter", () => {
                     cursor.classList.add("active2");
                     cursor2.classList.add("active2");
@@ -309,7 +309,7 @@
                     cursor.classList.remove("active2");
                     cursor2.classList.remove("active2");
                 });
-                
+
             });
 
             //소스보기 오버
@@ -322,7 +322,7 @@
                     cursor.classList.remove("active3");
                     cursor2.classList.remove("active3");
                 });
-                
+
             });
         });
     </script>

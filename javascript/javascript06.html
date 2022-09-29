@@ -122,23 +122,23 @@
                     </div>
                     <div class="script">
                         <pre><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
-    //01
-    document.querySelector(".sample01_N1").innerHTML = "1";
-    document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-    document.querySelector(".sample01_M1").innerHTML = "length";
-    document.querySelector(".sample01_P1").innerHTML = arrNum.length;
-    const arrTxt = [a, b, c, d, e];
-    //02
-    document.querySelector(".sample01_N2").innerHTML = "2";
-    document.querySelector(".sample01_Q2").innerHTML = "[a, b, c, d, e]";
-    document.querySelector(".sample01_M2").innerHTML = "length";
-    document.querySelector(".sample01_P2").innerHTML = arrTxt.length;
-    const arr = [1, 2, ['a', 'b']];
-    //03
-    document.querySelector(".sample01_N2").innerHTML = "3";
-    document.querySelector(".sample01_Q2").innerHTML = "[1, 2, ['a', 'b']]";
-    document.querySelector(".sample01_M2").innerHTML = "length";
-    document.querySelector(".sample01_P2").innerHTML = arr.length;
+//01
+document.querySelector(".sample01_N1").innerHTML = "1";
+document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample01_M1").innerHTML = "length";
+document.querySelector(".sample01_P1").innerHTML = arrNum.length;
+const arrTxt = [a, b, c, d, e];
+//02
+document.querySelector(".sample01_N2").innerHTML = "2";
+document.querySelector(".sample01_Q2").innerHTML = "[a, b, c, d, e]";
+document.querySelector(".sample01_M2").innerHTML = "length";
+document.querySelector(".sample01_P2").innerHTML = arrTxt.length;
+const arr = [1, 2, ['a', 'b']];
+//03
+document.querySelector(".sample01_N2").innerHTML = "3";
+document.querySelector(".sample01_Q2").innerHTML = "[1, 2, ['a', 'b']]";
+document.querySelector(".sample01_M2").innerHTML = "length";
+document.querySelector(".sample01_P2").innerHTML = arr.length;
     </code></pre>
                     </div>
                 </div>
@@ -605,7 +605,7 @@
                 <!-- sample07 -->
                 <div id="sample08" class="sample">
                     <h3>08. 배열 메서드 : slice()</h3>
-                    <p> </p>
+                    <p>배열 요소를 다른 요소로 변경 </p>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -1842,9 +1842,14 @@
             const num4 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
             for (let i = 0; i <= num4.length; i++) {
                 if (i % 2 == 1) {
-                    console.log(num4[i]);
+                    //console.log(num4[i]);
                 }
             }
+
+
+            // "e", "f" 가운데를 기준으로 출력(3가지)
+            const num5 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+
         }
 
     </script>
