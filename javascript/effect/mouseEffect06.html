@@ -74,17 +74,18 @@
             top: 0;
             width: 20px;
             height: 20px;
-            z-index: 9999;
+            background: #fff;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
             user-select: none;
             pointer-events: none;
             transition: transform 0.3s, opactiy 0.2s;
         }
 
-        .mouse__cursor.active {
-            transform: scale(5);
-            background: rgba(255, 166, 0, 0.6);
+        .mouse__cursor span {
+            background-color: rgb(0., 47, 255, 0.4);
+            border-color: #000;
+            transform: scale(10);
         }
     </style>
 </head>
@@ -109,6 +110,7 @@
     <main id="main">
         <section id="mouseType">
             <div class="mouse__cursor"></div>
+
             <div class="mouse__wrap">
                 <div class="mouse__img">
                     <figure>
@@ -448,17 +450,20 @@ window.addEventListener("mousemove", mouseMove);
         // 마우스 커서가 글씨 위에 올라가면 원의 크기는 5배 정도 크게 작업.... 글씨 반전 효과 추가
 
         const cursor = document.querySelector(".mouse__cursor");
-        window.addEventListener("mousemove", e => {
-            span.forEach(span => {
-                span.addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                    cursor2.classList.add("active");
-                });
-                span.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                    cursor2.classList.remove("active");
-                });
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.left = e.clientX - 25 + "px";   //단위 꼭 붙여주기
+            cursor.style.top = e.clientY - 25 + "px";
+        });
+
+        document.querySelectorAll(".mouse__wrap span").forEach(span => {
+            let attr = span.getAttribute("class");
+
+            span.addEventListener("mouseover", () => {
+                cursor.classList.add(attr);
             });
+            span.addEventListener("mouseout", () => {
+                cursor.classList.remove(attr);
+            })
         });
     </script>
 </body>

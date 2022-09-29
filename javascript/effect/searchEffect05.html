@@ -1074,7 +1074,8 @@ li {
 
         const searchList = document.querySelector(".search__list");
         const searchClick = document.querySelectorAll(".search__click ul li");
-
+        const searchClick2 = document.querySelectorAll(".search__click");
+        const searchInfo = document.querySelector(".num") //전체 갯수
         // 출력하기
         function updateList(list) {
             listCSS = "";
@@ -1097,9 +1098,17 @@ li {
         });
 
         // 숫자를 별로 치환해주기!
-        // dataset 안쓰고 가져오는 방법(고민) (index 이용)
-        // 조건문 들어간거 완료하기 -1개이상 , 2개이상....
-        // 전체 속성 갯수 표시
+
+        // dataset 안쓰고 가져오는 방법(고민) (index 이용)??
+
+        // 조건문 들어간거 완료하기 별이.. 1개이상 , 2개이상....
+
+        // 전체 갯수 구하기
+        searchInfo.textContent = cssProperty.length;
+
+        cssProperty.forEach(el => {
+            el.classList.add("show");
+        });
     </script>
 </body>
 
