@@ -79,13 +79,13 @@
             z-index: 1000;
             user-select: none;
             pointer-events: none;
+            mix-blend-mode: difference;
             transition: transform 0.3s, opactiy 0.2s;
         }
 
 
-        .mouse__cursor2.active {
+        .mouse__cursor.active {
             transform: scale(5);
-            background: rgba(255, 166, 0, 0.6);
         }
     </style>
 </head>
@@ -448,16 +448,24 @@ window.addEventListener("mousemove", mouseMove);
         window.addEventListener("mousemove", mouseMove);
 
         // 마우스 커서가 글씨 위에 올라가면 원의 크기는 5배 정도 크게 작업.... 글씨 반전 효과 추가
-        window.addEventListener("mousemove", e => {
-            span.forEach(span => {
-                span.addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                });
-                span.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                });
+        const text = document.querySelectorAll(".spanSlow");
+        const text2 = document.querySelectorAll(".spanFast");
+        text.forEach((e) => {
+            e.addEventListener("mouseenter", () => {
+                document.querySelector(".mouse__cursor").classList.add("active");
             });
-        })
+            e.addEventListener("mouseleave", () => {
+                document.querySelector(".mouse__cursor").classList.remove("active");
+            });
+        });
+        text2.forEach((e) => {
+            e.addEventListener("mouseenter", () => {
+                document.querySelector(".mouse__cursor").classList.add("active");
+            });
+            e.addEventListener("mouseleave", () => {
+                document.querySelector(".mouse__cursor").classList.remove("active");
+            });
+        });
 
 
     </script>
