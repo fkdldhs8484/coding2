@@ -85,7 +85,7 @@
 
 
         .mouse__cursor.active {
-            transform: scale(5);
+            transform: scale(10);
         }
     </style>
 </head>
@@ -448,9 +448,9 @@ window.addEventListener("mousemove", mouseMove);
         window.addEventListener("mousemove", mouseMove);
 
         // 마우스 커서가 글씨 위에 올라가면 원의 크기는 5배 정도 크게 작업.... 글씨 반전 효과 추가
-        const text = document.querySelectorAll(".spanSlow");
-        const text2 = document.querySelectorAll(".spanFast");
-        text.forEach((e) => {
+        const Slow = document.querySelectorAll(".spanSlow");
+        const Fast = document.querySelectorAll(".spanFast");
+        Slow.forEach((e) => {
             e.addEventListener("mouseenter", () => {
                 document.querySelector(".mouse__cursor").classList.add("active");
             });
@@ -458,7 +458,7 @@ window.addEventListener("mousemove", mouseMove);
                 document.querySelector(".mouse__cursor").classList.remove("active");
             });
         });
-        text2.forEach((e) => {
+        Fast.forEach((e) => {
             e.addEventListener("mouseenter", () => {
                 document.querySelector(".mouse__cursor").classList.add("active");
             });

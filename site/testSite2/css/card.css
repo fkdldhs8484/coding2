@@ -1,0 +1,44 @@
+.card__wrap {
+  width: 100%;
+  height: 300px;
+  background-color: #eee;
+}
+.card__wrap h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 40px;
+}
+.card__inner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 24%;
+
+  background: #fff;
+}
+.card__box {
+  padding: 10px 10px 10px 10px;
+}
+
+.card__box .title {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  overflow: hidden;
+}
+.card__box p {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.card__box span {
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}

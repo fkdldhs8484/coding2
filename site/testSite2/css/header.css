@@ -1,0 +1,22 @@
+.header__inner {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.header__logo img {
+  width: 40%;
+}
+.header__desc {
+  display: block;
+  width: 60%;
+}
+.header__desc ul {
+  display: flex;
+  justify-content: right;
+}
+.header__desc ul li a {
+  padding: 10px;
+}
