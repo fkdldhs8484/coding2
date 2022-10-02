@@ -1,0 +1,41 @@
+#footerType {
+    background: #263f5e;
+    color: #fff;
+    width: 100%;
+    margin-top: 40px;
+}
+.footer__logo {
+    height: 80px;
+    width: 200px;
+}
+.footer__info {
+    display: flex;
+    justify-content: space-around;
+}
+.footer__menu {
+    padding: 20px 0;
+}
+.footer__menu ul {
+    display: flex;
+}
+.footer__menu ul li {
+    padding-right: 20px;
+    color: #666;
+}
+.footer__menu ul li a {
+    color: #999;
+}
+
+.footer__address p {
+    color: #999;
+}
+.footer__address p > em {
+    color: #666;
+}
+
+.footer__wrap {
+    display: flex;
+    padding: 60px 0;
+    flex-direction: column;
+    justify-content: space-between;
+}

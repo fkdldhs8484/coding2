@@ -1,22 +1,34 @@
 .header__inner {
-  display: flex;
-  height: 60px;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  padding: 0 10px;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 auto;
+    background: #fff;
+}
+.header__logo {
+    width: 20%;
 }
 .header__logo img {
-  width: 40%;
+    width: 140px;
 }
 .header__desc {
-  display: block;
-  width: 60%;
+    width: 80%;
+    text-align: right;
 }
-.header__desc ul {
-  display: flex;
-  justify-content: right;
+.header__desc li {
+    display: inline;
 }
 .header__desc ul li a {
-  padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px 25px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+.header__menu li a:hover {
+    background: #f1f1f1;
+    border-radius: 5px;
 }

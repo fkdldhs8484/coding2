@@ -5,45 +5,734 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시험</title>
+    <title>시험문제</title>
 
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
-<div class="document">
-    <h2 class="t_tit"> 2020-09-30 시혐 </h2>
-
-    <hr>
-    <h2 class="t_tit">html</h2>
-    <div class="result">
-        <details>
-            <summary>코드 보기</summary>
-            <p class="t_desc"></p>
-            <div class="t_code">
-                <pre><code class="language-js">
-</code></pre>
-            </div>
-        </details>
-    </div>
-
-
-    <hr>
-    <h2 class="t_tit">css</h2>
-    <div class="result">
-        <details>
-            <summary>코드 보기</summary>
-            <p class="t_desc"></p>
-            <div class="t_code">
-                <pre><code class="language-js">
-</code></pre>
-            </div>
-        </details>
-    </div>
-
-</div>
 
 <body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">2022/09/30 시험문제</h2>
+            <hr>
+
+            <h3 class="t_tit2">01. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    function func() {
+        let i = 10, hap = 0;
+        while (i > 1) {
+            if (i % 3 == 1) {
+                hap += i;
+            }
+            i--;
+        }
+        document.write(hap);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    21
+                </details>
+            </div>
+
+            <h3 class="t_tit2">02. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func() {
+        let a = [];
+        for (i = 1; i <= 5; i++) {
+            a += [i];
+        }
+        document.write(a[2]);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    3
+                </details>
+            </div>
+
+            <h3 class="t_tit2">03. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func() {
+        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9], cnt = 0;
+        for (i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                cnt = cnt + 1;
+            }
+        }
+        document.write(cnt);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    4
+                </details>
+            </div>
+
+            <h3 class="t_tit2">04. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    function func(data, exp) {
+        let result = 1;
+        for (i = 1; i < exp; i++) {
+            result = result * i;
+        }
+        document.write(result + data);
+    }
+    func(1, 5);
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    25
+                </details>
+            </div>
+
+            <h3 class="t_tit2">05. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    function func() {
+        let a = [2, 3, 2, 4, 5, 6, 7, 2, 3, 3, 2];
+        let value = 0;
+        for (i = 0; i < a.length; i++) {
+            if (a[i] != 2) {
+                value++;
+            }
+        }
+        document.write(value);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    7
+                </details>
+            </div>
+
+            <h3 class="t_tit2">06. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    function func() {
+        let i, j = 0;
+
+        for (i = 0; i <= 8; i++) {
+            j += i;
+        }
+        document.write(j + i);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    45
+                </details>
+            </div>
+
+            <h3 class="t_tit2">07. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    function func() {
+        let a = 12, b = 8, c = 2, d = 3;
+        a /= b - c * d;
+        document.write(a)
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    6
+                </details>
+            </div>
+
+            <h3 class="t_tit2">08. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    function func13() {
+        let a, b, c, result;
+        a = 10;
+        b = 20;
+        c = 30;
+        result = a < b ? b / a : c;
+
+        document.write(result);
+    }
+    func13();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    2
+                </details>
+            </div>
+
+            <h3 class="t_tit2">09. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    function func() {
+        let a = 0, sum = 0;
+        while (a < 10) {
+            a++;
+            if (a % 2 == 1) continue;
+            sum += a;
+        }
+        document.write(sum);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    30
+                </details>
+            </div>
+
+            <h3 class="t_tit2">10. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func() {
+        let i = 0, sum = 0;
+        while (0) {
+            i++;
+            if (i > 10) break;
+            if (i % 5 == 0) continue;
+            sum += i;
+        }
+        document.write(sum);
+    }
+    func();
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    0
+                </details>
+            </div>
+
+            <h3 class="t_tit2">11. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function test(arrData) {
+        let result = 0;
+        for (let i = 0; i < arrSubject.length; i++) {
+            result += Number(arrSubject[i]);
+        }
+        let num = result
+        return num;
+    }
+    let arrSubject = ["100", "90", "80", "70"];
+    let result = test(arrSubject);
+
+    document.write(result);
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    340
+                </details>
+            </div>
+
+            <h3 class="t_tit2">12. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func(a, b, c) {
+        let answer;
+        if (a < b) answer = a;
+        else answer = b;
+        if (c < answer) answer = c;
+        document.write(answer);
+    }
+    func(2, 5, 10)
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    2
+                </details>
+            </div>
+
+            <h3 class="t_tit2">13. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    function func(n) {
+        let answer;
+        answer = Math.floor(n / 12);
+        return answer;
+    }
+    document.write(func(178));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    14
+                </details>
+            </div>
+
+            <h3 class="t_tit2">14. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func(s) {
+        let answer = "";
+        for (let x of s) {
+            if (x != 'w') answer += '#';
+            else answer += x;
+        }
+        return answer;
+    }
+    let str = "webstoryboy";
+    document.write(func(str));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    w##########
+                </details>
+            </div>
+
+            <h3 class="t_tit2">15. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func(s, t) {
+        let answer = 0;
+        for (let x of s) {
+            if (x !== t) answer++;
+        }
+        return answer;
+    }
+    let str = "wbestoryboy";
+    document.write(func(str, "t"));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    10
+                </details>
+            </div>
+
+            <h3 class="t_tit2">16. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function func(s) {
+        let answer = "";
+        for (let x of s) {
+            if (x === x.toUpperCase()) {
+                answer += x.toLowerCase();
+            } else {
+                answer += x.toUpperCase();
+            }
+        }
+        return answer;
+    }
+    document.write(func("webStorBOY10"));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    WEBsTORboy10
+                </details>
+            </div>
+
+            <h3 class="t_tit2">17. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    ㅇㅇ
+                </details>
+            </div>
+
+            <h3 class="t_tit2">18. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">   {
+    function solution(arr, divisor) {
+        var answer = [];
+
+        const div = arr.filter(el => el % divisor == 0);
+        answer = div.length > 0 ? div.sort((a, b) => a - b) : [-1];
+
+        return answer;
+    }
+    document.write(solution([1, 2, 3, 4, 5], 2));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    2,4
+                </details>
+            </div>
+
+            <h3 class="t_tit2">19. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    function solution(numbers) {
+        let answer = 0;
+        for (let i = 0; i < 10; i++) {
+            if (!numbers.includes(i)) {
+                answer += i;
+            }
+        }
+        return answer;
+    }
+    document.write(solution([1, 2, 3, 4, 6, 7, 8, 0]))
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    14
+                </details>
+            </div>
+
+            <h3 class="t_tit2">20. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function solution(n) {
+        for (let i = 1; i < n; i++) {
+            if (n % i === 1) return i;
+        }
+    }
+    document.write(solution(10))
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    3
+                </details>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
     <script>
+        hljs.highlightAll();
+    </script>
 
+    <script>
+        // {
+        //     function func() {
+        //         let i = 10, hap = 0;
+        //         while (i > 1) {
+        //             if (i % 3 == 1) {
+        //                 hap += i;
+        //             }
+        //             i--;
+        //         }
+        //         document.write(hap);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func() {
+        //         let a = [];
+        //         for (i = 1; i <= 5; i++) {
+        //             a += [i];
+        //         }
+        //         document.write(a[2]);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func() {
+        //         let a = [1, 2, 3, 4, 5, 6, 7, 8, 9], cnt = 0;
+        //         for (i = 0; i < a.length; i++) {
+        //             if (a[i] % 2 == 0) {
+        //                 cnt = cnt + 1;
+        //             }
+        //         }
+        //         document.write(cnt);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func(data, exp) {
+        //         let result = 1;
+        //         for (i = 1; i < exp; i++) {
+        //             result = result * i;
+        //         }
+        //         document.write(result + data);
+        //     }
+        //     func(1, 5);
+        // }
+        // {
+        //     function func() {
+        //         let a = [2, 3, 2, 4, 5, 6, 7, 2, 3, 3, 2];
+        //         let value = 0;
+        //         for (i = 0; i < a.length; i++) {
+        //             if (a[i] != 2) {
+        //                 value++;
+        //             }
+        //         }
+        //         document.write(value);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func() {
+        //         let i, j = 0;
 
+        //         for (i = 0; i <= 8; i++) {
+        //             j += i;
+        //         }
+        //         document.write(j + i);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func() {
+        //         let a = 12, b = 8, c = 2, d = 3;
+        //         a /= b - c * d;
+        //         document.write(a)
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func13() {
+        //         let a, b, c, result;
+        //         a = 10;
+        //         b = 20;
+        //         c = 30;
+        //         result = a < b ? b / a : c;
+
+        //         document.write(result);
+        //     }
+        //     func13();
+        // }
+        // {
+        //     function func() {
+        //         let a = 0, sum = 0;
+        //         while (a < 10) {
+        //             a++;
+        //             if (a % 2 == 1) continue;
+        //             sum += a;
+        //         }
+        //         document.write(sum);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func() {
+        //         let i = 0, sum = 0;
+        //         while (0) {
+        //             i++;
+        //             if (i > 10) break;
+        //             if (i % 5 == 0) continue;
+        //             sum += i;
+        //         }
+        //         document.write(sum);
+        //     }
+        //     func();
+        // }
+        // {
+        //     function test(arrData) {
+        //         let result = 0;
+        //         for (let i = 0; i < arrSubject.length; i++) {
+        //             result += Number(arrSubject[i]);
+        //         }
+        //         let num = result
+        //         return num;
+        //     }
+        //     let arrSubject = ["100", "90", "80", "70"];
+        //     let result = test(arrSubject);
+
+        //     document.write(result);
+        // }
+        // {
+        //     function func(a, b, c) {
+        //         let answer;
+        //         if (a < b) answer = a;
+        //         else answer = b;
+        //         if (c < answer) answer = c;
+        //         document.write(answer);
+        //     }
+        //     func(2, 5, 10)
+        // }
+        // {
+        //     function func(n) {
+        //         let answer;
+        //         answer = Math.floor(n / 12);
+        //         return answer;
+        //     }
+        //     document.write(func(178));
+        // }
+        // {
+        //     function func(s) {
+        //         let answer = "";
+        //         for (let x of s) {
+        //             if (x != 'w') answer += '#';
+        //             else answer += x;
+        //         }
+        //         return answer;
+        //     }
+        //     let str = "webstoryboy";
+        //     document.write(func(str));
+        // }
+        // {
+        //     function func(s, t) {
+        //         let answer = 0;
+        //         for (let x of s) {
+        //             if (x !== t) answer++;
+        //         }
+        //         return answer;
+        //     }
+        //     let str = "wbestoryboy";
+        //     document.write(func(str, "t"));
+        // }
+        // {
+        //     function func(s) {
+        //         let answer = "";
+        //         for (let x of s) {
+        //             if (x === x.toUpperCase()) {
+        //                 answer += x.toLowerCase();
+        //             } else {
+        //                 answer += x.toUpperCase();
+        //             }
+        //         }
+        //         return answer;
+        //     }
+        //     document.write(func("webStorBOY10"));
+        // }
+        {
+            function solution(n) {
+                var answer = [];
+                answer = n.toString().split('').reverse().map(val => parselnt(val));
+                return answer;
+            }
+            document.write((1, 2, 3, 4, 5));
+        }
+        // {
+        //     function solution(arr, divisor) {
+        //         var answer = [];
+
+        //         const div = arr.filter(el => el % divisor == 0);
+        //         answer = div.length > 0 ? div.sort((a, b) => a - b) : [-1];
+
+        //         return answer;
+        //     }
+        //     document.write(solution([1, 2, 3, 4, 5], 2));
+        // }
+        // {
+        //     function solution(numbers) {
+        //         let answer = 0;
+        //         for (let i = 0; i < 10; i++) {
+        //             if (!numbers.includes(i)) {
+        //                 answer += i;
+        //             }
+        //         }
+        //         return answer;
+        //     }
+        //     document.write(solution([1, 2, 3, 4, 6, 7, 8, 0]))
+        // }
+        // {
+        //     function solution(n) {
+        //         for (let i = 1; i < n; i++) {
+        //             if (n % i === 1) return i;
+        //         }
+        //     }
+        //     document.write(solution(10))
+        // }
     </script>
 </body>
 

@@ -1,22 +1,22 @@
 .slider__inner {
-  width: 1160px;
-  height: 400px;
-  position: relative;
-  margin: 0 auto;
-  background: url(/site/testSite2/img/slicer.jpg) center no-repeat;
-  display: block;
+    width: 1160px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    background: url(/site/testSite2/img/slicer.jpg) center no-repeat;
+    display: block;
 }
 .slider__img {
-  width: 300px;
-  background-color: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slider__img .title {
-  font-size: 25px;
-  color: #fff;
-  padding: 10px;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px;
 }
 .slider__img .title2 {
-  font-size: 15px;
-  color: #fff;
+    font-size: 15px;
+    color: #fff;
 }
