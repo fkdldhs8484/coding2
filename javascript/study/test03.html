@@ -56,13 +56,13 @@
                 <div class="t_code">
                     <pre><code class="language-js">{
     function func(){
-        let a = [];        // 배열 비어있음.
+        let a = [];        
         for( i=1; i<=5; i++){        // i가 5가 될 때까지 i 수를 늘림 1,2,3,4,5
             a += [i];                   // 비어있던 a 배열에 1,2,3,4,5 저장됨
         }
         document.write(a[2]);           // a의 두번째 배열은 3임
     }
-    func();         // 정답 == 3
+    func();         // 3
 }
 </code></pre>
                 </div>
@@ -80,9 +80,9 @@
                     <pre><code class="language-js"> {
     function func() {
         let a = [1, 2, 3, 4, 5, 6, 7, 8, 9], cnt = 0;   //i가 9를 넘지 않는 8이 될때까지 i값 계속 추가
-        for (i = 0; i < a.length; i++) {    //a[0]부터 a[8]까지 값 중 2로 나눴을 때 나머지가 0인 값
-            if (a[i] % 2 == 0) {    //조건에 충족하는 횟수만큼 1씩 저장
-                cnt = cnt + 1;  //해당 조건을 충족하는 수 == 2,4,6,8 / 총 4개
+        for (i = 0; i < a.length; i++) {   
+            if (a[i] % 2 == 0) {     //a[0]부터 a[8]까지 값 중 2로 나눴을 때 나머지가 0인 값 
+                cnt = cnt + 1;  //조건에 충족하는 횟수만큼 1씩 저장 .. 해당 조건을 충족하는 수 == 2,4,6,8 / 총 4개
             }
         }
         document.write(cnt);    // 정답 : 4
@@ -252,7 +252,7 @@
                     <pre><code class="language-js"> {
     function func() {
         let i = 0, sum = 0;
-        while (0) { //함정문제. 0이 들어가기 때문에 실행x
+        while (0) { // 0이 들어가기 때문에 실행x
             i++;
             if (i > 10) break;
             if (i % 5 == 0) continue;
@@ -328,8 +328,8 @@
                     <pre><code class="language-js">  {
     function func(n) {  // n == 178
         let answer;
-        answer = Math.floor(n / 12);    // 178 / 12 값 == 14.83333... 사사오입(반올림)하면 15지만 Math.floor를 쓰면 반올림을 하지 않음 / 즉 반내림(?)을 함
-        return answer;    // 정답 == 14
+        answer = Math.floor(n / 12);   
+        return answer;    // 14
     }
     document.write(func(178));
 }
@@ -456,11 +456,11 @@
     function solution(arr, divisor) {
         var answer = [];
 
-        const div = arr.filter(el => el % divisor == 0);     // filter로 2로 나눴을 때 나머지값이 0인 (즉 2의 배수인) 값을 골라냄 == 2, 4
+        const div = arr.filter(el => el % divisor == 0);     
 
-        answer = div.length > 0 ? div.sort((a, b) => a - b) : [-1];  // div.length(2) > 0이 참임 : 참이면 div안의 순서를 a-b 순서로 정렬하고 거짓이면 -1 출력(맞나?)
+        answer = div.length > 0 ? div.sort((a, b) => a - b) : [-1];  
 
-        return answer;  // 결론적으로 a-b 순서대로 [2, 4] 출력됨
+        return answer; 
     }
     document.write(solution([1, 2, 3, 4, 5], 2));   // 2,4
 }
