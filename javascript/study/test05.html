@@ -25,44 +25,215 @@
             <h3 class="t_tit2">01. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">{
-    function cookingMama(){
-        let cook = ['당근','소세지','삼겹살','계란후라이']
-        for(sel=0; sel&lt;cook.length; sel++){
-            if(cook[sel]!=='당근'){
-                let i = '오늘 저녁은'+cook[sel];
-                console.log(i);
-            }
+                    <pre><code class="language-js">function func() {
+    let a = [1, 2, 3, 4, 5], cnt = 0;
+
+    for (i = 0; i < a.length; i++) {
+        if (a[i] % 2 !== 0) {
+            cnt = cnt * 2;
         }
     }
+    document.write(cnt);
 }
+func()
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-                    (실행문이 없어서 실행x)
+                    0
                 </details>
             </div>
 
             <h3 class="t_tit2">02. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">{
-    function myWeight(){
-        let kcal, weight = 0;
+                    <pre><code class="language-js">function solution(arr, arr2) {
+    var answer = [];
 
-        for(kcal=0; kcal<=8; kcal++){   // kcal(1)=0; x
-            weight += kcal; 
-            if(kcal==5){    // kcal = 1,2,3,4,5 = 15
-                break;
-            }
-        }
-        console.log(weight+kcal);   // 5+15
-    }
-    myWeight()     // 20
+    const div = [...arr, ...arr2];
+    answer = div.length > 10 ? arr.reduce((a, b) => a + b) + arr2 : [-1];
+
+    return answer;
 }
+document.write(solution([1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e']));
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    -1
+                </details>
+            </div>
+
+            <h3 class="t_tit2">03. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function test(arrstr) {
+    let result = '';
+    for (let i = 0; i < arrSubject.length; i++) {
+        result += arrSubject[i].charAt(2);
+    }
+    let str = result;
+    return str;
+}
+let arrSubject = ['web', 'story', 'boy'];
+let result = test(arrSubject);
+
+document.write(result);
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    boy
+                </details>
+            </div>
+
+            <h3 class="t_tit2">04. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    let a = 18, b = 5, c = 2, d = 7;
+    a /= b - c * d;
+    document.write(Math.abs(a));
+}
+func();
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    2
+                </details>
+            </div>
+
+            <h3 class="t_tit2">05. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    let i = 0;
+    let j = '';
+
+    for (i = 0; i <= 5; i++) {
+        j += i;
+    }
+    document.write(j + 1);
+}
+func();                    
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    0,1,2,3,4,5,1
+                </details>
+            </div>
+
+            <h3 class="t_tit2">06. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function solution(s) {
+    var answer = [];
+    answer = s.split('').reverse().splice(2).shift();
+    return answer;
+}
+document.write(solution('abcde'));
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    c
+                </details>
+            </div>
+
+            <h3 class="t_tit2">07. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    let a = [];
+
+    for (i = 1; i <= 5; i++) {
+        a += ['i'];
+    }
+    document.write(a[3]);
+}
+func();
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    i
+                </details>
+            </div>
+
+            <h3 class="t_tit2">08. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function func(n) {
+    let answer;
+    answer = Math.ceil(n / 3);
+    if (answer == 7)
+        return answer;
+}
+document.write(func(20));
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    7
+                </details>
+            </div>
+
+            <h3 class="t_tit2">09. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    let a = [3, 6, 0, 5, 3, 2, 1, 3, 4];
+    let value = 10;
+    for (i = 0; i < a.length; i++) {
+        if (a[i] == 3) continue;
+        value--;
+    }
+    document.write(value);
+}
+func();
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    4
+                </details>
+            </div>
+
+            <h3 class="t_tit2">10. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">function func() {
+    let i = 10, sum = 10;
+    while (i > 1) {
+        if (i % 4 == 2) {
+            sum += i;
+            break;
+        }
+        i--;
+    }
+    document.write(sum);
+}
+func();
 </code></pre>
                 </div>
 
@@ -70,258 +241,6 @@
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
                     20
-                </details>
-            </div>
-
-            <h3 class="t_tit2">03. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function party() {
-        let join = 0;
-        let people = ['철수', '민수', '상수', '변수', '무리수']
-        let enable = 4;
-
-        if(people.length<=5){   // people(5) <= 5 맞으니..
-            enable = 3; // 3명..?
-        } else{
-            enable = 8;
-        }
-        while (join < people.length) {
-            join ++;
-            if (join == enable) break;
-        }
-        console.log("오늘 파티 참가 가능한 인원수는 총 "+join+"명");
-    }
-    party();     
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    3
-                </details>
-            </div>
-
-            <h3 class="t_tit2">04. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function func(){
-        let i = 0, sum = 0, sel = 0;
-
-        for(let sel=1; sel<=8; sel++){
-            if(sel&lt;4)break;
-        }
-        if(sel<=4){
-            while(i<=5) {
-                i++;
-                sum += i;
-            }
-        } else{
-            while(i<=3) {
-                i++;
-                sum += i;
-            }
-        }
-        console.log(sum);
-    }
-    func()
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    21
-                </details>
-            </div>
-
-            <h3 class="t_tit2">05. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    let o = 0;
-    let q = 1;
-    let c = 0;
-
-    for(let a=0; a<=1; a++){
-        for(let x=0; x<=10; x++){
-            o=a*x;
-            if(0){
-                o += 10;
-            }
-        }
-    }
-    console.log(o);
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    10
-                </details>
-            </div>
-
-            <h3 class="t_tit2">06. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function func(s) {
-        let answer = '';
-        let i=0;
-
-        for (let x of s) {
-            if (x === x.toUpperCase()) {
-                answer += x.toLowerCase();
-            } else {
-                answer += x.toUpperCase();
-            }
-            if('KICKboard' === answer.toUpperCase()){
-                i = 5;
-            } else{
-                i =3;
-            }
-        }
-        return i;
-    }
-    console.log(func("kickBOARD")) 
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    3
-                </details>
-            </div>
-
-            <h3 class="t_tit2">07. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function good(){
-        let list = [1,2,3,4,5,6];
-        let i = 0;
-
-        for(let q=0; q<=23; q++){
-            if(q%2==0){
-                i++
-            } else{
-                i--
-            }
-            if(q==2) break;
-            console.log(list[i]);
-        }
-    }
-    good();
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    21
-                </details>
-            </div>
-
-            <h3 class="t_tit2">08. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function solution(numbers){
-        let answer = 0;
-        for(let i=0; i<=10; i++){
-            if(!numbers.includes(i)){
-                answer += i;
-            }
-        }
-        if(answer<=10){
-            answer=0;
-        } else {
-            answer=1;
-        }
-        return answer;
-    }
-    console.log(solution([1,2,3,4,5,6,7,8,0]));
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    1
-                </details>
-            </div>
-
-            <h3 class="t_tit2">09. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function myCurrentMind(){
-        let q = ['Q','I','B','E','O','N','G','R']
-        let o = "";
-
-        for(let i=0; i<=q.length; i++){
-            if(i=2) o+=q[i];
-            if(i=4) o+=q[i];
-            if(i=7) o+=q[i];
-            if(i=1) o+=q[i];
-            if(i=5) o+=q[i];
-            if(i=6) o+=q[i];
-            break;
-        }
-        return o;
-    }
-    console.log(myCurrentMind());
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    DORING
-                </details>
-            </div>
-
-            <h3 class="t_tit2">10. 다음의 결과값을 작성하시오.</h3>
-            <div class="result">
-                <div class="t_code">
-                    <pre><code class="language-js">{
-    function func(afterSchool){
-        let list = ['a','b','c']
-        let i = 0;
-        if(i<=list.length){
-            i=1;
-        } else{
-            i=10;
-        }
-        let answer = "";
-        for(let x of afterSchool){
-            if(x == 'n') answer+= i;
-            else answer += x;
-        }
-        return(answer);
-    }
-    let str = "오늘은 남는 사람 n명"
-    console.log(func(str));  
-}
-</code></pre>
-                </div>
-
-                <details>
-                    <summary>정답보기</summary>
-                    <p class="t_desc"></p>
-                    1명
                 </details>
             </div>
         </div>
@@ -339,6 +258,21 @@
     </script>
 
     <script>
+        {
+            function func() {
+                let i = 6, hap = 0;
+                while (i > 1) {
+                    if (i % 2 == 0) {
+                        hap += i;
+                    } else {
+                        break;
+                    }
+                    i--;
+                }
+                document.write(hap - i);
+            }
+            func();
+        }
     </script>
 </body>
 
