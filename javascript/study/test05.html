@@ -28,10 +28,10 @@
                     <pre><code class="language-js">function q1(num) {
     let answer = 0;
     while(num) {
-        answer += num % 10;
-        num = parseInt(num / 10);
+        answer += num % 10;             //  answer(1996)?? % 10 =6, 1996/10 =199.9??
+        num = parseInt(num / 10);       //  parseInt = 특정진수를 정수로 반환... -> 1996/10 =19.. num 0이 나올때까지 반복..
     }
-    return answer;
+    return answer;  // 리턴값은 6+9+9+1 = 25
 }
 
 console.log(q1(1996));
@@ -49,8 +49,8 @@ console.log(q1(1996));
             <div class="result">
                 <div class="t_code">
                     <pre><code class="language-js">function q2() {
-    const array = [10, 31, 1, 2, 3 ,4, 32];
-    return array.sort();
+    const array = [10, 31, 1, 2, 3 ,4, 32];     // 앞의 자리수를 보고 비교 1 10 2 3 31 32 4 순..
+    return array.sort();    // sort = 적절한 위치에 배치후 배열 반환..
 }
 
 console.log(q2());
@@ -69,7 +69,7 @@ console.log(q2());
                 <div class="t_code">
                     <pre><code class="language-js">function q3() {
     const array = [10, 31, 1, 2, 3 ,4, 32];
-    return array.filter(x => String(x).length >= 2);
+    return array.filter(x => String(x).length >= 2);    // filter = 새로운 배열로 반환? String = 문자열 생성자? 숫자를 문자열로 바꿔주므로 2와 같거나 큰 숫자인 2자리 숫자만 출력...
 }
 
 console.log(q3());
@@ -79,7 +79,7 @@ console.log(q3());
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    [10, 31, 32]
                 </details>
             </div>
 
@@ -98,7 +98,7 @@ console.log(q4());
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    30
                 </details>
             </div>
 
@@ -106,7 +106,7 @@ console.log(q4());
             <div class="result">
                 <div class="t_code">
                     <pre><code class="language-js">   function q5() {
-    return "abcdefghijklmnop".match(/[d-f]/g);
+    return "abcdefghijklmnop".match(/[d-f]/g);  //match = 문자열이 정규식과 매치되는 부분을 검색.. /[d-f]/g는 d~f까지 배열로 반환한다는 의미
 }
 
 console.log(q5());                 
@@ -116,7 +116,7 @@ console.log(q5());
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    ['d', 'e', 'f']
                 </details>
             </div>
 
@@ -137,7 +137,7 @@ console.log(q6(1,2,3,4));
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    10
                 </details>
             </div>
 
@@ -158,7 +158,7 @@ console.log(q7());
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    tree
                 </details>
             </div>
 
@@ -183,7 +183,7 @@ console.log(q8());
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    0
                 </details>
             </div>
 
@@ -208,7 +208,7 @@ console.log(q9());
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    다나가
                 </details>
             </div>
 
@@ -218,10 +218,10 @@ console.log(q9());
                     <pre><code class="language-js">function q10(arr) {
     let flag = false;
     let n = 1;
-    while(!flag) {
+    while(!flag) {  //  while(!false)는 true...
         n++;
-        for(let i = 1; i < arr.length; i++) {
-            if((arr[0] * n) % arr[i] === 0) {
+        for(let i = 1; i < arr.length; i++) {   // i에 들어갈 수 있는 숫자는 1~3 배열값을 대입해보면 모두 짝수 = 조건식이 true
+            if((arr[0] * n) % arr[i] === 0) {   
                 flag = true;
             }
             else {
@@ -233,14 +233,14 @@ console.log(q9());
     return arr[0] * n
 }
 
-console.log(q10([2,6,8,14]));
+console.log(q10([2,6,8,14]));   // while문이 2,6,8,14의 공통배수(최소공배수)일때 멈추므로 답은 168
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    168
                 </details>
             </div>
         </div>
@@ -258,25 +258,7 @@ console.log(q10([2,6,8,14]));
     </script>
 
     <script>
-        {
-            function q1(num) {
-                let answer = 0;
-                while (num) {
-                    answer += num % 10;
-                    num = parseInt(num / 10);
-                }
-                return answer;
-            }
 
-            console.log(q1(1996));
-        }
-        {
-            function q2() {
-                const array = [10, 31, 1, 2, 3, 4, 32];
-                return array.sort();
-            }
-            console.log(q2());
-        }
     </script>
 </body>
 

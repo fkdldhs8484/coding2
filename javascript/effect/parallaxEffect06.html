@@ -425,56 +425,121 @@
         }
 
         .style5.split span {
+            display: inline-block;
             opacity: 0;
             min-width: 1vw;
-            transform: translateY(50px);
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
         }
 
         .style5.split span.show {
-            opacity: 1;
-            transform: translateY(0);
+            animation: flip 1s 1 ease-in forwards;
         }
 
-        @keyframes bounce {
-
-            0%,
-            20%,
-            53%,
+        @keyframes flip {
             0% {
-                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
+                transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+                animation-timing-function: ease-out;
+                opacity: 0;
             }
 
-            40%,
-            43% {
-                -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
-                transform: translate3d(0, -30px, 0) scaleY(1.1);
+            40% {
+                transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+                animation-timing-function: ease-out;
             }
 
-            70% {
-                -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
-                transform: translate3d(0, -15px, 0) scaleY(1.05);
+            50% {
+                transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+                animation-timing-function: ease-in;
             }
 
             80% {
-                -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                -webkit-transform: translate3d(0, 0, 0) scaleY(0.95);
-                transform: translate3d(0, 0, 0) scaleY(0.95);
+                transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+                animation-timing-function: ease-in;
+            }
+
+            100% {
+                transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+                animation-timing-function: ease-in;
+                opacity: 1;
+            }
+        }
+
+        .style6.split span {
+            display: inline-block;
+            opacity: 0;
+            min-width: 1vw;
+        }
+
+        .style6.split span.show {
+            animation: pulse 1s 1 ease-in forwards;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0;
+                transform: scale3d(1, 1, 1);
+            }
+
+            50% {
+                transform: scale3d(1.05, 1.05, 1.05);
+            }
+
+            100% {
+                transform: scale3d(1, 1, 1);
+                opacity: 1;
+            }
+        }
+
+        .style7.split span {
+            display: inline-block;
+            opacity: 0;
+            min-width: 1vw;
+        }
+
+        .style7.split span.show {
+            animation: bounceInLeft 1s 1 ease-in forwards;
+        }
+
+        @keyframes bounceInLeft {
+
+            0%,
+            60%,
+            75%,
+            90%,
+            100% {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(-3000px, 0, 0) scaleX(3);
+            }
+
+            60% {
+                transform: translate3d(25px, 0, 0) scaleX(1);
+            }
+
+            75% {
+                transform: translate3d(-10px, 0, 0) scaleX(0.98);
             }
 
             90% {
-                -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
-                transform: translate3d(0, -4px, 0) scaleY(1.02);
+                transform: translate3d(5px, 0, 0) scaleX(0.995);
             }
+
+            100% {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+
+        .style8.split span {
+            opacity: 0;
+            min-width: 1vw;
+            display: inline-block;
+        }
+
+        .style8.split span.show {
+            animation: lightSpeedInLeft 0.5s 1 ease-in forwards;
         }
     </style>
 </head>
@@ -557,7 +622,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">오늘은 당신의 남은 인생 중, 첫 번째 날이다.</p>
+                <p class="content__item__desc split style6">오늘은 당신의 남은 인생 중, 첫 번째 날이다.</p>
             </section>
             <!-- section6 -->
 
@@ -568,7 +633,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">나 자신에 대한 자신감을 잃으면 온 세상이 나의 적이 된다.</p>
+                <p class="content__item__desc split style7">나 자신에 대한 자신감을 잃으면 온 세상이 나의 적이 된다.</p>
             </section>
             <!-- section7 -->
 
@@ -579,7 +644,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">고개 숙이지 마십시오. 세상을 똑바로 정면으로 바라보십시오.</p>
+                <p class="content__item__desc split style8">고개 숙이지 마십시오. 세상을 똑바로 정면으로 바라보십시오.</p>
             </section>
             <!-- section8 -->
         </div>
