@@ -161,20 +161,13 @@
             margin-right: -4vw;
         }
 
-        #parallax__info {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            z-index: 2000;
-            background: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
+        #parallax__info li,
+        .scrollTop {
+            line-height: 1.4;
         }
 
         /* option */
-        .reveal>div {}
-
+        .reveal>div,
         .reveal>span {
             opacity: 0;
         }
@@ -184,7 +177,6 @@
             animation: opacity 1s linear forwards;
         }
 
-        .reveal.show>div {}
 
         .reveal {
             position: relative;
@@ -317,35 +309,40 @@
         @keyframes reveal_TTB {
             0% {
                 width: 100%;
-                height: 0;
+                height: 0%;
                 top: 0;
+                bottom: 0;
             }
 
             50% {
                 width: 100%;
                 height: 100%;
                 top: 0;
+                bottom: 0;
             }
 
             80% {
                 width: 100%;
                 height: 100%;
                 top: 0;
+                bottom: 0;
             }
 
             100% {
                 width: 100%;
-                height: 0;
+                height: 0%;
                 top: 100%;
+                bottom: 0;
             }
         }
 
-        @keyframes reveal_BTT {
+        @keyframes reveal-BTT {
             0% {
                 width: 100%;
-                height: 0;
+                height: 0%;
                 bottom: 0;
                 top: auto;
+
             }
 
             50% {
@@ -364,7 +361,7 @@
 
             100% {
                 width: 100%;
-                height: 0;
+                height: 0%;
                 bottom: 100%;
                 top: auto;
             }
@@ -470,7 +467,7 @@
 
             <section id="section8" class="content__item">
                 <span class="content__item__num">08</span>
-                <h2 class="content__item__title">section1</h2>
+                <h2 class="content__item__title">section8</h2>
                 <figure class="content__item__imgWrap reveal reveal-TWO reveal-BTT">
                     <div class="content__item__img"></div>
                 </figure>
@@ -917,7 +914,16 @@ scroll();
     <script>
 
         // reveal 클래스 자식에 글씨만 있다면, 가상을 span태그를 만들어서 넣어주세요! (6번 참고)
+        const revealText = document.querySelectorAll(".reveal");
 
+        revealText.forEach((el) => {
+            let splitText = el.innerText;
+
+            // console.log(splitText)
+            if (splitText) {
+                el.innerHTML = '<span>' + splitText + '</span>';
+            }
+        });
 
         function scroll() {
             let scrollTop = window.scrollY;
@@ -943,7 +949,7 @@ scroll();
                 }
             })
 
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+            // document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
             requestAnimationFrame(scroll);
         }
         scroll();
