@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험문제</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">2022/10/07 시험문제</h2>
+            <hr>
+
+            <h3 class="t_tit2">01. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">02. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">03. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">04. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">05. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">                
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">06. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">07. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">08. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">09. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">10. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+        {
+            function solution(a, b, c) {
+                let answer = "YES", max;
+                let tot = a + b + c;
+
+                if (a > b) max = a;
+                else max = b;
+                if (c > max) max = c;
+                if (tot - max <= max) answer = "NO";
+
+                return answer;
+            }
+            console.log(solution(13, 33, 17));  // NO
+        }
+    </script>
+</body>
+
+</html>
