@@ -122,3 +122,9 @@ label {
   box-sizing: border-box;
   margin-bottom: 50px;
 }
+
+.birth {
+  text-align: end;
+  /* display: flex; */
+  justify-content: space-between;
+}
