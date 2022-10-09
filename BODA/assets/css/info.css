@@ -1,130 +1,135 @@
 /* infoType */
 .info__inner {
-  width: 600px;
-  margin: 0 auto;
+    width: 600px;
+    margin: 0 auto;
 }
 
 .login1 {
-  font-size: 24px;
-  font-weight: 400;
-  padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 20px;
 }
 
 .info1 {
-  width: 600px;
-  display: block;
-  border-bottom: 1px solid #000;
-  padding-bottom: 50px;
+    width: 600px;
+    display: block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 50px;
 }
 
 label {
-  font-size: 18px;
-  display: block;
-  font-weight: 400;
-  padding-bottom: 10px;
-  padding-top: 20px;
+    font-size: 18px;
+    display: block;
+    font-weight: 400;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 #id {
-  width: 430px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
+    width: 430px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
 }
 
 #password {
-  width: 600px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
-  /*박스에 튀어나온거 가려줌...*/
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    /*박스에 튀어나온거 가려줌...*/
 }
 
 .btn1 {
-  padding: 15px 40px;
-  background-color: #323232;
-  border-radius: 10px;
-  color: #d9d9d9;
-  tab-size: 18px;
+    padding: 15px 40px;
+    background-color: #323232;
+    border-radius: 10px;
+    color: #d9d9d9;
+    tab-size: 18px;
 }
 
 .btn2 {
-  width: 170px;
-  padding: 15px 40px;
-  background-color: #fff;
-  border: 1px solid #323232;
-  border-radius: 10px;
-  color: #323232;
-  font-size: 20px;
-  margin-left: 85px;
+    width: 170px;
+    padding: 15px 40px;
+    background-color: #fff;
+    border: 1px solid #323232;
+    border-radius: 10px;
+    color: #323232;
+    font-size: 20px;
+    margin-left: 50px;
 }
 
 .btn2:hover {
-  background-color: #323232;
-  color: #fff;
-  align-items: center;
+    background-color: #323232;
+    color: #fff;
+    align-items: center;
 }
 
 .login2 {
-  font-size: 24px;
-  font-weight: 400;
-  padding-top: 60px;
-  padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 
 #name {
-  width: 600px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
 }
 
 #nickname {
-  width: 600px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
 }
 
 #mail {
-  width: 600px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
 }
 
 #box1 {
-  width: 200px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+}
+
+.Btn_box {
+    text-align: center;
+    align-items: center;
 }
 
 #box2,
 #box3 {
-  width: 165px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
+    width: 165px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
 }
 
 #tel {
-  width: 600px;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
-  margin-bottom: 50px;
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .birth {
-  text-align: end;
-  /* display: flex; */
-  justify-content: space-between;
+    text-align: end;
+    /* display: flex; */
+    justify-content: space-between;
 }
