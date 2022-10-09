@@ -25,8 +25,19 @@
             <h3 class="t_tit2">01. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">{
-    
+                    <pre><code class="language-js"> {
+    function solution(a, b, c) {
+        let answer = "YES", max;
+        let tot = a + b + c;
+
+        if (a > b) max = a;
+        else max = b;
+        if (c > max) max = c;
+        if (tot - max <= max) answer = "NO";
+
+        return answer;
+    }
+    console.log(solution(13, 33, 17));  // NO
 }
 </code></pre>
                 </div>
@@ -34,84 +45,151 @@
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    NO
                 </details>
             </div>
 
             <h3 class="t_tit2">02. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js"> {
+    function solution(a, b, c) {
+        let answer;
+        if (a < b) answer = a;
+        else answer = b;
+        if (c < answer) answer = c;
+        return answer;
+    }
+    console.log(solution(2, 5, 1));
+}
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    1
                 </details>
             </div>
 
             <h3 class="t_tit2">03. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js"> {
+    function solution(n) {
+        let answer;
+        answer = Math.ceil(n / 12);
+        return answer;
+    }
+    console.log(solution(178));
+}
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    15
                 </details>
             </div>
 
             <h3 class="t_tit2">04. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js"> {
+    function solution(n) {
+        let answer = 0;
+        for (let i = 1; i <= n; i++) {
+            answer = answer + i;
+        }
+        return answer;
+    }
+    console.log(solution(5));
+}
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    15
                 </details>
             </div>
 
             <h3 class="t_tit2">05. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">                
+                    <pre><code class="language-js"> {
+    function solution(arr) {
+        let answer = [];
+        let sum = 0, min = 1000;
+        for (let x of arr) {
+            if (x % 2 === 1) {
+                sum += x;
+                if (x < min) min = x;
+            }
+        }
+        answer.push(sum);
+        answer.push(min);
+        return answer;
+    }
+    arr = [12, 77, 38, 41, 53, 92, 85];
+    console.log(solution(arr));
+}               
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    [256, 41]
                 </details>
             </div>
 
             <h3 class="t_tit2">06. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js">  {
+    function solution(day, arr) {
+        let answer = 0;
+        for (let x of arr) {
+            if (x % 10 == day) answer++;
+        }
+        return answer;
+    }
+    arr = [25, 23, 11, 47, 53, 17, 33];
+    console.log(solution(3, arr));
+}
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    3
                 </details>
             </div>
 
             <h3 class="t_tit2">07. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js"> {
+    function solution(arr) {
+        let answer = arr;
+        let sum = answer.reduce((a, b) => a + b, 0);
+        for (let i = 0; i < 8; i++) {
+            for (let j = i + 1; j < 9; j++) {
+                if ((sum - (answer[i] + answer[j]) == 100)) {
+                    answer.splice(j, 1);
+                    answer.splice(i, 1);
+                }
+            }
+        }
+        return answer;
+    }
+    let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+    console.log(solution(arr));
+}
 </code></pre>
                 </div>
 
@@ -125,22 +203,113 @@
             <h3 class="t_tit2">08. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js"> {
+    function solution(s) {
+        let answer = "";
+        for (let x of s) {
+            if (x == 'A') answer += '#';
+            else answer += x;
+        }
+        return answer;
+    }
+    let str = "BANANA";
+    console.log(solution(str));
+}
 </code></pre>
                 </div>
 
                 <details>
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
-
+                    B#N#N#
                 </details>
             </div>
 
             <h3 class="t_tit2">09. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
-                    <pre><code class="language-js">
+                    <pre><code class="language-js">  {
+    function solution(s) {
+        let answer = s;
+        answer = answer.replace(/a/g, "#");
+        return answer;
+    }
+    let str = "javascript";
+    console.log(str);
+}
 
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    javascript
+                </details>
+            </div>
+
+            <h3 class="t_tit2">11. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function solution(s, t) {
+        let answer = s.split(t).length;
+        return answer - 1;
+    }
+    let str = "javascript react vue";
+    console.log(solution(str, 'a'));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    3
+                </details>
+            </div>
+
+            <h3 class="t_tit2">12. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function solution(s) {
+        let answer = 0;
+        for (let x of s) {
+            if (x === x.toUpperCase()) answer++;
+        }
+        return answer;
+    }
+    let str = "KoreaTimeGood";
+    console.log(solution(str));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    3
+                </details>
+            </div>
+
+            <h3 class="t_tit2">13. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function solution(s) {
+        let answer = "";
+        for (let x of s) {
+            let num = x.charCodeAt();
+
+            if (x === x.toLowerCase()) answer += x.toUpperCase();
+            else answer += x;
+        }
+        return answer;
+        let str = "ltisTimeToStudy";
+        console.log(solution(str));
+    }
+}
 </code></pre>
                 </div>
 
@@ -151,7 +320,59 @@
                 </details>
             </div>
 
-            <h3 class="t_tit2">10. 다음의 결과값을 작성하시오.</h3>
+            <h3 class="t_tit2">14. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">    {
+    function solution(s) {
+        let answer = "";
+        for (let i = 0; i < s.length; i++) {
+            if (s.indexOf(s[i]) === i) answer += s[i];
+        }
+        return answer;
+    }
+    console.log(solution("ksekkset"));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    kset
+                </details>
+            </div>
+
+            <h3 class="t_tit2">15. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    function solution(s) {
+        let answer = "YES";
+        stack = [];
+        for (let x of s) {
+            if (x === '(') stack.pust(x);
+            else {
+                if (stack.length === 0) return "NO";
+                stack.pop();
+            }
+        }
+        if (stack.length > 0) return "NO";
+        return answer;
+    }
+    console.log(solution("study"));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    NO
+                </details>
+            </div>
+
+            <h3 class="t_tit2">16. 다음의 결과값을 작성하시오.</h3>
             <div class="result">
                 <div class="t_code">
                     <pre><code class="language-js">
@@ -162,6 +383,88 @@
                     <summary>정답보기</summary>
                     <p class="t_desc"></p>
 
+                </details>
+            </div>
+
+            <h3 class="t_tit2">17. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">18. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+
+                </details>
+            </div>
+
+            <h3 class="t_tit2">19. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    function solution(s) {
+        let answer;
+        let stack = [];
+        for (let x of s) {
+            if (x === ')') {
+                while (stack.pop() !== '(');
+            }
+            else stack.push(x);
+        }
+        answer = stack.join('');
+        return answer;
+    }
+    let str = "(A(BC)D)EF(G(H)(IJ)K)LM(N)";
+    console.log(solution(str));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    EFLM
+                </details>
+            </div>
+
+            <h3 class="t_tit2">20. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">      function solution(n, k) {
+    let answer;
+    let queue = Array.from({ length: n }, (v, i) => i + 1);
+    while (queue.length) {
+        for (let i = 1; i < k; i++) queue.push(queue.shift());
+        queue.shift();
+        if (queue.length === 1) answer = queue.shift();
+    }
+    return answer;
+}
+console.log(solution(8, 3));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    7
                 </details>
             </div>
         </div>
@@ -192,6 +495,235 @@
                 return answer;
             }
             console.log(solution(13, 33, 17));  // NO
+        }
+        {
+            function solution(a, b, c) {
+                let answer;
+                if (a < b) answer = a;
+                else answer = b;
+                if (c < answer) answer = c;
+                return answer;
+            }
+            console.log(solution(2, 5, 1));
+        }
+        {
+            function solution(n) {
+                let answer;
+                answer = Math.ceil(n / 12);
+                return answer;
+            }
+            console.log(solution(178));
+        }
+        {
+            function solution(n) {
+                let answer = 0;
+                for (let i = 1; i <= n; i++) {
+                    answer = answer + i;
+                }
+                return answer;
+            }
+            console.log(solution(5));
+        }
+        {
+            function solution(arr) {
+                let answer = [];
+                let sum = 0, min = 1000;
+                for (let x of arr) {
+                    if (x % 2 === 1) {
+                        sum += x;
+                        if (x < min) min = x;
+                    }
+                }
+                answer.push(sum);
+                answer.push(min);
+                return answer;
+            }
+            arr = [12, 77, 38, 41, 53, 92, 85];
+            console.log(solution(arr));
+        }
+        {
+            function solution(day, arr) {
+                let answer = 0;
+                for (let x of arr) {
+                    if (x % 10 == day) answer++;
+                }
+                return answer;
+            }
+            arr = [25, 23, 11, 47, 53, 17, 33];
+            console.log(solution(3, arr));
+        }
+        {
+            function solution(arr) {
+                let answer = arr;
+                let sum = answer.reduce((a, b) => a + b, 0);
+                for (let i = 0; i < 8; i++) {
+                    for (let j = i + 1; j < 9; j++) {
+                        if ((sum - (answer[i] + answer[j]) == 100)) {
+                            answer.splice(j, 1);
+                            answer.splice(i, 1);
+                        }
+                    }
+                }
+                return answer;
+            }
+            let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+            console.log(solution(arr));
+        }
+        {
+            function solution(s) {
+                let answer = "";
+                for (let x of s) {
+                    if (x == 'A') answer += '#';
+                    else answer += x;
+                }
+                return answer;
+            }
+            let str = "BANANA";
+            console.log(solution(str));
+        }
+        {
+            function solution(s) {
+                let answer = s;
+                answer = answer.replace(/a/g, "#");
+                return answer;
+            }
+            let str = "javascript";
+            console.log(str);
+        }
+        {
+            function solution(s, t) {
+                let answer = s.split(t).length;
+                return answer - 1;
+            }
+            let str = "javascript react vue";
+            console.log(solution(str, 'a'));
+        }
+        {
+            function solution(s) {
+                let answer = 0;
+                for (let x of s) {
+                    if (x === x.toUpperCase()) answer++;
+                }
+                return answer;
+            }
+            let str = "KoreaTimeGood";
+            console.log(solution(str));
+        }
+        {
+            function solution(s) {
+                let answer = "";
+                for (let x of s) {
+                    let num = x.charCodeAt();
+
+                    if (x === x.toLowerCase()) answer += x.toUpperCase();
+                    else answer += x;
+                }
+                return answer;
+                let str = "ltisTimeToStudy";
+                console.log(solution(str));
+            }
+        }
+        {
+            function solution(s) {
+                let answer = "";
+                for (let x of s) {
+                    if (x === x.toUpperCase()) answer += x.toLowerCase();
+                    else answer += x.toLowerCase();
+                }
+                return answer;
+            }
+            console.log(solution("StuDY"));
+        }
+        {
+            function solution(s) {
+                let answer = "", max = Number.MIN_SAFE_INTEGER;
+                for (let x of s) {
+                    if (x.length > max) {
+                        max = x.length;
+                        answer = x;
+                    }
+                }
+                return answer;
+            }
+            let str = ["teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(str));
+        }
+        {
+            function solution(s) {
+                let answer;
+                let mid = Math.floor(s.length / 2);
+
+                if (s.length % 2 === 1) answer = s.substring(mid, mid + 1);
+                else answer = s.substring(mid - 1, mid + 1);
+                return answer;
+            }
+            console.log(solution("study"));
+        }
+        {
+            function solution(s) {
+                let answer = "";
+                for (let i = 0; i < s.length; i++) {
+                    if (s.indexOf(s[i]) === i) answer += s[i];
+                }
+                return answer;
+            }
+            console.log(solution("ksekkset"));
+        }
+        {
+            function solution(s) {
+                let answer;
+                answer = s.filter(function (v, i) {
+                    return s.indexOf(v) === i;
+                });
+                return answer;
+            }
+            let str = ["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        }
+        {
+            function solution(s) {
+                let answer = "YES";
+                stack = [];
+                for (let x of s) {
+                    if (x === '(') stack.pust(x);
+                    else {
+                        if (stack.length === 0) return "NO";
+                        stack.pop();
+                    }
+                }
+                if (stack.length > 0) return "NO";
+                return answer;
+            }
+            console.log(solution("study"));
+        }
+        {
+            function solution(s) {
+                let answer;
+                let stack = [];
+                for (let x of s) {
+                    if (x === ')') {
+                        while (stack.pop() !== '(');
+                    }
+                    else stack.push(x);
+                }
+                answer = stack.join('');
+                return answer;
+            }
+            let str = "(A(BC)D)EF(G(H)(IJ)K)LM(N)";
+            console.log(solution(str));
+        }
+        {
+            function solution(n, k) {
+                let answer;
+                let queue = Array.from({ length: n }, (v, i) => i + 1);
+                while (queue.length) {
+                    for (let i = 1; i < k; i++) queue.push(queue.shift());
+                    queue.shift();
+                    if (queue.length === 1) answer = queue.shift();
+                }
+                return answer;
+            }
+            console.log(solution(8, 3));
         }
     </script>
 </body>
