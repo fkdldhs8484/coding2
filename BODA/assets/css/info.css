@@ -89,7 +89,11 @@ label {
     color: #fff;
     align-items: center;
 }
-
+.openBtn:hover {
+    background-color: #323232;
+    color: #fff;
+    align-items: center;
+}
 .login2 {
     font-size: 24px;
     font-weight: 400;
