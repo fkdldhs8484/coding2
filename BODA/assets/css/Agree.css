@@ -1,5 +1,6 @@
 /* AgreeType */
 .Agree__inner {
+    position: relative;
     width: 600px;
     margin: 0 auto;
     /* background-color: #eee; */

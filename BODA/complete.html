@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/login_popup.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
 
     <style>
         @import url('https://webfontworld.github.io/score/SCoreDream.css');
@@ -18,24 +18,30 @@
 </head>
 
 <body>
-    <!-- 로그인 가입 팝업 -->
-    <div class="login__popup score ">
-        <div class="login__inner">
-            <div class="login__header">
-                <h3 class="title">SIGN UP</h3>
-            </div>
-            <div class="login__contents">
-                <form name="login" method="post">
-                    <fieldset>
-                        <p class="desc">회원가입이 성공적으로 완료되었습니다.</p>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="login__footer">
-                <button type="button" class="btn-close"><span>메인으로</span> </button>
-            </div>
+    <button class="openBtn">다음으로</button>
+    <div class="modal hidden">
+        <div class="bg"></div>
+        <div class="modalBox">
+            <h2>SIGN UP</h2>
+            <p>회원가입이 성공적으로 완료되었습니다.</p>
+            <button class="closeBtn">메인으로</button>
         </div>
     </div>
+
+    <script>
+        const open = () => {
+            document.querySelector(".modal").classList.remove("hidden");
+        }
+
+        const close = () => {
+            document.querySelector(".modal").classList.add("hidden");
+        }
+
+        document.querySelector(".openBtn").addEventListener("click", open);
+        document.querySelector(".closeBtn").addEventListener("click", close);
+        document.querySelector(".bg").addEventListener("click", close);
+    </script>
+
 </body>
 
 </html>

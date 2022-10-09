@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/info.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
 
     <style>
         @import url('https://webfontworld.github.io/score/SCoreDream.css');
@@ -76,7 +77,16 @@
                 </article>
                 <div class="Btn_box">
                     <button class="btn2" type="submit"> 메인으로</button>
-                    <button class="btn2" type="submit"> 회원가입 완료</button>
+                    <button class="openBtn">다음으로</button>
+                    <div class="modal hidden">
+                        <div class="bg"></div>
+                        <div class="modalBox">
+                            <h2>SIGN UP</h2>
+                            <p>회원가입이 성공적으로 완료되었습니다.</p>
+                            <button class="closeBtn">메인으로</button>
+                        </div>
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -84,31 +94,25 @@
     </section>
 
     <script>
+        window.onunload = function () { window.scrollTo(0, 0); }
+
         //id 중복체크
         function idCheck() {
             //새창 만들기
             window.open("idCheckForm.jsp", "idwin", "width=400, height=350");
         }
 
-        // 팝업
-        var target = document.querySelectorAll('.btn2');
-        var btnPopClose = document.querySelectorAll('.login__popup .btn-close');
-        var targetID;
-
-        // 팝업 열기
-        for (var i = 0; i < target.length; i++) {
-            target[i].addEventListener('click', function () {
-                targetID = this.getAttribute('href');
-                document.querySelector(targetID).style.display = 'block';
-            });
+        const open = () => {
+            document.querySelector(".modal").classList.remove("hidden");
         }
 
-        // 팝업 닫기
-        for (var j = 0; j < target.length; j++) {
-            btnPopClose[j].addEventListener('click', function () {
-                this.parentNode.parentNode.style.display = 'none';
-            });
+        const close = () => {
+            document.querySelector(".modal").classList.add("hidden");
         }
+
+        document.querySelector(".openBtn").addEventListener("click", open);
+        document.querySelector(".closeBtn").addEventListener("click", close);
+        document.querySelector(".bg").addEventListener("click", close);
     </script>
 </body>
 
