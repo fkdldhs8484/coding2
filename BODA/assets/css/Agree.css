@@ -150,21 +150,24 @@ input[id="check4"]:checked + label::after {
 }
 
 .btn_box {
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.Btn {
-    width: 173px;
-    height: 72px;
+.btn_box .Btn {
+    width: 17%;
+    padding: 15px 40px;
     background-color: #fff;
     border-radius: 10px;
     font-size: 20px;
     border: 1px solid #323232;
-    margin-left: 50px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Btn:hover {
-    background-color: #000;
+    background-color: #323232;
     color: #fff;
 }

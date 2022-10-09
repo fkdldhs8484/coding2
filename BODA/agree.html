@@ -25,7 +25,9 @@
             <h3>약관동의</h3>
             <p>[필수] 회원가입을 위한 약관에 동의해주세요.</p>
             <article class="Agree a1">
-                <h4 class="title">이용약관 동의 [필수] <input type='checkbox' id="check1"><label for="check1"></label></h4>
+                <h4 class="title">이용약관 동의 [필수] <input type='checkbox' name='check_all' id="check1" required><label
+                        for="check1"></label>
+                </h4>
 
                 <div class="box">
                     <h5 class="desc">제 1 조 [ 목적 ]</h5>
@@ -41,7 +43,8 @@
             </article>
 
             <article class="Agree a2">
-                <h4 class="title">개인정보 수집 및 이용 동의 [필수] <input type='checkbox' id="check2"><label for="check2"></label>
+                <h4 class="title">개인정보 수집 및 이용 동의 [필수] <input type='checkbox' name='check_all' id="check2"><label
+                        for="check2"></label>
                 </h4>
 
                 <div class="box">
@@ -58,22 +61,36 @@
 
             </article>
             <div class="checkbox1">
-                <input type='checkbox' id="check3"><label for="check3"></label>
+                <input type='checkbox' id="check3" name='check_all'><label for="check3"></label>
                 <p class="checkbox_p">[필수] 만 14세 이상입니다.</p>
             </div>
             <div class="checkbox2">
-                <input type='checkbox' id="check4"><label for="check4"></label>
+                <input type='checkbox' id="check4" name='check_all' value='selectall' onclick='selectAll(this)'><label
+                    for="check4"></label>
                 <p class="checkbox_p">모든 약관에 동의합니다.</p>
             </div>
             <div class="btn_box">
-                <button type="submit" class="Btn">메인으로</button>
-                <button type="submit" class="Btn">다음</button>
+                <a href="#" class="Btn">메인으로</a>
+                <a href="info.html" class="Btn">다음</a>
             </div>
 
         </div>
-
-
     </section>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+
+    <script>
+        // 모두 체크하기
+        function selectAll(selectAll) {
+            const checkboxes
+                = document.getElementsByName('check_all');
+
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+    </script>
 </body>
 
 </html>
