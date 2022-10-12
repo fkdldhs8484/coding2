@@ -144,7 +144,7 @@ body {
     width: 43px;
     height: 73px;
     z-index: 10000;
-    background: url(/javascript/assets/img3/cursor.png);
+    background: url(/javascript/assets/img/cursor.png);
     user-select: none;
     pointer-events: none;
 }
