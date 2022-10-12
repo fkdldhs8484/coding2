@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/bg.css">
+    <link rel="stylesheet" href="../assets/css/game.css">
+    <link rel="stylesheet" href="../assets/css/music.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Webs Game World</h1>
+        <div class="time"></div>
+    </header>
+    <!-- header -->
+
+    <main id="main">
+        <div class="cursor"></div>
+        <div class="icon_box">
+            <div class="icon1">
+                <img src="../assets/img3/icon1.png" alt="뮤직">
+                <span>뮤직 듣기</span>
+            </div>
+            <div class="icon2">
+                <img src="../assets/img3/folder.png" alt="뮤직">
+                <span>내 파일</span>
+            </div>
+            <div class="icon3">
+                <img src="../assets/img3/reading.png" alt="뮤직">
+                <span>문서</span>
+            </div>
+            <div class="icon4">
+                <img src="../assets/img3/movies.png" alt="뮤직">
+                <span>동영상</span>
+            </div>
+            <div class="icon5">
+                <img src="../assets/img3/figma.png" alt="뮤직">
+                <span>피그마</span>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+
+    <footer id="footer">
+        <div class="agent"></div>
+    </footer>
+    <!-- footer -->
+
+    <!-- 뮤직 플레이어 -->
+    <div class="music__wrap">
+        <div class="music__inner">
+            <div class="music__header">
+                <div>*</div>
+                <h2>Music player</h2>
+                <div>*</div>
+            </div>
+            <div class="music__contents">
+                <div class="music__view">
+                    <div class="img">
+                        <img src="../assets/img3/music_v01.png" alt="#">
+                    </div>
+                    <div class="title">
+                        <h3>Average - Patrick Patrikios</h3>
+                        <p>youtuber music</p>
+                    </div>
+                </div>
+                <div class="music__control">
+                    <div class="progress">
+                        <div class="bar">
+                            <audio src="main-audio" src="../assets/audio/music_audio01.mp3"></audio>
+                        </div>
+                        <div class="timer">
+                            <span class="current">0:00</span>
+                            <span class="duration">4:00</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <i title="전체 반복" class="reprat" id="control-repeat"></i>
+                        <i title="이전곡 재생" class="prev" id="control-prev"></i>
+                        <i title="재생" class="play" id="control-play"></i>
+                        <i title="다음곡 재생" class="next" id="control-next"></i>
+                        <i title="재생 목록" class="list" id="control-list"></i>
+
+                        <!-- <i title="한곡 반복" class="reprat_one"></i> -->
+                        <!-- <i title="랜덤 재생" class="shuffle"></i> -->
+                        <!-- <i title="재생" class="stop"></i> -->
+                    </div>
+                </div>
+            </div>
+            <div class="music__footer">
+                <div class="music__list">
+                    <h3><span class="list"></span>뮤직 리스트</h3>
+                    <ul>
+                        <!-- <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //뮤직 플레이어 -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/music.js"></script>
+
+    <script>
+        $(".icon1").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../assets/img/folder.png")
+            },
+        });
+        $(".icon2").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../assets/img3/folder.png")
+            },
+        });
+        $(".icon3").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../assets/img3/reading.png")
+            },
+        });
+        $(".icon4").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../assets/img3/movies.png")
+            },
+        });
+        $(".icon5").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../assets/img3/figma.png")
+            },
+        });
+        $(".music__wrap").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../assets/img3/figma.png")
+            },
+        });
+
+        const cursor = document.querySelector(".cursor");
+
+
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.left = e.clientX + "px";   //단위 꼭 붙여주기
+            cursor.style.top = e.clientY + "px";
+        });
+
+        function printTime() {
+            const clock = document.querySelector(".time");
+            const now = new Date();
+            const nowTime =
+                now.getFullYear() +
+                "년 " +
+                (now.getMonth() + 1) +
+                "월 " +
+                now.getDate() +
+                "일 " +
+                now.getHours() +
+                "시 " +
+                now.getMinutes() +
+                "분 " +
+                now.getSeconds() +
+                "초";
+            clock.innerText = nowTime;
+            setTimeout("printTime()", 1000);
+            // 1초마다 시간이 바뀌도록 하려면 setTimeout 사용해야 함
+        }
+        function printAgent() {
+            const agent = document.querySelector(".agent");
+            const os = navigator.userAgent.toLocaleLowerCase();
+            // agent.innerText = os;
+            // 윈도우 기준 출력물
+            // mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/105.0.0.0 safari/537.36
+            if (os.indexOf("window") >= 0) {
+                // 기종 출력
+                // 기종별로 CSS를 달리 설정할 수 있음
+                agent.innerText = "현재 windows를 사용하고, 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("window");
+            } else if (os.indexOf("macintosh") >= 0) {
+                agent.innerText = "현재 mac을 사용하고, 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("mac");
+            } else if (os.indexOf("iphone") >= 0) {
+                agent.innerText = "현재 IPhone을 사용하고 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("iphone");
+            } else if (os.indexOf("android") >= 0) {
+                agent.innerText = "현재 Android를 사용하고 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("android");
+            }
+        }
+        window.onload = function () {
+            printTime();
+            printAgent();
+        };
+    </script>
+
+</body>
+
+</html>
