@@ -141,11 +141,11 @@ musicNextBtn.addEventListener('click', () => {
 
 // 뮤직 리스트 버튼
 musicListBtn.addEventListener('click', () => {
-  musicList.classList.add('show')
-  musicList.classList.remove('hide')
+  musicListUl.classList.add('show')
+  musicListUl.classList.remove('hide')
 })
 musicListClose.addEventListener('click', () => {
-  musicList.classList.add('hide')
+  musicListUl.classList.add('hide')
 })
 
 // 뮤직 리스트 구현하기
