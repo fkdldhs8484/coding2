@@ -72,10 +72,10 @@ const musicProgressDuration = musicWrap.querySelector(
   '.progress .timer .duration',
 )
 const musicRepeat = musicWrap.querySelector('#control-repeat')
-const musicListBtn = musicWrap.querySelector('#control-list')
-const musicList = musicWrap.querySelector('.music__list')
+const musicListBtn = musicWrap.querySelector('#control-list') // 재생목록 버튼
+const musicList = musicWrap.querySelector('.music__list')   // 목록 리스트
 const musicListUl = musicList.querySelector('.music__list ul')
-const musicListClose = musicList.querySelector('.music__list a .close')
+const musicListClose = musicList.querySelector('.music__list .close')   // x버튼
 
 let musicIndex = 1  // 현재 음악 인덱스
 
@@ -141,10 +141,11 @@ musicNextBtn.addEventListener('click', () => {
 
 // 뮤직 리스트 버튼
 musicListBtn.addEventListener('click', () => {
-  musicListUl.classList.add('show')
+  musicList.classList.add('show')
+  musicList.classList.remove('hide')
 })
 musicListClose.addEventListener('click', () => {
-  musicList.classList.remove('hide')
+  musicList.classList.add('hide')
 })
 
 // 뮤직 리스트 구현하기
