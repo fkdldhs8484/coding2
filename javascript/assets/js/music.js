@@ -212,8 +212,6 @@ musicAudio.addEventListener("ended", () => {
 });
 
 //플레이 버튼
-//재생 버튼 클릭했을 때 함수 실행
-//pause - 플레이 버튼을 누르면 정지 버튼이 나와야 한다.
 musicPlay.addEventListener("click", () => {
     //클래스를 추가시켜 pause가 있는 경우 정지하고 없는 경우 재생시키기
     const isMusicPaused = musicWrap.classList.contains("paused"); //음악 재생 중
@@ -230,40 +228,22 @@ musicNextBtn.addEventListener("click", () => {
     nextMusic();
 });
 
+//뮤직 리스트 열기, 닫기
+const closeBtn = document.querySelector(".close-btn");
+
+closeBtn.addEventListener("click", () => {
+    musicList.style.display = "none";
+});
+musicListBtn.addEventListener("click", () => {
+    musicList.style.display = "block";
+});
+
 //뮤직 리스트 버튼
 musicPlay.addEventListener("click", () => {
     musicList.classList.add("show");
 });
 
-// 뮤직 리스트 구현하기 (수정 전)
-// for(let i=0; i < allMusic.length; i++){
-//     let li = `
-//         <li data-index="${i + 1}">
-//             <strong>${allMusic[i].name}</strong>
-//             <em>${allMusic[i].artist}</em>
-//             <audio class="${allMusic[i].audio}" src="../assets/audio/${allMusic[i].audio}.mp3"></audio>
-//             <span class="audio-duration" id="${allMusic[i].audio}">재생시간</span>
-//         </li>
-//     `;
-
-//     // musicListUl.innerHTML += li; : 한 번에 로딩해서 값을 인식하지 못함.
-//     musicListUl.insertAdjacentHTML("beforeend", li); //
-
-//     //리스트에 음악시간 불러오기
-//     let liAudioDration = musicListUl.querySelector(`${allMusic[i].audio}`); //리스트에서 시간을 표시할 선택자를 가져온다
-//     let liAudio = musicListUl.querySelector(`${allMusic[i].audio}`); //리스트에서 오디오를 가져옴
-//     liAudio.addEventListener("loadeddata", () => {
-//         let audioDuration = liAudio.duration; //오디오 전체 길이
-//         let totalMin = Math.floor(audioDuration / 60); //전체 길이를 분 단위로 쪼개기
-//         let totalSec = Math.floor(audioDuration % 60); //초 계산하기
-
-//         if(totalSec < 10) totalSec = `0${totalSec}`; //앞자리에 0추가하기
-//         liAudioDration.innerText = `${totalMin}:${totalSec}`; //시간 문자열로 출력하기
-//         liAudioDration.setAttribute("data-duration", `${totalMin}:${totalSec}`); //속성에 오디오 길이 기록
-//     });
-// }
-
-// 뮤직 리스트 구현하기 (수정 후)
+// 뮤직 리스트 구현하기
 for (let i = 0; i < allMusic.length; i++) {
     let li = `
       <li data-index="${i + 1}">
@@ -295,7 +275,7 @@ for (let i = 0; i < allMusic.length; i++) {
     });
 }
 
-//뮤직 리스트를 클릭하면 재생 - 눌렀을 때 아래의 함수가 실행되게 해준다.
+//뮤직 리스트를 클릭하면 재생
 function playListMusic() {
     const musicListAll = musicListUl.querySelectorAll("li"); //뮤직 리스트 목록
     for (let i = 0; i < musicListAll.length; i++) {
@@ -318,7 +298,7 @@ function playListMusic() {
     }
 }
 
-//뮤직 리스트를 클릭하면 - 클릭하면 재생되도록 함.
+//뮤직 리스트를 클릭하면..
 function clicked(el) {
     let getLiIndex = el.getAttribute("data-index"); //클릭한 뮤직 리스크의 인덱스 값을 저장한다.
     musicIndex = getLiIndex; //클릭한 인덱스 값을 뮤직 인덱스에 저장한다.
@@ -330,16 +310,6 @@ function clicked(el) {
 window.addEventListener("load", () => {
     loadMusic(musicIndex); //음악재생
     playListMusic(); //리스트 초기화
-});
-
-//뮤직 리스트 열기, 닫기
-const closeBtn = document.querySelector(".close-btn");
-
-closeBtn.addEventListener("click", () => {
-    musicList.style.display = "none";
-});
-musicListBtn.addEventListener("click", () => {
-    musicList.style.display = "block";
 });
 
 // 볼륨 조절
