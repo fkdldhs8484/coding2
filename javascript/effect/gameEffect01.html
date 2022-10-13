@@ -67,6 +67,10 @@
                     <div class="title">
                         <h3>Kazoom - Quincas Moreira</h3>
                         <p>YouTube Music</p>
+
+                    </div>
+                    <div class="volume">
+                        <input type="range" id="volume-control" min="0.1" max="10">
                     </div>
                 </div>
                 <div class="music__control">
@@ -81,20 +85,21 @@
                     </div>
                     <div class="control">
                         <i title="전체 반복" class="repeat" id="control-repeat"></i>
-                        <i title="이전곡 재생" class="prev" id="control-prev"></i>
+
+                        <i title="이전곡" class="prev" id="control-prev"></i>
                         <i title="재생" class="play" id="control-play"></i>
-                        <i title="다음곡 재생" class="next" id="control-next"></i>
+                        <i title="디음곡" class="next" id="control-next"></i>
                         <i title="재생목록" class="list" id="control-list"></i>
 
-                        <!-- <i title="한곡 반복" class="repeat_one"></i> -->
-                        <!-- <i title="랜덤 재생" class="shuffle"></i> -->
-                        <!-- <i title="재생" class="stop"></i> -->
+                        <!-- <i title="한곡 반복" class="repeat_one"></i>
+                        <i title="랜덤 반복" class="shuffle"></i> -->
+                        <!-- <i title="정지" class="pause"></i>  -->
                     </div>
                 </div>
             </div>
             <div class="music__footer">
                 <div class="music__list">
-                    <h3><span class="list"></span>뮤직 리스트 <a href="#" class="close"></a> </h3>
+                    <h3><span class="list"></span>뮤직 리스트<span class="close-btn"></span></h3>
                     <ul>
                         <!-- <li>
                             <strong>제목</strong>
@@ -113,6 +118,8 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/music.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/common.js"></script>
 
     <script>
         $(".icon1").draggable({
@@ -154,25 +161,23 @@
             cursor.style.top = e.clientY + "px";
         });
 
+        //시계
         function printTime() {
             const clock = document.querySelector(".time");
             const now = new Date();
-            const nowTime =
-                now.getFullYear() +
-                "년 " +
-                (now.getMonth() + 1) +
-                "월 " +
-                now.getDate() +
-                "일 " +
-                now.getHours() +
-                "시 " +
-                now.getMinutes() +
-                "분 " +
-                now.getSeconds() +
-                "초";
+            // clock.innerText = now;
+            let hr = now.getHours();
+            if (hr < 10) hr = '0' + hr;
+            if (hr > 12) hr = hr - 12;
+            let min = now.getMinutes();
+            if (min < 10) min = '0' + min;
+            let sec = now.getSeconds();
+            if (sec < 10) sec = '0' + sec;
+            let month = now.getMonth() + 1;
+            if (month < 10) month = '0' + month;
+            const nowTime = "" + now.getFullYear() + "년 " + (now.getMonth() + 1) + "월 " + now.getDate() + "일 " + hr + "시 " + min + "분 " + sec + "초";
             clock.innerText = nowTime;
-            setTimeout("printTime()", 1000);
-            // 1초마다 시간이 바뀌도록 하려면 setTimeout 사용해야 함
+            setTimeout("printTime()", 1000)
         }
 
 
