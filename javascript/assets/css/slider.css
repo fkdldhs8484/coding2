@@ -9,34 +9,34 @@ body {
   height: 100vh;
 }
 body.img01 {
-  background: #000 url(../img3/effect_bg01@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
 }
 body.img02 {
-  background: #000 url(../img3/effect_bg02@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg02@2x-min.jpg) no-repeat center / cover;
 }
 body.img03 {
-  background: #000 url(../img3/effect_bg03@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg03@2x-min.jpg) no-repeat center / cover;
 }
 body.img04 {
-  background: #000 url(../img3/effect_bg04@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg04@2x-min.jpg) no-repeat center / cover;
 }
 body.img05 {
-  background: #000 url(../img3/effect_bg05@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg05@2x-min.jpg) no-repeat center / cover;
 }
 body.img06 {
-  background: #000 url(../img3/effect_bg06@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg06@2x-min.jpg) no-repeat center / cover;
 }
 body.img07 {
-  background: #000 url(../img3/effect_bg07@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg07@2x-min.jpg) no-repeat center / cover;
 }
 body.img08 {
-  background: #000 url(../img3/effect_bg08@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg08@2x-min.jpg) no-repeat center / cover;
 }
 body.img09 {
-  background: #000 url(../img3/effect_bg09@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg09@2x-min.jpg) no-repeat center / cover;
 }
 body.img10 {
-  background: #000 url(../img3/effect_bg10@2x-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
 }
 body::after {
   content: "";

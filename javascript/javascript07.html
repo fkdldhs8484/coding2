@@ -60,21 +60,54 @@
             </div>
             <div class="main_sample">
                 <div id="sample01" class="sample">
-                    <h3>01. 변수 : 데이터 저장</h3>
-                    <p></p>
+                    <h3>01. 수학 메서드 : Math.rendom() : 0과 1사이의 난수 값을 반환 : 반환(숫자)</h3>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 32%;">
+                                <col style="width: 32%;">
+                                <col style="width: 37%;">
+                                <col style="width: 5%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기본값</th>
+                                    <th>메서드</th>
+                                    <th>리턴값</th>
+                                    <th>클릭</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sample01_N1"></td>
+                                    <td class="sample01_Q1"></td>
+                                    <td class="sample01_M1"></td>
+                                    <td class="sample01_P1"></td>
+                                    <td class="sample01_B1"><button>클릭</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample01_N2"></td>
+                                    <td class="sample01_Q2"></td>
+                                    <td class="sample01_M2"></td>
+                                    <td class="sample01_P2"></td>
+                                    <td class="sample01_B2"><button>클릭</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample01_N3"></td>
+                                    <td class="sample01_Q3"></td>
+                                    <td class="sample01_M3"></td>
+                                    <td class="sample01_P3"></td>
+                                    <td class="sample01_B3"><button>클릭</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="script">
-                        <pre><code class="language-js">
-    </code></pre>
+<pre><code class="language-js">
+</code></pre>
                     </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과보기</summary>
-                            <div class="sample01_result">
-
-                            </div>
-                        </details>
-                    </div>
-                </div>
                 <!-- //sample01 -->
             </div>
         </div>
@@ -87,11 +120,35 @@
     <!-- //footer -->
 
     <script src="assets/js/highlight.min.js"></script>
+    
     <script>
         hljs.highlightAll();
     </script>
-    <script>
 
+    <script>
+        document.querySelector(".sample01_N1").innerHTML = 1;
+        document.querySelector(".sample01_Q1").innerHTML = "0~1";
+        document.querySelector(".sample01_M1").innerHTML = "Math.rendom()";
+        document.querySelector(".sample01_P1").style.color = "black";
+        document.querySelector(".sample01_B1").addEventListener("click", () => {
+            document.querySelector(".sample01_P1").innerHTML = Math.random();
+        });
+
+        document.querySelector(".sample01_N2").innerHTML = 2;
+        document.querySelector(".sample01_Q2").innerHTML = "0 ~ 9";
+        document.querySelector(".sample01_M2").innerHTML = "Math.rendom()";
+        document.querySelector(".sample01_P2").style.color = "black";
+        document.querySelector(".sample01_B2").addEventListener("click", () => {
+            document.querySelector(".sample01_P2").innerHTML = Math.floor(Math.random() * 10);
+        });
+
+        document.querySelector(".sample01_N3").innerHTML = 3;
+        document.querySelector(".sample01_Q3").innerHTML = "10 ~ 19";
+        document.querySelector(".sample01_M3").innerHTML = "Math.rendom()";
+        document.querySelector(".sample01_P3").style.color = "black";
+        document.querySelector(".sample01_B3").addEventListener("click", () => {
+            document.querySelector(".sample01_P3").innerHTML = Math.floor(Math.random() + 10);
+        });
     </script>
 </body>
 
