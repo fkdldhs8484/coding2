@@ -793,25 +793,38 @@
         updateList();
 
 
-
-        // 피셔 에이츠 알고리즘
-        function shuffle(data) {
-            for (let i = data.length - 1; i >= 0; i--) {  // 0~ 15 반복
-                const randomIndex = Math.floor(Math.random() * (i + 1));
-                // console.log(randomIndex)
-                [data[i], data[randomIndex]] = [data[randomIndex], data[i]];   // 배열구조분해 (중복된 숫자가 안나옴)
-                cssList.innerHTML += data[i];
-            }
-        }
-        document.querySelector(".btn6").addEventListener("click", (e) => {
-            e.preventDefault();
-            cssList.innerHTML = "";
-            shuffle(cssProp)
-        })
-
         // 카테고리 클릭하면 나오게 하기 (주말숙제)
+        const searchClick = document.querySelectorAll(".search__click .btn"); // 버튼
+        const searchInfo = document.querySelector(".search__info"); // 전체 속성 갯수 문구
+        const searchInfoNum = document.querySelector(".search__info .num"); // 전체 속성 갯수
+        let count = 0;
 
-      
+        // 속성 갯수 구하기
+        searchInfoNum.textContent = cssProperty.length;
+
+        // 클릭하면 나오게...
+        searchClick.forEach((el) => {
+            el.addEventListener("click", () => {
+                const searchWord = el.innerText; // 사용자가 클릭한 알파벳
+                document.querySelector(".search__info .num").innerHTML = searchWord;
+                searchInfoNum.classList.remove("hide");
+
+                cssProperty.forEach((el) => {
+                    const cssName = el.querySelector("category").innerText; // CSS 속성의 텍스트
+                    // console.log(cssName)
+
+                    // 알파벳 첫글자 == CSS 속성의 첫글자
+                    if (searchWord.charAt(0) === cssName.charAt(0)) {
+                        el.classList.remove("hide");
+                        count++;
+                    } else {
+                        el.classList.add("hide");
+                    }
+                    searchInfoNum.innerHTML = count;
+                });
+                count = 0;
+            });
+        });
     </script>
 </body>
 
