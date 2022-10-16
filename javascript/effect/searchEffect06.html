@@ -606,71 +606,26 @@
             { num: 5, name: "z-index", desc: "요소들의 수직 위치를 설정합니다." },
         ];
 
-        const cssList = document.querySelector(".search__list .line");
+        const cssList = document.querySelector(".search__list .line");      // css 속성들 출력할 공간
 
+        const cssProp = [];
 
         // 데이터 출력하기
-        const updatrList = () => {
+        const updateList = () => {
             let listCSS = "";
 
             cssProperty.forEach((data, index) => {
-                listCSS += `<li>${data.num} : ${data.name} : ${data.desc}</li>`;
+                listCSS += `<li>${data.num}. <strong>${data.name}</strong> : ${data.desc}</li>`;
+                cssProp.push(`<li>${data.num}. <strong>${data.name}</strong> : ${data.desc}</li>`);
             });
             cssList.innerHTML = listCSS;
-
-        }
-        updatrList();
-
-        // 랜덤 데이터 출력하기
-        let cssProp = [];
-
-
-        const updateList = () => {
-            // forEach
-            // cssProperty.forEach((data, index) => {
-            //     cssPort += `<li>${data.num}. ${data.name} : ${data.desc}</li>`
-            // });
-            // cssList.innerHTML += cssProp;
-
-            // for of문
-            // for(const data of cssProperty){
-            //     cssPort.push(`<li>${data.num}. ${data.name} : ${data.desc}</li>`); 
-            // }
-            // cssList.innerHTML += cssProp;
-
-
-            // map()
-            cssProperty.map((data, index) => {
-                cssProp.push(`<li>${data.num}. ${data.name} : ${data.desc} </li>`);
-                cssList.innerHTML += cssProp[index];
-            });
         }
         updateList();
 
-
-
-        // 피셔 에이츠 알고리즘
-        function shuffle(data) {
-            for (let i = data.length - 1; i >= 0; i--) {  // 0~ 15 반복
-                const randomIndex = Math.floor(Math.random() * (i + 1));
-                // console.log(randomIndex)
-                [data[i], data[randomIndex]] = [data[randomIndex], data[i]];   // 배열구조분해 (중복된 숫자가 안나옴)
-                cssList.innerHTML += data[i];
-            }
-        }
-        document.querySelector(".btn6").addEventListener("click", (e) => {
-            e.preventDefault();
-            cssList.innerHTML = "";
-            shuffle(cssProp)
-        })
-
-        // 카테고리 클릭하면 나오게 하기 (주말숙제)
-
-
-        // 반대로 정렬 
+        // 반대로 정렬
         function sortReverse() {
             cssProperty.reverse();
-            updatrList();
+            updateList();
         }
 
         // 내림차순 정렬
@@ -678,7 +633,7 @@
             cssProperty.sort((a, b) => {
                 return b.num - a.num;
             });
-            updatrList();
+            updateList();
         }
 
         // 오름차순 정렬
@@ -686,25 +641,27 @@
             cssProperty.sort((a, b) => {
                 return a.num - b.num;
             });
-            updatrList();
+            updateList();
         }
 
-        // 알파벳(a~z) 정렬
+        // 알파벳 정렬(a~z)
         function sortAlphabet() {
             cssProperty.sort((prev, cur) => {
-                if (prev > cur) return 1;
-                if (prev < cur) return -1;
+                const [upperPrev, upperCur] = [prev.name.toUpperCase(), cur.name.toUpperCase()]
+                if (upperPrev > upperCur) return 1;
+                if (upperPrev < upperCur) return -1;
             });
-            updatrList();
+            updateList();
         }
 
-        // 알파벳(z~a) 정렬
+        // 알파벳 정렬(z~a)
         function sortAlphabetZ() {
             cssProperty.sort((prev, cur) => {
-                if (prev < cur) return 1;
-                if (prev > cur) return -1;
+                const [upperPrev, upperCur] = [prev.name.toUpperCase(), cur.name.toUpperCase()]
+                if (upperPrev < upperCur) return 1;
+                if (upperPrev > upperCur) return -1;
             });
-            updatrList();
+            updateList();
         }
 
         // 반대로 정렬 클릭
@@ -712,24 +669,39 @@
             sortReverse();
         });
 
-        // 오름차순 정렬
+        // 내림차순 정렬 클릭
         document.querySelector(".btn2").addEventListener("click", () => {
-            sortAscending();
-        });
-
-        // 내림차순 정렬
-        document.querySelector(".btn3").addEventListener("click", () => {
             sortDescending();
         });
 
-        // 알파벳 정렬 (a~z)
+        // 오름차순 정렬 클릭
+        document.querySelector(".btn3").addEventListener("click", () => {
+            sortAscending();
+        });
+
+        // 알파벳 정렬(a~z) 클릭
         document.querySelector(".btn4").addEventListener("click", () => {
             sortAlphabet();
         });
 
-        // 알파벳 정렬 (z~a)
+        // 알파벳 정렬(z~a) 클릭
         document.querySelector(".btn5").addEventListener("click", () => {
             sortAlphabetZ();
+        });
+
+        // 피셔 예이츠 알고리즘
+        function shuffle(data) {
+            for (let i = data.length - 1; i >= 0; i--) {
+                const randomIndex = Math.floor(Math.random() * (i + 1));
+                // console.log(randomIndex);
+                [data[i], data[randomIndex]] = [data[randomIndex], data[i]];
+                cssList.innerHTML += data[i];
+            }
+        }
+
+        document.querySelector(".btn6").addEventListener("click", () => {
+            cssList.innerHTML = "";
+            shuffle(cssProp);
         });
 
     </script>

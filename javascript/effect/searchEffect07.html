@@ -792,6 +792,16 @@
         }
         updateList();
 
+        // 피셔 예이츠 알고리즘
+        function shuffle(data) {
+            for (let i = data.length - 1; i >= 0; i--) {
+                const randomIndex = Math.floor(Math.random() * (i + 1));
+                // console.log(randomIndex);
+                [data[i], data[randomIndex]] = [data[randomIndex], data[i]];
+                cssList.innerHTML += data[i];
+            }
+        }
+
 
         // 카테고리 클릭하면 나오게 하기 (주말숙제)
         const searchClick = document.querySelectorAll(".search__click .btn"); // 버튼
