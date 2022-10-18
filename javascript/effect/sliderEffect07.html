@@ -332,7 +332,8 @@
     <!-- //footer -->
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script>
+
+    <!-- <script>
         const sliderWrap = document.querySelector(".slider__wrap");
         const sliderImg = document.querySelector(".slider__img");       //보여지는 영역
         const sliderInner = document.querySelector(".slider__inner");   //움직이는 영역
@@ -346,13 +347,13 @@
 
         let currentIndex = 0,                           // 현재 이미지
             sliderLength = slider.length,
-            sliderWidth = slider[0].offsetWidth         // 슬라이드 Width 값
-        sliderFirst = slider[0],                    // 첫번째 이미지
+            sliderWidth = slider[0].offsetWidth,        // 슬라이드 Width 값
+            sliderFirst = slider[0],                    // 첫번째 이미지
             sliderLast = slider[sliderLength - 1],      // 마지막 이미지  
             cloneFirst = sliderFirst.cloneNode(true),   // 첫번째 이미지 복사
             cloneLast = sliderLast.cloneNode(true),     // 마지막 이미지 복사
-            dotIndex = "";
-        interval = 3000,
+            dotIndex = "",
+            interval = 3000,
             sliderTimer = "";
 
         function init() {
@@ -388,6 +389,9 @@
 
             sliderDot.innerHTML = dotIndex;
             sliderDot.firstElementChild.classList.add("active");
+
+            // 스탑 버튼 감추기
+            sliderDot.querySelector('.play').style.display = 'none';
         }
 
         function gotoSlider(index) {
@@ -459,6 +463,210 @@
 
         sliderInner.addEventListener("transitionend", checkIndex)
 
+        // 버튼 바꿔주기
+        const btnPlay = document.querySelector(".search__audio .play");
+        const btnStop = document.querySelector(".search__audio .stop");
+
+        btnPlay.style.display = "none";
+
+        searchStart.addEventListener("click", () => {
+            btnPlay.style.display = "block";
+            btnStop.style.display = "none";
+            searchAudio.play();
+        });
+
+        btnStop.addEventListener("click", () => {
+            searchAudio.play();
+            btnStop.style.display = "none";
+            btnPlay.style.display = "block";
+        });
+
+        btnPlay.addEventListener("click", () => {
+            searchAudio.pause();
+            btnPlay.style.display = "none";
+            btnStop.style.display = "block";
+        });
+
+        // 플레이 || 스탑 버튼 클릭
+        sliderBtnPlay.addEventListener('click', () => {
+            stopClick = false;
+            console.log("sliderBtnPlay");
+            sliderBtnPlay.style.display = 'none';
+            sliderBtnStop.style.display = 'inline-block';
+            clearTimeout(sliderTimer);
+            autoPlay();
+        });
+        sliderBtnStop.addEventListener('click', () => {
+            stopClick = true;
+            console.log("sliderBtnStop");
+            sliderBtnPlay.style.display = 'inline-block';
+            sliderBtnStop.style.display = 'none';
+            stopPlay();
+        });
+    </script> -->
+
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");            // 전체 이미지 슬라이드
+        const sliderImg = document.querySelector(".slider__img");              // 보여지는 영역
+        const sliderInner = document.querySelector(".slider__inner");          // 움직이는 영역
+        const slider = document.querySelectorAll(".slider");                   // 이미지
+        const sliderDot = document.querySelector(".slider__dot");              // 닷 메뉴
+        const sliderBtn = document.querySelector(".slider__btn");              // 버튼
+        const sliderBtnPrev = document.querySelector(".slider__btn .prev");    // 왼쪽 버튼
+        const sliderBtnNext = document.querySelector(".slider__btn .next");    // 오른쪽 버튼
+
+        let currentIndex = 0;
+        let sliderLength = slider.length;
+        let sliderWidth = slider[0].offsetWidth;
+        let dotIndex = "";
+        let interval = 6000;
+        let sliderTimer = '';
+        let stopClick = false;
+        let mouseenterOn = false;
+
+        function imgClone() {
+            let sliderFirst = slider[0];
+            let sliderLast = slider[sliderLength - 1];
+            let cloneFirst = sliderFirst.cloneNode(true);
+            let cloneLast = sliderLast.cloneNode(true);
+            sliderInner.appendChild(cloneFirst);
+            sliderInner.insertBefore(cloneLast, sliderFirst);
+        }
+
+        function createDot() {
+            // dot 추가
+            for (let i = 0; i < sliderLength; i++) {
+                dotIndex += "<a href='#' class='dot'></a>";
+            }
+
+            // dot play & stop 추가
+            dotIndex += `<a href='#' class='play'></a>`;
+            dotIndex += `<a href='#' class='stop'></a>`;
+
+            // 적용
+            sliderDot.innerHTML = dotIndex;
+            // active 추가
+            sliderDot.firstElementChild.classList.add("active");
+            // 스탑 버튼 감추기
+            sliderDot.querySelector('.play').style.display = 'none';
+        }
+
+        function autoPlay() {
+            if (stopClick === true || mouseenterOn === true) return;
+            // 자동 플레이
+            console.log("autoPlay 실행");
+            sliderTimer = setInterval(() => {
+                let intervalNum = currentIndex + 1;
+                gotoSlider(intervalNum);
+            }, interval);
+        }
+
+        function stopPlay() {
+            // 플레이 정지
+            clearInterval(sliderTimer);
+        }
+
+        function init() {
+            // 이미지 복사
+            imgClone();
+
+            // 닷 버튼 생성
+            createDot();
+
+            // 자동 재생
+            autoPlay();
+        }
+        init();
+
+        function gotoSlider(index) {
+            sliderInner.classList.add('transition');
+            let posInitial = sliderInner.offsetLeft; // -800
+            sliderInner.style.left = -sliderWidth * (index + 1) + "px";
+            currentIndex = index;
+        }
+
+        function checkIndex() {
+            sliderInner.classList.remove('transition');
+            // 마지막 이미지
+            if (currentIndex >= sliderLength) {
+                sliderInner.style.left = `${-(1 * sliderWidth)}px`;
+                currentIndex = 0;
+            }
+            // 처음 이미지
+            else if (currentIndex < 0) {
+                sliderInner.style.left = `${-(sliderLength * sliderWidth)}px`;
+                currentIndex = sliderLength - 1;
+            }
+
+            // 닷 버튼 엑티브 바꿔주기
+            document.querySelectorAll('.slider__dot a').forEach(b => {
+                b.classList.remove('active');
+            });
+            document.querySelectorAll('.slider__dot a')[currentIndex].classList.add('active');
+        }
+
+        // 이전 버튼 클릭
+        sliderBtnPrev.addEventListener('click', () => {
+            let prevIndex = currentIndex - 1;
+            gotoSlider(prevIndex);
+        });
+
+        // 다음 버튼 클릭
+        sliderBtnNext.addEventListener('click', () => {
+            let nextIndex = currentIndex + 1;
+            gotoSlider(nextIndex);
+        });
+
+        // 트랜지션 끝났을 때
+        sliderInner.addEventListener('transitionend', () => {
+            checkIndex();
+        });
+
+        // 마우스 오버 했을 때 정지
+        sliderInner.addEventListener('mouseenter', () => {
+            console.log("mouseenter");
+            mouseenterOn = true; // 움직일 수 없다
+            stopPlay();
+        });
+
+        // 마우스 떠났을 때 재시작
+        sliderInner.addEventListener('mouseleave', () => {
+            console.log("mouseleave");
+            mouseenterOn = false; // 움직일 수 있다.
+            clearTimeout(sliderTimer);
+            autoPlay();
+        });
+
+        // 플레이 || 스탑 버튼 클릭
+        const sliderBtnPlay = document.querySelector(".slider__dot .play");    // 플레이 버튼
+        const sliderBtnStop = document.querySelector(".slider__dot .stop");    // 정지 버튼
+        sliderBtnPlay.addEventListener('click', () => {
+            stopClick = false;
+            console.log("sliderBtnPlay");
+            sliderBtnPlay.style.display = 'none';
+            sliderBtnStop.style.display = 'inline-block';
+            clearTimeout(sliderTimer);
+            autoPlay();
+        });
+        sliderBtnStop.addEventListener('click', () => {
+            stopClick = true;
+            console.log("sliderBtnStop");
+            sliderBtnPlay.style.display = 'inline-block';
+            sliderBtnStop.style.display = 'none';
+            stopPlay();
+        });
+
+        // 닷 버튼 클릭
+        document.querySelectorAll('.slider__dot a.dot').forEach((a, index) => {
+            a.addEventListener('click', e => {
+                document.querySelectorAll('.slider__dot a.dot').forEach(b => {
+                    b.classList.remove('active');
+                });
+                a.classList.add('active');
+                sliderInner.style.left = `${-((index + 1) * sliderWidth)}px`;
+                currentIndex = index;
+            });
+        });
     </script>
 </body>
 

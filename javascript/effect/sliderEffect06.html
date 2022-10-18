@@ -391,20 +391,18 @@
             });
         });
 
-        // sliderBtnPrev.addEventListener("click", (
-        //     gotoSlider(-1);
-        // setTimeout(() => {
-        //     sliderBtn.classList.remove("disable")
-        // }, 300);
-        // )
-
-        // sliderBtnNext.addEventListener("click", (
-        //     gotoSlider(1);
-        // setTimeout(() => {
-        //     sliderBtn.classList.remove("disable")
-        // }, 300);
-        // )
-
+        sliderBtnPrev.addEventListener("click", () => {
+            gotoSlider(-1);
+            setTimeout(() => {
+                sliderBtn.classList.remove("disable");
+            }, 300);
+        });
+        sliderBtnNext.addEventListener("click", () => {
+            gotoSlider(1);
+            setTimeout(() => {
+                sliderBtn.classList.remove("disable");
+            }, 300);
+        });
         sliderInner.addEventListener("transitionend", checkIndex);
 
     </script>

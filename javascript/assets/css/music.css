@@ -1,4 +1,6 @@
 .music__wrap {
+    z-index: 10;
+    display: none;
 }
 .music__inner {
     width: 500px;
