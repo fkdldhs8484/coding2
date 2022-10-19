@@ -1,0 +1,534 @@
+/* main header */
+.main__header {
+    position: relative;
+}
+
+.main__header h2:nth-child(1) {
+    line-height: 1.3;
+    font-weight: 600;
+    font-size: 60px;
+    color: #323232;
+}
+.main__header h2:nth-child(2) {
+    line-height: 1.3;
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 60px;
+    color: #323232;
+}
+.main__header .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.main__header .menu li:nth-child(1) a {
+    font-weight: 200;
+    padding: 3px 20px;
+    font-size: 18px;
+    color: #b0b0b0;
+    border-right: 1px solid #D0D0D0;
+}
+.main__header .menu li:nth-child(2) a {
+    color: #b0b0b0;
+    font-weight: 200;
+    font-size: 18px;
+    padding: 3px 20px;
+}
+.main__header .menu li:nth-child(1) a.active,
+.main__header .menu li:nth-child(2) a.active {
+    color: #323232;
+    font-weight: 600;
+}
+
+.main__header .home {
+    position: absolute;
+    bottom: 100px;    
+    right: 20px;
+}
+.main__header .home span:nth-child(1) {
+    margin-right: 25px;
+}
+.main__header .home span:nth-child(2){
+    color: #b0b0b0;
+    font-weight: 200;
+    font-size: 14px;
+    padding-left: 25px;
+    border-left: 1px solid #D0D0D0;
+}
+
+.main__header .menu li:nth-child(1) a {
+    font-weight: 200;
+    width: 150px;
+    height: 26px;
+    display: inline-block;
+    font-size: 18px;
+    color: #B0B0B0;
+    border-right: 1px solid #D0D0D0;
+}
+.main__header .menu li:nth-child(2) a {
+    color: #B0B0B0;
+    font-weight: 200;
+    text-align: right;
+    width: 140px;
+    height: 26px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+
+/* cardType */
+.cardType {
+    background-color: #f5f5f5;
+    margin-bottom: 90px;
+}
+.cardType.mobile{
+    display: none;
+}
+.card__container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.card {
+    margin: 40px 0;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    font-family: "scoredream";
+}
+.card figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card::before {
+    content: "BEST1";
+    text-align: center;
+    line-height: 37px;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    color: #323232;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    width: 95px;
+    height: 37px;
+    z-index: 2;
+}
+.card:nth-child(2)::before {
+    content: "BEST2";
+}
+.card:nth-child(3)::before {
+    content: "BEST3";
+}
+
+.card__desc {
+    box-sizing: border-box;
+    padding: 30px 20px 20px 20px;
+}
+
+.card__desc h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #323232;
+}
+.card__desc p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-box-orient: vertical;
+    margin-bottom: 30px;
+    color: #323232;
+}
+.card__desc .icon {
+    display: flex;
+    justify-content: space-between;
+}
+.card__desc .icon div svg {
+}
+.card__desc .icon div span:nth-child(2) {
+    color: #888888;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media(max-width: 1200px){
+    .card {
+        width: 33%;
+    }
+}
+
+@media(max-width: 840px){
+    .card::before {
+        line-height: 27px;
+        font-size: 14px;
+        top: 15px;
+        left: 15px;
+        width: 75px;
+        height: 27px;
+    }
+    .card__desc {
+        padding: 20px 15px 10px 15px;
+    }
+    
+    .card__desc h3 {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #323232;
+    }
+    .card__desc p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: #323232;
+    }
+    .card__desc .icon {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card__desc .icon div svg {
+        width: 16px;
+    }
+    .card__desc .icon div span:nth-child(2) {
+        color: #888888;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    
+}
+
+@media(max-width: 600px){
+    .card {
+        width: 100%;
+    }
+    .card__desc {
+        box-sizing: border-box;
+        padding: 30px 20px 20px 20px;
+    }
+    
+    .card__desc h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    .card__desc p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .card__desc .icon {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card__desc .icon div span:nth-child(2) {
+        color: #888888;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .cardType {
+        display: none;
+    }
+    .cardType.mobile {
+        display: block;
+    }
+}
+
+
+/* board */
+.review__board {
+    margin-bottom: 30px;
+}
+.board__head {
+    background-color: #323232;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-weight: 400;
+    font-style: normal;
+    table-layout: fixed;
+}
+
+.review__table table thead tr {
+    background-color: #323232;
+    color: #f5f5f5;
+}
+.review__table table thead tr th {
+    font-weight: 400;
+    height: 54px;
+    font-size: 18px;
+}
+.review__table table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.review__table table tbody tr td:nth-child(2) {
+    text-align: left;
+    padding-left: 60px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+.review__table table tbody tr td {
+    text-align: center;
+    height: 80px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 16px;
+    color: #323232;
+}
+.review__table table tbody tr td a {
+    color: #323232;
+}
+/* table2 */
+.review__table.subTable {
+    display: none;
+}
+.review__table.subTable table thead tr th {
+    font-size: 16px;
+}
+.review__table.subTable tr td {
+    font-size: 15px;
+}
+.review__table.subTable table tbody tr td:nth-child(2) {
+    padding-left: 10px;
+}
+.review__table.subTable table tbody tr td:nth-child(4) {
+    font-size: 14px;
+}
+.review__table.subTable .board__btn {
+    display: none;
+}
+
+/* search */
+.riview__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 100px;
+} 
+.riview__subSerch {
+    display: none;
+}
+
+/* write btn */
+.riview__search .board__btn {
+    margin-left: 20px;
+}
+.riview__search .board__btn a {
+    width: 107px;
+    height: 50px;
+    color: white;
+    background-color: #323232;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 200;
+    font-size: 16px;
+}
+.riview__search fieldset {
+    position: relative;
+    margin-right: 20px;
+}
+.riview__search fieldset select {
+    width: 100px;
+    height: 45px;
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.riview__search fieldset select option {
+    font-size: 16px;
+    font-weight: 400;
+}
+.riview__search fieldset select:focus{
+    outline: none;
+}
+.riview__search fieldset input {
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid #b0b0b0;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+.riview__search fieldset input:focus {
+    outline: none;
+}
+.riview__search fieldset input::placeholder {
+    font-weight: 300;
+    font-size: 16px;
+}
+.riview__search fieldset button {
+    background-color: white;
+    margin-left: 10px;
+    cursor:pointer;
+    position: absolute;
+    right: 0px;
+    bottom: 13px;
+}
+
+/* board pages */
+.board__pages ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board__pages ul li a {
+    display: flex;
+    justify-content: center;
+    color: #888888;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 400;
+}
+.board__pages ul li a.active{
+    color: #323232;
+    font-weight: 600;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 600px) {
+    .review__board {
+        margin-bottom: 0;
+    }
+    .main__header .home {
+        display: none;
+    }
+    .review__table {
+        display: none;
+    }
+    .review__table.subTable {
+        display: block;
+    }
+    .review__table .board__btn a {
+        display: block;
+    }
+    .riview__search .board__btn {
+        text-align: left;
+        margin-left: 0;
+    }
+    .riview__search fieldset {
+        margin-right: 0;
+    }
+    .riview__search fieldset select {
+        width: 90px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+
+}
+@media (max-width: 480px) {
+    .riview__search {
+        display: none;
+    }
+    .riview__subSerch {
+        display: block;
+    }
+    .review__board {
+        margin-bottom: 30px;
+    }
+    /* write btn */
+    .riview__subSerch .board__btn {
+        margin-left: 20px;
+    }
+    .riview__subSerch .board__btn a {
+        width: 107px;
+        height: 50px;
+        color: white;
+        background-color: #323232;
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 200;
+        font-size: 16px;
+    }
+    .riview__subSerch fieldset {
+        position: relative;
+        width: initial;
+        margin-right: 20px;
+    }
+    .riview__subSerch fieldset select {
+        width: 100px;
+        height: 45px;
+        margin-right: 20px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .riview__subSerch fieldset select option {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .riview__subSerch fieldset select:focus{
+        outline: none;
+    }
+    .riview__subSerch fieldset input {
+        width: 200px;
+        height: 45px;
+        border: none;
+        border-bottom: 1px solid #b0b0b0;
+        font-size: 16px;
+        font-weight: 400;
+        padding-left: 5px;
+    }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button,
+    input::-webkit-search-results-button,
+    input::-webkit-search-results-decoration{
+        display:none;
+    }
+    .riview__subSerch fieldset input:focus {
+        outline: none;
+    }
+    .riview__subSerch fieldset input::placeholder {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .riview__subSerch fieldset button {
+        background-color: white;
+        margin-left: 10px;
+        cursor:pointer;
+        position: absolute;
+        right: 0px;
+        bottom: 13px;
+    }
+    .review__table.subTable .board__btn {
+        margin-top: 30px;
+    }
+    .review__table.subTable .board__btn a {
+        width: 107px;
+        height: 50px;
+        color: white;
+        background-color: #323232;
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 200;
+        font-size: 16px;
+    }
+    .review__table table colgroup col:first-child {
+        width: 10%;
+    }
+}

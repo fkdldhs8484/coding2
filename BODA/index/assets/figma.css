@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'S-CoreDream';
+}
+
+/* link 초기화 */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+body {
+    background: #000;
+}
+
+.container {
+    min-width: 1160px;
+    width: 1160px;
+    margin: 0 auto;
+    text-align: center;
+}   
+
+#loginHeader h1 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#loginHeader h1 a {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+#loginSection h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #dddddd;
+}
