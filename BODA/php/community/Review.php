@@ -18,6 +18,7 @@
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
         <?php include "../include/header.php" ?>
+        <?php include "../login/login.php" ?>
         <!-- //header -->
 
         <main id="main">
@@ -41,7 +42,7 @@
                 <div class="card__container">
                     <div class="card">
                         <figure>
-                            <img src="../assets/img/review_card_bg01.jpg" alt="review01" />
+                            <img src="../../html/assets/img/review_card_bg01.jpg" alt="review01" />
                         </figure>
                         <div class="card__desc">
                             <h3><a href="bestReviewView.html">포토존 죽여주는 전시회 다녀왔습니다.</a></h3>
@@ -84,7 +85,7 @@
                     </div>
                     <div class="card">
                         <figure>
-                            <img src="../assets/img/review_card_bg02.jpg" alt="review02" />
+                            <img src="../../html/assets/img/review_card_bg02.jpg" alt="review02" />
                         </figure>
                         <div class="card__desc">
                             <h3><a href="bestReviewView.html">오랜만에 행복한 주말 보내기</a></h3>
@@ -127,7 +128,7 @@
                     </div>
                     <div class="card">
                         <figure>
-                            <img src="../assets/img/review_card_bg03.jpg" alt="review03" />
+                            <img src="../../html/assets/img/review_card_bg03.jpg" alt="review03" />
                         </figure>
                         <div class="card__desc">
                             <h3><a href="bestReviewView.html">요즘 유행하는 전시회들 추천!</a></h3>
@@ -176,7 +177,7 @@
                         <div class="swiper-slide">
                             <div class="card">
                                 <figure>
-                                    <img src="../assets/img/review_card_bg01.jpg" alt="review01" />
+                                    <img src="../../html/assets/img/review_card_bg01.jpg" alt="review01" />
                                 </figure>
                                 <div class="card__desc">
                                     <h3><a href="bestReviewView.html">포토존 죽여주는 전시회 다녀왔습니다.</a></h3>
@@ -221,7 +222,7 @@
                         <div class="swiper-slide">
                             <div class="card">
                                 <figure>
-                                    <img src="../assets/img/review_card_bg02.jpg" alt="review02" />
+                                    <img src="../../html/assets/img/review_card_bg02.jpg" alt="review02" />
                                 </figure>
                                 <div class="card__desc">
                                     <h3><a href="bestReviewView.html">오랜만에 행복한 주말 보내기</a></h3>
@@ -266,7 +267,7 @@
                         <div class="swiper-slide">
                             <div class="card">
                                 <figure>
-                                    <img src="../assets/img/review_card_bg03.jpg" alt="review03" />
+                                    <img src="../../html/assets/img/review_card_bg03.jpg" alt="review03" />
                                 </figure>
                                 <div class="card__desc">
                                     <h3><a href="bestReviewView.html">요즘 유행하는 전시회들 추천!</a></h3>
@@ -387,11 +388,7 @@
                                 </tr> -->
                             </tbody>
                         </table>
-                        <div class="board__btn">
-                            <a href="ReviewWrite.php">
-                                글쓰기
-                            </a>
-                        </div>
+                        
                     </div>
 
                     <div class="review__table subTable">
@@ -483,6 +480,9 @@
                 </div>
 
                 <div class="riview__search">
+                    <div class="board__btn">
+                        <a href="ReviewWrite.php">글쓰기</a>
+                    </div>
                     <fieldset>
                         <legend></legend>
                         <select name="searchOption" id="searchOption">

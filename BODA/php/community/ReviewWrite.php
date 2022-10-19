@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>REVIEW WRITE</title>
-
         <!-- CSS -->
         <?php include "../include/link.php" ?>
     </head>
@@ -15,10 +14,9 @@
             <a href="#main">콘텐츠 영역 바로가기</a>
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
-
         <?php include "../include/header.php" ?>
+        <?php include "../login/login.php" ?>
         <!-- //header -->
-
         <main id="main">
         <h2 class="blind">리뷰 게시판 글쓰기 페이지입니다.</h2>
             <div class="main__header top__container">
@@ -135,11 +133,11 @@
                                     </colgroup>
                                     <div>
                                         <label class="blind" for="ReviewTitle">제목</label>
-                                        <input type="text" name="ReviewTitle" class="ReviewTitle" placeholder="제목을 입력해 주세요." required>
+                                        <input type="text" name="ReviewTitle" class="Title" placeholder="제목을 입력해 주세요." required>
                                     </div>
                                     <div>
                                         <label class="blind" for="ReviewContents">내용</label>
-                                        <textarea name="ReviewContents" class="ReviewContents" rows="20" required></textarea>
+                                        <textarea name="ReviewContents" class="Contents" rows="20" required></textarea>
                                     </div>
                                 </table>
                             </div>
@@ -154,10 +152,8 @@
                 </form>
             </section>
         </main>
-        
         <?php include "../include/footer.php" ?>
         <!-- //footer -->
-
         <?php include "../include/script.php" ?>
     </body>
 </html>

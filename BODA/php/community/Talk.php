@@ -18,6 +18,7 @@
 
 <body>
     <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     <!-- //header -->
 
     <main id="main">
@@ -39,10 +40,10 @@
             <div class="talk__write">
                 <form action="talkWriteSave.php" name="TalkWrite" method="post">
                     <fieldset>
-                        <legend>전시 토크 게시판 작성 영역</legend>
+                        <legend class="blind">전시 토크 게시판 작성 영역</legend>
                         <button type="submit" class="btn">글쓰기</button>
                         <div>
-                            <label for="TalkContents">내용</label>
+                            <label class="blind" for="TalkContents">내용</label>
                             <textarea
                                 name="TalkContents"
                                 id="TalkContents"

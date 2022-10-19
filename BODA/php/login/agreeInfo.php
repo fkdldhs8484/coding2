@@ -16,6 +16,7 @@
     </div>
 
     <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     
     <main id="infoType" class="info__wrap agree">
         <h2 class="agree_tit">SIGN UP</h2>

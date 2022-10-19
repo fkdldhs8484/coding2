@@ -9,6 +9,7 @@
 
 <body>
     <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     <!-- //header -->
 
     <section id="AgreeType" class="Agree__wrap agree">

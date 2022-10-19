@@ -1,4 +1,3 @@
-/* 아이콘 */
 .mid__ikon {
 	text-align: right;
 	margin-bottom: 10px;
@@ -6,7 +5,6 @@
 	justify-content: flex-end;
 }
 
-/* 아이콘 사진, 링크 */
 .mid__ikon .Photo,
 .link {
 	margin-right: 30px;
@@ -89,7 +87,6 @@ table {
 
 .table__bottom {
 	display: flex;
-	justify-content: flex-end;
 }
 
 .table__bottom .icon {
@@ -112,6 +109,21 @@ table {
 }
 
 .table__bottom .btn a {
+	width: 107px;
+	height: 50px;
+	color: white;
+	background-color: #323232;
+	display: inline-block;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 15px;
+	margin-top: 40px;
+	font-weight: 200;
+	font-size: 16px;
+}
+
+.table__bottom .btn button {
 	width: 107px;
 	height: 50px;
 	color: white;

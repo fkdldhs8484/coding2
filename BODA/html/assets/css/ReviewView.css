@@ -41,7 +41,6 @@ table {
     box-sizing: border-box;
     padding: 80px 80px 120px 80px;
     width: 100%;
-    border-bottom: 1px solid #D0D0D0;
 }
 .board__table table tbody tr td {
     color: black;

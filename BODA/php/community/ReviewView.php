@@ -18,6 +18,7 @@
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
         <?php include "../include/header.php" ?>
+        <?php include "../login/login.php" ?>
         <!-- //header -->
     
         <main id="main">

@@ -2,7 +2,6 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,15 +10,14 @@
     <!-- CSS -->
     <?php include "../include/link.php" ?>
 </head>
-
 <body>
     <div id="skip">
         <a href="#header">헤더 영역 바로가기</a>
         <a href="#main">콘텐츠 영역 바로가기</a>
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
-
     <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     <!-- //header -->
     
     <main id="infoType" class="info__wrap agree">
@@ -28,14 +26,12 @@
                 <div class="bg"></div>
                 <div class="modalBox">
                     <h2>LOGIN</h2>
-<?php    
-    $youID = $_POST['youID'];
-    $youPass = $_POST['youPass'];
-
+<?php   
+    $youID = $_POST['userID'];
+    $youPass = $_POST['userPass'];
     function msg($alert){
         echo "<p>{$alert}</p>";
     }
-
     $sql = "SELECT myMemberID, youID, youNickName, youPass FROM myMember WHERE youID = '$youID' AND youPass = '$youPass'";
     $result = $connect -> query($sql);
     if($result){
@@ -66,5 +62,4 @@
     <?php include "../include/footer.php" ?>
     <!-- //footer -->
 </body>
-
 </html>
