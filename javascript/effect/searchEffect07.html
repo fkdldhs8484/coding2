@@ -447,6 +447,12 @@
         <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
     </footer>
     <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script>
         const cssProperty = [
             { num: 1, name: "accent-color", desc: "특정 요소에 색상을 지정할 때 사용됩니다." },
@@ -841,14 +847,16 @@
         const searchStart = document.querySelector(".search__box .start");
         const searchInput = document.querySelector("#search");
         const searchAudio = document.querySelector("#audio");
+        const musicPlay = document.querySelector(".search__audio .play");
+        const musicStop = document.querySelector(".search__audio .stop");
         const searchAudioBtn = document.querySelector(".search__audio > span");
         const searchScoreRotal = document.querySelector(".search__info .num");  // 전체 속성 갯수
-        const searchScoreNow = document.querySelector(".search__info");         // 현재 맞춘 갯수
+        const searchScoreNow = document.querySelector(".search__info .now");         // 현재 맞춘 갯수
         const searchResult = document.querySelector(".search__result .result");
         const searchResultWrap = document.querySelector(".search__result");
         const searchRestart = document.querySelector(".search__result .restart");
 
-        let timeReamining = 5,     // 남은시간
+        let timeReamining = 120,     // 남은시간
             timeIntreval,           //시간 간격
             score = 0,              // 점수
             answers = {};          // 새로운 정답
@@ -880,11 +888,11 @@
             // 게임이 시작되면 시간 설정
             setInterval(reduceTime, 1000);  // 1초에 한번씩 실행..
 
-            // 뮤직 추가하기
-            searchAudio.play();
+            // 음악 추가
+            music();
 
             // 점수 계산
-            searchScoreRotal.innerText = cssProperty.length;
+            let score = 0;
 
             // 정답 체크
             checkAnswers();
@@ -892,15 +900,17 @@
             // 
         }
 
-        // 음악 설정
-        function audio(){
-            searchAudioBtn.addEventListener("click", () => {
-                searchAudioBtn.classList.toggle("playing");
-                if(searchAudioBtn.classList.contains("playing")){
-                    searchAudio.play();
-                } else {
-                    searchAudio.pause();
-                }
+        // 음악 재생
+        function music() {
+            musicStop.addEventListener("click", () => {
+                musicStop.style.display = "none";
+                musicPlay.style.display = "block";
+                searchAudio.pause();
+            })
+            musicPlay.addEventListener("click", () => {
+                musicPlay.style.display = "none";
+                musicStop.style.display = "block";
+                searchAudio.play();
             })
             searchAudio.play();
         }
@@ -929,18 +939,17 @@
         // 정답 체크하기 : 정답을 객체 파일로 만들기
         function checkAnswers() {
             cssProperty.forEach(item => {
-                let answer = item.name.trim().toLowerCase();
+                let answer = item.name.trim().toLocaleLowerCase();
                 answers[answer] = false;
             });
-            console.log(answers)
         }
 
         // 오답 보여주기
-        function missAnswers(){
+        function missAnswers() {
             seaechMissAnswers.style.display = "block";
             cssProperty.forEach(item => {
                 let answer = item.name.trim().toLocaleLowerCase();
-                if(!answers[answer]){
+                if (!answers[answer] == false) {
                     seaechMissAnswers.innerHTML += `<span>${answer}</span>`;
                 }
             });
@@ -983,7 +992,6 @@
 
             // 음악 끄기
             searchAudio.pause();
-            searchAudioBtn.classList.remove("playing");
 
             // 시간 정지
             clearInterval(timeIntreval);
@@ -996,20 +1004,21 @@
         }
 
         // 다시 시작하기
-        function restart(){
+        function restart() {
             searchResultWrap.classList.remove("show");
-            searchAudioBtn.classList.remove("playing");
             searchAudio.play();
+
             startQuiz();
-            timeReamining = 120;
+            timeReamining = 120;  // 시간
             score = 0;
-            searchScoreNow.innerText = "0";
+            searchScoreNow.innerText = 0;
         }
 
         // 버튼 이벤트
         searchStart.addEventListener("click", startQuiz);
         searchInput.addEventListener("input", checkInput);
         searchRestart.addEventListener("click", restart);
+
 
     </script>
 </body>
