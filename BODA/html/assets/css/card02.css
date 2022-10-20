@@ -1,0 +1,51 @@
+.card2__wrap {}
+.card2__inner {
+    width: 100%;
+    margin: 0 auto;
+}
+.left{
+    background-color: #eee;
+    margin-bottom: 60px;
+    margin-top: 35px;
+}
+.card2 {
+    width: 30%;
+    float: left;
+  
+}
+.card2__contents{
+    
+}
+.card2 .title {
+
+}
+button {}
+
+.right {
+    width: 70%;
+    float: right;
+    margin-bottom: 60px;
+    margin-top: 35px;
+}
+
+.card2__img01,
+.card2__img02 {
+    width: 310px;
+    float: right;
+    margin-left: 30px;
+  
+}
+
+.button-prev {
+    right: 20px;
+    left: auto;
+}
+
+.button-next,
+.button-prev {
+    width: 25px;
+    height: 23px;
+    background-size: 130px;
+    background-image: url(/BODA/html/assets/img/icon01.svg);
+    cursor: pointer;
+}

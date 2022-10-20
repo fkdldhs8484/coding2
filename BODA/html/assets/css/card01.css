@@ -24,6 +24,7 @@
 .card__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .card {
@@ -37,7 +38,6 @@
 }
 
 .card img {
-    width: 330px;
     height: 281px;
     margin-bottom: 25px;
 }
@@ -50,3 +50,28 @@
    font-size: 16px;
    font-weight: normal;
 }
+
+.slider__btn a {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 71px;
+    background: url(/BODA/html/assets/img/icon01.svg);
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+}
+
+.slider__btn a.prev {
+    left: 57px;
+    background-position: 138px -28px;
+
+}
+
+.slider__btn a.next {
+    right: 81px;
+    background-position: 107px 72px;
+
+}
+

@@ -19,6 +19,10 @@
     <!-- css -->
     <link rel="stylesheet" href="/BODA/html/assets/css/swiper.css" />
 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
     <style>
         @import url('https://webfontworld.github.io/score/SCoreDream.css');
     </style>
@@ -221,27 +225,15 @@
             <span>Review</span>
             </h2>
             <div class="card__inner">
-                <article class="card">
-                    <figure>
-                        <img src="/BODA/html/assets/img/card01.jpg" alt="이미지2">
-                    </figure>
-                    <h3>격물치지</h3>
-                    <p class="desc">2022.10.13. ~ 2022.11.26.</p>
-                </article>
-                <article class="card">
-                    <figure>
-                        <img src="/BODA/html/assets/img/card02.jpg" alt="이미지1">
-                    </figure>
-                    <h3>정소영 개인전</h3>
-                    <p class="desc">2022.10.14.~2022.11.26.</p>
-                </article>
-                <article class="card">
-                    <figure>
-                        <img src="/BODA/html/assets/img/card03.jpg" alt="이미지3">
-                    </figure>
-                    <h3>진민욱 : 어제 걸은 길</h3>
-                    <p class="desc">2022.10.06. ~ 2022.12.16.</p>
-                </article>
+              
+                <div class="slick-slider">
+                    <div>AA</div>
+                    <div>BB</div>
+                    <div>CC</div>
+                    <div>DD</div>
+                    <div>EE</div>
+                    <div>FF</div>
+                </div>
             </div>
         </section>
         <!-- card -->
@@ -268,29 +260,39 @@
         </section>
         <!-- banner -->
 
-        <section id="cardType02" class="card__wrap score section">
+        <section id="cardType02" class="card2__wrap score section">
             <span class="blind">카드 영역02</span>
-            <div class="card__inner container">
-                <article class="card">
-                    <div class="card__contents">
-                        <h3>BEST <br>
+            <div class="card2__inner container">
+                <article class="card2 left">
+                    <div class="card2__contents">
+                        <h3 class="title">BEST <br>
                             REVIEW
                         </h3>
                         <button class="btn">베스트 리뷰 바로가기</button>
                         <button class="btn">일반 리뷰 바로가기</button>
                     </div>
                 </article>
-                <article class="card">
-                    <figure class="card__header">
-                        <img src="" alt="">
+                <article class="card2 right">
+                    <figure class="card2__img01">
+                        <img src="/BODA/html/assets/img/card02-01.jpg" alt="#">
+                    </figure>
+                    <figure class="card2__img02">
+                        <img src="/BODA/html/assets/img/card02-02.jpg" alt="#">
                     </figure>
                 </article>
+                <div class="button-next"></div>
+                <div class="button-prev"></div>
             </div>
         </section>
         <!-- card02 -->
 
+       
     </main>
 
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/slick.min.js"></script>
 
     <script src="/BODA/html/assets/js/swiper.js"></script>
     <script>
@@ -311,6 +313,20 @@
             },
         });
 
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                centerMode: true,
+                slidesToShow: 5,
+                dots: true,
+                arrows: true,
+                swipe: true,
+                //  infinite: true,
+                swipeToSlide: true,
+                //adaptiveHeight: true,
+            });
+
+
+        });
         
     </script>
 </body>

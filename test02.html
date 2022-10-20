@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: linear-gradient(45deg, #51cce2, #3369e7);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+        }
+
+        .slick-slider {
+            width: 100%;
+            background-color: transparent;
+        }
+
+        .slick-slider .slick-track {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            height: 100px;
+            justify-content: center;
+        }
+
+        .slick-slider .slick-slide {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px 0px;
+            margin: 10px;
+            background-color: white;
+            transition: all 0.3s ease;
+            height: auto;
+            text-align: center;
+        }
+
+        .slick-slider .slick-slide.slick-current,
+        .slick-slider .slick-slide.slick-center {
+            background: linear-gradient(45deg, #f69259, #f16975);
+            padding: 30px 0px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            z-index: 10;
+            top: 0px;
+            background-color: transparent;
+        }
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slick-slider">
+        <div>AA</div>
+        <div>BB</div>
+        <div>CC</div>
+        <div>DD</div>
+        <div>EE</div>
+        <div>FF</div>
+    </div>
+
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                centerMode: true,
+                slidesToShow: 5,
+                dots: true,
+                arrows: true,
+                swipe: true,
+                //  infinite: true,
+                swipeToSlide: true,
+                //adaptiveHeight: true,
+            });
+
+
+            /*$('.slick-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+              changecolor("white", 0);
+            });
+            $('.slick-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+              changecolor("red", 30);
+            });
+            function changecolor(color, padding) { 
+              $('.slick-slider .slick-current').css("background-color", color);
+              $('.slick-slider .slick-current').css("padding", padding);
+              //$('.slick-slider').slick("setPosition");
+            //  $('.slick-slider').slick('resize');
+            }
+            changecolor("red", 30);*/
+        });
+
+    </script>
+</body>
+
+</html>
