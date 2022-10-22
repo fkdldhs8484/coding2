@@ -48,6 +48,7 @@
   
   .banner a {
     font-size: 20px;
+    color: #323232;
   }
   
   @media (max-width: 960px) {

@@ -10,114 +10,293 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        body {
-            background: linear-gradient(45deg, #51cce2, #3369e7);
-            height: 100%;
+        .per-control {
+            padding: 40px 0;
+            max-width: 800px;
+            margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0px;
+            flex-wrap: wrap;
         }
 
-        .slick-slider {
+        .per-next {
+            margin-left: 10px;
+        }
+
+        .per-prev {
+            margin-left: 20px;
+        }
+
+        .per-arrow {
+            display: flex;
+        }
+
+        .per-next:hover,
+        .per-prev:hover {
+            transform: scale(1.1);
+        }
+
+        .per-next,
+        .per-prev {
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #111111;
+            border-radius: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s
+        }
+
+        .per-carousel {
+            position: relative;
+            max-width: 250px;
             width: 100%;
-            background-color: transparent;
+            height: 350px;
+            margin: 50px auto auto;
         }
 
-        .slick-slider .slick-track {
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-            height: 100px;
-            justify-content: center;
-        }
-
-        .slick-slider .slick-slide {
-            float: none;
-            display: inline-block;
-            vertical-align: middle;
-            padding: 10px 0px;
-            margin: 10px;
+        .per-carousel .item {
+            max-width: 250px;
+            height: 300px;
+            width: 100%;
             background-color: white;
-            transition: all 0.3s ease;
-            height: auto;
+            transition: height 0.3s, left 0.3s, box-shadow 0.3s;
+            position: absolute;
+            bottom: 0;
             text-align: center;
         }
 
-        .slick-slider .slick-slide.slick-current,
-        .slick-slider .slick-slide.slick-center {
-            background: linear-gradient(45deg, #f69259, #f16975);
-            padding: 30px 0px;
+        .before-item {
+            left: -70%;
+            cursor: pointer;
         }
 
-        .slick-prev,
-        .slick-next {
-            z-index: 10;
-            top: 0px;
-            background-color: transparent;
+        .center-item {
+            height: 350px !important;
+            left: 0;
         }
 
-        .slick-prev {
-            left: 10px;
+        .second-item,
+        .last-item,
+        .center-item {
+            box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .slick-next {
-            right: 10px;
+        .after-item {
+            left: 70%;
+            cursor: pointer;
+        }
+
+        .per-line {
+            width: 80%;
+            background-color: #111111;
+            height: 1px;
+            position: relative;
+        }
+
+        .actual-line {
+            transition: width 0.3s;
+            background-color: #74D064;
+            height: 3px;
+            position: absolute;
+            top: -1px;
+            left: 0;
+        }
+
+        .per-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        .per-title {
+            margin-top: 50px;
+            font-size: 30px;
         }
     </style>
 </head>
 
 <body>
-    <div class="slick-slider">
-        <div>AA</div>
-        <div>BB</div>
-        <div>CC</div>
-        <div>DD</div>
-        <div>EE</div>
-        <div>FF</div>
-    </div>
+    <section class="Per-wrapper">
+        <div class="per-carousel carousel-two">
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">1</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">2</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">3</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">4</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">5</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">6</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="per-content">
+                    <h3 class="per-title">7</h3>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="per-control">
+            <div class="per-line">
+                <div class="actual-line"></div>
+            </div>
+            <div class="per-arrow">
+                <span class="per-prev">
+                    <svg width="9px" height="17px" viewBox="0 0 9 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path
+                                d="M5.95402631,5.53955726 L12.4900312,12.6302483 C12.5215536,12.663625 12.5200504,12.7162361 12.4866737,12.7477585 C12.4633873,12.7697513 12.4295365,12.7764084 12.3996562,12.7648714 C8.92068895,11.4216238 6.28747023,10.75 4.5,10.75 C2.75167103,10.75 0.194227704,11.392532 -3.17232997,12.6775959 L-3.17225579,12.6777903 C-3.2755576,12.7172221 -3.39126605,12.6654452 -3.43069786,12.5621434 C-3.45811021,12.4903296 -3.44198647,12.4091621 -3.38920725,12.3532783 L3.04597369,5.53955726 C3.80439711,4.73652071 5.07021051,4.70035461 5.87324707,5.45877803 C5.90093716,5.48492978 5.92787455,5.51186717 5.95402631,5.53955726 Z"
+                                id="Triangle" fill="#111111"
+                                transform="translate(4.500000, 8.500000) rotate(-90.000000) translate(-4.500000, -8.500000) ">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+                <span class="per-next">
+                    <svg width="9px" height="17px" viewBox="0 0 9 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path
+                                d="M5.95402631,5.53955726 L12.4900312,12.6302483 C12.5215536,12.663625 12.5200504,12.7162361 12.4866737,12.7477585 C12.4633873,12.7697513 12.4295365,12.7764084 12.3996562,12.7648714 C8.92068895,11.4216238 6.28747023,10.75 4.5,10.75 C2.75167103,10.75 0.194227704,11.392532 -3.17232997,12.6775959 L-3.17225579,12.6777903 C-3.2755576,12.7172221 -3.39126605,12.6654452 -3.43069786,12.5621434 C-3.45811021,12.4903296 -3.44198647,12.4091621 -3.38920725,12.3532783 L3.04597369,5.53955726 C3.80439711,4.73652071 5.07021051,4.70035461 5.87324707,5.45877803 C5.90093716,5.48492978 5.92787455,5.51186717 5.95402631,5.53955726 Z"
+                                id="Triangle-Copy" fill="#111111"
+                                transform="translate(4.500000, 8.500000) scale(-1, 1) rotate(-90.000000) translate(-4.500000, -8.500000) ">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </div> -->
+    </section>
 
-
-    <!-- jQuery CDN -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/slick.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.slick-slider').slick({
-                centerMode: true,
-                slidesToShow: 5,
-                dots: true,
-                arrows: true,
-                swipe: true,
-                //  infinite: true,
-                swipeToSlide: true,
-                //adaptiveHeight: true,
-            });
 
 
-            /*$('.slick-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-              changecolor("white", 0);
-            });
-            $('.slick-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-              changecolor("red", 30);
-            });
-            function changecolor(color, padding) { 
-              $('.slick-slider .slick-current').css("background-color", color);
-              $('.slick-slider .slick-current').css("padding", padding);
-              //$('.slick-slider').slick("setPosition");
-            //  $('.slick-slider').slick('resize');
+        jQuery(document).ready(function () {
+            var allItems = [],
+                lineFull = [],
+                firstItem,
+                arr2 = [],
+                arr1 = [],
+                count,
+                count2,
+                actualEl,
+                lineGap,
+                firstArr2,
+                last,
+                firstArr1;
+
+            allItems = $('.per-carousel .item').toArray();
+            firstItem = allItems[0];
+            allItems.shift();
+            arr1 = allItems.splice(0, Math.ceil(allItems.length / 2));
+            arr2 = allItems;
+            lineFull = [...arr1, ...arr2];
+            arr2.reverse();
+            carouselClass();
+
+            function carouselClass() {
+                $(".per-carousel .item").removeClass('center-item before-item after-item');
+                $(".per-carousel .item").css('z-index', '0');
+                $(firstItem).addClass('center-item');
+                $(firstItem).css('z-index', '90');
+                count = arr1.length;
+                count2 = arr2.length;
+                actualEl = lineFull.indexOf(firstItem);
+                lineGap = (((actualEl + 2) * 100) / (lineFull.length + 1));
+                $(".actual-line").css('width', lineGap + '%');
+                for (i = 0; i < arr1.length; i++) {
+                    if (arr1.length == count) {
+                        $(arr1[i]).addClass('second-item');
+                    }
+                    count--;
+                    $(arr1[i]).addClass('after-item');
+                    $(arr1[i]).css('z-index', count);
+                }
+
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr2.length == count2) {
+                        $(arr2[i]).addClass('last-item');
+                    }
+                    count2--;
+                    $(arr2[i]).addClass('before-item');
+                    $(arr2[i]).css('z-index', count2);
+                }
             }
-            changecolor("red", 30);*/
+
+            function sliding(firstArray, secondArray) {
+                firstArr2 = secondArray.pop();
+                firstArray.push(firstArr2);
+                secondArray.unshift(firstItem);
+                last = secondArray[-1];
+                firstArray.push(last);
+                firstArr1 = firstArray[0];
+                firstItem = firstArr1;
+                firstArray.shift();
+                firstArray.pop();
+                $(".per-carousel .item").removeClass('center-item before-item after-item last-item second-item');
+                carouselClass();
+            }
+
+            $(document).on('click', '.second-item, .per-next', function () {
+                sliding(arr1, arr2);
+            });
+
+            $(document).on('click', '.last-item, .per-prev', function () {
+                sliding(arr2, arr1);
+            });
+
+            $(".per-carousel").on("touchstart", function (event) {
+                console.log("work");
+                var xClick = event.originalEvent.touches[0].pageX;
+                $(this).one("touchmove", function (event) {
+                    var xMove = event.originalEvent.touches[0].pageX;
+                    if (Math.floor(xClick - xMove) > 5) {
+                        sliding(arr1, arr2);
+                    }
+                    else if (Math.floor(xClick - xMove) < -5) {
+                        sliding(arr2, arr1);
+                    }
+                });
+                $(".per-carousel").on("touchend", function () {
+                    $(this).off("touchmove");
+                });
+            });
         });
 
     </script>
