@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험문제</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">2022/10/07 시험문제</h2>
+            <hr>
+
+            <h3 class="t_tit2">01. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    const arr = [1, 1, 3, 3, 0, 1, 1];
+
+    function solution(arr) {
+        return arr.filter((item, idx) => item !== arr[idx + 1]);
+    }
+    console.log(solution(arr));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    [1, 3, 0, 1]
+                </details>
+            </div>
+
+            <h3 class="t_tit2">02. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    const arr = "webstoryboy";
+
+    function solution(s) {
+        const answer = '';
+        return s.length % 2 == 1 ? s[s.length / 2 | 0] : s.slice(s.length / 2 - 1, s.length / 2 + 1);
+    }
+    console.log(solution(arr));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    o
+                </details>
+            </div>
+
+            <h3 class="t_tit2">03. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function solution(numbers) {
+        var answer = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            answer = answer + numbers[i]
+        }
+        answer = answer / numbers.length;
+        return answer;
+    }
+
+    console.log(solution(arr));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    5.5
+                </details>
+            </div>
+
+            <h3 class="t_tit2">04. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">// {
+    //     cosnt string = "webstoryboy";
+
+    //     function solution(s) {
+    //         const answer = '';
+    //         for (let i = s.length - 1; i >= 0; i--) {
+    //             answer = answer + s[i]
+    //         }
+    //         return answer;
+    //     }
+    //     console.log(solution(string));
+    // }
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    15
+                </details>
+            </div>
+
+            <h3 class="t_tit2">05. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">{
+    //     cosnt num = 10;
+
+    //     function solution(n) {
+    //         let answer = '';
+    //         for (i = 0; i < n; i++) {
+    //             if (i % 2 == 0) {
+    //                 answer += "코";
+    //             } else {
+    //                 answer += "딩";
+    //             }
+    //         }
+    //         return answer;
+    //     }
+    //     console.log(solution(num));
+    // }              
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    [256, 41]
+                </details>
+            </div>
+
+            <h3 class="t_tit2">06. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    const num = "webstoryboy";
+
+    function solution(s) {
+        let answer;
+        let arr = [...s]
+        if (arr.length % 2 == 0) {
+            answer = arr.splice(arr.length / 2 - 1, 2);
+        } else {
+            answer = arr.splice(Math.floor(arr.length / 2), 1);
+        }
+        return answer.join("");
+    }
+
+    console.log(solution(num))
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    o
+                </details>
+            </div>
+
+            <h3 class="t_tit2">07. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    const num = [5, 9, 7, 10];
+
+    function solution(arr, divisor) {
+        var answer = [];
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] % divisor == 0) answer.push(arr[i]);
+        }
+        return answer;
+    }
+    console.log(solution(num, 5))
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    [5, 10]
+                </details>
+            </div>
+
+            <h3 class="t_tit2">08. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js"> {
+    const num = [5, 9, 7, 10];
+
+    function solution(arr) {
+        let sm = arr[0], index = 0;
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] < sm) {
+                sm = arr[i];
+                index = i;
+            }
+        }
+        arr.splice(index, 1);
+        return arr;
+    }
+    console.log(solution(num))
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    [9, 7, 10]
+                </details>
+            </div>
+
+            <h3 class="t_tit2">09. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">  {
+    const num = "webstoryboy";
+
+    function solution(s) {
+        let answer = s.split("");
+
+        for (i = 0; i < answer.length - 4; i++) {
+            answer[i] = "*";
+        }
+        return answer.join("");
+    }
+    console.log(solution(num))
+}
+
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    *******yboy
+                </details>
+            </div>
+
+            <h3 class="t_tit2">10. 다음의 결과값을 작성하시오.</h3>
+            <div class="result">
+                <div class="t_code">
+                    <pre><code class="language-js">   {
+    function solution(arr1, arr2) {
+        let answer = [];
+        arr1.sort();
+        arr2.sort();
+        let p1 = p2 = 0;
+
+        while (p1 < arr1.length && p2 < arr2.length) {
+            if (arr1[p1] == arr2[p2]) {
+                answer.push(arr1[p1++]);
+                p2++;
+            }
+            else if (arr1[p1] < arr2[p2]) p1++;
+            else p2++;
+        }
+        return answer;
+    }
+
+    let a = [1, 3, 9, 5, 2];
+    let b = [3, 2, 5, 7, 8];
+
+    console.log(solution(a, b));
+}
+</code></pre>
+                </div>
+
+                <details>
+                    <summary>정답보기</summary>
+                    <p class="t_desc"></p>
+                    [2, 3, 5]
+                </details>
+            </div>
+
+
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+        {
+            const arr = [1, 1, 3, 3, 0, 1, 1];
+
+            function solution(arr) {
+                return arr.filter((item, idx) => item !== arr[idx + 1]);
+            }
+            console.log(solution(arr));
+        }
+        {
+            const arr = "webstoryboy";
+
+            function solution(s) {
+                const answer = '';
+                return s.length % 2 == 1 ? s[s.length / 2 | 0] : s.slice(s.length / 2 - 1, s.length / 2 + 1);
+            }
+            console.log(solution(arr));
+        }
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            function solution(numbers) {
+                var answer = 0;
+                for (let i = 0; i < numbers.length; i++) {
+                    answer = answer + numbers[i]
+                }
+                answer = answer / numbers.length;
+                return answer;
+            }
+
+            console.log(solution(arr));
+        }
+        // {
+        //     cosnt string = "webstoryboy";
+
+        //     function solution(s) {
+        //         const answer = '';
+        //         for (let i = s.length - 1; i >= 0; i--) {
+        //             answer = answer + s[i]
+        //         }
+        //         return answer;
+        //     }
+        //     console.log(solution(string));
+        // }
+        // {
+        //     cosnt num = 10;
+
+        //     function solution(n) {
+        //         let answer = '';
+        //         for (i = 0; i < n; i++) {
+        //             if (i % 2 == 0) {
+        //                 answer += "코";
+        //             } else {
+        //                 answer += "딩";
+        //             }
+        //         }
+        //         return answer;
+        //     }
+        //     console.log(solution(num));
+        // }
+        {
+            const num = "webstoryboy";
+
+            function solution(s) {
+                let answer;
+                let arr = [...s]
+                if (arr.length % 2 == 0) {
+                    answer = arr.splice(arr.length / 2 - 1, 2);
+                } else {
+                    answer = arr.splice(Math.floor(arr.length / 2), 1);
+                }
+                return answer.join("");
+            }
+
+            console.log(solution(num))
+        }
+        {
+            const num = [5, 9, 7, 10];
+
+            function solution(arr, divisor) {
+                var answer = [];
+
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i] % divisor == 0) answer.push(arr[i]);
+                }
+                return answer;
+            }
+            console.log(solution(num, 5))
+        }
+        {
+            const num = [5, 9, 7, 10];
+
+            function solution(arr) {
+                let sm = arr[0], index = 0;
+
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i] < sm) {
+                        sm = arr[i];
+                        index = i;
+                    }
+                }
+                arr.splice(index, 1);
+                return arr;
+            }
+            console.log(solution(num))
+        }
+        {
+            const num = "webstoryboy";
+
+            function solution(s) {
+                let answer = s.split("");
+
+                for (i = 0; i < answer.length - 4; i++) {
+                    answer[i] = "*";
+                }
+                return answer.join("");
+            }
+            console.log(solution(num))
+        }
+
+        {
+            function solution(arr1, arr2) {
+                let answer = [];
+                arr1.sort();
+                arr2.sort();
+                let p1 = p2 = 0;
+
+                while (p1 < arr1.length && p2 < arr2.length) {
+                    if (arr1[p1] == arr2[p2]) {
+                        answer.push(arr1[p1++]);
+                        p2++;
+                    }
+                    else if (arr1[p1] < arr2[p2]) p1++;
+                    else p2++;
+                }
+                return answer;
+            }
+
+            let a = [1, 3, 9, 5, 2];
+            let b = [3, 2, 5, 7, 8];
+
+            console.log(solution(a, b));
+        }
+    </script>
+</body>
+
+</html>

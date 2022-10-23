@@ -355,17 +355,12 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
         <h2>01. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js"> {
-    function func() {
-        let i = 10, hap = 0;
-        while (i > 1) {
-            if (i % 3 == 2) {
-                hap += i;
-            }
-            i--;
-        }
-        document.write(hap);
+    const arr = [0, 0, 2, 2, 3, 3];
+
+    function solution(arr) {
+        return arr.filter((item, idx) => item !== arr[idx + 0]);
     }
-    func();     //15
+    console.log(solution(arr));
 }
 </code></pre>
         </div>
@@ -376,17 +371,14 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample2" class="sample">
         <h2>02. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
-    function func() {
-        let a = [];
+            <pre class="line-numbers"><code class="language-js">  {
+    const arr = "webstoryboy";
 
-        for (i = 1; i <= 5; i++) {
-            a += [i];
-        }
-        document.write(a[1]);
-
+    function solution(s) {
+        const answer = '';
+        return s.length % 2 == 1 ? s[s.length / 2 | 0] : s.slice(s.length / 2 + 1, s.length / 2 - 1);
     }
-    func();     //2
+    console.log(solution(arr));
 }
 </code></pre>
         </div>
@@ -397,17 +389,19 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample3" class="sample">
         <h2>03. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">   {
-    function func() {
-        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9], cnt = 0;
-        for (i = 0; i < a.length; i++) {
-            if (a[i] % 3 == 0) {
-                cnt = cnt + 1;
-            }
+            <pre class="line-numbers"><code class="language-js"> {
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function solution(numbers) {
+        var answer = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            answer = answer + numbers[i]
         }
-        document.write(cnt);
+        answer = answer / numbers.length;
+        return answer;
     }
-    func();     //3
+
+    console.log(solution(arr));
 }
 </code></pre>
         </div>
@@ -418,16 +412,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample4" class="sample">
         <h2>04. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">  {
-    function func(data, exp) {
-        let result = 1;
-        for (i = 1; i < exp; i++) {
-            result = result * i;
-        }
-        document.write(result + data);
-    }
-    func(1, 1);     //2
-}
+            <pre class="line-numbers"><code class="language-js"> 
 </code></pre>
         </div>
     </div>
@@ -437,19 +422,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample5" class="sample">
         <h2>05. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
-    function func() {
-        let a = [2, 3, 2, 4, 5, 6, 7, 2, 3, 3, 2];
-        let value = 0;
-        for (i = 0; i < a.length; i++) {
-            if (a[i] != 1) {
-                value++;
-            }
-        }
-        document.write(value);
-    }
-    func();     //11
-}
+            <pre class="line-numbers"><code class="language-js">
 </code></pre>
         </div>
     </div>
@@ -459,16 +432,21 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample6" class="sample">
         <h2>06. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">  {
-    function func() {
-        let i, j = 0;
+            <pre class="line-numbers"><code class="language-js"> {
+    const num = "webstoryboy";
 
-        for (i = 0; i <= 1; i++) {
-            j += i;
+    function solution(s) {
+        let answer;
+        let arr = [...s]
+        if (arr.length % 2 == 0) {
+            answer = arr.splice(arr.length / 2 + 1, 2);
+        } else {
+            answer = arr.splice(Math.floor(arr.length / 2), 2);
         }
-        document.write(j + i);
+        return answer.join("");
     }
-    func();     //3
+
+    console.log(solution(num))
 }
 </code></pre>
         </div>
@@ -479,13 +457,18 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample7" class="sample">
         <h2>07. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js"> {
-    function func() {
-        let a = 12, b = 8, c = 2, d = 3;
-        a /= b - c * d; 
-        document.write(b)  
+            <pre class="line-numbers"><code class="language-js">   {
+    const num = [5, 9, 7, 10];
+
+    function solution(arr, divisor) {
+        var answer = [];
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] % divisor == 0) answer.push(arr[i]);
+        }
+        return answer;
     }
-    func();     //8
+    console.log(solution(num, 10))
 }
 </code></pre>
         </div>
@@ -496,17 +479,23 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample8" class="sample">
         <h2>08. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
-    function func13() {
-        let a, b, c, result;
-        a = 10;
-        b = 20;
-        c = 30;
-        result = a / b ? b + a : c;
-        document.write(result);
+            <pre class="line-numbers"><code class="language-js">  {
+    const num = [5, 9, 7, 10];
+
+    function solution(arr) {
+        let sm = arr[1], index = 1;
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] < sm) {
+                sm = arr[i];
+                index = i;
+            }
+        }
+        arr.splice(index, 1);
+        return arr;
     }
-    func13();   //30
-} 
+    console.log(solution(num))
+}
 </code></pre>
         </div>
     </div>
@@ -516,17 +505,18 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <div id="sample9" class="sample">
         <h2>09. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">   {
-    function func() {
-        let a = 0, sum = 0;
-        while (a < 10) {
-            a++;
-            if (a % 1 == 1) continue;
-            sum += a;
+            <pre class="line-numbers"><code class="language-js">  {
+    const num = "webstoryboy";
+
+    function solution(s) {
+        let answer = s.split("");
+
+        for (i = 0; i < answer.length + 5; i++) {
+            answer[i] = "*";
         }
-        document.write(sum);
+        return answer.join("");
     }
-    func();     //55
+    console.log(solution(num))
 }
 </code></pre>
         </div>
@@ -537,17 +527,27 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
         <h2>10. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">  {
-    function func() {
-        let i = 0, sum = 0;
-        while (1) {
-            i++;
-            if (i > 10) break;
-            if (i % 5 == 0) continue;
-            sum += i;
+    function solution(arr1, arr2) {
+        let answer = [];
+        arr1.sort();
+        arr2.sort();
+        let p1 = p2 = 0;
+
+        while (p1 < arr1.length && p2 < arr2.length) {
+            if (arr1[p1] == arr2[p2]) {
+                answer.push(arr1[p1++]);
+                p2++;
+            }
+            else if (arr1[p1] < arr2[p2]) p1++;
+            else p2++;
         }
-        document.write(sum);
+        return answer;
     }
-    func();     //40
+
+    let a = [2, 6, 8, 10];
+    let b = [10, 8, 12, 16];
+
+    console.log(solution(a, b));
 }
 </code></pre>
         </div>
@@ -566,122 +566,157 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+        // 01
+        {
+            const arr = [0, 0, 2, 2, 3, 3];
 
+            function solution(arr) {
+                return arr.filter((item, idx) => item !== arr[idx + 0]);
+            }
+            console.log(solution(arr));
+        }
+        // 02
+        {
+            const arr = "webstoryboy";
+
+            function solution(s) {
+                const answer = '';
+                return s.length % 2 == 1 ? s[s.length / 2 | 0] : s.slice(s.length / 2 + 1, s.length / 2 - 1);
+            }
+            console.log(solution(arr));
+        }
+        // 03
+        {
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            function solution(numbers) {
+                var answer = 0;
+                for (let i = 0; i < numbers.length; i++) {
+                    answer = answer + numbers[i]
+                }
+                answer = answer / numbers.length;
+                return answer;
+            }
+
+            console.log(solution(arr));
+        }
+        //  04
         // {
-        //     function func() {
-        //         let i = 10, hap = 0;
-        //         while (i > 1) {
-        //             if (i % 3 == 2) {
-        //                 hap += i;
+        //     cosnt string = "webstoryboy";
+
+        //     function solution(s) {
+        //         const answer = '';
+        //         for (let i = s.length - 1; i >= 0; i--) {
+        //             answer = answer + s[i]
+        //         }
+        //         return answer;
+        //     }
+        //     console.log(solution(string));
+        // }
+        //  05
+        // {
+        //     cosnt num = 10;
+
+        //     function solution(n) {
+        //         let answer = '';
+        //         for (i = 0; i < n; i++) {
+        //             if (i % 2 == 0) {
+        //                 answer += "코";
+        //             } else {
+        //                 answer += "딩";
         //             }
-        //             i--;
         //         }
-        //         document.write(hap);
+        //         return answer;
         //     }
-        //     func();
+        //     console.log(solution(num));
         // }
-        // {
-        //     function func() {
-        //         let a = [];
+        // 06
+        {
+            const num = "webstoryboy";
 
-        //         for (i = 1; i <= 5; i++) {
-        //             a += [i];
-        //         }
-        //         document.write(a[1]);
+            function solution(s) {
+                let answer;
+                let arr = [...s]
+                if (arr.length % 2 == 0) {
+                    answer = arr.splice(arr.length / 2 + 1, 2);
+                } else {
+                    answer = arr.splice(Math.floor(arr.length / 2), 2);
+                }
+                return answer.join("");
+            }
 
-        //     }
-        //     func();
-        // }
-        // {
-        //     function func() {
-        //         let a = [1, 2, 3, 4, 5, 6, 7, 8, 9], cnt = 0;
-        //         for (i = 0; i < a.length; i++) {
-        //             if (a[i] % 3 == 0) {
-        //                 cnt = cnt + 1;
-        //             }
-        //         }
-        //         document.write(cnt);
-        //     }
-        //     func();
-        // }
-        // {
-        //     function func(data, exp) {
-        //         let result = 1;
-        //         for (i = 1; i < exp; i++) {
-        //             result = result * i;
-        //         }
-        //         document.write(result + data);
-        //     }
-        //     func(1, 1);
-        // }
-        // {
-        //     function func() {
-        //         let a = [2, 3, 2, 4, 5, 6, 7, 2, 3, 3, 2];
-        //         let value = 0;
-        //         for (i = 0; i < a.length; i++) {
-        //             if (a[i] != 1) {
-        //                 value++;
-        //             }
-        //         }
-        //         document.write(value);
-        //     }
-        //     func();
-        // }
-        // {
-        //     function func() {
-        //         let i, j = 0;
+            console.log(solution(num))
+        }
+        // 07
+        {
+            const num = [5, 9, 7, 10];
 
-        //         for (i = 0; i <= 1; i++) {
-        //             j += i;
-        //         }
-        //         document.write(j + i);
-        //     }
-        //     func();
-        // }
-        // {
-        //     function func() {
-        //         let a = 12, b = 8, c = 2, d = 3;
-        //         a /= b - c * d;
-        //         document.write(b)
-        //     }
-        //     func();
-        // }
-        // {
-        //     function func13() {
-        //         let a, b, c, result;
-        //         a = 10;
-        //         b = 20;
-        //         c = 30;
-        //         result = a / b ? b + a : c;
-        //         document.write(result);
-        //     }
-        //     func13();
-        // }
-        // {
-        //     function func() {
-        //         let a = 0, sum = 0;
-        //         while (a < 10) {
-        //             a++;
-        //             if (a % 1 == 1) continue;
-        //             sum += a;
-        //         }
-        //         document.write(sum);
-        //     }
-        //     func();
-        // }
-        // {
-        //     function func() {
-        //         let i = 0, sum = 0;
-        //         while (1) {
-        //             i++;
-        //             if (i > 10) break;
-        //             if (i % 5 == 0) continue;
-        //             sum += i;
-        //         }
-        //         document.write(sum);
-        //     }
-        //     func();
-        // }
+            function solution(arr, divisor) {
+                var answer = [];
+
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i] % divisor == 0) answer.push(arr[i]);
+                }
+                return answer;
+            }
+            console.log(solution(num, 10))
+        }
+        // 08
+        {
+            const num = [5, 9, 7, 10];
+
+            function solution(arr) {
+                let sm = arr[1], index = 1;
+
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i] < sm) {
+                        sm = arr[i];
+                        index = i;
+                    }
+                }
+                arr.splice(index, 1);
+                return arr;
+            }
+            console.log(solution(num))
+        }
+        // 09
+        {
+            const num = "webstoryboy";
+
+            function solution(s) {
+                let answer = s.split("");
+
+                for (i = 0; i < answer.length + 5; i++) {
+                    answer[i] = "*";
+                }
+                return answer.join("");
+            }
+            console.log(solution(num))
+        }
+        // 10
+        {
+            function solution(arr1, arr2) {
+                let answer = [];
+                arr1.sort();
+                arr2.sort();
+                let p1 = p2 = 0;
+
+                while (p1 < arr1.length && p2 < arr2.length) {
+                    if (arr1[p1] == arr2[p2]) {
+                        answer.push(arr1[p1++]);
+                        p2++;
+                    }
+                    else if (arr1[p1] < arr2[p2]) p1++;
+                    else p2++;
+                }
+                return answer;
+            }
+
+            let a = [2, 6, 8, 10];
+            let b = [10, 8, 12, 16];
+
+            console.log(solution(a, b));
+        }
     </script>
 </body>
 

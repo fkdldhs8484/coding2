@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="thisForm">
+        <p class="qna_privacy_agree">
+            <input type="checkbox" id="pv_agree" name="pv_agree" class="agree_ck" />
+            <label for="pv_agree">동의합니다.</label>
+        </p>
+        <button type="button" onClick="chk();">확인</button>
+    </form>
+</body>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    function chk() {
+        var f = document.thisForm;
+        if (f.pv_agree.checked !== true) {
+            alert('필수항목에 체크해 주세요.');
+        } else {
+            alert('통과');
+            f.submit();
+        }
+    }
+</script>
+
+</html>
