@@ -183,12 +183,12 @@
     <section id="AgreeType" class="Agree__wrap agree">
         <h2 class="agree_tit">SIGN UP</h2>
         <div class="Agree__inner">
-            <form name="thisForm">
+            <form>
                 <h3>약관동의</h3>
                 <p>[필수] 회원가입을 위한 약관에 동의해주세요.</p>
                 <article class="Agree a1">
-                    <h4 class="title">이용약관 동의 [필수] <input type='checkbox' name='check_all' id="check1" required><label
-                            for="check1"></label>
+                    <h4 class="title">이용약관 동의 [필수] <input type='checkbox'  id="check1" required><label
+                            for="check1" id="input__check"></label>
                     </h4>
 
                     <div class="box">
@@ -211,8 +211,8 @@
                 </article>
 
                 <article class="Agree a2">
-                    <h4 class="title">개인정보 수집 및 이용 동의 [필수] <input type='checkbox' name='check_all' id="check2"><label
-                            for="check2"></label>
+                    <h4 class="title">개인정보 수집 및 이용 동의 [필수] <input type='checkbox'  id="check2"><label
+                            for="check2" id="input__check"></label>
                     </h4>
 
                     <div class="box">
@@ -234,18 +234,18 @@
                     </div>
 
                 </article>
-                <div class="checkbox1">
-                    <input type='checkbox' id="check3" name='check_all'><label for="check3"></label>
+                <div class="checkbox1" id="input__check">
+                    <input type='checkbox' id="check3" ><label for="check3"></label>
                     <p class="checkbox_p">[필수] 만 14세 이상입니다.</p>
                 </div>
                 <div class="checkbox2">
-                    <input type='checkbox' id="check4" name='check_all' value='selectall'
+                    <input type='checkbox' id="check4"  value='selectall'
                         onclick='selectAll(this)'><label for="check4"></label>
                     <p class="checkbox_p">모든 약관에 동의합니다.</p>
                 </div>
                 <div class="btn_box">
                     <button href="#" class="Btn">메인으로</button>
-                    <button href="agreeInfo.html" class="Btn" onClick="chk();">다음</button>
+                    <button type="submit" class="Btn" disabled>다음</button>
                 </div>
             </form>
         </div>
@@ -315,16 +315,36 @@
     <!-- //script -->
 
     <script>
-        function chk() {
-            var f = document.thisForm;
-            if (f.check1.checked !== true) {
-                alert('필수항목에 체크해 주세요.');
-            } else {
-                alert('통과');
-                f.submit();
-            }
-        }
+        const checkboxAll = document.querySelector('.checkbox2 input'); // 모두 동의 체크박스
+        const checkBoxes = document.querySelectorAll('#input__check');    // 모두 동의를 제외한 체크박스
+        const submitBtn = document.querySelector('button submit'); // 확인 버튼
 
+        const agreements = {
+            termsOfService: false,
+            privacyPolicy: false,
+            allowPromotions: false,
+        };
+
+        checkBoxes.forEach((item) => item.addEventListener('input', toggleCheckbox));
+
+
+        checkboxAll.addEventListener('click', (e) => {
+            const { checked } = e.target;
+            if (checked) {
+                checkBoxes.forEach((item) => {
+                    item.checked = true;
+                    agreements[item.id] = true;
+                    item.parentNode.classList.add('active');
+                });
+            } else {
+                checkBoxes.forEach((item) => {
+                    item.checked = false;
+                    agreements[item.id] = false;
+                    item.parentNode.classList.remove('active');
+                });
+            }
+            toggleSubmitButton();
+        });
 
     </script>
 </body>
