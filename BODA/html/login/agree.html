@@ -19,7 +19,7 @@
 
 <body>
     <!-- header -->
-    <header id="header" class="header__container">
+    <header id="header" class="header__container ">
         <div class="header__area">
             <div class="header__logo">
                 <a href="#">BODA</a>
@@ -187,13 +187,15 @@
                 <h3>약관동의</h3>
                 <p>[필수] 회원가입을 위한 약관에 동의해주세요.</p>
                 <article class="Agree a1">
-                    <h4 class="title">이용약관 동의 [필수]
-                        <div class="input__check">
-                            <input type='checkbox' name='check_all' id="check1" value="check1" type="checkbox" name="agree" id="chk1" required><label
-                                for="check1"></label>
-                        </div>
-                    </h4>
 
+                    <h4 class="title">이용약관 동의 [필수]
+
+                        <div class="input__check">
+                            <input type="checkbox" name="agreement" id="termsOfService" value="termsOfService"
+                                required /> <label for="termsOfService" class="required"></label>
+                        </div>
+
+                    </h4>
                     <div class="box">
                         <h5 class="desc">제 1 조 [ 목적 ]</h5>
                         <p class="desc2">사이트를 통하여 제공하는 모든 서비스의 이용조건 및 절차, 이용자의 권리, 의무, 책임<br>
@@ -211,18 +213,21 @@
                         </p>
                     </div>
 
+
                 </article>
 
                 <article class="Agree a2">
                     <h4 class="title">개인정보 수집 및 이용 동의 [필수]
                         <div class="input__check">
-                            <input type='checkbox' name='check_all' id="check2"><label for="check2" type="checkbox" name="agree" id="chk1" required></label>
+                            <input type="checkbox" name="agreement" id="privacyPolicy" value="privacyPolicy" required />
+                            <label for="privacyPolicy" class="required"></label>
                         </div>
                     </h4>
 
                     <div class="box">
                         <h5 class="desc">1. 개인정보 수집목적 및 이용목적</h5>
-                        <p class="desc2">회원제 서비스 이용에 따른 본인확인, 개인 식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 가입 의사 확인, 연령확인, 불만처리 등
+                        <p class="desc2">회원제 서비스 이용에 따른 본인확인, 개인 식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 가입 의사 확인, 연령확인, 불만처리
+                            등
                             민원처리,
                             고지사항 전달
                         </p>
@@ -239,18 +244,19 @@
                     </div>
 
                 </article>
-                <div class="checkbox1">
-                    <input type='checkbox' id="check3" name='check_all'><label for="check3" type="checkbox" name="agree" id="chk1" required></label>
+                <div class="input__check">
+                    <input type="checkbox" name="agreement" id="allowPromotions" value="allowPromotions" />
+                    <label for="allowPromotions"></label>
                     <p class="checkbox_p">[필수] 만 14세 이상입니다.</p>
                 </div>
-                <div class="checkbox2">
-                    <input type='checkbox' id="check4" name='check_all' value='selectall'
-                        onclick='selectAll(this)'><label for="check4"></label>
+                <div class="terms__check__all">
+                    <input type="checkbox" name="checkAll" id="checkAll" />
+                    <label for=" checkAll" id="cheack_all"></label>
                     <p class="checkbox_p">모든 약관에 동의합니다.</p>
                 </div>
                 <div class="btn_box">
                     <a type="submit" class="Btn">메인으로</a>
-                    <a href="agreeInfo.html" type="submit" class="Btn" disabled>다음</a>
+                    <button type="submit" class="next-button" disabled>확인</button>
                 </div>
             </form>
         </div>
@@ -319,26 +325,6 @@
     <script src="../assets/js/agree.js"></script>
     <!-- //script -->
 
-    <script>
-        function agree() {
-            var chkbox = document.getElementsByName('agree');
-            var chk = false;
-            for (var i = 0; i < chkbox.length; i++) {
-                if (chkbox[i].checked) {
-                    chk = true;
-                } else {
-                    chk = false;
-                }
-            }
-
-            if (chk) {
-                alert("모든 약관에 동의함.");
-                return false;
-            } else {
-                alert("모든 약관에 동의해 주세요.")
-            }
-        }
-    </script>
 
 </body>
 

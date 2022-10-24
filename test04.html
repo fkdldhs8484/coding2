@@ -1,34 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<link rel="stylesheet" href="/BODA/html/assets/css/agree.css">
+
+<html>
 
 <body>
-    <form name="thisForm">
-        <p class="qna_privacy_agree">
-            <input type="checkbox" id="pv_agree" name="pv_agree" class="agree_ck" />
-            <label for="pv_agree">동의합니다.</label>
-        </p>
-        <button type="button" onClick="chk();">확인</button>
-    </form>
-</body>
+    <section id="AgreeType" class="Agree__wrap agree">
+        <h2 class="agree_tit">SIGN UP</h2>
+        <div class="Agree__inner">
+            <form id="form__wrap">
+                <h3>약관동의</h3>
+                <p>[필수] 회원가입을 위한 약관에 동의해주세요.</p>
+                <article class="Agree a1">
 
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-    function chk() {
-        var f = document.thisForm;
-        if (f.pv_agree.checked !== true) {
-            alert('필수항목에 체크해 주세요.');
-        } else {
-            alert('통과');
-            f.submit();
+                    <h4 class="title">이용약관 동의 [필수]
+
+                        <div class="input__check">
+                            <input type="checkbox" name="agreement" id="termsOfService" value="termsOfService"
+                                required /> <label for="termsOfService" class="required"></label>
+                        </div>
+
+                    </h4>
+                    <div class="box">
+                        <h5 class="desc">제 1 조 [ 목적 ]</h5>
+                        <p class="desc2">사이트를 통하여 제공하는 모든 서비스의 이용조건 및 절차, 이용자의 권리, 의무, 책임<br>
+                            사항과 기타 필요한 사항을 규정함을 목적으로 합니다.
+                        </p>
+                        <h5 class="desc">제 2 조 [ 공지 ]</h5>
+                        <p class="desc2">1. 본 약관은 재단이 사이트의 화면 또는 기타의 방법으로 이용자에게 공지하고 회원이 동의함으로써 효력이 발생하며, 서비스 제공 행위 및
+                            이용자의
+                            서비스 사용 행위에 본 약관이 우선적으로 적용됩니다.
+                        </p>
+                        <h5 class="desc">제 3 조 [ 공지 ]</h5>
+                        <p class="desc2">1. 본 약관은 재단이 사이트의 화면 또는 기타의 방법으로 이용자에게 공지하고 회원이 동의함으로써 효력이 발생하며, 서비스 제공 행위 및
+                            이용자의
+                            서비스 사용 행위에 본 약관이 우선적으로 적용됩니다.
+                        </p>
+                    </div>
+
+
+                </article>
+
+                <article class="Agree a2">
+                    <h4 class="title">개인정보 수집 및 이용 동의 [필수]
+                        <div class="input__check">
+                            <input type="checkbox" name="agreement" id="privacyPolicy" value="privacyPolicy" required />
+                            <label for="privacyPolicy" class="required"></label>
+                        </div>
+                    </h4>
+
+                    <div class="box">
+                        <h5 class="desc">1. 개인정보 수집목적 및 이용목적</h5>
+                        <p class="desc2">회원제 서비스 이용에 따른 본인확인, 개인 식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 가입 의사 확인, 연령확인, 불만처리
+                            등
+                            민원처리,
+                            고지사항 전달
+                        </p>
+                        <h5 class="desc">2. 수집하는 개인정보 항목</h5>
+                        <p class="desc2">- 회원가입 시<br>
+                            ∙ 필수항목: 성명, 회원 ID, 비밀번호, 전화번호, 생년월일<br>
+                            ∙ 선택항목: 이메일 수신 동의<br>
+                        </p>
+                        <h5 class="desc">2. 수집하는 개인정보 항목</h5>
+                        <p class="desc2">- 회원가입 시<br>
+                            ∙ 필수항목: 성명, 회원 ID, 비밀번호, 전화번호, 생년월일<br>
+                            ∙ 선택항목: 이메일 수신 동의<br>
+                        </p>
+                    </div>
+
+                </article>
+                <div class="input__check">
+                    <input type="checkbox" name="agreement" id="allowPromotions" value="allowPromotions" />
+                    <label for="allowPromotions"></label>
+                    <p class="checkbox_p">[필수] 만 14세 이상입니다.</p>
+                </div>
+                <div class="terms__check__all">
+                    <input type="checkbox" name="checkAll" id="checkAll" />
+                    <label for=" checkAll"></label>
+                    <p class="checkbox_p">모든 약관에 동의합니다.</p>
+                </div>
+                <div class="btn_box">
+                    <a type="submit" class="Btn">메인으로</a>
+                    <button type="submit" class="next-button" disabled>확인</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- //section -->
+
+    <script>
+
+        const form = document.querySelector('#form__wrap');
+        const checkAll = document.querySelector('.terms__check__all input');
+        const checkBoxes = document.querySelectorAll('.input__check input');
+        const submitButton = document.querySelector('button');
+
+        const agreements = {
+            termsOfService: false,
+            privacyPolicy: false,
+            allowPromotions: false,
+        };
+
+
+        checkBoxes.forEach((item) => item.addEventListener('input', toggleCheckbox));
+
+        function toggleCheckbox(e) {
+            const { checked, id } = e.target;
+            agreements[id] = checked;
+            this.parentNode.classList.toggle('active');
+            checkAllStatus();
+            toggleSubmitButton();
         }
-    }
-</script>
+
+        function checkAllStatus() {
+            const { termsOfService, privacyPolicy, allowPromotions } = agreements;
+            if (termsOfService && privacyPolicy && allowPromotions) {
+                checkAll.checked = true;
+            } else {
+                checkAll.checked = false;
+            }
+        }
+
+        function toggleSubmitButton() {
+            const { termsOfService, privacyPolicy, allowPromotions } = agreements;
+            if (termsOfService && privacyPolicy && allowPromotions) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        checkAll.addEventListener('click', (e) => {
+            const { checked } = e.target;
+            if (checked) {
+                checkBoxes.forEach((item) => {
+                    item.checked = true;
+                    agreements[item.id] = true;
+                    item.parentNode.classList.add('active');
+                });
+            } else {
+                checkBoxes.forEach((item) => {
+                    item.checked = false;
+                    agreements[item.id] = false;
+                    item.parentNode.classList.remove('active');
+                });
+            }
+            toggleSubmitButton();
+        });
+    </script>
+</body>
 
 </html>

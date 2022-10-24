@@ -63,7 +63,7 @@ input[type="checkbox"] + label {
     margin-right: 20px;
 }
 
-input[id="check1"]:checked + label::after {
+input[id="termsOfService"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -75,7 +75,7 @@ input[id="check1"]:checked + label::after {
     color: #000;
 }
 
-input[id="check2"]:checked + label::after {
+input[id="privacyPolicy"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -87,7 +87,7 @@ input[id="check2"]:checked + label::after {
     color: #000;
 }
 
-input[id="check3"]:checked + label::after {
+input[id="allowPromotions"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -99,7 +99,7 @@ input[id="check3"]:checked + label::after {
     color: #000;
 }
 
-input[id="check4"]:checked + label::after {
+input[id="cheack_all"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -130,20 +130,20 @@ input[id="check4"]:checked + label::after {
     color: #444;
 }
 
-.checkbox1 {
+.input__check {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.checkbox2 {
+.terms__check__all {
     margin-bottom: 70px;
     display: flex;
     align-items: center;
 }
 
-.checkbox1 .checkbox_p,
-.checkbox2 .checkbox_p {
+.input__check .checkbox_p,
+.terms__check__all .checkbox_p {
     font-size: 16px;
     color: #000;
     margin: 2px;
@@ -166,7 +166,8 @@ input[id="check4"]:checked + label::after {
     margin-bottom: 120px;
 }
 
-.btn_box .Btn {
+.btn_box .Btn,
+.next-button {
     /* width: 17%; */
     /* padding: 15px 40px; */
     width: 175px;
@@ -180,11 +181,6 @@ input[id="check4"]:checked + label::after {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.Btn:hover {
-    background-color: #323232;
-    color: #fff;
 }
 
 /* infoType */
@@ -227,10 +223,10 @@ input[id="check4"]:checked + label::after {
 .inputbox > div {
     display: flex;
     align-items: center;
-    margin-right: 30px; 
+    margin-right: 30px;
 }
 
-#infoType .inputbox input[type=radio] {
+#infoType .inputbox input[type="radio"] {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -314,7 +310,6 @@ input[id="check4"]:checked + label::after {
     padding-bottom: 20px;
 }
 
-
 /* 완료 페이지 */
 .modalBox {
     width: 100%;
@@ -357,9 +352,9 @@ input[id="check4"]:checked + label::after {
     display: none;
 }
 
-@media (max-width:960px) {
+@media (max-width: 960px) {
     .agree {
-        padding: 0 20px
+        padding: 0 20px;
     }
     .Agree__inner {
         width: 90%;
@@ -371,9 +366,8 @@ input[id="check4"]:checked + label::after {
     .info__inner input {
         width: 50%;
     }
-
 }
-@media (max-width:600px) {
+@media (max-width: 600px) {
     .IDbox {
         flex-wrap: nowrap;
         display: block;
@@ -406,7 +400,7 @@ input[id="check4"]:checked + label::after {
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
     .agree {
         padding: 0 10px;
     }
