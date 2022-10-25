@@ -40,7 +40,7 @@
                         </p>
                     </div>
 
-                </article>
+                </article> 
 
                 <article class="Agree a2">
                     <h4 class="title">개인정보 수집 및 이용 동의 [필수] <input type='checkbox' name='check_all' id="check2"><label

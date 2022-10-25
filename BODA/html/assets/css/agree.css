@@ -63,7 +63,7 @@ input[type="checkbox"] + label {
     margin-right: 20px;
 }
 
-input[id="termsOfService"]:checked + label::after {
+input[id="check1"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -75,7 +75,7 @@ input[id="termsOfService"]:checked + label::after {
     color: #000;
 }
 
-input[id="privacyPolicy"]:checked + label::after {
+input[id="check2"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -87,7 +87,7 @@ input[id="privacyPolicy"]:checked + label::after {
     color: #000;
 }
 
-input[id="allowPromotions"]:checked + label::after {
+input[id="check3"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -99,7 +99,7 @@ input[id="allowPromotions"]:checked + label::after {
     color: #000;
 }
 
-input[id="cheack_all"]:checked + label::after {
+input[id="check4"]:checked + label::after {
     content: "✔";
     font-size: 20px;
     width: 20px;
@@ -133,17 +133,18 @@ input[id="cheack_all"]:checked + label::after {
 .input__check {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
-
-.terms__check__all {
+.checkbox1 {
+    display: flex;
+}
+.checkbox2 {
     margin-bottom: 70px;
     display: flex;
     align-items: center;
 }
 
 .input__check .checkbox_p,
-.terms__check__all .checkbox_p {
+.checkbox2 .checkbox_p {
     font-size: 16px;
     color: #000;
     margin: 2px;
@@ -167,12 +168,11 @@ input[id="cheack_all"]:checked + label::after {
 }
 
 .btn_box .Btn,
-.next-button {
+.next_button {
     /* width: 17%; */
     /* padding: 15px 40px; */
     width: 175px;
     height: 72px;
-    background-color: #fff;
     border-radius: 10px;
     font-size: 20px;
     box-sizing: border-box;
@@ -181,6 +181,12 @@ input[id="cheack_all"]:checked + label::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
+}
+
+button[type="submit"]:disabled {
+    background: #000;
+    color: #fff;
 }
 
 /* infoType */
@@ -254,8 +260,6 @@ input[id="cheack_all"]:checked + label::after {
     border-radius: 10px;
 }
 
-#infoType .IDbox {
-}
 
 #infoType .IDbox input {
     width: 75%;
