@@ -167,8 +167,7 @@ input[id="check4"]:checked + label::after {
     margin-bottom: 120px;
 }
 
-.btn_box .Btn,
-.next_button {
+.btn_box .Btn {
     /* width: 17%; */
     /* padding: 15px 40px; */
     width: 175px;
@@ -184,10 +183,10 @@ input[id="check4"]:checked + label::after {
     background-color: #fff;
 }
 
-button[type="submit"]:disabled {
+/* button[type="submit"]:disabled {
     background: #000;
     color: #fff;
-}
+} */
 
 /* infoType */
 .info__inner {

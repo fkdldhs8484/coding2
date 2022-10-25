@@ -150,17 +150,6 @@ table {
     color: #888888;
     padding: 0 5px;
 }
-.comment .contents .contents__top .modify {
-    font-weight: 300;
-    font-size: 16px;
-    color: #888888;
-    padding: 0 5px 0 0;
-}
-.comment .contents .contents__top .remove {
-    font-weight: 300;
-    font-size: 16px;
-    color: #888888;
-}
 .comment .contents .contents__bottom {
     font-weight: 300;
     font-size: 16px;
@@ -171,6 +160,14 @@ table {
 }
 .comment_2 .profile{
     background-image: url(https://github.com/mj0614k/Coding/blob/main/assets/img/tistory.jpg?raw=true);
+}
+
+.comment .contents .contents__top .modify,
+.comment .contents .contents__top .remove {
+    background-color: white;
+    padding: 0 5px 0 0;
+    cursor: pointer;
+    color: #B0B0B0;
 }
 
 /* blind */
