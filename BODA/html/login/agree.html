@@ -234,18 +234,18 @@
                     </div>
 
                 </article>
-                <div class="checkbox1">
+                <div class="checkbox1 Agree">
                     <input type='checkbox' id="check3" name='check_all'><label for="check3"></label>
                     <p class="checkbox_p">[필수] 만 14세 이상입니다.</p>
                 </div>
-                <div class="checkbox2">
+                <div class="checkbox2 Agree">
                     <input type='checkbox' id="check4" name='check_all' value='selectall'
                         onclick='selectAll(this)'><label for="check4"></label>
                     <p class="checkbox_p">모든 약관에 동의합니다.</p>
                 </div>
                 <div class="btn_box">
                     <a href="#" class="Btn">메인으로</a>
-                    <button type="submit" class="next_button" disabled="disabled">확인</button>
+                    <button type="button" class="next_button" onclick="newPage()" disabled="disabled" >확인</button>
                 </div>
             </form>
         </div>
@@ -317,7 +317,52 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
     <script>
-        
+        const checkAll = document.querySelector(".checkbox2 input"); // 모두 동의
+        const checkBoxes = document.querySelectorAll(".Agree input"); // 모두 동의 제외
+        const Button = document.querySelector(".btn_box button"); // 확인 버튼
+
+        // 3개 버튼
+        const agreements = {
+            check1: false,
+            check2: false,
+            check3: false,
+            check4: false,
+        };
+
+        checkBoxes.forEach((item) => item.addEventListener("input", toggleCheckbox));
+
+        // 체크박스 
+        function toggleCheckbox(e) {
+            const { checked, id } = e.target;
+            agreements[id] = checked;
+            this.parentNode.classList.toggle('active');
+            checkAllStatus();
+            toggleSubmitButton();
+        }
+
+        function checkAllStatus() {
+            const { check1, check2, check3,  check4} = agreements;
+            if (check1 && check2 && check3 && check4) {
+                checkAll.checked = true;
+            } else {
+                checkAll.checked = false;
+            }
+        }
+
+        // 체크박스 3개 클릭되면 버튼
+        function toggleSubmitButton() {
+        const { check1, check2, check3, check4 } = agreements;
+            if (check1 && check2 && check3 && check4) {
+                Button.disabled = false;
+            } else {
+                Button.disabled = true;
+            }
+        }
+
+        // 링크 이동
+        function newPage()  {
+            window.location.href = 'http://127.0.0.1:5502/BODA/html/login/agreeInfo.html'
+        }
     </script>
 </body>
 
