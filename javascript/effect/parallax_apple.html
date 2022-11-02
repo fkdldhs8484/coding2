@@ -1,183 +1,251 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      href="https://webfontworld.github.io/ChosunGu/ChosunGu.css"
-      rel="stylesheet"
-    />
-  </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "ChosunGu";
-      font-weight: 300;
-    }
-    .fixed {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .scrollTop {
-      position: fixed;
-      left: 10px;
-      top: 10px;
-      width: 40px;
-      height: 40px;
-      background: rgba(0, 0, 0, 0.3);
-      text-align: center;
-      line-height: 40px;
-      z-index: 10000;
-    }
-    /* layout */
-    #contents {
-    }
-    #section1 {
-      height: 10000px;
-    }
-    #section2 {
-    }
-    #section3 {
-    }
-    #section4 {
-    }
-    #section5 {
-    }
-    #section6 {
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    /* sec1 */
-    .sec1_text1 {
-      font-size: 8vw;
-      white-space: nowrap;
-    }
-    .sec1_text2 {
-      font-size: 8vw;
-      white-space: nowrap;
-    }
-    .sec1_text3 {
-      width: 100%;
-      height: 100vh;
-      background: url(https://images.unsplash.com/photo-1666756240261-d2a79080c069?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1261&q=80);
-      background-size: cover;
-      background-position: center;
-    }
+  <link href="https://webfontworld.github.io/ChosunGu/ChosunGu.css" rel="stylesheet" />
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ChosunGu";
+    font-weight: 300;
+  }
 
-    .sec1_text4 {
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      background: #000;
-      color: #fff;
-      text-align: center;
-      line-height: 50vw;
-      font-size: 8vw;
-    }
+  .fixed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    /* sec2 */
-    .sec2_text1 {
-      width: 60vw;
-      height: 80vh;
-      background: #eee;
-      text-align: center;
-      line-height: 40px;
-      font-size: 3vw;
-    }
-    .sec2_text2 {
-      font-size: 8vw;
-      white-space: nowrap;
-    }
-  </style>
-  <body>
-    <div class="scrollTop">0</div>
+  .scrollTop {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+    z-index: 10000;
+  }
 
-    <main id="contents">
-      <section id="section1">
-        <div class="sec1">
-          <div
-            class="sec1_text1 fixed"
-            data-0="  top: 50%; opacity:1"
-            data-500="top: 30%; opacity:0"
-          >
-            안녕하세요!
+  /* layout */
+  #contents {}
+
+  #section1 {
+    height: 10000px;
+  }
+
+  #section2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #section3 {}
+
+  #section4 {}
+
+  #section5 {}
+
+  #section6 {}
+
+  /* sec1 */
+  .sec1_text1 {
+    font-size: 8vw;
+    white-space: nowrap;
+  }
+
+  .sec1_text2 {
+    font-size: 4vw;
+    white-space: nowrap;
+  }
+
+  .sec1_text2 span {
+    color: khaki;
+  }
+
+  .sec1_text3 {
+    font-size: 6vw;
+    white-space: nowrap;
+  }
+
+  /* .sec1_text3 {
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1666756240261-d2a79080c069?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1261&q=80);
+    background-size: cover;
+    background-position: center;
+  } */
+
+  .sec1_img1 {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: url(/assets/ico/favicon.png);
+    color: #fff;
+    text-align: center;
+    line-height: 50vw;
+    font-size: 8vw;
+    display: flex;
+  }
+
+  .sec1_img2 {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: url(/assets/ico/favicon.png);
+    color: #fff;
+    text-align: center;
+    line-height: 50vw;
+    font-size: 8vw;
+  }
+
+  /* sec2 */
+  .sec2_text1 {
+    width: 100vh;
+    height: 50vw;
+    background: #000;
+    text-align: center;
+    line-height: 40px;
+
+  }
+
+  .sec1_title {
+    font-size: 8vw;
+  }
+
+  .sec2_text2 {
+    font-size: 8vw;
+    white-space: nowrap;
+    color: #fff;
+    text-align: center;
+  }
+
+  .sec2_text3 {
+    width: 30vh;
+    font-size: 8vw;
+    white-space: nowrap;
+    color: #fff;
+    text-align: center;
+  }
+
+  .sec2_title {
+
+    font-size: 4vw;
+    white-space: nowrap;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .sec2_desc {
+    font-size: 2vw;
+    white-space: nowrap;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+  }
+</style>
+
+<body>
+  <div class="scrollTop">0</div>
+
+  <main id="contents">
+    <section id="section1">
+      <div class="sec1">
+        <div class="sec1_text1 fixed" data-0="  top: 50%; opacity:1" data-500="top: 30%; opacity:0">
+          안녕하세요!😈
+        </div>
+        <div class="sec1_text2 fixed" data-500=" opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
+          data-1000="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)" data-1500="top: 30%; opacity:0""
+          data-2000=" opacity: 0; top: 50%; scale(0)">
+          프론트앤드 개발자 를 꿈꾸고 있는 <span>이유나 </span>입니다.
+        </div>
+        <div class="sec1_text3 fixed" data-2500=" opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
+          data-3000="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
+          data-3500="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
+          data-4000="opacity: 0; top: 50%; transform: translate(-50%, -50%) scale(0)">
+          START
+        </div>
+
+        <!-- <div class="sec1_text3 fixed" data-1300="width : 0%;   transform: translate(-50%, -50%) rotate(360deg)"
+          data-2300="width : 100%; transform: translate(-50%, -50%) rotate(0deg)"
+          data-4000="width : 100%; transform: translate(-50%, -50%) rotate(0deg)"
+          data-4500="width : 0%;   transform: translate(-50%, -50%) rotate(360ddeg)"></div> -->
+        <div class="sec1_text4 fixed" data-4500=" transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+          data-5000=" transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+          data-5500="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+          data-6000="transform: translate(-50%, -50%) scale(0) rotate(-360deg)">
+          <div class="sec1_img1">
           </div>
-          <div
-            class="sec1_text2 fixed"
-            data-500=" opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
-            data-1000="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
-            data-1500="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(0)"
-          >
-            프론트앤드 개발자 입니다!
-          </div>
-          <div
-            class="sec1_text3 fixed"
-            data-1300="width : 0%;   transform: translate(-50%, -50%) rotate(360deg)"
-            data-2300="width : 100%; transform: translate(-50%, -50%) rotate(0deg)"
-            data-4000="width : 100%; transform: translate(-50%, -50%) rotate(0deg)"
-            data-4500="width : 0%;   transform: translate(-50%, -50%) rotate(360ddeg)"
-          ></div>
-          <div
-            class="sec1_text4 fixed"
-            data-2000="transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
-            data-3000="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-            data-3500="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-            data-4000="transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
-          ></div>
         </div>
-      </section>
-      <!-- //section1 -->
+      </div>
+    </section>
+    <!-- //section1 -->
 
-      <section id="section2">
-        <div
-          class="sec2_text1 fixed"
-          data-4300="opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(0)"
-          data-5500="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
-          data-6500="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(0)"
-        >
-          <div></div>
-        </div>
-        <div
-          class="sec2_text2 fixed"
-          data-7000="opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
-          data-7500="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
-          data-8000="opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
-        >
-          안녕하세요!
-        </div>
-      </section>
-      <!-- //section2 -->
+    <section id="section2">
+      <div class="sec2_text1 fixed" data-6200="opacity: 0; top: 100%; transform: translate(-50%, -50%) scale(2)"
+        data-7000="opacity: 1; top: 70%; transform: translate(-50%, -50%) scale(2)"></div>
+      <div class="sec2_text2 fixed" data-7200="opacity: 0; left: 90%; transform: translate(-50%, -50%) scale(1)"
+        data-7500="opacity: 1; left: 50%; transform: translate(-50%, -50%) scale(1)"
+        data-8000="opacity: 1; left: 20%; transform: translate(-50%, -50%) scale(1)">
+        <h2 class="sec1_title"> about</h2>
 
-      <section id="section3"></section>
-      <!-- //section3 -->
-      <section id="section4"></section>
-      <!-- //section4 -->
-      <section id="section5"></section>
-      <!-- //section5 -->
-      <section id="section6"></section>
-      <!-- //section6 -->
-    </main>
-    <!-- contents -->
+      </div>
+      <div class="sec2_text3 fixed" data-8200="opacity: 0; left: 90%; transform: translate(-50%, -50%) scale(1)"
+        data-8600="opacity: 1; left: 50%; transform: translate(-50%, -50%) scale(1)"
+        data-9000="opacity: 1; left: 45%; transform: translate(-50%, -50%) scale(0)">
+        <h2 class="sec2_title">Creative</h2>
+        <p class="sec2_desc">저는 제손으로 무엇을 창작 하는 것을 좋아합니다. 평소에 그림을 그리는 것을 좋아하며,<br>
+          노력해서 완성된 결과물을 보면 뿌듯함을 느끼며, 의욕이 샘 솟습니다.<br>
+          프론트엔드 역시 제가 원하는 사이트 화면을 구현할 수 있다는 점에 도전하였습니다.</p>
+      </div>
+      <div class="sec2_text3 fixed" data-9200="opacity: 0; left: 90%; transform: translate(-50%, -50%) scale(1)"
+        data-10600="opacity: 1; left: 50%; transform: translate(-50%, -50%) scale(1)"
+        data-11000="opacity: 1; left: 45%; transform: translate(-50%, -50%) scale(0)">
+        <h2 class="sec2_title">yeoljeong</h2>
+        <p class="sec2_desc">저는 새로운걸 배우는 것을 좋아합니다.<br>
+          코딩 역시 한번도 배우지 않았지만, 호기심으로 배우기 시작했습니다.<br>
+          항상 도전하는 모습으로 열심히 배우겠습니다.</p>
+      </div>
+    </section>
+    <!-- //section2 -->
 
-    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
-    <script>
-      const s = skrollr.init();
+    <section id="section3"></section>
+    <!-- //section3 -->
+    <section id="section4"></section>
+    <!-- //section4 -->
+    <section id="section5"></section>
+    <!-- //section5 -->
+    <section id="section6"></section>
+    <!-- //section6 -->
+  </main>
+  <!-- contents -->
 
-      function scroll() {
-        let scrollTop =
-          window.pageXOffset || document.documentElement.scrollTop;
+  <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+  <script>
+    const s = skrollr.init();
 
-        document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+    function scroll() {
+      let scrollTop =
+        window.pageXOffset || document.documentElement.scrollTop;
 
-        requestAnimationFrame(scroll);
-      }
-      scroll();
-    </script>
-  </body>
+      document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+      requestAnimationFrame(scroll);
+    }
+    scroll();
+  </script>
+</body>
+
 </html>
