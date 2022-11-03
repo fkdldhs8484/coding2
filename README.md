@@ -30,4 +30,4 @@ https://fkdldhs8484.github.io/coding2/html/alphabet.html
 https://fkdldhs8484.github.io/coding2/css/index.html
 
 ### 사이트
-https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/parallax_apple.html
+http://127.0.0.1:5502/javascript/effect/parallax_apple.html
