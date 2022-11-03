@@ -28,3 +28,6 @@ https://fkdldhs8484.github.io/coding2/html/alphabet.html
 
 ### CSS 메인 페이지
 https://fkdldhs8484.github.io/coding2/css/index.html
+
+### 사이트
+https://github.com/fkdldhs8484/coding2/blob/main/javascript/effect/parallax_apple.html
